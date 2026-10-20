@@ -16,7 +16,7 @@
 
 ## 👋 About Me
 
-Hi! I'm **Thenuda Sahas**, a **Computing student (Pearson BTEC HND)** from Sri Lanka. I'm interested in cybersecurity, information security, network security, and software development.
+👋 Hi! I'm **Thenuda Sahas** 👨‍💻 , a **Computing student (Pearson BTEC HND)** from Sri Lanka. I'm interested in cybersecurity, information security, network security, and software development.
 
 - 🎓 Currently a **Computing student (Pearson BTEC HND)**
 - 🛡️ Exploring information security and defensive security practices
