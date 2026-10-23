@@ -9,7 +9,7 @@
   <a href="mailto:sahas.thenu@gmail.com"><img src="https://img.shields.io/badge/EMAIL-Contact%20Me-0D1117?style=for-the-badge&logo=gmail&logoColor=EA4335" alt="Email" /></a>
   <a href="https://github.com/thenudasahas2008"><img src="https://img.shields.io/badge/GITHUB-Follow-0D1117?style=for-the-badge&logo=github&logoColor=FFFFFF" alt="GitHub profile" /></a>
   <br /><br />
-  <img src="https://komarev.com/ghpvc/?username=thenudasahas2008&style=for-the-badge&color=0891B2&label=PROFILE%20VIEWS" alt="Profile views" />
+  <img src="https://hits.sh/github.com/thenudasahas2008.svg?style=for-the-badge&label=PROFILE%20VIEWS&color=0891B2" alt="Profile views" />
 </div>
 
 ---
