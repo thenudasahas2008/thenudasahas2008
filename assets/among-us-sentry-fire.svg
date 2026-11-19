@@ -1439,10 +1439,7 @@
 
   <!-- Bottom Footer Telemetry Bar -->
   <g transform="translate(72, 196)">
-    <!-- Mode Readout -->
-    <text x="0" y="8" fill="#7d8590" font-size="9.5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
-      Mode: <tspan fill="#ef4444" font-weight="700">Dynamic Multi-Target Flank &amp; Purge</tspan> &#8226; <tspan fill="#e6edf3">10 Targets (16s Loop)</tspan>
-    </text>
+
     <!-- Legend -->
     <g transform="translate(630, 0)">
       <text x="-26" y="8" fill="#7d8590" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Less</text>
