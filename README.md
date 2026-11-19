@@ -97,8 +97,17 @@
   <a href="https://github.com/thenudasahas2008/PromptSentry">
     <img src="assets/project-promptsentry.svg?v=3" width="49%" alt="PromptSentry AI Defense Gateway" />
   </a>
+  <a href="https://github.com/thenudasahas2008/DiscordFarmer">
+    <img src="assets/project-discordfarmer.svg?v=1" width="49%" alt="DiscordFarmer 24/7 Presence Client" />
+  </a>
+</p>
+
+<p align="center">
   <a href="https://github.com/thenudasahas2008/Baduwa">
     <img src="assets/project-baduwa.svg?v=4" width="49%" alt="Baduwa Discord Audio Bot" />
+  </a>
+  <a href="https://github.com/thenudasahas2008/Password-Strength-Checker">
+    <img src="assets/project-passwordchecker.svg?v=1" width="49%" alt="Password Strength Checker Tool" />
   </a>
 </p>
 
