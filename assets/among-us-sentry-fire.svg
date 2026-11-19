@@ -5,6 +5,12 @@
       <stop offset="50%" stop-color="#0d1117"/>
       <stop offset="100%" stop-color="#060911"/>
     </linearGradient>
+    <linearGradient id="fireTrailGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff4500" stop-opacity="0.1"/>
+      <stop offset="40%" stop-color="#ff8c00"/>
+      <stop offset="80%" stop-color="#ffea00"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
     <linearGradient id="impostorRedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#ff4d4d"/>
       <stop offset="40%" stop-color="#ef4444"/>
@@ -15,466 +21,207 @@
       <stop offset="40%" stop-color="#38bdf8"/>
       <stop offset="100%" stop-color="#0284c7"/>
     </linearGradient>
-    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="2" result="blur"/>
+    <filter id="bulletGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
     <style>
-@keyframes impostorSnakePath {
-  0.00% { transform: translate(77.0px, 109.0px) scaleX(1); }
-  10.00% { transform: translate(217.0px, 109.0px) scaleX(1); }
-  24.00% { transform: translate(413.0px, 109.0px) scaleX(1); }
-  32.00% { transform: translate(525.0px, 109.0px) scaleX(1); }
-  36.00% { transform: translate(581.0px, 109.0px) scaleX(1); }
-  37.00% { transform: translate(581.0px, 95.0px) scaleX(1); }
-  41.00% { transform: translate(637.0px, 95.0px) scaleX(1); }
-  43.00% { transform: translate(665.0px, 95.0px) scaleX(1); }
-  45.00% { transform: translate(665.0px, 123.0px) scaleX(1); }
-  48.00% { transform: translate(707.0px, 123.0px) scaleX(1); }
-  49.00% { transform: translate(721.0px, 123.0px) scaleX(1); }
-  50.00% { transform: translate(721.0px, 137.0px) scaleX(1); }
-  52.00% { transform: translate(721.0px, 109.0px) scaleX(1); }
-  54.00% { transform: translate(721.0px, 81.0px) scaleX(1); }
-  55.00% { transform: translate(735.0px, 81.0px) scaleX(1); }
-  56.00% { transform: translate(735.0px, 95.0px) scaleX(1); }
-  58.00% { transform: translate(735.0px, 123.0px) scaleX(1); }
-  60.00% { transform: translate(735.0px, 151.0px) scaleX(1); }
-  61.00% { transform: translate(749.0px, 151.0px) scaleX(1); }
-  62.00% { transform: translate(749.0px, 137.0px) scaleX(1); }
-  64.00% { transform: translate(749.0px, 109.0px) scaleX(1); }
-  65.00% { transform: translate(749.0px, 95.0px) scaleX(1); }
-  67.00% { transform: translate(749.0px, 67.0px) scaleX(1); }
-  68.00% { transform: translate(763.0px, 67.0px) scaleX(1); }
-  69.00% { transform: translate(763.0px, 81.0px) scaleX(1); }
-  70.00% { transform: translate(763.0px, 95.0px) scaleX(1); }
-  71.00% { transform: translate(763.0px, 109.0px) scaleX(1); }
-  72.00% { transform: translate(763.0px, 123.0px) scaleX(1); }
-  74.00% { transform: translate(763.0px, 151.0px) scaleX(1); }
-  75.00% { transform: translate(777.0px, 151.0px) scaleX(1); }
-  76.00% { transform: translate(777.0px, 137.0px) scaleX(1); }
-  77.00% { transform: translate(777.0px, 123.0px) scaleX(1); }
-  79.00% { transform: translate(777.0px, 95.0px) scaleX(1); }
-  80.00% { transform: translate(777.0px, 81.0px) scaleX(1); }
-  81.00% { transform: translate(777.0px, 67.0px) scaleX(1); }
-  82.00% { transform: translate(791.0px, 67.0px) scaleX(1); }
-  83.00% { transform: translate(791.0px, 81.0px) scaleX(1); }
-  84.00% { transform: translate(791.0px, 95.0px) scaleX(1); }
-  85.00% { transform: translate(791.0px, 109.0px) scaleX(1); }
-  88.00% { transform: translate(791.0px, 151.0px) scaleX(1); }
-  90.00% { transform: translate(791.0px, 145.0px) scaleX(-1); }
-  92.00% { transform: translate(791.0px, 151.0px) scaleX(1); }
-  94.00% { transform: translate(791.0px, 147.0px) scaleX(-1); }
-  96.00% { opacity: 0; transform: translate(791.0px, 151.0px) scaleX(1); }
-  96.01% { opacity: 0; transform: translate(77.0px, 109.0px) scaleX(1); }
-  97.50% { opacity: 1; transform: translate(77.0px, 109.0px) scaleX(1); }
-  100.00% { opacity: 1; transform: translate(77.0px, 109.0px) scaleX(1); }
-}
 
-@keyframes impostorWaddle {
-  0%, 100% { transform: translateY(0px) rotate(-5deg); }
-  50%      { transform: translateY(-2px) rotate(5deg); }
+@keyframes gunRecoil {
+  0%, 100% { transform: translate(0px, 0px); }
+  6.67%    { transform: translate(-3px, 0.5px); }
+  8.00%    { transform: translate(0px, 0px); }
+  30.00%   { transform: translate(-3px, -1px); }
+  31.50%   { transform: translate(0px, 0px); }
+  53.33%   { transform: translate(-3px, -0.5px); }
+  54.80%   { transform: translate(0px, 0px); }
+  75.00%   { transform: translate(-3px, 0.5px); }
+  76.50%   { transform: translate(0px, 0px); }
 }
-.waddling {
-  animation: impostorWaddle 0.22s ease-in-out infinite alternate;
-  transform-origin: 0px 5px;
-}
-.impostor-head {
-  animation: impostorSnakePath 14s linear infinite;
-  animation-delay: -0.7s;
-}
-.snake-seg-1 {
-  animation: impostorSnakePath 14s linear infinite;
-  animation-delay: -0.45s;
-  opacity: 0.9;
-}
-.snake-seg-2 {
-  animation: impostorSnakePath 14s linear infinite;
-  animation-delay: -0.22s;
-  opacity: 0.75;
-}
-.snake-seg-3 {
-  animation: impostorSnakePath 14s linear infinite;
-  animation-delay: 0s;
-  opacity: 0.6;
+.impostor-blaster {
+  animation: gunRecoil 12s ease-out infinite;
 }
 
 
-@keyframes statusTextAnim {
-  0%, 23%    { content: 'PATROLLING GRID'; fill: #58a6ff; }
-  24%, 87%   { content: 'DEVOURING CONTRIBUTIONS'; fill: #39d353; }
-  88%, 95%   { content: '100% DEVOURED [VICTORY]'; fill: #f1e05a; }
-  96%, 100%  { content: 'RESPAWNING GRID...'; fill: #58a6ff; }
+@keyframes muzzleFlashSeq {
+  0%, 6.66%     { opacity: 0; }
+  6.67%, 7.50%  { opacity: 1; }
+  7.51%, 29.99% { opacity: 0; }
+  30.00%, 30.83%{ opacity: 1; }
+  30.84%, 53.32%{ opacity: 0; }
+  53.33%, 54.16%{ opacity: 1; }
+  54.17%, 74.99%{ opacity: 0; }
+  75.00%, 75.83%{ opacity: 1; }
+  75.84%, 100%  { opacity: 0; }
 }
+.muzzle-flash {
+  animation: muzzleFlashSeq 12s ease-out infinite;
+  transform: translate(594px, 104px);
+}
+
+
+@keyframes flyBullet1 {
+  0%, 6.66% { opacity: 0; transform: translate(594px, 104px) rotate(-3.65deg); }
+  6.67%            { opacity: 1; transform: translate(594px, 104px) rotate(-3.65deg); }
+  12.49%     { opacity: 1; transform: translate(735px, 95px) rotate(-3.65deg); }
+  12.50%, 100%      { opacity: 0; transform: translate(735px, 95px) rotate(-3.65deg); }
+}
+.bullet-1 {
+  animation: flyBullet1 12s linear infinite;
+}
+
+
+@keyframes impactDetonation1 {
+  0%, 12.49% { opacity: 0; }
+  12.50%            { opacity: 1; }
+  15.00%      { opacity: 0; }
+  100%                 { opacity: 0; }
+}
+.detonation-1 {
+  animation: impactDetonation1 12s ease-out infinite;
+  transform: translate(735px, 95px);
+}
+
+
+@keyframes burnTarget1 {
+  0%, 12.49% { fill: #26a641; }
+  12.50%            { fill: #ffffff; }
+  14.00%      { fill: #ffea00; }
+  16.50%      { fill: #ff4500; }
+  19.50%      { fill: #dc2626; }
+  22.50%     { fill: #161b22; }
+  93.00%               { fill: #161b22; }
+  96.00%               { fill: #006d32; }
+  98.00%, 100%         { fill: #26a641; }
+}
+#tgt_47_2 {
+  animation: burnTarget1 12s linear infinite;
+}
+
+
+@keyframes flyBullet2 {
+  0%, 29.99% { opacity: 0; transform: translate(594px, 104px) rotate(16.87deg); }
+  30.00%            { opacity: 1; transform: translate(594px, 104px) rotate(16.87deg); }
+  35.82%     { opacity: 1; transform: translate(749px, 151px) rotate(16.87deg); }
+  35.83%, 100%      { opacity: 0; transform: translate(749px, 151px) rotate(16.87deg); }
+}
+.bullet-2 {
+  animation: flyBullet2 12s linear infinite;
+}
+
+
+@keyframes impactDetonation2 {
+  0%, 35.82% { opacity: 0; }
+  35.83%            { opacity: 1; }
+  38.33%      { opacity: 0; }
+  100%                 { opacity: 0; }
+}
+.detonation-2 {
+  animation: impactDetonation2 12s ease-out infinite;
+  transform: translate(749px, 151px);
+}
+
+
+@keyframes burnTarget2 {
+  0%, 35.82% { fill: #39d353; }
+  35.83%            { fill: #ffffff; }
+  37.33%      { fill: #ffea00; }
+  39.83%      { fill: #ff4500; }
+  42.83%      { fill: #dc2626; }
+  45.83%     { fill: #161b22; }
+  93.00%               { fill: #161b22; }
+  96.00%               { fill: #006d32; }
+  98.00%, 100%         { fill: #39d353; }
+}
+#tgt_48_6 {
+  animation: burnTarget2 12s linear infinite;
+}
+
+
+@keyframes flyBullet3 {
+  0%, 53.32% { opacity: 0; transform: translate(594px, 104px) rotate(1.69deg); }
+  53.33%            { opacity: 1; transform: translate(594px, 104px) rotate(1.69deg); }
+  59.16%     { opacity: 1; transform: translate(763px, 109px) rotate(1.69deg); }
+  59.17%, 100%      { opacity: 0; transform: translate(763px, 109px) rotate(1.69deg); }
+}
+.bullet-3 {
+  animation: flyBullet3 12s linear infinite;
+}
+
+
+@keyframes impactDetonation3 {
+  0%, 59.16% { opacity: 0; }
+  59.17%            { opacity: 1; }
+  61.67%      { opacity: 0; }
+  100%                 { opacity: 0; }
+}
+.detonation-3 {
+  animation: impactDetonation3 12s ease-out infinite;
+  transform: translate(763px, 109px);
+}
+
+
+@keyframes burnTarget3 {
+  0%, 59.16% { fill: #006d32; }
+  59.17%            { fill: #ffffff; }
+  60.67%      { fill: #ffea00; }
+  63.17%      { fill: #ff4500; }
+  66.17%      { fill: #dc2626; }
+  69.17%     { fill: #161b22; }
+  93.00%               { fill: #161b22; }
+  96.00%               { fill: #006d32; }
+  98.00%, 100%         { fill: #006d32; }
+}
+#tgt_49_3 {
+  animation: burnTarget3 12s linear infinite;
+}
+
+
+@keyframes flyBullet4 {
+  0%, 74.99% { opacity: 0; transform: translate(594px, 104px) rotate(-6.66deg); }
+  75.00%            { opacity: 1; transform: translate(594px, 104px) rotate(-6.66deg); }
+  80.82%     { opacity: 1; transform: translate(791px, 81px) rotate(-6.66deg); }
+  80.83%, 100%      { opacity: 0; transform: translate(791px, 81px) rotate(-6.66deg); }
+}
+.bullet-4 {
+  animation: flyBullet4 12s linear infinite;
+}
+
+
+@keyframes impactDetonation4 {
+  0%, 80.82% { opacity: 0; }
+  80.83%            { opacity: 1; }
+  83.33%      { opacity: 0; }
+  100%                 { opacity: 0; }
+}
+.detonation-4 {
+  animation: impactDetonation4 12s ease-out infinite;
+  transform: translate(791px, 81px);
+}
+
+
+@keyframes burnTarget4 {
+  0%, 80.82% { fill: #39d353; }
+  80.83%            { fill: #ffffff; }
+  82.33%      { fill: #ffea00; }
+  84.83%      { fill: #ff4500; }
+  87.83%      { fill: #dc2626; }
+  90.83%     { fill: #161b22; }
+  93.00%               { fill: #161b22; }
+  96.00%               { fill: #006d32; }
+  98.00%, 100%         { fill: #39d353; }
+}
+#tgt_51_1 {
+  animation: burnTarget4 12s linear infinite;
+}
+
+
 @keyframes badgePillPulse {
-  0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 2px rgba(57, 211, 83, 0.4)); }
-  50%      { opacity: 1; filter: drop-shadow(0 0 6px rgba(57, 211, 83, 0.8)); }
+  0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 2px rgba(239, 68, 68, 0.4)); }
+  50%      { opacity: 1; filter: drop-shadow(0 0 6px rgba(239, 68, 68, 0.8)); }
 }
 .badge-pulse {
   animation: badgePillPulse 1.5s ease-in-out infinite;
-}
-
-
-@keyframes eat_24_3 {
-  0%, 23.99% { fill: #0e4429; }
-  24.00%            { fill: #ffffff; }
-  24.60%            { fill: #f1e05a; }
-  25.20%, 94.99%    { fill: #161b22; }
-  95.00%               { fill: #161b22; }
-  97.00%               { fill: #006d32; }
-  99.00%, 100%         { fill: #0e4429; }
-}
-#sq_24_3 {
-  animation: eat_24_3 14s linear infinite;
-}
-
-
-@keyframes eat_36_2 {
-  0%, 36.99% { fill: #006d32; }
-  37.00%            { fill: #ffffff; }
-  37.60%            { fill: #f1e05a; }
-  38.20%, 94.99%    { fill: #161b22; }
-  95.00%               { fill: #161b22; }
-  97.00%               { fill: #006d32; }
-  99.00%, 100%         { fill: #006d32; }
-}
-#sq_36_2 {
-  animation: eat_36_2 14s linear infinite;
-}
-
-
-@keyframes eat_42_4 {
-  0%, 44.99% { fill: #006d32; }
-  45.00%            { fill: #ffffff; }
-  45.60%            { fill: #f1e05a; }
-  46.20%, 94.99%    { fill: #161b22; }
-  95.00%               { fill: #161b22; }
-  97.00%               { fill: #006d32; }
-  99.00%, 100%         { fill: #006d32; }
-}
-#sq_42_4 {
-  animation: eat_42_4 14s linear infinite;
-}
-
-
-@keyframes eat_46_5 {
-  0%, 49.99% { fill: #26a641; }
-  50.00%            { fill: #ffffff; }
-  50.60%            { fill: #f1e05a; }
-  51.20%, 94.99%    { fill: #161b22; }
-  95.00%               { fill: #161b22; }
-  97.00%               { fill: #006d32; }
-  99.00%, 100%         { fill: #26a641; }
-}
-#sq_46_5 {
-  animation: eat_46_5 14s linear infinite;
-}
-
-
-@keyframes eat_46_3 {
-  0%, 51.99% { fill: #006d32; }
-  52.00%            { fill: #ffffff; }
-  52.60%            { fill: #f1e05a; }
-  53.20%, 94.99%    { fill: #161b22; }
-  95.00%               { fill: #161b22; }
-  97.00%               { fill: #006d32; }
-  99.00%, 100%         { fill: #006d32; }
-}
-#sq_46_3 {
-  animation: eat_46_3 14s linear infinite;
-}
-
-
-@keyframes eat_47_1 {
-  0%, 54.99% { fill: #0e4429; }
-  55.00%            { fill: #ffffff; }
-  55.60%            { fill: #f1e05a; }
-  56.20%, 94.99%    { fill: #161b22; }
-  95.00%               { fill: #161b22; }
-  97.00%               { fill: #006d32; }
-  99.00%, 100%         { fill: #0e4429; }
-}
-#sq_47_1 {
-  animation: eat_47_1 14s linear infinite;
-}
-
-
-@keyframes eat_47_2 {
-  0%, 55.99% { fill: #26a641; }
-  56.00%            { fill: #ffffff; }
-  56.60%            { fill: #f1e05a; }
-  57.20%, 94.99%    { fill: #161b22; }
-  95.00%               { fill: #161b22; }
-  97.00%               { fill: #006d32; }
-  99.00%, 100%         { fill: #26a641; }
-}
-#sq_47_2 {
-  animation: eat_47_2 14s linear infinite;
-}
-
-
-@keyframes eat_47_4 {
-  0%, 57.99% { fill: #006d32; }
-  58.00%            { fill: #ffffff; }
-  58.60%            { fill: #f1e05a; }
-  59.20%, 94.99%    { fill: #161b22; }
-  95.00%               { fill: #161b22; }
-  97.00%               { fill: #006d32; }
-  99.00%, 100%         { fill: #006d32; }
-}
-#sq_47_4 {
-  animation: eat_47_4 14s linear infinite;
-}
-
-
-@keyframes eat_48_6 {
-  0%, 60.99% { fill: #39d353; }
-  61.00%            { fill: #ffffff; }
-  61.60%            { fill: #f1e05a; }
-  62.20%, 94.99%    { fill: #161b22; }
-  95.00%               { fill: #161b22; }
-  97.00%               { fill: #006d32; }
-  99.00%, 100%         { fill: #39d353; }
-}
-#sq_48_6 {
-  animation: eat_48_6 14s linear infinite;
-}
-
-
-@keyframes eat_48_5 {
-  0%, 61.99% { fill: #006d32; }
-  62.00%            { fill: #ffffff; }
-  62.60%            { fill: #f1e05a; }
-  63.20%, 94.99%    { fill: #161b22; }
-  95.00%               { fill: #161b22; }
-  97.00%               { fill: #006d32; }
-  99.00%, 100%         { fill: #006d32; }
-}
-#sq_48_5 {
-  animation: eat_48_5 14s linear infinite;
-}
-
-
-@keyframes eat_48_3 {
-  0%, 63.99% { fill: #26a641; }
-  64.00%            { fill: #ffffff; }
-  64.60%            { fill: #f1e05a; }
-  65.20%, 94.99%    { fill: #161b22; }
-  95.00%               { fill: #161b22; }
-  97.00%               { fill: #006d32; }
-  99.00%, 100%         { fill: #26a641; }
-}
-#sq_48_3 {
-  animation: eat_48_3 14s linear infinite;
-}
-
-
-@keyframes eat_48_2 {
-  0%, 64.99% { fill: #39d353; }
-  65.00%            { fill: #ffffff; }
-  65.60%            { fill: #f1e05a; }
-  66.20%, 94.99%    { fill: #161b22; }
-  95.00%               { fill: #161b22; }
-  97.00%               { fill: #006d32; }
-  99.00%, 100%         { fill: #39d353; }
-}
-#sq_48_2 {
-  animation: eat_48_2 14s linear infinite;
-}
-
-
-@keyframes eat_49_0 {
-  0%, 67.99% { fill: #0e4429; }
-  68.00%            { fill: #ffffff; }
-  68.60%            { fill: #f1e05a; }
-  69.20%, 94.99%    { fill: #161b22; }
-  95.00%               { fill: #161b22; }
-  97.00%               { fill: #006d32; }
-  99.00%, 100%         { fill: #0e4429; }
-}
-#sq_49_0 {
-  animation: eat_49_0 14s linear infinite;
-}
-
-
-@keyframes eat_49_1 {
-  0%, 68.99% { fill: #006d32; }
-  69.00%            { fill: #ffffff; }
-  69.60%            { fill: #f1e05a; }
-  70.20%, 94.99%    { fill: #161b22; }
-  95.00%               { fill: #161b22; }
-  97.00%               { fill: #006d32; }
-  99.00%, 100%         { fill: #006d32; }
-}
-#sq_49_1 {
-  animation: eat_49_1 14s linear infinite;
-}
-
-
-@keyframes eat_49_2 {
-  0%, 69.99% { fill: #0e4429; }
-  70.00%            { fill: #ffffff; }
-  70.60%            { fill: #f1e05a; }
-  71.20%, 94.99%    { fill: #161b22; }
-  95.00%               { fill: #161b22; }
-  97.00%               { fill: #006d32; }
-  99.00%, 100%         { fill: #0e4429; }
-}
-#sq_49_2 {
-  animation: eat_49_2 14s linear infinite;
-}
-
-
-@keyframes eat_49_3 {
-  0%, 70.99% { fill: #006d32; }
-  71.00%            { fill: #ffffff; }
-  71.60%            { fill: #f1e05a; }
-  72.20%, 94.99%    { fill: #161b22; }
-  95.00%               { fill: #161b22; }
-  97.00%               { fill: #006d32; }
-  99.00%, 100%         { fill: #006d32; }
-}
-#sq_49_3 {
-  animation: eat_49_3 14s linear infinite;
-}
-
-
-@keyframes eat_49_4 {
-  0%, 71.99% { fill: #0e4429; }
-  72.00%            { fill: #ffffff; }
-  72.60%            { fill: #f1e05a; }
-  73.20%, 94.99%    { fill: #161b22; }
-  95.00%               { fill: #161b22; }
-  97.00%               { fill: #006d32; }
-  99.00%, 100%         { fill: #0e4429; }
-}
-#sq_49_4 {
-  animation: eat_49_4 14s linear infinite;
-}
-
-
-@keyframes eat_50_5 {
-  0%, 75.99% { fill: #006d32; }
-  76.00%            { fill: #ffffff; }
-  76.60%            { fill: #f1e05a; }
-  77.20%, 94.99%    { fill: #161b22; }
-  95.00%               { fill: #161b22; }
-  97.00%               { fill: #006d32; }
-  99.00%, 100%         { fill: #006d32; }
-}
-#sq_50_5 {
-  animation: eat_50_5 14s linear infinite;
-}
-
-
-@keyframes eat_50_4 {
-  0%, 76.99% { fill: #0e4429; }
-  77.00%            { fill: #ffffff; }
-  77.60%            { fill: #f1e05a; }
-  78.20%, 94.99%    { fill: #161b22; }
-  95.00%               { fill: #161b22; }
-  97.00%               { fill: #006d32; }
-  99.00%, 100%         { fill: #0e4429; }
-}
-#sq_50_4 {
-  animation: eat_50_4 14s linear infinite;
-}
-
-
-@keyframes eat_50_2 {
-  0%, 78.99% { fill: #26a641; }
-  79.00%            { fill: #ffffff; }
-  79.60%            { fill: #f1e05a; }
-  80.20%, 94.99%    { fill: #161b22; }
-  95.00%               { fill: #161b22; }
-  97.00%               { fill: #006d32; }
-  99.00%, 100%         { fill: #26a641; }
-}
-#sq_50_2 {
-  animation: eat_50_2 14s linear infinite;
-}
-
-
-@keyframes eat_50_1 {
-  0%, 79.99% { fill: #006d32; }
-  80.00%            { fill: #ffffff; }
-  80.60%            { fill: #f1e05a; }
-  81.20%, 94.99%    { fill: #161b22; }
-  95.00%               { fill: #161b22; }
-  97.00%               { fill: #006d32; }
-  99.00%, 100%         { fill: #006d32; }
-}
-#sq_50_1 {
-  animation: eat_50_1 14s linear infinite;
-}
-
-
-@keyframes eat_50_0 {
-  0%, 80.99% { fill: #26a641; }
-  81.00%            { fill: #ffffff; }
-  81.60%            { fill: #f1e05a; }
-  82.20%, 94.99%    { fill: #161b22; }
-  95.00%               { fill: #161b22; }
-  97.00%               { fill: #006d32; }
-  99.00%, 100%         { fill: #26a641; }
-}
-#sq_50_0 {
-  animation: eat_50_0 14s linear infinite;
-}
-
-
-@keyframes eat_51_0 {
-  0%, 81.99% { fill: #39d353; }
-  82.00%            { fill: #ffffff; }
-  82.60%            { fill: #f1e05a; }
-  83.20%, 94.99%    { fill: #161b22; }
-  95.00%               { fill: #161b22; }
-  97.00%               { fill: #006d32; }
-  99.00%, 100%         { fill: #39d353; }
-}
-#sq_51_0 {
-  animation: eat_51_0 14s linear infinite;
-}
-
-
-@keyframes eat_51_1 {
-  0%, 82.99% { fill: #39d353; }
-  83.00%            { fill: #ffffff; }
-  83.60%            { fill: #f1e05a; }
-  84.20%, 94.99%    { fill: #161b22; }
-  95.00%               { fill: #161b22; }
-  97.00%               { fill: #006d32; }
-  99.00%, 100%         { fill: #39d353; }
-}
-#sq_51_1 {
-  animation: eat_51_1 14s linear infinite;
-}
-
-
-@keyframes eat_51_2 {
-  0%, 83.99% { fill: #26a641; }
-  84.00%            { fill: #ffffff; }
-  84.60%            { fill: #f1e05a; }
-  85.20%, 94.99%    { fill: #161b22; }
-  95.00%               { fill: #161b22; }
-  97.00%               { fill: #006d32; }
-  99.00%, 100%         { fill: #26a641; }
-}
-#sq_51_2 {
-  animation: eat_51_2 14s linear infinite;
-}
-
-
-@keyframes eat_51_3 {
-  0%, 84.99% { fill: #39d353; }
-  85.00%            { fill: #ffffff; }
-  85.60%            { fill: #f1e05a; }
-  86.20%, 94.99%    { fill: #161b22; }
-  95.00%               { fill: #161b22; }
-  97.00%               { fill: #006d32; }
-  99.00%, 100%         { fill: #39d353; }
-}
-#sq_51_3 {
-  animation: eat_51_3 14s linear infinite;
 }
 
     </style>
@@ -483,18 +230,18 @@
   <rect x="0.5" y="0.5" width="879" height="204" rx="8" fill="url(#bgGrad)" stroke="#30363d" stroke-width="1"/>
   <!-- Header Bar -->
   <g transform="translate(25, 26)">
-    <!-- Mini Among Us Icon -->
+    <!-- Mini Impostor Icon -->
     <g transform="translate(0, 0)">
       <rect x="-3" y="-2" width="3" height="7" rx="1" fill="#b91c1c" stroke="#450a0a" stroke-width="0.8"/>
       <path d="M -1 -4 C -1 -6, 5 -6, 5 -4 L 5 4 C 5 5, 4 5, 3 5 L 3 7 C 3 8, 2 8, 2 7 L 2 5 L 1 5 L 1 7 C 1 8, 0 8, 0 7 L 0 5 C -0.5 5, -1 4.5, -1 4 Z" fill="#ef4444" stroke="#450a0a" stroke-width="0.8"/>
       <rect x="1" y="-3" width="4.5" height="3" rx="1.5" fill="#38bdf8" stroke="#450a0a" stroke-width="0.6"/>
     </g>
-    <text x="14" y="2" fill="#e6edf3" font-size="11" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" letter-spacing="0.5">AMONG US <tspan fill="#7d8590" font-weight="400">// GRID RUNNER (SNAKE EAT)</tspan></text>
+    <text x="14" y="2" fill="#e6edf3" font-size="11" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" letter-spacing="0.5">AMONG US <tspan fill="#7d8590" font-weight="400">// TACTICAL INCINERATOR (DELAYED FIRE)</tspan></text>
   </g>
   <g transform="translate(685, 24)" class="badge-pulse">
-    <rect x="0" y="-10" width="168" height="20" rx="10" fill="#161b22" stroke="#238636" stroke-width="1"/>
-    <circle cx="10" cy="0" r="3.5" fill="#39d353"/>
-    <text x="20" y="3.5" fill="#39d353" font-size="9" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" letter-spacing="0.5">DEVOURING GRID [OK]</text>
+    <rect x="0" y="-10" width="168" height="20" rx="10" fill="#161b22" stroke="#da3633" stroke-width="1"/>
+    <circle cx="10" cy="0" r="3.5" fill="#ff4d4d"/>
+    <text x="20" y="3.5" fill="#ff4d4d" font-size="9" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" letter-spacing="0.5">TARGET FIRING [ACTIVE]</text>
   </g>
   <!-- Month Labels -->
   <g fill="#7d8590" font-size="9" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
@@ -691,7 +438,7 @@
     <rect x="408" y="62" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="408" y="76" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="408" y="90" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect id="sq_24_3" x="408" y="104" width="10" height="10" rx="2" fill="#0e4429"/>
+    <rect x="408" y="104" width="10" height="10" rx="2" fill="#0e4429"/>
     <rect x="408" y="118" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="408" y="132" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="408" y="146" width="10" height="10" rx="2" fill="#161b22"/>
@@ -774,7 +521,7 @@
     <rect x="562" y="146" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="576" y="62" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="576" y="76" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect id="sq_36_2" x="576" y="90" width="10" height="10" rx="2" fill="#006d32"/>
+    <rect x="576" y="90" width="10" height="10" rx="2" fill="#006d32"/>
     <rect x="576" y="104" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="576" y="118" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="576" y="132" width="10" height="10" rx="2" fill="#161b22"/>
@@ -818,7 +565,7 @@
     <rect x="660" y="76" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="660" y="90" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="660" y="104" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect id="sq_42_4" x="660" y="118" width="10" height="10" rx="2" fill="#006d32"/>
+    <rect x="660" y="118" width="10" height="10" rx="2" fill="#006d32"/>
     <rect x="660" y="132" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="660" y="146" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="674" y="62" width="10" height="10" rx="2" fill="#161b22"/>
@@ -845,72 +592,117 @@
     <rect x="716" y="62" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="716" y="76" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="716" y="90" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect id="sq_46_3" x="716" y="104" width="10" height="10" rx="2" fill="#006d32"/>
+    <rect x="716" y="104" width="10" height="10" rx="2" fill="#006d32"/>
     <rect x="716" y="118" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect id="sq_46_5" x="716" y="132" width="10" height="10" rx="2" fill="#26a641"/>
+    <rect x="716" y="132" width="10" height="10" rx="2" fill="#26a641"/>
     <rect x="716" y="146" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="730" y="62" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect id="sq_47_1" x="730" y="76" width="10" height="10" rx="2" fill="#0e4429"/>
-    <rect id="sq_47_2" x="730" y="90" width="10" height="10" rx="2" fill="#26a641"/>
+    <rect x="730" y="76" width="10" height="10" rx="2" fill="#0e4429"/>
+    <rect id="tgt_47_2" x="730" y="90" width="10" height="10" rx="2" fill="#26a641"/>
     <rect x="730" y="104" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect id="sq_47_4" x="730" y="118" width="10" height="10" rx="2" fill="#006d32"/>
+    <rect x="730" y="118" width="10" height="10" rx="2" fill="#006d32"/>
     <rect x="730" y="132" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="730" y="146" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="744" y="62" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="744" y="76" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect id="sq_48_2" x="744" y="90" width="10" height="10" rx="2" fill="#39d353"/>
-    <rect id="sq_48_3" x="744" y="104" width="10" height="10" rx="2" fill="#26a641"/>
+    <rect x="744" y="90" width="10" height="10" rx="2" fill="#39d353"/>
+    <rect x="744" y="104" width="10" height="10" rx="2" fill="#26a641"/>
     <rect x="744" y="118" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect id="sq_48_5" x="744" y="132" width="10" height="10" rx="2" fill="#006d32"/>
-    <rect id="sq_48_6" x="744" y="146" width="10" height="10" rx="2" fill="#39d353"/>
-    <rect id="sq_49_0" x="758" y="62" width="10" height="10" rx="2" fill="#0e4429"/>
-    <rect id="sq_49_1" x="758" y="76" width="10" height="10" rx="2" fill="#006d32"/>
-    <rect id="sq_49_2" x="758" y="90" width="10" height="10" rx="2" fill="#0e4429"/>
-    <rect id="sq_49_3" x="758" y="104" width="10" height="10" rx="2" fill="#006d32"/>
-    <rect id="sq_49_4" x="758" y="118" width="10" height="10" rx="2" fill="#0e4429"/>
+    <rect x="744" y="132" width="10" height="10" rx="2" fill="#006d32"/>
+    <rect id="tgt_48_6" x="744" y="146" width="10" height="10" rx="2" fill="#39d353"/>
+    <rect x="758" y="62" width="10" height="10" rx="2" fill="#0e4429"/>
+    <rect x="758" y="76" width="10" height="10" rx="2" fill="#006d32"/>
+    <rect x="758" y="90" width="10" height="10" rx="2" fill="#0e4429"/>
+    <rect id="tgt_49_3" x="758" y="104" width="10" height="10" rx="2" fill="#006d32"/>
+    <rect x="758" y="118" width="10" height="10" rx="2" fill="#0e4429"/>
     <rect x="758" y="132" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="758" y="146" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect id="sq_50_0" x="772" y="62" width="10" height="10" rx="2" fill="#26a641"/>
-    <rect id="sq_50_1" x="772" y="76" width="10" height="10" rx="2" fill="#006d32"/>
-    <rect id="sq_50_2" x="772" y="90" width="10" height="10" rx="2" fill="#26a641"/>
+    <rect x="772" y="62" width="10" height="10" rx="2" fill="#26a641"/>
+    <rect x="772" y="76" width="10" height="10" rx="2" fill="#006d32"/>
+    <rect x="772" y="90" width="10" height="10" rx="2" fill="#26a641"/>
     <rect x="772" y="104" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect id="sq_50_4" x="772" y="118" width="10" height="10" rx="2" fill="#0e4429"/>
-    <rect id="sq_50_5" x="772" y="132" width="10" height="10" rx="2" fill="#006d32"/>
+    <rect x="772" y="118" width="10" height="10" rx="2" fill="#0e4429"/>
+    <rect x="772" y="132" width="10" height="10" rx="2" fill="#006d32"/>
     <rect x="772" y="146" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect id="sq_51_0" x="786" y="62" width="10" height="10" rx="2" fill="#39d353"/>
-    <rect id="sq_51_1" x="786" y="76" width="10" height="10" rx="2" fill="#39d353"/>
-    <rect id="sq_51_2" x="786" y="90" width="10" height="10" rx="2" fill="#26a641"/>
-    <rect id="sq_51_3" x="786" y="104" width="10" height="10" rx="2" fill="#39d353"/>
+    <rect x="786" y="62" width="10" height="10" rx="2" fill="#39d353"/>
+    <rect id="tgt_51_1" x="786" y="76" width="10" height="10" rx="2" fill="#39d353"/>
+    <rect x="786" y="90" width="10" height="10" rx="2" fill="#26a641"/>
+    <rect x="786" y="104" width="10" height="10" rx="2" fill="#39d353"/>
     <rect x="786" y="118" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="786" y="132" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="786" y="146" width="10" height="10" rx="2" fill="#161b22"/>
   </g>
-  <!-- Snake Body Segment 3 -->
-  <g class="snake-seg-3">
-    <circle cx="0" cy="0" r="3" fill="#f1e05a" stroke="#0d1117" stroke-width="1.2"/>
-  </g>
-  <!-- Snake Body Segment 2 -->
-  <g class="snake-seg-2">
-    <circle cx="0" cy="0" r="3.8" fill="#2ea043" stroke="#0d1117" stroke-width="1.2"/>
-  </g>
-  <!-- Snake Body Segment 1: Cyan Mini Crewmate -->
-  <g class="snake-seg-1">
-    <circle cx="0" cy="0" r="4.6" fill="#38bdf8" stroke="#0d1117" stroke-width="1.5"/>
-    <ellipse cx="1" cy="-0.5" rx="2.5" ry="1.2" fill="#ffffff" opacity="0.8"/>
-  </g>
-  <!-- Leading Head: Red Among Us Crewmate -->
-  <g class="impostor-head">
-    <g class="waddling">
-      <rect x="-9" y="-6" width="4.5" height="11" rx="2" fill="#991b1b" stroke="#450a0a" stroke-width="1.5"/>
-      <path d="M -5 -9 C -5 -13, 5 -13, 5 -9 L 5 4 C 5 6, 4 6.5, 3 6.5 L 3 9 C 3 10.5, 1 10.5, 1 9 L 1 6 L -1 6 L -1 9 C -1 10.5, -3 10.5, -3 9 L -3 6.5 C -4 6.5, -5 6, -5 4 Z" fill="url(#impostorRedGrad)" stroke="#450a0a" stroke-width="1.8" stroke-linejoin="round"/>
-      <rect x="-1" y="-7.5" width="8.5" height="6" rx="3" fill="url(#visorGrad)" stroke="#450a0a" stroke-width="1.4"/>
-      <ellipse cx="3.2" cy="-6" rx="2.2" ry="1" fill="#ffffff" opacity="0.85" transform="rotate(-10 3.2 -6)"/>
+  <!-- Stationed Impostor Sentry at (570, 92) -->
+  <g transform="translate(570, 92)">
+    <!-- Backpack -->
+    <rect x="-9" y="-6" width="4.5" height="13" rx="2" fill="#991b1b" stroke="#450a0a" stroke-width="1.5"/>
+    <path d="M -5 -9 C -5 -13, 5 -13, 5 -9 L 5 6 C 5 8, 4 8.5, 3 8.5 L 3 11 C 3 12.5, 1 12.5, 1 11 L 1 8 L -1 8 L -1 11 C -1 12.5, -3 12.5, -3 11 L -3 8.5 C -4 8.5, -5 8, -5 6 Z" fill="url(#impostorRedGrad)" stroke="#450a0a" stroke-width="1.8" stroke-linejoin="round"/>
+    <rect x="-1" y="-7.5" width="8.5" height="6.5" rx="3.2" fill="url(#visorGrad)" stroke="#450a0a" stroke-width="1.4"/>
+    <ellipse cx="3.2" cy="-5.5" rx="2.2" ry="1.1" fill="#ffffff" opacity="0.85" transform="rotate(-10 3.2 -5.5)"/>
+    <!-- Blaster Cannon -->
+    <g class="impostor-blaster" transform="translate(6, 12)">
+      <rect x="0" y="-3.5" width="12" height="7" rx="1.5" fill="#1e293b" stroke="#0f172a" stroke-width="1.4"/>
+      <rect x="12" y="-4" width="6" height="8" rx="1" fill="#475569" stroke="#0f172a" stroke-width="1.2"/>
+      <rect x="8" y="-4" width="2" height="8" fill="#f97316"/>
     </g>
+  </g>
+  <!-- Clean Muzzle Flash (Flases at exact fire moments) -->
+  <g class="muzzle-flash" filter="url(#bulletGlow)">
+    <polygon points="0,-7 2,-2 7,0 2,2 0,7 -2,2 -7,0 -2,-2" fill="#ffea00"/>
+    <circle cx="0" cy="0" r="2.5" fill="#ffffff"/>
+  </g>
+  <!-- Sequential Bullet 1 -->
+  <g class="bullet-1" filter="url(#bulletGlow)">
+    <path d="M -22 -2.5 Q -8 -4 8 0 Q -8 4 -22 2.5 Q -14 0 -22 -2.5 Z" fill="url(#fireTrailGrad)"/>
+    <polygon points="8,-6 10,-1.8 15,0 10,1.8 8,6 6.2,1.8 1,0 6.2,-1.8" fill="#ffea00"/>
+    <circle cx="8" cy="0" r="2.5" fill="#ffffff"/>
+  </g>
+  <!-- Sequential Bullet 2 -->
+  <g class="bullet-2" filter="url(#bulletGlow)">
+    <path d="M -22 -2.5 Q -8 -4 8 0 Q -8 4 -22 2.5 Q -14 0 -22 -2.5 Z" fill="url(#fireTrailGrad)"/>
+    <polygon points="8,-6 10,-1.8 15,0 10,1.8 8,6 6.2,1.8 1,0 6.2,-1.8" fill="#ffea00"/>
+    <circle cx="8" cy="0" r="2.5" fill="#ffffff"/>
+  </g>
+  <!-- Sequential Bullet 3 -->
+  <g class="bullet-3" filter="url(#bulletGlow)">
+    <path d="M -22 -2.5 Q -8 -4 8 0 Q -8 4 -22 2.5 Q -14 0 -22 -2.5 Z" fill="url(#fireTrailGrad)"/>
+    <polygon points="8,-6 10,-1.8 15,0 10,1.8 8,6 6.2,1.8 1,0 6.2,-1.8" fill="#ffea00"/>
+    <circle cx="8" cy="0" r="2.5" fill="#ffffff"/>
+  </g>
+  <!-- Sequential Bullet 4 -->
+  <g class="bullet-4" filter="url(#bulletGlow)">
+    <path d="M -22 -2.5 Q -8 -4 8 0 Q -8 4 -22 2.5 Q -14 0 -22 -2.5 Z" fill="url(#fireTrailGrad)"/>
+    <polygon points="8,-6 10,-1.8 15,0 10,1.8 8,6 6.2,1.8 1,0 6.2,-1.8" fill="#ffea00"/>
+    <circle cx="8" cy="0" r="2.5" fill="#ffffff"/>
+  </g>
+  <!-- Impact Spark Explosion 1 -->
+  <g class="detonation-1" filter="url(#bulletGlow)">
+    <polygon points="0,-12 3,-3 12,0 3,3 0,12 -3,3 -12,0 -3,-3" fill="#ffffff"/>
+    <polygon points="-7,-7 0,-2 7,-7 2,0 7,7 0,2 -7,7 -2,0" fill="#ffea00"/>
+    <circle cx="0" cy="0" r="4.5" fill="#ff4500" opacity="0.8"/>
+  </g>
+  <!-- Impact Spark Explosion 2 -->
+  <g class="detonation-2" filter="url(#bulletGlow)">
+    <polygon points="0,-12 3,-3 12,0 3,3 0,12 -3,3 -12,0 -3,-3" fill="#ffffff"/>
+    <polygon points="-7,-7 0,-2 7,-7 2,0 7,7 0,2 -7,7 -2,0" fill="#ffea00"/>
+    <circle cx="0" cy="0" r="4.5" fill="#ff4500" opacity="0.8"/>
+  </g>
+  <!-- Impact Spark Explosion 3 -->
+  <g class="detonation-3" filter="url(#bulletGlow)">
+    <polygon points="0,-12 3,-3 12,0 3,3 0,12 -3,3 -12,0 -3,-3" fill="#ffffff"/>
+    <polygon points="-7,-7 0,-2 7,-7 2,0 7,7 0,2 -7,7 -2,0" fill="#ffea00"/>
+    <circle cx="0" cy="0" r="4.5" fill="#ff4500" opacity="0.8"/>
+  </g>
+  <!-- Impact Spark Explosion 4 -->
+  <g class="detonation-4" filter="url(#bulletGlow)">
+    <polygon points="0,-12 3,-3 12,0 3,3 0,12 -3,3 -12,0 -3,-3" fill="#ffffff"/>
+    <polygon points="-7,-7 0,-2 7,-7 2,0 7,7 0,2 -7,7 -2,0" fill="#ffea00"/>
+    <circle cx="0" cy="0" r="4.5" fill="#ff4500" opacity="0.8"/>
   </g>
   <!-- Bottom Footer Bar -->
   <g transform="translate(72, 178)">
     <!-- Status Note -->
-    <text x="0" y="8" fill="#7d8590" font-size="9.5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Patrol Mode: <tspan fill="#39d353" font-weight="600">Devouring Green Nodes</tspan> &#8226; <tspan fill="#e6edf3">Snake Eat Loop (14s)</tspan></text>
+    <text x="0" y="8" fill="#7d8590" font-size="9.5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Mode: <tspan fill="#ff4d4d" font-weight="600">Sequential Sentry Fire</tspan> &#8226; <tspan fill="#e6edf3">1 Bullet Delay Loop (12s)</tspan></text>
     <!-- Legend -->
     <g transform="translate(630, 0)">
       <text x="-26" y="8" fill="#7d8590" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Less</text>
@@ -919,7 +711,8 @@
       <rect x="26" y="0" width="9" height="9" rx="2" fill="#006d32"/>
       <rect x="39" y="0" width="9" height="9" rx="2" fill="#26a641"/>
       <rect x="52" y="0" width="9" height="9" rx="2" fill="#39d353"/>
-      <text x="66" y="8" fill="#7d8590" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">More</text>
+      <rect x="68" y="0" width="9" height="9" rx="2" fill="#ff4500"/>
+      <text x="82" y="8" fill="#ff4500" font-size="8.5" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">BURNING &#128293;</text>
     </g>
   </g>
 </svg>

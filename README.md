@@ -120,9 +120,9 @@
 
 ## 📈 Activity & Development Velocity
 
-<!-- Among Us Crewmate Snake Eat Contributions Grid Animation -->
+<!-- Among Us Tactical Sentry Single Bullet Fire Animation -->
 <p align="center">
-  <img src="assets/among-us-sentry-fire.svg?v=5" width="100%" alt="Among Us Devouring Contributions Snake Eat Animation" />
+  <img src="assets/among-us-sentry-fire.svg?v=6" width="100%" alt="Among Us Tactical Sentry Single Bullet Delayed Fire Animation" />
 </p>
 
 <!-- Real-Time Auto-Updating GitHub Analytics & Streak Suite -->
