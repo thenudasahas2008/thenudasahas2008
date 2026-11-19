@@ -128,7 +128,7 @@
 
 <!-- Among Us Impostor Incinerating Contributions Animation -->
 <p align="center">
-  <img src="assets/among-us-contribution-fire.svg?v=2" width="100%" alt="Among Us Impostor Firing at Contributions" />
+  <img src="assets/among-us-contribution-fire.svg?v=3" width="100%" alt="Among Us Impostor Firing at Contributions" />
 </p>
 
 <!-- Developer Telemetry & Activity Dashboard -->
