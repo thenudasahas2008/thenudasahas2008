@@ -1,13 +1,13 @@
 <!-- ========================================================================= -->
-<!-- THENUDA SAHAS | CYBERSECURITY & SOFTWARE ENGINEERING PORTFOLIO -->
+<!-- THENUDA SAHAS SOORIYAARACHCHI | CYBERSECURITY & DIGITAL FORENSICS PORTFOLIO -->
 <!-- ========================================================================= -->
 
 <div align="center">
-  <!-- Dynamic Cybersecurity Gradient Banner -->
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=225&section=header&text=THENUDA%20SAHAS&fontSize=48&fontColor=E6FCFF&fontAlignY=36&desc=CYBERSECURITY%20%E2%80%A2%20NETWORK%20DEFENSE%20%E2%80%A2%20SOFTWARE%20ENGINEERING&descSize=13&descAlignY=58&color=0:020617,35:0B3D4F,70:00BFA6,100:22D3EE" width="100%" alt="Thenuda Sahas Header Banner" />
+  <!-- Dynamic Cybersecurity Waving Banner -->
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=230&section=header&text=THENUDA%20SAHAS&fontSize=48&fontColor=E6FCFF&fontAlignY=36&desc=CYBERSECURITY%20%7C%20DIGITAL%20FORENSICS%20%7C%20SOFTWARE%20ENGINEERING&descSize=13&descAlignY=58&color=0:020617,35:0B3D4F,70:00BFA6,100:22D3EE" width="100%" alt="Thenuda Sahas Header Banner" />
 
   <!-- Dynamic Typing Title -->
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=2500&pause=800&color=22D3EE&center=true&vCenter=true&repeat=true&width=780&height=50&lines=Computing+Student+%7C+Pearson+BTEC+HND+%F0%9F%8E%93;Cybersecurity+%26+Information+Security+Enthusiast+%F0%9F%9B%A1%EF%B8%8F;Defensive+Security+%26+Network+Protocol+Analysis+%F0%9F%94%8E;Python+Developer+%26+Security+Tool+Builder+%F0%9F%90%8D;Building+PromptSentry+%E2%80%A2+Securing+Systems+Every+Day+%E2%9A%A1" alt="Dynamic Typing Intro" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=2500&pause=800&color=22D3EE&center=true&vCenter=true&repeat=true&width=800&height=50&lines=Computing+Student+%7C+Pearson+BTEC+HND+%F0%9F%8E%93;Cybersecurity+%26+Digital+Forensics+Enthusiast+%F0%9F%94%8E;Defensive+Network+Security+%26+Packet+Analysis+%F0%9F%9B%A1%EF%B8%8F;Python+Developer+%E2%80%A2+Creator+of+PromptSentry+%E2%9A%A1;Digital+Evidence+Preservation+%26+Incident+Response+%F0%9F%94%90" alt="Dynamic Typing Intro" />
 
   <br />
 
@@ -20,49 +20,56 @@
   <br /><br />
 
   <!-- Live Status & Verification -->
-  <img src="https://img.shields.io/badge/STATUS-OPEN%20TO%20COLLABORATION-00BFA6?style=for-the-badge" alt="Status Badge" />
+  <img src="https://img.shields.io/badge/SPECIALIZATION-Cybersecurity%20%26%20Digital%20Forensics-0B3D4F?style=for-the-badge&logo=securityscorecard&logoColor=22D3EE" alt="Specialization" />
   <img src="https://hits.sh/github.com/thenudasahas2008.svg?style=for-the-badge&label=PROFILE%20VIEWS&color=0891B2" alt="Profile views" />
 </div>
 
 ---
 
-### 🖥️ System Terminal & Diagnostic (`whoami`)
+### 🖥️ Forensic & Security Terminal (`whoami`)
 
 ```bash
-╔═════════════════════════════════════════════════════════════════════════════════════════════╗
-║  sahas@cyber-station:~$ neofetch --profile                                                  ║
-║  -----------------------------------------------------------------------------------------  ║
-║  ● Identity      : Thenuda Sahas (thenudasahas2008)                                         ║
-║  ● Academic Base : Computing Student — Pearson BTEC Higher National Diploma (HND)           ║
-║  ● Regional Hub  : Colombo, Sri Lanka 🇱🇰                                                    ║
-║  ● Primary Core  : Cybersecurity • Defensive Network Security • Secure Software Development ║
-║  ● Target Scope  : Information Security, Threat Modeling, Web Security (OWASP Top 10)       ║
-║  ● Tech Stack    : Python, Bash, Linux (Kali/Ubuntu), Git, Wireshark, Web Engineering       ║
-║  ● Current Status: Actively Building Security Tools & Advancing Network Security Labs       ║
-║  ● Core Rule     : "Verify every packet. Hardening by design. Learn responsibly."           ║
-╚═════════════════════════════════════════════════════════════════════════════════════════════╝
+╔═════════════════════════════════════════════════════════════════════════════════════════════════╗
+║  ● ● ● sahas@forensics-station:~ (zsh)                                                         ║
+║  ---------------------------------------------------------------------------------------------  ║
+║  ● Full Name     : Thenuda Sahas Sooriyaarachchi                                                ║
+║  ● Academic Base : Computing Student — Pearson BTEC Higher National Diploma (HND)              ║
+║  ● Location      : Colombo, Sri Lanka 🇱🇰                                                        ║
+║  ● Field Focus   : Cybersecurity • Digital Forensics & Incident Response (DFIR) • Software Dev ║
+║  ● Technical Core: Packet Analysis • Evidence Integrity • Web Application Security • Python     ║
+║  ● OS Workspace  : Kali Linux (Security Testing) • Ubuntu LTS • Windows 11 (WSL2)               ║
+║  ● Security Code : "Verify integrity. Preserve the evidence. Harden every perimeter."           ║
+╚═════════════════════════════════════════════════════════════════════════════════════════════════╝
 ```
 
 ---
 
-## 🛡️ Security Specializations & Competencies
+## 🛡️ Core Pillars & Security Specializations
 
 <table>
   <tr>
-    <td width="50%" valign="top">
-      <h4>🌐 Network & Defensive Security</h4>
+    <td width="33.3%" valign="top">
+      <h4>🔍 Digital Forensics (DFIR)</h4>
       <ul>
-        <li><b>Packet Analysis:</b> Traffic capture & protocol inspection with Wireshark.</li>
-        <li><b>Network Architecture:</b> TCP/IP subnetting, firewalls, and routing fundamentals.</li>
-        <li><b>Defensive Hardening:</b> Principle of least privilege, Linux user permissions, and host defense.</li>
+        <li><b>Evidence Preservation:</b> Hash verification (MD5/SHA256) and chain of custody basics.</li>
+        <li><b>Log & Artifact Analysis:</b> Investigating authentication logs, system journals, and timeline forensics.</li>
+        <li><b>Incident Response:</b> Understanding breach indicators, post-incident triage, and threat mitigation.</li>
       </ul>
     </td>
-    <td width="50%" valign="top">
-      <h4>🔐 Application & Information Security</h4>
+    <td width="33.3%" valign="top">
+      <h4>🌐 Defensive Network Security</h4>
       <ul>
-        <li><b>Web Security:</b> Understanding OWASP Top 10 vulnerabilities (SQLi, XSS, CSRF, IDOR).</li>
-        <li><b>Responsible Hacking:</b> Penetration testing practiced strictly in authorized lab environments.</li>
-        <li><b>AI & LLM Security:</b> Heuristic security scanning and prompt-injection defense with <i>PromptSentry</i>.</li>
+        <li><b>Packet Capture:</b> Deep protocol analysis using Wireshark and Tshark.</li>
+        <li><b>Network Architecture:</b> Subnetting, firewall rules, TCP/IP handshakes, and routing.</li>
+        <li><b>Host Hardening:</b> Linux security permissions, port auditing, and service isolation.</li>
+      </ul>
+    </td>
+    <td width="33.3%" valign="top">
+      <h4>🔐 Application & AI Security</h4>
+      <ul>
+        <li><b>OWASP Top 10:</b> Researching injection flaws, broken access control, and API weaknesses.</li>
+        <li><b>LLM Guardrails:</b> Building input sanitization & prompt-injection defense with <i>PromptSentry</i>.</li>
+        <li><b>Secure Coding:</b> Developing modular, defensively structured Python and Bash applications.</li>
       </ul>
     </td>
   </tr>
@@ -70,32 +77,50 @@
 
 ---
 
-## 🧰 Technical Arsenal & Tooling
+## 🧰 Technical Arsenal & Tooling Matrix
 
 <div align="center">
 
-| Domain | Technologies & Frameworks |
+| Domain | Technologies & Environments |
 | :--- | :--- |
-| **Operating Systems & Shell** | <img src="https://skillicons.dev/icons?i=linux,kali,ubuntu,windows,bash,powershell&theme=dark" height="38" alt="OS and Shell" /> |
-| **Languages & Scripting** | <img src="https://skillicons.dev/icons?i=python,c,cpp,js,html,css&theme=dark" height="38" alt="Languages" /> |
-| **Tools & Infrastructure** | <img src="https://skillicons.dev/icons?i=git,github,vscode,docker,postman,cloudflare&theme=dark" height="38" alt="Tools" /> |
+| **Operating Systems & Shell** | <img src="https://skillicons.dev/icons?i=linux,kali,ubuntu,debian,windows,bash,powershell&theme=dark" height="38" alt="OS and Shell" /> |
+| **Development & Scripting** | <img src="https://skillicons.dev/icons?i=python,c,cpp,js,html,css&theme=dark" height="38" alt="Languages" /> |
+| **Security & Developer Tools** | <img src="https://skillicons.dev/icons?i=git,github,vscode,docker,postman,cloudflare&theme=dark" height="38" alt="Tools" /> |
 
 </div>
 
-<p align="center"><i>Constantly updating my technical capabilities through hands-on lab experiments and real-world projects.</i></p>
+<p align="center">
+  <img src="https://img.shields.io/badge/FORENSICS-Digital%20Evidence%20Preservation-0B3D4F?style=for-the-badge&logo=target&logoColor=22D3EE" alt="Forensics Badge" />
+  <img src="https://img.shields.io/badge/NETWORK-Packet%20Inspection%20%26%20Firewalls-123344?style=for-the-badge&logo=wireshark&logoColor=67E8F9" alt="Network Badge" />
+  <img src="https://img.shields.io/badge/AI%20SECURITY-PromptSentry%20Defense-123C35?style=for-the-badge&logo=shield&logoColor=6EE7B7" alt="AI Security Badge" />
+</p>
 
 ---
 
 ## 🚀 Featured Engineering Projects
 
-<div align="center">
-  <a href="https://github.com/thenudasahas2008/PromptSentry">
-    <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=thenudasahas2008&repo=PromptSentry&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=00BFA6" alt="PromptSentry Project" />
-  </a>
-  <a href="https://github.com/thenudasahas2008/Baduwa">
-    <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=thenudasahas2008&repo=Baduwa&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=00BFA6" alt="Baduwa Discord Bot" />
-  </a>
-</div>
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <div align="center">
+        <a href="https://github.com/thenudasahas2008/PromptSentry">
+          <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=thenudasahas2008&repo=PromptSentry&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=00BFA6" alt="PromptSentry Project" />
+        </a>
+      </div>
+      <p><b>PromptSentry</b> is an AI security firewall and heuristic prompt-injection defense gateway designed to protect LLM pipelines against adversarial inputs, jailbreaks, and sensitive data leakage.</p>
+      <p><code>Python</code> • <code>AI Safety</code> • <code>Heuristic Defense</code> • <code>Input Validation</code></p>
+    </td>
+    <td width="50%" valign="top">
+      <div align="center">
+        <a href="https://github.com/thenudasahas2008/Baduwa">
+          <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=thenudasahas2008&repo=Baduwa&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=00BFA6" alt="Baduwa Discord Bot" />
+        </a>
+      </div>
+      <p><b>Baduwa (ZYRO)</b> is a 24/7 high-availability Discord audio automation and music bot featuring interactive in-Discord button controls, auto-reconnection, and slash command integration.</p>
+      <p><code>Python</code> • <code>Discord API</code> • <code>Asyncio</code> • <code>Media Streaming</code></p>
+    </td>
+  </tr>
+</table>
 
 <div align="center">
   <br />
@@ -137,14 +162,15 @@ MISSION TIMELINE [2026 - 2027]:
 │   ├── Information Systems & Secure Database Architecture (Active)
 │   └── Software Engineering & Object-Oriented Design (Completed)
 │
-├── [SECURITY LABS] Hands-on Practical Exploitation & Defense
-│   ├── Linux Hardening, Privilege Escalation & Bash Automation (Active)
-│   ├── OWASP Web Application Security & API Vulnerability Labs (In Progress)
-│   └── Packet Sniffing, Threat Intelligence & Heuristic Analysis (Active)
+├── [SECURITY & DFIR LABS] Practical Exploitation, Forensics & Defense
+│   ├── Digital Forensics Artifacts & Evidence Preservation Methodology
+│   ├── Linux Hardening, Privilege Escalation & Bash Automation
+│   ├── OWASP Web Application Security & API Vulnerability Labs
+│   └── Wireshark Packet Inspection & Network Forensic Triage
 │
 └── [TARGET CERTIFICATIONS]
-    ├── CompTIA Security+ (Preparing)
-    └── eJPT / Certified Ethical Hacker Practical (Roadmap)
+    ├── CompTIA Security+ (In Preparation)
+    └── eJPT / Certified Digital Forensics Examiner (Roadmap)
 ```
 
 ---
