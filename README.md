@@ -17,9 +17,8 @@
   <a href="#-technical-arsenal--tooling-matrix"><img src="https://img.shields.io/badge/Tech_Arsenal-0D1117?style=flat-square&logo=target&logoColor=22D3EE" alt="Arsenal" /></a>
   <a href="#-featured-projects"><img src="https://img.shields.io/badge/Projects-0D1117?style=flat-square&logo=github&logoColor=22D3EE" alt="Projects" /></a>
   <a href="#-activity--development-velocity"><img src="https://img.shields.io/badge/Analytics-0D1117?style=flat-square&logo=chartdotjs&logoColor=22D3EE" alt="Analytics" /></a>
-  <a href="#-live-cyber-defense--network-telemetry"><img src="https://img.shields.io/badge/Telemetry-0D1117?style=flat-square&logo=wireshark&logoColor=22D3EE" alt="Telemetry" /></a>
   <a href="#-strategic-roadmap--certifications-2026---2027"><img src="https://img.shields.io/badge/Roadmap-0D1117?style=flat-square&logo=git&logoColor=22D3EE" alt="Roadmap" /></a>
-  <a href="#-encrypted-uplink--tactical-communications"><img src="https://img.shields.io/badge/Comms-0D1117?style=flat-square&logo=signal&logoColor=22D3EE" alt="Comms" /></a>
+  <a href="#-encrypted-uplink--direct-communications"><img src="https://img.shields.io/badge/Comms-0D1117?style=flat-square&logo=signal&logoColor=22D3EE" alt="Comms" /></a>
 
   <br /><br />
 
@@ -139,18 +138,10 @@
 
 ---
 
-## 📡 Live Cyber Defense & Network Telemetry
-
-<p align="center">
-  <img src="assets/cyber-defense-matrix.svg?v=1" width="100%" alt="Real-Time Network Packet and Defense Telemetry" />
-</p>
-
----
-
 ## 🎯 Strategic Roadmap & Certifications (2026 - 2027)
 
 <p align="center">
-  <img src="assets/animated-cyber-roadmap.svg?v=1" width="100%" alt="Strategic Academic and Certification Roadmap" />
+  <img src="assets/clean-cyber-roadmap.svg?v=1" width="100%" alt="Strategic Academic and Certification Roadmap" />
 </p>
 
 <div align="center">
@@ -162,21 +153,21 @@
 
 ---
 
-## 📡 Encrypted Uplink & Tactical Communications
+## 📡 Encrypted Uplink & Direct Communications
 
 <p align="center">
-  <img src="assets/cyber-uplink-dock.svg?v=1" width="100%" alt="Encrypted Communications and Tactical Uplink Dock" />
+  <img src="assets/clean-cyber-comms.svg?v=1" width="100%" alt="Direct Communications and Verified Channels" />
 </p>
 
 <!-- 100% Clickable One-Click Dispatch Badges -->
 <p align="center">
-  <a href="mailto:sahas.thenu@gmail.com"><img src="https://img.shields.io/badge/DISPATCH%20EMAIL-sahas.thenu%40gmail.com-0D1117?style=for-the-badge&logo=gmail&logoColor=22D3EE" alt="Email" /></a>
+  <a href="mailto:sahas.thenu@gmail.com"><img src="https://img.shields.io/badge/EMAIL-sahas.thenu%40gmail.com-0D1117?style=for-the-badge&logo=gmail&logoColor=22D3EE" alt="Email" /></a>
   &nbsp;&nbsp;
-  <a href="https://www.thenudasahas.site/"><img src="https://img.shields.io/badge/OFFICIAL%20PORTFOLIO-thenudasahas.site-0D1117?style=for-the-badge&logo=googlechrome&logoColor=00C7B7" alt="Portfolio" /></a>
+  <a href="https://www.thenudasahas.site/"><img src="https://img.shields.io/badge/PORTFOLIO-thenudasahas.site-0D1117?style=for-the-badge&logo=googlechrome&logoColor=22D3EE" alt="Portfolio" /></a>
   <br /><br />
-  <a href="https://github.com/thenudasahas2008"><img src="https://img.shields.io/badge/GITHUB%20VAULT-thenudasahas2008-0D1117?style=for-the-badge&logo=github&logoColor=58A6FF" alt="GitHub" /></a>
+  <a href="https://github.com/thenudasahas2008"><img src="https://img.shields.io/badge/GITHUB-thenudasahas2008-0D1117?style=for-the-badge&logo=github&logoColor=22D3EE" alt="GitHub" /></a>
   &nbsp;&nbsp;
-  <a href="https://discordapp.com/users/zyrox_01xi"><img src="https://img.shields.io/badge/SECURE%20DISCORD-zyrox__01xi-0D1117?style=for-the-badge&logo=discord&logoColor=A371F7" alt="Discord" /></a>
+  <a href="https://discordapp.com/users/zyrox_01xi"><img src="https://img.shields.io/badge/DISCORD-zyrox__01xi-0D1117?style=for-the-badge&logo=discord&logoColor=22D3EE" alt="Discord" /></a>
 </p>
 
 <div align="center">

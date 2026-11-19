@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 205" width="100%" height="100%" fill="none">
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, "Fira Code", Menlo, monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+
+      @keyframes statusPulse {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 1; filter: drop-shadow(0 0 5px #39D353); }
+      }
+      .beacon {
+        animation: statusPulse 2s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Outer Clean HUD Container -->
+  <rect x="1.5" y="1.5" width="877" height="202" rx="10" fill="#0D1117" stroke="#30363D" stroke-width="1.3" />
+
+  <!-- Top Tactical Header Bar -->
+  <path d="M 1.5 10 A 8.5 8.5 0 0 1 10 1.5 L 870 1.5 A 8.5 8.5 0 0 1 878.5 10 L 878.5 38 L 1.5 38 Z" fill="#161B22" />
+  <line x1="1.5" y1="38" x2="878.5" y2="38" stroke="#30363D" stroke-width="1" />
+
+  <!-- Window Traffic Lights (Unified Clean Slate & Cyan) -->
+  <circle cx="22" cy="20" r="4.5" fill="#30363D" />
+  <circle cx="38" cy="20" r="4.5" fill="#30363D" />
+  <circle cx="54" cy="20" r="4.5" fill="#22D3EE" />
+
+  <!-- Header Title (Large & Bold Cyan) -->
+  <text x="76" y="24" class="mono" font-size="12" font-weight="700" fill="#22D3EE">
+    THENUDA SAHAS // DIRECT COMMUNICATIONS &amp; VERIFIED CHANNELS
+  </text>
+
+  <!-- Live Status Beacon Right -->
+  <rect x="710" y="10" width="150" height="20" rx="10" fill="#0E4429" stroke="#238636" stroke-width="1" />
+  <circle cx="722" cy="20" r="3.5" fill="#39D353" class="beacon" />
+  <text x="732" y="24" class="mono" font-size="9.5" font-weight="700" fill="#39D353">CHANNELS LIVE [READY]</text>
+
+  <!-- ==================== 2x2 COMMUNICATIONS GRID ==================== -->
+
+  <!-- PORTAL 1: EMAIL -->
+  <g transform="translate(20, 50)">
+    <rect width="410" height="74" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1" />
+
+    <text x="18" y="22" class="mono" font-size="10" font-weight="700" fill="#22D3EE">01 // DIRECT EMAIL</text>
+    <rect x="306" y="10" width="88" height="18" rx="4" fill="#0D1117" stroke="#22D3EE" stroke-width="0.8" />
+    <text x="350" y="22" class="mono" font-size="8.5" font-weight="700" fill="#22D3EE" text-anchor="middle">SLA &lt; 24H</text>
+
+    <!-- Large, Clear, Readable Address -->
+    <text x="18" y="47" class="sans" font-size="15.5" font-weight="700" fill="#FFFFFF">sahas.thenu@gmail.com</text>
+    <text x="18" y="63" class="sans" font-size="11.5" fill="#8B949E">PGP / GPG Encryption Supported</text>
+  </g>
+
+  <!-- PORTAL 2: WEBSITE -->
+  <g transform="translate(450, 50)">
+    <rect width="410" height="74" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1" />
+
+    <text x="18" y="22" class="mono" font-size="10" font-weight="700" fill="#22D3EE">02 // OFFICIAL WEBSITE</text>
+    <rect x="296" y="10" width="98" height="18" rx="4" fill="#0D1117" stroke="#22D3EE" stroke-width="0.8" />
+    <text x="345" y="22" class="mono" font-size="8.5" font-weight="700" fill="#22D3EE" text-anchor="middle">PRODUCTION SSL</text>
+
+    <!-- Large, Clear Address -->
+    <text x="18" y="47" class="sans" font-size="15.5" font-weight="700" fill="#FFFFFF">https://thenudasahas.site</text>
+    <text x="18" y="63" class="sans" font-size="11.5" fill="#8B949E">Research Portfolio &amp; Project Catalog</text>
+  </g>
+
+  <!-- PORTAL 3: GITHUB -->
+  <g transform="translate(20, 134)">
+    <rect width="410" height="34" rx="6" fill="#161B22" stroke="#30363D" stroke-width="1" />
+    <text x="16" y="22" class="mono" font-size="11" font-weight="700" fill="#22D3EE">03 // GITHUB :</text>
+    <text x="120" y="22" class="mono" font-size="13" font-weight="700" fill="#FFFFFF">@thenudasahas2008</text>
+    <text x="394" y="22" class="mono" font-size="10" font-weight="600" fill="#8B949E" text-anchor="end">OPEN SOURCE VAULT</text>
+  </g>
+
+  <!-- PORTAL 4: DISCORD -->
+  <g transform="translate(450, 134)">
+    <rect width="410" height="34" rx="6" fill="#161B22" stroke="#30363D" stroke-width="1" />
+    <text x="16" y="22" class="mono" font-size="11" font-weight="700" fill="#22D3EE">04 // DISCORD :</text>
+    <text x="130" y="22" class="mono" font-size="13" font-weight="700" fill="#FFFFFF">zyrox_01xi</text>
+    <text x="394" y="22" class="mono" font-size="10" font-weight="600" fill="#8B949E" text-anchor="end">AVAILABLE FOR COLLAB</text>
+  </g>
+
+  <!-- Bottom Command Line (Clear, No Overlapping Wave!) -->
+  <line x1="20" y1="178" x2="860" y2="178" stroke="#21262D" stroke-width="1" />
+
+  <g transform="translate(24, 194)" class="mono">
+    <text x="0" y="0" font-size="11" fill="#22D3EE" font-weight="700">
+      $ comms --status=active --handshake=verified
+    </text>
+    <text x="832" y="0" font-size="11" font-weight="700" fill="#39D353" text-anchor="end">
+      [ENCRYPTION: SHA-256 • LK SAFE HARBOR ACTIVE]
+    </text>
+  </g>
+</svg>
