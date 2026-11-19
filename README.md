@@ -12,7 +12,7 @@
   <br />
 
   <!-- Quick Navigation Pills -->
-  <a href="#-forensic--security-terminal-whoami"><img src="https://img.shields.io/badge/Terminal-0D1117?style=flat-square&logo=gnubash&logoColor=22D3EE" alt="Terminal" /></a>
+  <a href="#️-whoami"><img src="https://img.shields.io/badge/Terminal-0D1117?style=flat-square&logo=gnubash&logoColor=22D3EE" alt="Terminal" /></a>
   <a href="#-practical-security-labs--research-platforms"><img src="https://img.shields.io/badge/Labs-0D1117?style=flat-square&logo=tryhackme&logoColor=22D3EE" alt="Labs" /></a>
   <a href="#-technical-arsenal--tooling-matrix"><img src="https://img.shields.io/badge/Tech_Arsenal-0D1117?style=flat-square&logo=target&logoColor=22D3EE" alt="Arsenal" /></a>
   <a href="#-featured-projects"><img src="https://img.shields.io/badge/Projects-0D1117?style=flat-square&logo=github&logoColor=22D3EE" alt="Projects" /></a>
@@ -36,7 +36,7 @@
 
 ---
 
-### 🖥️ BlackArch DFIR Terminal Console (`whoami`)
+## 🖥️ whoami
 
 <p align="center">
   <img src="assets/cyber-terminal-animated.svg?v=3" width="100%" alt="BlackArch Linux DFIR Cyber Terminal Console" />
