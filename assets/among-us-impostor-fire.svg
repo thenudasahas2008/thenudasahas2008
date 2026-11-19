@@ -293,21 +293,6 @@
   </defs>
   <!-- Background Container -->
   <rect x="0.5" y="0.5" width="879" height="204" rx="8" fill="url(#bgGrad)" stroke="#30363d" stroke-width="1"/>
-  <!-- Header Bar -->
-  <g transform="translate(25, 26)">
-    <!-- Mini Impostor Icon -->
-    <g transform="translate(0, 0)">
-      <rect x="-3" y="-2" width="3" height="7" rx="1" fill="#b91c1c" stroke="#450a0a" stroke-width="0.8"/>
-      <path d="M -1 -4 C -1 -6, 5 -6, 5 -4 L 5 4 C 5 5, 4 5, 3 5 L 3 7 C 3 8, 2 8, 2 7 L 2 5 L 1 5 L 1 7 C 1 8, 0 8, 0 7 L 0 5 C -0.5 5, -1 4.5, -1 4 Z" fill="#ef4444" stroke="#450a0a" stroke-width="0.8"/>
-      <rect x="1" y="-3" width="4.5" height="3" rx="1.5" fill="#38bdf8" stroke="#450a0a" stroke-width="0.6"/>
-    </g>
-    <text x="14" y="2" fill="#e6edf3" font-size="11" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" letter-spacing="0.5">AMONG US <tspan fill="#7d8590" font-weight="400">// GRID PATROL SENTRY (TACTICAL WALK and FIRE)</tspan></text>
-  </g>
-  <g transform="translate(685, 24)" class="badge-pulse">
-    <rect x="0" y="-10" width="168" height="20" rx="10" fill="#161b22" stroke="#da3633" stroke-width="1"/>
-    <circle cx="10" cy="0" r="3.5" fill="#ff4d4d"/>
-    <text x="20" y="3.5" fill="#ff4d4d" font-size="9" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" letter-spacing="0.5">PATROL and ENGAGE [OK]</text>
-  </g>
   <!-- Month Labels -->
   <g fill="#7d8590" font-size="9" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
     <text x="72" y="48">Nov</text>
