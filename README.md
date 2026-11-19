@@ -143,10 +143,10 @@
 
 <p align="center">
   <a href="https://github.com/thenudasahas2008/PromptSentry">
-    <img src="assets/project-promptsentry.svg" width="49%" alt="PromptSentry AI Defense Gateway" />
+    <img src="assets/project-promptsentry.svg?v=2" width="49%" alt="PromptSentry AI Defense Gateway" />
   </a>
   <a href="https://github.com/thenudasahas2008/Baduwa">
-    <img src="assets/project-baduwa.svg" width="49%" alt="Baduwa Discord Audio Bot" />
+    <img src="assets/project-baduwa.svg?v=2" width="49%" alt="Baduwa Discord Audio Bot" />
   </a>
 </p>
 
@@ -161,7 +161,7 @@
 ## 📈 Activity & Development Velocity
 
 <p align="center">
-  <img src="assets/cyber-hud.svg" width="100%" alt="Real-Time Cyber Telemetry and Activity Engine" />
+  <img src="assets/cyber-hud.svg?v=3" width="100%" alt="Real-Time Cyber Telemetry and Activity Engine" />
 </p>
 
 ---
