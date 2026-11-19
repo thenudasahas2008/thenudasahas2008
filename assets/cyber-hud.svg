@@ -194,9 +194,9 @@
       <rect x="293" width="3" height="5" rx="1.5" fill="#89E051" />
 
       <text x="0" y="22" class="sans" font-size="10" fill="#C9D1D9">
-        <tspan fill="#F1E05A" font-weight="700">●</tspan> JS 96.6% &nbsp;
-        <tspan fill="#3572A5" font-weight="700">●</tspan> Python 2.1% &nbsp;
-        <tspan fill="#89E051" font-weight="700">●</tspan> Bash &nbsp;
+        <tspan fill="#F1E05A" font-weight="700">●</tspan> JS 96.6% &#160;
+        <tspan fill="#3572A5" font-weight="700">●</tspan> Python 2.1% &#160;
+        <tspan fill="#89E051" font-weight="700">●</tspan> Bash &#160;
         <tspan fill="#8B949E">| Discord Bot &amp; AI Security Engines</tspan>
       </text>
     </g>

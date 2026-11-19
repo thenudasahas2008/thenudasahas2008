@@ -161,7 +161,7 @@
 ## 📈 Activity & Development Velocity
 
 <p align="center">
-  <img src="assets/cyber-activity-hud.svg" width="100%" alt="Real-Time Cyber Telemetry and Activity Engine" />
+  <img src="assets/cyber-hud.svg" width="100%" alt="Real-Time Cyber Telemetry and Activity Engine" />
 </p>
 
 ---
