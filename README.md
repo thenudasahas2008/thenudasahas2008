@@ -93,14 +93,6 @@
 
 ---
 
-## ⚡ Defensive Security & Forensics Pipeline
-
-<p align="center">
-  <img src="assets/defense-pipeline.svg" width="100%" alt="Defensive Security and Forensics Pipeline" />
-</p>
-
----
-
 ## 🎯 Practical Security Labs & Research Platforms
 
 <div align="center">
