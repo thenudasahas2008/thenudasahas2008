@@ -142,7 +142,7 @@
 ## 📡 Live Cyber Defense & Network Telemetry
 
 <p align="center">
-  <img src="assets/cyber-telemetry-stream.svg?v=1" width="100%" alt="Real-Time Network Packet and Defense Telemetry" />
+  <img src="assets/cyber-defense-matrix.svg?v=1" width="100%" alt="Real-Time Network Packet and Defense Telemetry" />
 </p>
 
 ---

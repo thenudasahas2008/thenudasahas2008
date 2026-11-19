@@ -1,0 +1,226 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 230" width="100%" height="100%" fill="none">
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, "Fira Code", Menlo, monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+
+      /* Animation: Radar Sweep */
+      @keyframes radarSpin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      .sweep-beam {
+        transform-origin: 75px 115px;
+        animation: radarSpin 3.5s linear infinite;
+      }
+
+      /* Animation: Target Blip Pulse */
+      @keyframes blipFade {
+        0%, 100% { opacity: 0.2; transform: scale(0.8); }
+        50% { opacity: 1; transform: scale(1.2); }
+      }
+      .blip-1 { animation: blipFade 1.6s ease-in-out infinite; transform-origin: 90px 100px; }
+      .blip-2 { animation: blipFade 2.2s ease-in-out infinite 0.7s; transform-origin: 60px 130px; }
+
+      /* Animation: Packet Line Pulse */
+      @keyframes packetPulse {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 1; filter: drop-shadow(0 0 4px #22D3EE); }
+      }
+      .packet-dot {
+        animation: packetPulse 2s ease-in-out infinite;
+      }
+
+      /* Animation: Status LED */
+      @keyframes ledGlow {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 1; filter: drop-shadow(0 0 6px #39D353); }
+      }
+      .led-green {
+        animation: ledGlow 1.8s ease-in-out infinite;
+      }
+
+      /* Animation: Gauge Shimmer */
+      @keyframes arcPulse {
+        0%, 100% { stroke: #22D3EE; }
+        50% { stroke: #38BDF8; }
+      }
+      .gauge-arc {
+        animation: arcPulse 3s ease-in-out infinite;
+      }
+    </style>
+
+    <!-- Radar Sweep Gradient -->
+    <linearGradient id="sweepGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#00BFA6" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Background Grid Pattern -->
+    <pattern id="hudGrid" width="14" height="14" patternUnits="userSpaceOnUse">
+      <path d="M 14 0 L 0 0 0 14" fill="none" stroke="#21262D" stroke-width="0.5" stroke-opacity="0.5"/>
+    </pattern>
+
+    <!-- Cyber Cyan-Indigo Gradient -->
+    <linearGradient id="cyberHudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Sci-Fi Tactical Frame with Chamfered Style -->
+  <rect x="1.5" y="1.5" width="877" height="227" rx="8" fill="#0A0E17" stroke="#30363D" stroke-width="1.3" />
+
+  <!-- Corner Tech Accent Brackets (Sci-Fi Aesthetic) -->
+  <path d="M 2 18 L 2 2 L 18 2" fill="none" stroke="#22D3EE" stroke-width="2" />
+  <path d="M 878 18 L 878 2 L 862 2" fill="none" stroke="#22D3EE" stroke-width="2" />
+  <path d="M 2 212 L 2 228 L 18 228" fill="none" stroke="#22D3EE" stroke-width="2" />
+  <path d="M 878 212 L 878 228 L 862 228" fill="none" stroke="#22D3EE" stroke-width="2" />
+
+  <!-- Top Tactical Status Bar -->
+  <path d="M 2 8 L 878 8 L 878 34 L 2 34 Z" fill="#121824" />
+  <line x1="2" y1="34" x2="878" y2="34" stroke="#21262D" stroke-width="1" />
+
+  <!-- Left Header Tag -->
+  <g transform="translate(16, 22)">
+    <rect width="6" height="12" rx="1" fill="#22D3EE" />
+    <text x="14" y="9.5" class="mono" font-size="10" font-weight="700" fill="#22D3EE">SEC-OPS // REAL-TIME NETWORK &amp; THREAT TELEMETRY DECK</text>
+  </g>
+
+  <!-- Right Status Beacon -->
+  <rect x="715" y="8" width="148" height="18" rx="9" fill="#0E3320" stroke="#238636" stroke-width="0.8" />
+  <circle cx="727" cy="17" r="3" fill="#39D353" class="led-green" />
+  <text x="736" y="20.5" class="mono" font-size="8.5" font-weight="700" fill="#39D353">0 BREACHES • ACTIVE</text>
+
+  <!-- ==================== COLUMN 1: RADAR & SENSORS (Width 220) ==================== -->
+  <g transform="translate(16, 44)">
+    <rect width="210" height="146" rx="6" fill="#111622" stroke="#262C36" stroke-width="1" />
+    <rect width="210" height="146" rx="6" fill="url(#hudGrid)" />
+
+    <text x="12" y="18" class="mono" font-size="8.5" font-weight="700" fill="#22D3EE">01 // THREAT RADAR</text>
+    <line x1="12" y1="23" x2="198" y2="23" stroke="#21262D" stroke-width="0.8" />
+
+    <!-- Circular Radar Scope -->
+    <g transform="translate(45, 30)">
+      <!-- Outer & Inner Radar Rings -->
+      <circle cx="60" cy="42" r="38" fill="#0A0E17" stroke="#21262D" stroke-width="1" />
+      <circle cx="60" cy="42" r="26" fill="none" stroke="#21262D" stroke-width="0.8" stroke-dasharray="2,2" />
+      <circle cx="60" cy="42" r="14" fill="none" stroke="#21262D" stroke-width="0.8" />
+
+      <!-- Crosshairs -->
+      <line x1="22" y1="42" x2="98" y2="42" stroke="#21262D" stroke-width="0.8" />
+      <line x1="60" y1="4" x2="60" y2="80" stroke="#21262D" stroke-width="0.8" />
+
+      <!-- Rotating Sweep Arm -->
+      <g class="sweep-beam" style="transform-origin: 60px 42px;">
+        <path d="M 60 42 L 98 42 A 38 38 0 0 0 86.8 15.1 Z" fill="url(#sweepGrad)" />
+        <line x1="60" y1="42" x2="98" y2="42" stroke="#22D3EE" stroke-width="1.2" />
+      </g>
+
+      <!-- Target Blips -->
+      <circle cx="75" cy="30" r="2.5" fill="#22D3EE" class="blip-1" style="transform-origin: 75px 30px;" />
+      <circle cx="48" cy="55" r="2" fill="#39D353" class="blip-2" style="transform-origin: 48px 55px;" />
+    </g>
+
+    <!-- Radar Footer Metrics -->
+    <g transform="translate(12, 130)" class="mono" font-size="8.5">
+      <text fill="#8B949E">SWEEP: <tspan fill="#39D353" font-weight="700">360° SECURE</tspan></text>
+      <text x="186" text-anchor="end" fill="#8B949E">LATENCY: <tspan fill="#22D3EE" font-weight="700">&lt; 15ms</tspan></text>
+    </g>
+  </g>
+
+  <!-- ==================== COLUMN 2: WIRESHARK PACKET STREAM (Width 390) ==================== -->
+  <g transform="translate(236, 44)">
+    <rect width="390" height="146" rx="6" fill="#111622" stroke="#262C36" stroke-width="1" />
+    <rect width="390" height="146" rx="6" fill="url(#hudGrid)" />
+
+    <text x="14" y="18" class="mono" font-size="8.5" font-weight="700" fill="#58A6FF">02 // WIRESHARK DEEP PACKET INSPECTION &amp; AUDIT</text>
+    <line x1="14" y1="23" x2="376" y2="23" stroke="#21262D" stroke-width="0.8" />
+
+    <!-- Terminal Packet Rows (Bounded and Clean) -->
+    <g transform="translate(14, 42)" class="mono" font-size="9.5">
+      <!-- Packet 1: TLS -->
+      <g transform="translate(0, 0)">
+        <circle cx="4" cy="-4" r="2.5" fill="#22D3EE" class="packet-dot" />
+        <text x="14" y="0" fill="#22D3EE" font-weight="700">[TLS 1.3]</text>
+        <text x="80" y="0" fill="#F0F6FC">Port 443 Handshake</text>
+        <text x="362" y="0" text-anchor="end" fill="#39D353" font-weight="700">AES-256 [SECURE]</text>
+      </g>
+
+      <!-- Packet 2: Gateway Filter -->
+      <g transform="translate(0, 20)">
+        <circle cx="4" cy="-4" r="2.5" fill="#39D353" />
+        <text x="14" y="0" fill="#39D353" font-weight="700">[PROMPTSENTRY]</text>
+        <text x="110" y="0" fill="#F0F6FC">Heuristic Firewall</text>
+        <text x="362" y="0" text-anchor="end" fill="#39D353" font-weight="700">PASS (0 INJECT)</text>
+      </g>
+
+      <!-- Packet 3: Digital Forensics Hash -->
+      <g transform="translate(0, 40)">
+        <circle cx="4" cy="-4" r="2.5" fill="#A371F7" />
+        <text x="14" y="0" fill="#A371F7" font-weight="700">[DFIR TRIAGE]</text>
+        <text x="96" y="0" fill="#F0F6FC">Chain-of-Custody SHA-256</text>
+        <text x="362" y="0" text-anchor="end" fill="#38BDF8" font-weight="700">MATCH [VERIFIED]</text>
+      </g>
+
+      <!-- Packet 4: TCP Filter -->
+      <g transform="translate(0, 60)">
+        <circle cx="4" cy="-4" r="2.5" fill="#58A6FF" />
+        <text x="14" y="0" fill="#58A6FF" font-weight="700">[TCP SYN/ACK]</text>
+        <text x="106" y="0" fill="#F0F6FC">Strict Ingress Ruleset</text>
+        <text x="362" y="0" text-anchor="end" fill="#39D353" font-weight="700">ZERO-TRUST [OK]</text>
+      </g>
+
+      <!-- Packet 5: Status -->
+      <g transform="translate(0, 80)">
+        <circle cx="4" cy="-4" r="2.5" fill="#39D353" class="led-green" />
+        <text x="14" y="0" fill="#39D353" font-weight="700">[STATUS]</text>
+        <text x="74" y="0" fill="#8B949E">Sensors Active • Colombo Lab</text>
+        <text x="362" y="0" text-anchor="end" fill="#22D3EE" font-weight="700">AUDIT: 100% CLEAN</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ==================== COLUMN 3: DEFENSE INTEGRITY DIAL (Width 230) ==================== -->
+  <g transform="translate(636, 44)">
+    <rect width="228" height="146" rx="6" fill="#111622" stroke="#262C36" stroke-width="1" />
+    <rect width="228" height="146" rx="6" fill="url(#hudGrid)" />
+
+    <text x="14" y="18" class="mono" font-size="8.5" font-weight="700" fill="#38BDF8">03 // DEFENSE POSTURE</text>
+    <line x1="14" y1="23" x2="214" y2="23" stroke="#21262D" stroke-width="0.8" />
+
+    <!-- Circular Gauge & Score -->
+    <g transform="translate(114, 76)">
+      <!-- Background Arc -->
+      <circle cx="0" cy="0" r="36" fill="none" stroke="#21262D" stroke-width="5" stroke-dasharray="170 60" transform="rotate(135)" />
+      <!-- Value Arc (99.8%) -->
+      <circle cx="0" cy="0" r="36" fill="none" stroke="#22D3EE" stroke-width="5" stroke-dasharray="160 70" stroke-linecap="round" transform="rotate(135)" class="gauge-arc" />
+
+      <!-- Center Score -->
+      <text x="0" y="3" class="mono" font-size="14" font-weight="700" fill="#F0F6FC" text-anchor="middle">99.8%</text>
+      <text x="0" y="16" class="mono" font-size="7.5" font-weight="700" fill="#39D353" text-anchor="middle">SHIELD ACTIVE</text>
+    </g>
+
+    <!-- Posture Indicators -->
+    <g transform="translate(14, 130)" class="mono" font-size="8">
+      <rect width="94" height="16" rx="3" fill="#0D1117" stroke="#21262D" stroke-width="0.8" />
+      <text x="47" y="11" fill="#22D3EE" text-anchor="middle" font-weight="700">HEURISTIC: ON</text>
+
+      <rect x="104" width="94" height="16" rx="3" fill="#0D1117" stroke="#21262D" stroke-width="0.8" />
+      <text x="151" y="11" fill="#39D353" text-anchor="middle" font-weight="700">ZERO-TRUST: ON</text>
+    </g>
+  </g>
+
+  <!-- ==================== BOTTOM HUD COMMAND LINE ==================== -->
+  <line x1="16" y1="200" x2="864" y2="200" stroke="#21262D" stroke-width="1" stroke-dasharray="3,3" />
+
+  <g transform="translate(18, 216)" class="mono">
+    <text x="0" y="0" font-size="10" fill="#39D353" font-weight="700">
+      $ wireshark -k -i eth0 --filter "cyber.perimeter == secure" --status=active
+    </text>
+    <text x="844" y="0" font-size="9.5" font-weight="700" fill="#22D3EE" text-anchor="end">
+      [ALL 3 TELEMETRY CHANNELS SYNCHRONIZED • LK]
+    </text>
+  </g>
+</svg>
