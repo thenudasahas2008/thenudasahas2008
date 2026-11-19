@@ -160,23 +160,15 @@
 
 ## 📈 Activity & Development Velocity
 
-```bash
-┌──(sahas㉿cyber-velocity)-[~/workspace/activity]
-└─$ git log --all --graph --pretty=format:"%h %ad [%an] %s%d" --date=short -n 6
-* 74e730e 2026-11-19 [Thenuda Sahas] feat(PromptSentry): production-grade heuristic AI defense gateway (HEAD -> main)
-* 1582c63 2026-11-19 [Thenuda Sahas] feat(Baduwa): 24/7 Discord audio daemon with interactive button controls
-* 13acf49 2026-11-18 [Thenuda Sahas] sec(DFIR): cryptographic chain-of-custody verification script (SHA-256)
-* aecc20f 2026-11-18 [Thenuda Sahas] sec(OWASP): heuristic input triage for LLM01 injection mitigation
-* 7514705 2026-11-17 [Thenuda Sahas] ops(Hardening): Linux endpoint permissions & Wireshark packet inspection rules
-* 6bb09db 2026-11-16 [Thenuda Sahas] feat(Portfolio): digital forensics writeups & academic portfolio deployment
+<!-- Among Us Impostor Incinerating Contributions Animation -->
+<p align="center">
+  <img src="assets/among-us-contribution-fire.svg" width="100%" alt="Among Us Impostor Firing at Contributions" />
+</p>
 
-┌──(sahas㉿cyber-velocity)-[~/workspace/activity]
-└─$ git telemetry --summary
-[✓] Total Commits Verified : 87+ Commits across production repositories
-[✓] Active Engineering     : PromptSentry • Baduwa • Forensic Scripts
-[✓] Languages Detected     : JavaScript (96.6%) • Python (2.1%) • Bash / Shell
-[✓] Development Posture    : Continuous Learning • Zero Critical Vulnerabilities
-```
+<!-- Developer Telemetry & Activity Dashboard -->
+<p align="center">
+  <img src="assets/developer-telemetry.svg" width="100%" alt="Developer Telemetry &amp; Activity Dashboard" />
+</p>
 
 ---
 
