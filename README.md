@@ -39,7 +39,7 @@
 <h2 id="whoami">🖥️ whoami</h2>
 
 <p align="center">
-  <img src="assets/cyber-terminal-animated.svg?v=3" width="100%" alt="BlackArch Linux DFIR Cyber Terminal Console" />
+  <img src="assets/cyber-terminal-animated.svg?v=4" width="100%" alt="BlackArch Linux DFIR Cyber Terminal Console" />
 </p>
 
 ---
