@@ -84,17 +84,13 @@ $ whoami
   <img src="./assets/cyber-divider.svg" width="100%" alt="Cyber Divider" />
 </p>
 
-## 🐍 GitHub Contribution Snake & Activity
+## ඞ Among Us Impostor Contribution Sabotage & Fire Blast 🔥
 
-<!-- Contribution Snake Animation generated via GitHub Actions -->
+<!-- Among Us Impostor Incinerating Contributions Animation -->
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/thenudasahas2008/thenudasahas2008/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/thenudasahas2008/thenudasahas2008/output/github-contribution-grid-snake.svg">
-    <img alt="GitHub Contribution Grid Snake" src="https://raw.githubusercontent.com/thenudasahas2008/thenudasahas2008/output/github-contribution-grid-snake-dark.svg" width="100%">
-  </picture>
+  <img src="./assets/among-us-contribution-fire.svg" width="100%" alt="Among Us Impostor Firing at Contributions" />
   <br />
-  <sub>⚡ The snake eats commits every 12 hours automatically via GitHub Actions!</sub>
+  <sub>🔥 <i>Emergency Meeting: The Red Impostor is patrolling the contribution grid and incinerating commits with a flamethrower!</i> ඞ</sub>
 </div>
 
 <br />
