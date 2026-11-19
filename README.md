@@ -146,7 +146,7 @@
     <img src="assets/project-promptsentry.svg?v=2" width="49%" alt="PromptSentry AI Defense Gateway" />
   </a>
   <a href="https://github.com/thenudasahas2008/Baduwa">
-    <img src="assets/project-baduwa.svg?v=2" width="49%" alt="Baduwa Discord Audio Bot" />
+    <img src="assets/project-baduwa.svg?v=3" width="49%" alt="Baduwa Discord Audio Bot" />
   </a>
 </p>
 
