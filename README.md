@@ -51,6 +51,9 @@
 ## 🚀 Featured Projects
 
 <p align="center">
+  <a href="https://github.com/thenudasahas2008/PromptSentry">
+    <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=thenudasahas2008&repo=PromptSentry&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=34D399" alt="PromptSentry repository card" />
+  </a>
   <a href="https://github.com/thenudasahas2008/Thenuda-Sahas">
     <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=thenudasahas2008&repo=Thenuda-Sahas&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=34D399" alt="Thenuda-Sahas repository card" />
   </a>
