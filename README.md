@@ -1,101 +1,161 @@
-<!-- Thenuda Sahas | Cybersecurity-themed GitHub Profile README -->
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=220&section=header&text=THENUDA%20SAHAS&fontSize=48&fontColor=E6FCFF&fontAlignY=36&desc=CYBERSECURITY%20%7C%20SOFTWARE%20PROJECTS%20%7C%20CONTINUOUS%20LEARNING&descSize=14&descAlignY=57&color=0:020617,45:0B3D4F,100:00BFA6" width="100%" alt="Thenuda Sahas Cybersecurity Banner" />
+<!-- ========================================================================= -->
+<!-- THENUDA SAHAS | CYBERSECURITY & SOFTWARE ENGINEERING PORTFOLIO -->
+<!-- ========================================================================= -->
 
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=19&duration=2600&pause=750&color=22D3EE&center=true&vCenter=true&repeat=true&width=760&height=55&lines=Computing+Student+%7C+Pearson+BTEC+HND;Exploring+Information+%26+Network+Security;Learning+Ethical+Hacking+Responsibly;Building+Projects+%7C+Learning+Every+Day" alt="Animated typing introduction" />
+<div align="center">
+  <!-- Dynamic Cybersecurity Gradient Banner -->
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=225&section=header&text=THENUDA%20SAHAS&fontSize=48&fontColor=E6FCFF&fontAlignY=36&desc=CYBERSECURITY%20%E2%80%A2%20NETWORK%20DEFENSE%20%E2%80%A2%20SOFTWARE%20ENGINEERING&descSize=13&descAlignY=58&color=0:020617,35:0B3D4F,70:00BFA6,100:22D3EE" width="100%" alt="Thenuda Sahas Header Banner" />
+
+  <!-- Dynamic Typing Title -->
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=2500&pause=800&color=22D3EE&center=true&vCenter=true&repeat=true&width=780&height=50&lines=Computing+Student+%7C+Pearson+BTEC+HND+%F0%9F%8E%93;Cybersecurity+%26+Information+Security+Enthusiast+%F0%9F%9B%A1%EF%B8%8F;Defensive+Security+%26+Network+Protocol+Analysis+%F0%9F%94%8E;Python+Developer+%26+Security+Tool+Builder+%F0%9F%90%8D;Building+PromptSentry+%E2%80%A2+Securing+Systems+Every+Day+%E2%9A%A1" alt="Dynamic Typing Intro" />
+
   <br />
-  <a href="https://www.thenudasahas.site/"><img src="https://img.shields.io/badge/PORTFOLIO-Visit%20Website-0D1117?style=for-the-badge&logo=googlechrome&logoColor=22D3EE" alt="Portfolio website" /></a>
-  <a href="mailto:sahas.thenu@gmail.com"><img src="https://img.shields.io/badge/EMAIL-Contact%20Me-0D1117?style=for-the-badge&logo=gmail&logoColor=EA4335" alt="Email" /></a>
-  <a href="https://github.com/thenudasahas2008"><img src="https://img.shields.io/badge/GITHUB-Follow-0D1117?style=for-the-badge&logo=github&logoColor=FFFFFF" alt="GitHub profile" /></a>
+
+  <!-- Direct Communication & Social Links -->
+  <a href="https://www.thenudasahas.site/"><img src="https://img.shields.io/badge/PORTFOLIO-thenudasahas.site-0D1117?style=for-the-badge&logo=googlechrome&logoColor=22D3EE" alt="Portfolio website" /></a>
+  <a href="mailto:sahas.thenu@gmail.com"><img src="https://img.shields.io/badge/EMAIL-sahas.thenu%40gmail.com-0D1117?style=for-the-badge&logo=gmail&logoColor=EA4335" alt="Email" /></a>
+  <a href="https://github.com/thenudasahas2008"><img src="https://img.shields.io/badge/GITHUB-thenudasahas2008-0D1117?style=for-the-badge&logo=github&logoColor=FFFFFF" alt="GitHub profile" /></a>
+  <a href="https://discordapp.com/users/zyrox_01xi"><img src="https://img.shields.io/badge/DISCORD-zyrox__01xi-0D1117?style=for-the-badge&logo=discord&logoColor=5865F2" alt="Discord" /></a>
+
   <br /><br />
+
+  <!-- Live Status & Verification -->
+  <img src="https://img.shields.io/badge/STATUS-OPEN%20TO%20COLLABORATION-00BFA6?style=for-the-badge" alt="Status Badge" />
   <img src="https://hits.sh/github.com/thenudasahas2008.svg?style=for-the-badge&label=PROFILE%20VIEWS&color=0891B2" alt="Profile views" />
 </div>
 
 ---
 
-## 👋 About Me
+### 🖥️ System Terminal & Diagnostic (`whoami`)
 
-👋 Hi! I'm **Thenuda Sahas** 👨‍💻, a **Computing student (Pearson BTEC HND)** from Sri Lanka. I'm interested in cybersecurity, information security, network security, and software development.
-
-- 🎓 Currently a **Computing student (Pearson BTEC HND)**
-- 🛡️ Exploring information security and defensive security practices
-- 🌐 Learning network security and web security fundamentals
-- 🔐 Learning ethical hacking responsibly in authorised environments
-- 💻 Building software projects and improving my technical skills
-- 🌱 Always learning, practising, and documenting what I learn
-
-<p align="center">
-  <img src="https://img.shields.io/badge/EDUCATION-Pearson%20BTEC%20HND-123344?style=for-the-badge&logo=academia&logoColor=67E8F9" alt="Pearson BTEC HND" />
-  <img src="https://img.shields.io/badge/LOCATION-Sri%20Lanka-123C35?style=for-the-badge&logo=googlemaps&logoColor=6EE7B7" alt="Sri Lanka" />
-  <img src="https://img.shields.io/badge/MINDSET-Always%20Learning-172554?style=for-the-badge&logo=bookstack&logoColor=93C5FD" alt="Always learning" />
-</p>
-
-## 🛡️ Cybersecurity Focus
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Information%20Security-Exploring-123344?style=for-the-badge&logo=owasp&logoColor=67E8F9" alt="Information security" />
-  <img src="https://img.shields.io/badge/Network%20Security-Learning-123344?style=for-the-badge&logo=cisco&logoColor=67E8F9" alt="Network security" />
-  <img src="https://img.shields.io/badge/Ethical%20Hacking-Responsible%20Learning-123C35?style=for-the-badge&logo=kalilinux&logoColor=6EE7B7" alt="Ethical hacking" />
-  <img src="https://img.shields.io/badge/Web%20Security-Learning-172554?style=for-the-badge&logo=firefoxbrowser&logoColor=93C5FD" alt="Web security" />
-</p>
-
-## 🧰 Tools & Technologies
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=linux,kali,windows,git,github,vscode,html,css,js,python&theme=dark" alt="Linux, Kali Linux, Windows, Git, GitHub, VS Code, HTML, CSS, JavaScript and Python" />
-</p>
-
-<p align="center"><i>These are tools and technologies I use or am exploring as part of my learning journey.</i></p>
-
-## 🚀 Featured Projects
-
-<p align="center">
-  <a href="https://github.com/thenudasahas2008/PromptSentry">
-    <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=thenudasahas2008&repo=PromptSentry&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=34D399" alt="PromptSentry repository card" />
-  </a>
-  <a href="https://github.com/thenudasahas2008/Thenuda-Sahas">
-    <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=thenudasahas2008&repo=Thenuda-Sahas&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=34D399" alt="Thenuda-Sahas repository card" />
-  </a>
-  <br />
-  <a href="https://www.thenudasahas.site/"><img src="https://img.shields.io/badge/THENUDA%20PORTFOLIO-Explore%20Website-0D1117?style=for-the-badge&logo=googlechrome&logoColor=22D3EE" alt="Explore portfolio website" /></a>
-</p>
-
-<p align="center">
-  🔗 <a href="https://github.com/thenudasahas2008?tab=repositories">Explore all my repositories</a>
-</p>
-
-## 📊 GitHub Analytics
-
-<p align="center">
-  <img height="180" src="https://github-readme-stats-fast.vercel.app/api?username=thenudasahas2008&show_icons=true&rank_icon=github&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=34D399" alt="GitHub statistics" />
-  <img height="180" src="https://streak-stats.demolab.com?user=thenudasahas2008&theme=transparent&hide_border=true&background=0D1117&ring=22D3EE&fire=34D399&currStreakLabel=22D3EE&sideLabels=C9D1D9&dates=8B949E&currStreakNum=E6EDF3&sideNums=E6EDF3" alt="GitHub contribution streak" />
-</p>
-
-<p align="center">
-  <a href="https://github.com/thenudasahas2008?tab=repositories"><img src="https://img.shields.io/badge/VIEW-My%20Repositories-0D1117?style=for-the-badge&logo=github&logoColor=22D3EE" alt="View repositories" /></a>
-  <a href="https://github.com/thenudasahas2008"><img src="https://img.shields.io/badge/VIEW-GitHub%20Profile-0D1117?style=for-the-badge&logo=githubactions&logoColor=34D399" alt="View GitHub profile activity" /></a>
-</p>
-
-## 💻 My Learning Roadmap
-
-```text
-[01] Learn cybersecurity fundamentals
-[02] Practise networking and Linux
-[03] Explore web security in authorised labs
-[04] Build useful software projects
-[05] Document what I learn and keep improving
+```bash
+╔═════════════════════════════════════════════════════════════════════════════════════════════╗
+║  sahas@cyber-station:~$ neofetch --profile                                                  ║
+║  -----------------------------------------------------------------------------------------  ║
+║  ● Identity      : Thenuda Sahas (thenudasahas2008)                                         ║
+║  ● Academic Base : Computing Student — Pearson BTEC Higher National Diploma (HND)           ║
+║  ● Regional Hub  : Colombo, Sri Lanka 🇱🇰                                                    ║
+║  ● Primary Core  : Cybersecurity • Defensive Network Security • Secure Software Development ║
+║  ● Target Scope  : Information Security, Threat Modeling, Web Security (OWASP Top 10)       ║
+║  ● Tech Stack    : Python, Bash, Linux (Kali/Ubuntu), Git, Wireshark, Web Engineering       ║
+║  ● Current Status: Actively Building Security Tools & Advancing Network Security Labs       ║
+║  ● Core Rule     : "Verify every packet. Hardening by design. Learn responsibly."           ║
+╚═════════════════════════════════════════════════════════════════════════════════════════════╝
 ```
 
-## 📫 Connect With Me
+---
+
+## 🛡️ Security Specializations & Competencies
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>🌐 Network & Defensive Security</h4>
+      <ul>
+        <li><b>Packet Analysis:</b> Traffic capture & protocol inspection with Wireshark.</li>
+        <li><b>Network Architecture:</b> TCP/IP subnetting, firewalls, and routing fundamentals.</li>
+        <li><b>Defensive Hardening:</b> Principle of least privilege, Linux user permissions, and host defense.</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <h4>🔐 Application & Information Security</h4>
+      <ul>
+        <li><b>Web Security:</b> Understanding OWASP Top 10 vulnerabilities (SQLi, XSS, CSRF, IDOR).</li>
+        <li><b>Responsible Hacking:</b> Penetration testing practiced strictly in authorized lab environments.</li>
+        <li><b>AI & LLM Security:</b> Heuristic security scanning and prompt-injection defense with <i>PromptSentry</i>.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+---
+
+## 🧰 Technical Arsenal & Tooling
+
+<div align="center">
+
+| Domain | Technologies & Frameworks |
+| :--- | :--- |
+| **Operating Systems & Shell** | <img src="https://skillicons.dev/icons?i=linux,kali,ubuntu,windows,bash,powershell&theme=dark" height="38" alt="OS and Shell" /> |
+| **Languages & Scripting** | <img src="https://skillicons.dev/icons?i=python,c,cpp,js,html,css&theme=dark" height="38" alt="Languages" /> |
+| **Tools & Infrastructure** | <img src="https://skillicons.dev/icons?i=git,github,vscode,docker,postman,cloudflare&theme=dark" height="38" alt="Tools" /> |
+
+</div>
+
+<p align="center"><i>Constantly updating my technical capabilities through hands-on lab experiments and real-world projects.</i></p>
+
+---
+
+## 🚀 Featured Engineering Projects
+
+<div align="center">
+  <a href="https://github.com/thenudasahas2008/PromptSentry">
+    <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=thenudasahas2008&repo=PromptSentry&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=00BFA6" alt="PromptSentry Project" />
+  </a>
+  <a href="https://github.com/thenudasahas2008/Baduwa">
+    <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=thenudasahas2008&repo=Baduwa&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=00BFA6" alt="Baduwa Discord Bot" />
+  </a>
+</div>
+
+<div align="center">
+  <br />
+  <a href="https://www.thenudasahas.site/"><img src="https://img.shields.io/badge/OFFICIAL%20PORTFOLIO-Visit%20Website-0D1117?style=for-the-badge&logo=googlechrome&logoColor=22D3EE" alt="Visit Portfolio" /></a>
+  <a href="https://github.com/thenudasahas2008?tab=repositories"><img src="https://img.shields.io/badge/REPOSITORIES-Explore%20All%20Code-0D1117?style=for-the-badge&logo=github&logoColor=00BFA6" alt="Explore Repositories" /></a>
+</div>
+
+---
+
+## 📈 Activity & Development Velocity
+
+<!-- Real-time GitHub Activity Trend -->
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=thenudasahas2008&theme=react-dark&bg_color=0D1117&color=22D3EE&line=00BFA6&point=34D399&area=true&hide_border=true" width="100%" alt="Thenuda's GitHub Activity Graph" />
+</div>
+
+<br />
+
+<!-- Streak and Language Analytics -->
+<div align="center">
+  <img height="175" src="https://github-readme-stats-fast.vercel.app/api?username=thenudasahas2008&show_icons=true&rank_icon=github&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=00BFA6" alt="GitHub Statistics" />
+  <img height="175" src="https://streak-stats.demolab.com?user=thenudasahas2008&theme=transparent&hide_border=true&background=0D1117&ring=22D3EE&fire=00BFA6&currStreakLabel=22D3EE&sideLabels=C9D1D9&dates=8B949E&currStreakNum=E6EDF3&sideNums=E6EDF3" alt="GitHub Contribution Streak" />
+</div>
+
+<br />
+
+<div align="center">
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=thenudasahas2008&layout=compact&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=00BFA6" alt="Top Languages Breakdown" />
+</div>
+
+---
+
+## 🎯 Strategic Roadmap & Certifications
+
+```yaml
+MISSION TIMELINE [2026 - 2027]:
+├── [ACADEMIC] Pearson BTEC Higher National Diploma (HND) in Computing
+│   ├── Network Engineering & Protocol Analysis (Active)
+│   ├── Information Systems & Secure Database Architecture (Active)
+│   └── Software Engineering & Object-Oriented Design (Completed)
+│
+├── [SECURITY LABS] Hands-on Practical Exploitation & Defense
+│   ├── Linux Hardening, Privilege Escalation & Bash Automation (Active)
+│   ├── OWASP Web Application Security & API Vulnerability Labs (In Progress)
+│   └── Packet Sniffing, Threat Intelligence & Heuristic Analysis (Active)
+│
+└── [TARGET CERTIFICATIONS]
+    ├── CompTIA Security+ (Preparing)
+    └── eJPT / Certified Ethical Hacker Practical (Roadmap)
+```
+
+---
+
+## 📫 Connect & Inquiries
 
 <p align="center">
-  <a href="mailto:sahas.thenu@gmail.com"><img src="https://img.shields.io/badge/EMAIL-sahas.thenu%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Thenuda" /></a>
+  <a href="mailto:sahas.thenu@gmail.com"><img src="https://img.shields.io/badge/EMAIL-sahas.thenu%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
   <a href="https://github.com/thenudasahas2008"><img src="https://img.shields.io/badge/GITHUB-thenudasahas2008-161B22?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-  <a href="https://www.thenudasahas.site/"><img src="https://img.shields.io/badge/WEBSITE-Visit%20Portfolio-0D1117?style=for-the-badge&logo=googlechrome&logoColor=22D3EE" alt="Portfolio" /></a>
-</p>
-
-<p align="center">
-  <a href="https://discordapp.com/users/zyrox_01xi"><img src="https://img.shields.io/badge/DISCORD-zyrox__01xi-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord username zyrox_01xi" /></a>
+  <a href="https://www.thenudasahas.site/"><img src="https://img.shields.io/badge/WEBSITE-thenudasahas.site-0D1117?style=for-the-badge&logo=googlechrome&logoColor=22D3EE" alt="Portfolio Website" /></a>
+  <a href="https://discordapp.com/users/zyrox_01xi"><img src="https://img.shields.io/badge/DISCORD-zyrox__01xi-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
 </p>
 
 <div align="center">
