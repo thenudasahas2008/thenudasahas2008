@@ -122,7 +122,7 @@
 
 <!-- Among Us Tactical Sentry Walk and Delayed Fire Animation -->
 <p align="center">
-  <img src="assets/among-us-sentry-fire.svg?v=8" width="100%" alt="Among Us Tactical Sentry Walk and Delayed Fire Animation" />
+  <img src="assets/among-us-sentry-fire.svg?v=9" width="100%" alt="Among Us Tactical Sentry Dynamic Multi-Target Flank and Fire Animation" />
 </p>
 
 <!-- Real-Time Auto-Updating GitHub Analytics & Streak Suite -->
