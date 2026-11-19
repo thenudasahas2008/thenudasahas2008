@@ -17,8 +17,7 @@
   <a href="#-technical-arsenal--tooling-matrix"><img src="https://img.shields.io/badge/Tech_Arsenal-0D1117?style=flat-square&logo=target&logoColor=22D3EE" alt="Arsenal" /></a>
   <a href="#-featured-projects"><img src="https://img.shields.io/badge/Projects-0D1117?style=flat-square&logo=github&logoColor=22D3EE" alt="Projects" /></a>
   <a href="#-activity--development-velocity"><img src="https://img.shields.io/badge/Analytics-0D1117?style=flat-square&logo=chartdotjs&logoColor=22D3EE" alt="Analytics" /></a>
-  <a href="#-strategic-roadmap--certifications"><img src="https://img.shields.io/badge/Roadmap-0D1117?style=flat-square&logo=git&logoColor=22D3EE" alt="Roadmap" /></a>
-  <a href="#-security-policy--responsible-disclosure"><img src="https://img.shields.io/badge/Policy-0D1117?style=flat-square&logo=securityscorecard&logoColor=22D3EE" alt="Policy" /></a>
+  <a href="#-live-cyber-defense--network-telemetry"><img src="https://img.shields.io/badge/Telemetry-0D1117?style=flat-square&logo=wireshark&logoColor=22D3EE" alt="Telemetry" /></a>
   <a href="#-connect--inquiries"><img src="https://img.shields.io/badge/Contact-0D1117?style=flat-square&logo=gmail&logoColor=22D3EE" alt="Contact" /></a>
 
   <br /><br />
@@ -131,18 +130,10 @@
 
 ---
 
-## 🎯 Strategic Roadmap & Certifications
+## 📡 Live Cyber Defense & Network Telemetry
 
 <p align="center">
-  <img src="assets/strategic-roadmap.svg?v=2" width="100%" alt="Strategic Academic & Certification Roadmap" />
-</p>
-
----
-
-## 🔐 Security Policy & Responsible Disclosure
-
-<p align="center">
-  <img src="assets/security-disclosure.svg?v=2" width="100%" alt="Coordinated Vulnerability Disclosure & Security Policy" />
+  <img src="assets/cyber-telemetry-stream.svg?v=1" width="100%" alt="Real-Time Network Packet and Defense Telemetry" />
 </p>
 
 ---
@@ -150,13 +141,13 @@
 ## 📫 Connect & Inquiries
 
 <p align="center">
-  <a href="mailto:sahas.thenu@gmail.com"><img src="https://img.shields.io/badge/EMAIL-sahas.thenu%40gmail.com-0D1117?style=for-the-badge&logo=gmail&logoColor=EA4335" alt="Email" /></a>
+  <a href="mailto:sahas.thenu@gmail.com"><img src="https://img.shields.io/badge/EMAIL-sahas.thenu%40gmail.com-0D1117?style=for-the-badge&logo=gmail&logoColor=22D3EE" alt="Email" /></a>
   &nbsp;&nbsp;
   <a href="https://www.thenudasahas.site/"><img src="https://img.shields.io/badge/PORTFOLIO-thenudasahas.site-0D1117?style=for-the-badge&logo=googlechrome&logoColor=22D3EE" alt="Portfolio" /></a>
   <br /><br />
-  <a href="https://github.com/thenudasahas2008"><img src="https://img.shields.io/badge/GITHUB-thenudasahas2008-0D1117?style=for-the-badge&logo=github&logoColor=FFFFFF" alt="GitHub" /></a>
+  <a href="https://github.com/thenudasahas2008"><img src="https://img.shields.io/badge/GITHUB-thenudasahas2008-0D1117?style=for-the-badge&logo=github&logoColor=22D3EE" alt="GitHub" /></a>
   &nbsp;&nbsp;
-  <a href="https://discordapp.com/users/zyrox_01xi"><img src="https://img.shields.io/badge/DISCORD-zyrox__01xi-0D1117?style=for-the-badge&logo=discord&logoColor=5865F2" alt="Discord" /></a>
+  <a href="https://discordapp.com/users/zyrox_01xi"><img src="https://img.shields.io/badge/DISCORD-zyrox__01xi-0D1117?style=for-the-badge&logo=discord&logoColor=22D3EE" alt="Discord" /></a>
 </p>
 
 <div align="center">
