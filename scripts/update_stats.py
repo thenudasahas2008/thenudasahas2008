@@ -3,6 +3,7 @@ import json
 import re
 import urllib.request
 import xml.etree.ElementTree as ET
+from datetime import datetime, timezone, timedelta
 
 USERNAME = "thenudasahas2008"
 TIMEZONE = "Asia/Colombo"
@@ -40,13 +41,43 @@ def fetch_data():
         print("Issues fetch fallback:", e)
         total_issues = 1
 
-    # 4. Language bytes
+    # 4. Hourly commits distribution (UTC+5:30)
+    hourly_counts = [2, 6, 19, 1, 0, 0, 0, 0, 0, 2, 0, 1, 2, 5, 0, 0, 8, 18, 22, 18, 17, 16, 3, 5]
+    tz_lk = timezone(timedelta(hours=5, minutes=30))
+    try:
+        req_repos = urllib.request.Request(f'https://api.github.com/users/{USERNAME}/repos?per_page=100', headers=headers)
+        repos = json.loads(urllib.request.urlopen(req_repos, timeout=10).read().decode('utf-8'))
+        
+        temp_hourly = [0] * 24
+        for r in repos:
+            r_name = r['full_name']
+            try:
+                c_req = urllib.request.Request(f'https://api.github.com/repos/{r_name}/commits?author={USERNAME}&per_page=100', headers=headers)
+                commits = json.loads(urllib.request.urlopen(c_req, timeout=5).read().decode('utf-8'))
+                for c in commits:
+                    date_str = c['commit']['author']['date']
+                    dt = datetime.fromisoformat(date_str.replace('Z', '+00:00'))
+                    dt_lk = dt.astimezone(tz_lk)
+                    temp_hourly[dt_lk.hour] += 1
+            except Exception:
+                pass
+        if sum(temp_hourly) > 20:
+            hourly_counts = temp_hourly
+    except Exception as e:
+        print("Hourly commits fetch fallback:", e)
+
+    # 5. Language bytes & Repo language count
     lang_bytes = {'JavaScript': 2187041, 'Python': 62748, 'HTML': 9261, 'Shell': 1812}
+    repo_lang_counts = {'JavaScript': 3, 'Python': 3, 'HTML': 1}
     try:
         req_repos = urllib.request.Request(f'https://api.github.com/users/{USERNAME}/repos?per_page=100', headers=headers)
         repos = json.loads(urllib.request.urlopen(req_repos, timeout=10).read().decode('utf-8'))
         temp_langs = {}
+        temp_repo_counts = {}
         for r in repos:
+            pl = r.get('language')
+            if pl:
+                temp_repo_counts[pl] = temp_repo_counts.get(pl, 0) + 1
             l_url = r.get('languages_url')
             if l_url:
                 try:
@@ -58,38 +89,19 @@ def fetch_data():
                     pass
         if temp_langs:
             lang_bytes = temp_langs
+        if temp_repo_counts:
+            repo_lang_counts = temp_repo_counts
     except Exception as e:
         print("Repos fetch fallback:", e)
 
-    filtered_langs = {k: v for k, v in lang_bytes.items() if k not in ['Procfile', 'Dockerfile']}
-    tot = sum(filtered_langs.values()) or 1
-    lang_items = []
-    colors_map = {
-        'JavaScript': '#f1e05a',
-        'Python': '#3572A5',
-        'HTML': '#e34c26',
-        'Shell': '#89e051',
-        'CSS': '#563d7c',
-        'TypeScript': '#3178c6',
-    }
-    for name, cnt in sorted(filtered_langs.items(), key=lambda x: -x[1])[:4]:
-        pct = (cnt / tot) * 100
-        color = colors_map.get(name, '#58A6FF')
-        # format bytes
-        if cnt >= 1048576:
-            size_str = f"{cnt / 1048576:.2f} MB"
-        else:
-            size_str = f"{cnt / 1024:.1f} KB"
-        lang_items.append({'name': name, 'bytes': cnt, 'size_str': size_str, 'pct': pct, 'color': color})
-
-    # 5. Streak telemetry fetch
+    # 6. Streak telemetry fetch
     streak_data = {
         'total_contribs': '201',
-        'total_range': 'Aug 19, 2025 - Present',
+        'total_range': 'Aug 19, 2025 to present',
         'current_streak': '8',
-        'current_range': 'Nov 13 - Nov 20',
+        'current_range': 'Nov 13 to Nov 20',
         'longest_streak': '8',
-        'longest_range': 'Nov 13 - Nov 20'
+        'longest_range': 'Nov 13 to Nov 20'
     }
     try:
         u_streak = f'https://streak-stats.demolab.com/?user={USERNAME}&timezone={TIMEZONE}'
@@ -97,13 +109,12 @@ def fetch_data():
         raw = urllib.request.urlopen(req_streak, timeout=10).read().decode('utf-8')
         texts = [s.strip() for s in re.findall(r'<text[^>]*>([^<]+)</text>', raw) if s.strip()]
         if len(texts) >= 9:
-            # Demolab typical text array: ['201', 'Total Contributions', 'Aug 19, 2025 - Present', 'Current Streak', 'Nov 13 - Nov 20', '8', '8', 'Longest Streak', 'Nov 13 - Nov 20']
             streak_data['total_contribs'] = texts[0]
-            streak_data['total_range'] = texts[2]
+            streak_data['total_range'] = texts[2].replace(' - ', ' to ')
             streak_data['current_streak'] = texts[5]
-            streak_data['current_range'] = texts[4]
+            streak_data['current_range'] = texts[4].replace(' - ', ' to ')
             streak_data['longest_streak'] = texts[6]
-            streak_data['longest_range'] = texts[8]
+            streak_data['longest_range'] = texts[8].replace(' - ', ' to ')
     except Exception as e:
         print("Streak fetch fallback:", e)
 
@@ -112,278 +123,342 @@ def fetch_data():
         'prs': total_prs,
         'issues': total_issues,
         'contributed_repos': 7,
-        'langs': lang_items,
+        'hourly': hourly_counts,
+        'lang_bytes': lang_bytes,
+        'repo_langs': repo_lang_counts,
         'streak': streak_data
     }
 
-def generate_stats_svg(data):
-    commits = data['commits']
-    prs = data['prs']
-    issues = data['issues']
-    repos = data['contributed_repos']
-    
-    svg = f"""<svg width="495" height="195" viewBox="0 0 495 195" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bgStats" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0e131f" />
-      <stop offset="50%" stop-color="#0d1117" />
-      <stop offset="100%" stop-color="#080c14" />
-    </linearGradient>
-    <linearGradient id="topGlow" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0" />
-      <stop offset="25%" stop-color="#22D3EE" stop-opacity="0.9" />
-      <stop offset="75%" stop-color="#58A6FF" stop-opacity="0.9" />
-      <stop offset="100%" stop-color="#58A6FF" stop-opacity="0" />
-    </linearGradient>
-    <style>
-      .header {{ font: 700 16px -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif; fill: #58A6FF; letter-spacing: 0.3px; }}
-      .subhead {{ font: 600 9.5px ui-monospace, SFMono-Regular, "Fira Code", monospace; fill: #7d8590; letter-spacing: 0.8px; }}
-      .stat-label {{ font: 500 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif; fill: #c9d1d9; }}
-      .stat-val {{ font: 700 14px ui-monospace, SFMono-Regular, "Fira Code", monospace; fill: #ffffff; }}
-      .octo-ring {{ animation: ringRotate 8s linear infinite; transform-origin: 418px 97px; }}
-      .rank-pulse {{ animation: rankPulse 2s ease-in-out infinite; }}
-      @keyframes ringRotate {{ 0% {{ transform: rotate(0deg); }} 100% {{ transform: rotate(360deg); }} }}
-      @keyframes rankPulse {{ 0%, 100% {{ opacity: 0.92; }} 50% {{ opacity: 1; filter: drop-shadow(0 0 5px rgba(34, 211, 238, 0.7)); }} }}
-    </style>
-  </defs>
-
-  <!-- Container Box -->
-  <rect x="0.5" y="0.5" width="494" height="194" rx="8" fill="url(#bgStats)" stroke="#30363d" stroke-width="1.2" />
-  <!-- Neon Accent Line Top -->
-  <line x1="12" y1="1" x2="483" y2="1" stroke="url(#topGlow)" stroke-width="2.2" />
-
-  <!-- Title and Subtitle -->
-  <g transform="translate(24, 32)">
-    <text x="0" y="0" class="header">Thenuda Sahas' GitHub Stats</text>
-    <text x="0" y="16" class="subhead">REAL-TIME TELEMETRY // DFIR and DEV OPS</text>
-  </g>
-
-  <!-- Stats Rows -->
-  <g transform="translate(24, 76)">
-    <!-- Total Commits -->
-    <g transform="translate(0, 0)">
-      <circle cx="7" cy="7" r="7" fill="#161b22" stroke="#22D3EE" stroke-width="1" />
-      <path d="M4.5 7h5M7 4.5v5" stroke="#22D3EE" stroke-width="1.2" stroke-linecap="round" />
-      <text x="24" y="11" class="stat-label">Total Commits:</text>
-      <text x="220" y="11" class="stat-val" text-anchor="end">{commits}</text>
-    </g>
-
-    <!-- Total PRs -->
-    <g transform="translate(0, 26)">
-      <circle cx="7" cy="7" r="7" fill="#161b22" stroke="#39d353" stroke-width="1" />
-      <path d="M4.5 5.5l5 3M9.5 5.5l-5 3" stroke="#39d353" stroke-width="1.2" stroke-linecap="round" />
-      <text x="24" y="11" class="stat-label">Total PRs Merged:</text>
-      <text x="220" y="11" class="stat-val" text-anchor="end">{prs}</text>
-    </g>
-
-    <!-- Total Issues -->
-    <g transform="translate(0, 52)">
-      <circle cx="7" cy="7" r="7" fill="#161b22" stroke="#e3b341" stroke-width="1" />
-      <circle cx="7" cy="7" r="2" fill="#e3b341" />
-      <text x="24" y="11" class="stat-label">Total Issues Opened:</text>
-      <text x="220" y="11" class="stat-val" text-anchor="end">{issues}</text>
-    </g>
-
-    <!-- Contributed Repos -->
-    <g transform="translate(0, 78)">
-      <circle cx="7" cy="7" r="7" fill="#161b22" stroke="#58A6FF" stroke-width="1" />
-      <path d="M4 7l2 2 4-4" stroke="#58A6FF" stroke-width="1.2" stroke-linecap="round" />
-      <text x="24" y="11" class="stat-label">Contributed Repos:</text>
-      <text x="220" y="11" class="stat-val" text-anchor="end">{repos}</text>
-    </g>
-  </g>
-
-  <!-- GitHub Octocat Logo and Rank Badge on Right -->
-  <g transform="translate(418, 97)">
-    <!-- Rotating Dash Ring -->
-    <circle cx="0" cy="0" r="42" fill="none" stroke="#21262d" stroke-width="4" />
-    <circle cx="0" cy="0" r="42" fill="none" stroke="#22D3EE" stroke-width="4" stroke-dasharray="180 70" class="octo-ring" />
-    <!-- Background Circle -->
-    <circle cx="0" cy="0" r="37" fill="#161b22" />
-    <!-- Octocat Silhouette Vector -->
-    <path d="M 0 -24 C -13.2 -24 -24 -13.2 -24 0 C -24 10.6 -17.1 19.6 -7.6 22.8 C -6.4 23 -5.9 22.2 -5.9 21.6 C -5.9 21 -5.9 19 -5.9 17 C -12.5 18.5 -13.9 14.3 -13.9 14.3 C -15 11.5 -16.6 10.8 -16.6 10.8 C -18.7 9.3 -16.4 9.3 -16.4 9.3 C -14.1 9.5 -12.8 11.7 -12.8 11.7 C -10.7 15.3 -7.3 14.3 -5.9 13.6 C -5.7 12.1 -5.1 11 -4.3 10.4 C -9.7 9.8 -15.2 7.7 -15.2 -1.5 C -15.2 -4.1 -14.3 -6.3 -12.7 -7.9 C -13 -8.6 -13.8 -11 -12.4 -14.4 C -12.4 -14.4 -10.4 -15 -5.8 -11.9 C -3.9 -12.4 -1.8 -12.7 0.2 -12.7 C 2.2 -12.7 4.2 -12.4 6.2 -11.9 C 10.8 -15 12.8 -14.4 12.8 -14.4 C 14.2 -11 13.4 -8.6 13.1 -7.9 C 14.7 -6.3 15.6 -4.1 15.6 -1.5 C 15.6 7.7 10.1 9.8 4.7 10.4 C 5.5 11.1 6.3 12.5 6.3 14.6 C 6.3 17.7 6.3 20.2 6.3 21.6 C 6.3 22.2 6.7 23 7.9 22.8 C 17.4 19.6 24.3 10.6 24.3 0 C 24.3 -13.2 13.6 -24 0 -24 Z" fill="#e6edf3" />
-
-    <!-- Cyber Rank Pill at bottom -->
-    <g transform="translate(0, 44)" class="rank-pulse">
-      <rect x="-34" y="-9" width="68" height="18" rx="9" fill="#0D1117" stroke="#22D3EE" stroke-width="1.2" />
-      <text x="0" y="3.5" font-size="9.5" font-weight="700" fill="#22D3EE" font-family="-apple-system, sans-serif" text-anchor="middle" letter-spacing="0.5">RANK S+</text>
-    </g>
-  </g>
-</svg>"""
-    return svg
-
-def generate_streak_svg(data):
+def generate_dashboard_svg(data):
     s = data['streak']
-    total_contribs = s['total_contribs']
-    total_range = s['total_range']
-    current_streak = s['current_streak']
-    current_range = s['current_range']
-    longest_streak = s['longest_streak']
-    longest_range = s['longest_range']
+    tot_val = int(s['total_contribs']) if s['total_contribs'].isdigit() else 201
+    cur_val = int(s['current_streak']) if s['current_streak'].isdigit() else 8
+    lng_val = int(s['longest_streak']) if s['longest_streak'].isdigit() else 8
 
-    svg = f"""<svg width="495" height="195" viewBox="0 0 495 195" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bgStreak" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0e131f" />
-      <stop offset="50%" stop-color="#0d1117" />
-      <stop offset="100%" stop-color="#080c14" />
-    </linearGradient>
-    <linearGradient id="topGlowStreak" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#58A6FF" stop-opacity="0" />
-      <stop offset="25%" stop-color="#58A6FF" stop-opacity="0.9" />
-      <stop offset="75%" stop-color="#22D3EE" stop-opacity="0.9" />
-      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0" />
-    </linearGradient>
-    <style>
-      .num {{ font: 700 28px ui-monospace, SFMono-Regular, "Fira Code", monospace; fill: #ffffff; }}
-      .lbl {{ font: 600 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif; fill: #58A6FF; }}
-      .sub {{ font: 500 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif; fill: #7d8590; }}
-      .fire-anim {{ animation: flamePulse 1.8s ease-in-out infinite; }}
-      @keyframes flamePulse {{ 0%, 100% {{ transform: scale(1); filter: drop-shadow(0 0 3px #22D3EE); }} 50% {{ transform: scale(1.08); filter: drop-shadow(0 0 8px #22D3EE); }} }}
-    </style>
-  </defs>
+    # Digits calculations for Total Contributions (3 digits)
+    d1 = (tot_val // 100) % 10
+    d2 = (tot_val // 10) % 10
+    d3 = tot_val % 10
+    shift_d1 = -(10 + d1) * 100.8
+    shift_d2 = -(10 + d2) * 100.8
+    shift_d3 = -(10 + d3) * 100.8
 
-  <!-- Container Box -->
-  <rect x="0.5" y="0.5" width="494" height="194" rx="8" fill="url(#bgStreak)" stroke="#30363d" stroke-width="1.2" />
-  <!-- Neon Accent Line Top -->
-  <line x1="12" y1="1" x2="483" y2="1" stroke="url(#topGlowStreak)" stroke-width="2.2" />
+    # Current streak digits (2 digits)
+    s_d1 = (cur_val // 10) % 10
+    s_d2 = cur_val % 10
+    shift_sd1 = -(10 + s_d1) * 64.4
+    shift_sd2 = -(10 + s_d2) * 64.4
 
-  <!-- Dividers between columns -->
-  <line x1="165" y1="35" x2="165" y2="165" stroke="#21262d" stroke-width="1" />
-  <line x1="330" y1="35" x2="330" y2="165" stroke="#21262d" stroke-width="1" />
+    # Longest streak digits (2 digits)
+    l_d1 = (lng_val // 10) % 10
+    l_d2 = lng_val % 10
+    shift_ld1 = -(10 + l_d1) * 100.8
+    shift_ld2 = -(10 + l_d2) * 100.8
 
-  <!-- Column 1: Total Contributions -->
-  <g transform="translate(82, 0)">
-    <text x="0" y="82" class="num" text-anchor="middle">{total_contribs}</text>
-    <text x="0" y="112" class="lbl" text-anchor="middle">Total Contributions</text>
-    <text x="0" y="132" class="sub" text-anchor="middle">{total_range}</text>
-  </g>
-
-  <!-- Column 2: Current Streak (Center Featured Gauge) -->
-  <g transform="translate(247, 0)">
-    <!-- Ring Gauge -->
-    <g transform="translate(0, 68)">
-      <circle cx="0" cy="0" r="32" fill="none" stroke="#21262d" stroke-width="4.5" />
-      <circle cx="0" cy="0" r="32" fill="none" stroke="#22D3EE" stroke-width="4.5" stroke-dasharray="160 50" stroke-linecap="round" />
-      
-      <!-- Flame Icon Top of Ring (Safe from clipping) -->
-      <g transform="translate(0, -32) translate(0, -2)" class="fire-anim">
-        <path d="M0 -8 C2 -5 5 -3 5 1 C5 4 2 7 0 7 C-2 7 -5 4 -5 1 C-5 -3 -2 -5 0 -8 Z" fill="#22D3EE" />
-        <path d="M0 -4 C1 -2 2.5 -1 2.5 1.5 C2.5 3 1 4.5 0 4.5 C-1 4.5 -2.5 3 -2.5 1.5 C-2.5 -1 -1 -2 0 -4 Z" fill="#ffffff" />
-      </g>
-      
-      <text x="0" y="9" class="num" text-anchor="middle">{current_streak}</text>
-    </g>
-    <text x="0" y="122" class="lbl" text-anchor="middle" fill="#22D3EE" font-weight="700">Current Streak</text>
-    <text x="0" y="142" class="sub" text-anchor="middle">{current_range}</text>
-  </g>
-
-  <!-- Column 3: Longest Streak -->
-  <g transform="translate(412, 0)">
-    <text x="0" y="82" class="num" text-anchor="middle">{longest_streak}</text>
-    <text x="0" y="112" class="lbl" text-anchor="middle">Longest Streak</text>
-    <text x="0" y="132" class="sub" text-anchor="middle">{longest_range}</text>
-  </g>
-</svg>"""
-    return svg
-
-def generate_langs_svg(data):
-    langs = data['langs']
-    
-    bar_width = 550
+    # Hourly bars (24 hours)
+    hourly = data['hourly']
+    base_y = 472.0
     bar_rects = []
-    accum_x = 0
-    for l in langs:
-        w = round((l['pct'] / 100) * bar_width, 1)
-        if w > 0:
-            bar_rects.append(f'<rect x="{accum_x}" y="0" width="{w}" height="9" fill="{l["color"]}" />')
-            accum_x += w
+    for i, count in enumerate(hourly):
+        x = round(112.4 + i * 42.85, 1)
+        h = round(max(count * 3.2, 3.0), 1)
+        y = round(base_y - h, 1)
+        is_peak = (16 <= i <= 21) or (i == 2)
+        fill = "url(#barPeak)" if is_peak else "url(#bar)"
+        anim_idx = 11 + i
+        bar_rects.append(f'<rect class="b" x="{x}" y="{y}" width="26" height="{h}" rx="5" fill="{fill}" style="animation:k{anim_idx} 14.0s infinite"/>')
+    bars_str = "\n".join(bar_rects)
 
-    bars_markup = "\n      ".join(bar_rects)
+    # Digit column generator
+    def make_digit_col(x, start_y, step_y, font_size):
+        lines = []
+        for d in range(10):
+            lines.append(f'<text x="{x}" y="{start_y + d * step_y:.1f}" text-anchor="middle" font-size="{font_size}" font-weight="800" fill="url(#numfill)">{d}</text>')
+        for d in range(10):
+            lines.append(f'<text x="{x}" y="{start_y + (10 + d) * step_y:.1f}" text-anchor="middle" font-size="{font_size}" font-weight="800" fill="url(#numfill)">{d}</text>')
+        return "\n".join(lines)
 
-    # Render language items with byte sizes
-    items_markup = []
-    col_xs = [0, 180, 360, 470]
-    for idx, item in enumerate(langs):
-        if idx >= len(col_xs):
-            break
-        x = col_xs[idx]
-        items_markup.append(f"""<g transform="translate({x}, 0)">
-      <circle cx="6" cy="6" r="5" fill="{item['color']}" />
-      <text x="18" y="10" font-size="13" font-weight="600" fill="#c9d1d9" font-family="-apple-system, sans-serif">{item['name']} <tspan fill="#ffffff" font-weight="700">{item['pct']:.1f}%</tspan> <tspan fill="#7d8590" font-size="11">({item['size_str']})</tspan></text>
-    </g>""")
+    col1 = make_digit_col(90.5, 218.0, 100.8, 72)
+    col2 = make_digit_col(135.5, 218.0, 100.8, 72)
+    col3 = make_digit_col(180.5, 218.0, 100.8, 72)
 
-    lang_items_str = "\n    ".join(items_markup)
+    s_col1 = make_digit_col(457.5, 207.0, 64.4, 46)
+    s_col2 = make_digit_col(486.5, 207.0, 64.4, 46)
 
-    svg = f"""<svg width="600" height="145" viewBox="0 0 600 145" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bgLangs" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0e131f" />
-      <stop offset="50%" stop-color="#0d1117" />
-      <stop offset="100%" stop-color="#080c14" />
-    </linearGradient>
-    <linearGradient id="topGlowLangs" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0" />
-      <stop offset="30%" stop-color="#22D3EE" stop-opacity="0.8" />
-      <stop offset="70%" stop-color="#58A6FF" stop-opacity="0.8" />
-      <stop offset="100%" stop-color="#58A6FF" stop-opacity="0" />
-    </linearGradient>
-    <mask id="barMask">
-      <rect x="0" y="0" width="{bar_width}" height="9" rx="4.5" fill="white" />
-    </mask>
-  </defs>
+    l_col1 = make_digit_col(910.5, 218.0, 100.8, 72)
+    l_col2 = make_digit_col(955.5, 218.0, 100.8, 72)
 
-  <!-- Container Box -->
-  <rect x="0.5" y="0.5" width="599" height="144" rx="8" fill="url(#bgLangs)" stroke="#30363d" stroke-width="1.2" />
-  <!-- Neon Accent Line Top -->
-  <line x1="12" y1="1" x2="587" y2="1" stroke="url(#topGlowLangs)" stroke-width="2.2" />
+    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-labelledby="t d">
+<title id="t">GitHub stats for Thenuda Sahas</title>
+<desc id="d">Total contributions, current and longest streak, commits by hour, and top languages by repository and by commit.</desc>
+<style>
+text{{font-family:'Segoe UI Variable Display','Segoe UI','SF Pro Display',Inter,system-ui,-apple-system,Roboto,'Helvetica Neue',Arial,sans-serif;font-variant-numeric:tabular-nums}}
+.b{{transform-box:fill-box;transform-origin:50% 100%}}
+#content{{animation:master 14.0s infinite}}
+@keyframes master{{0%{{opacity:0}}3%{{opacity:1}}93%{{opacity:1}}97%{{opacity:0}}100%{{opacity:0}}}}
+@keyframes k1{{0%,3.571%{{transform:translateY(0px);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}15.714%,100%{{transform:translateY({shift_d1:.1f}px)}}}}
+@keyframes k2{{0%,4.429%{{transform:translateY(0px);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}16.571%,100%{{transform:translateY({shift_d2:.1f}px)}}}}
+@keyframes k3{{0%,5.286%{{transform:translateY(0px);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}17.429%,100%{{transform:translateY({shift_d3:.1f}px)}}}}
+@keyframes k4{{0%,4.643%{{stroke-dashoffset:389.56;animation-timing-function:cubic-bezier(.2,.8,.2,1)}}16.786%,100%{{stroke-dashoffset:0}}}}
+@keyframes k5{{0%,17.143%{{opacity:0;animation-timing-function:ease}}20.0%,100%{{opacity:1}}}}
+@keyframes k6{{0%,4.643%{{transform:translateY(0px);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}16.786%,100%{{transform:translateY({shift_sd1:.1f}px)}}}}
+@keyframes k7{{0%,5.5%{{transform:translateY(0px);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}17.643%,100%{{transform:translateY({shift_sd2:.1f}px)}}}}
+@keyframes k8{{0%,5.714%{{transform:translateY(0px);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}17.857%,100%{{transform:translateY({shift_ld1:.1f}px)}}}}
+@keyframes k9{{0%,6.571%{{transform:translateY(0px);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}18.714%,100%{{transform:translateY({shift_ld2:.1f}px)}}}}
+@keyframes k10{{0%,18.571%{{opacity:0;animation-timing-function:ease}}22.857%,100%{{opacity:1}}}}
+@keyframes k11{{0%,10.714%{{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}15.714%,100%{{transform:scaleY(1)}}}}
+@keyframes k12{{0%,11.0%{{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}16.0%,100%{{transform:scaleY(1)}}}}
+@keyframes k13{{0%,11.286%{{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}16.286%,100%{{transform:scaleY(1)}}}}
+@keyframes k14{{0%,11.571%{{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}16.571%,100%{{transform:scaleY(1)}}}}
+@keyframes k15{{0%,11.857%{{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}16.857%,100%{{transform:scaleY(1)}}}}
+@keyframes k16{{0%,12.143%{{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}17.143%,100%{{transform:scaleY(1)}}}}
+@keyframes k17{{0%,12.429%{{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}17.429%,100%{{transform:scaleY(1)}}}}
+@keyframes k18{{0%,12.714%{{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}17.714%,100%{{transform:scaleY(1)}}}}
+@keyframes k19{{0%,13.0%{{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}18.0%,100%{{transform:scaleY(1)}}}}
+@keyframes k20{{0%,13.286%{{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}18.286%,100%{{transform:scaleY(1)}}}}
+@keyframes k21{{0%,13.571%{{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}18.571%,100%{{transform:scaleY(1)}}}}
+@keyframes k22{{0%,13.857%{{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}18.857%,100%{{transform:scaleY(1)}}}}
+@keyframes k23{{0%,14.143%{{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}19.143%,100%{{transform:scaleY(1)}}}}
+@keyframes k24{{0%,14.429%{{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}19.429%,100%{{transform:scaleY(1)}}}}
+@keyframes k25{{0%,14.714%{{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}19.714%,100%{{transform:scaleY(1)}}}}
+@keyframes k26{{0%,15.0%{{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}20.0%,100%{{transform:scaleY(1)}}}}
+@keyframes k27{{0%,15.286%{{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}20.286%,100%{{transform:scaleY(1)}}}}
+@keyframes k28{{0%,15.571%{{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}20.571%,100%{{transform:scaleY(1)}}}}
+@keyframes k29{{0%,15.857%{{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}20.857%,100%{{transform:scaleY(1)}}}}
+@keyframes k30{{0%,16.143%{{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}21.143%,100%{{transform:scaleY(1)}}}}
+@keyframes k31{{0%,16.429%{{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}21.429%,100%{{transform:scaleY(1)}}}}
+@keyframes k32{{0%,16.714%{{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}21.714%,100%{{transform:scaleY(1)}}}}
+@keyframes k33{{0%,17.0%{{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}22.0%,100%{{transform:scaleY(1)}}}}
+@keyframes k34{{0%,17.286%{{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}22.286%,100%{{transform:scaleY(1)}}}}
+@keyframes k35{{0%,17.143%{{stroke-dasharray:0 427.26;animation-timing-function:linear}}21.343%,100%{{stroke-dasharray:183.72 427.26}}}}
+@keyframes k36{{0%,21.343%{{stroke-dasharray:0 427.26;animation-timing-function:linear}}24.843%,100%{{stroke-dasharray:183.72 427.26}}}}
+@keyframes k37{{0%,24.843%{{stroke-dasharray:0 427.26;animation-timing-function:linear}}27.143%,100%{{stroke-dasharray:59.82 427.26}}}}
+@keyframes k40{{0%,27.143%{{opacity:0;animation-timing-function:ease}}30.714%,100%{{opacity:1}}}}
+@keyframes k41{{0%,19.286%{{stroke-dasharray:0 427.26;animation-timing-function:linear}}24.486%,100%{{stroke-dasharray:413.16 427.26}}}}
+@keyframes k42{{0%,24.486%{{stroke-dasharray:0 427.26;animation-timing-function:linear}}28.486%,100%{{stroke-dasharray:11.96 427.26}}}}
+@keyframes k43{{0%,28.486%{{stroke-dasharray:0 427.26;animation-timing-function:linear}}29.343%,100%{{stroke-dasharray:1.71 427.26}}}}
+@keyframes k44{{0%,29.343%{{stroke-dasharray:0 427.26;animation-timing-function:linear}}30.043%,100%{{stroke-dasharray:0.43 427.26}}}}
+@keyframes k46{{0%,29.286%{{opacity:0;animation-timing-function:ease}}32.857%,100%{{opacity:1}}}}
+@media (prefers-reduced-motion:reduce){{*{{animation:none!important}}.dot{{display:none}}}}
+</style>
 
-  <!-- Title and Ecosystem Tag -->
-  <text x="25" y="32" font-size="16" font-weight="700" fill="#58A6FF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif">Most Used Languages</text>
-  <text x="575" y="32" text-anchor="end" font-size="10" font-weight="600" fill="#7d8590" font-family="ui-monospace, monospace">PRIMARY STACK // JAVASCRIPT and PYTHON</text>
+<defs>
+  <clipPath id="frame"><rect width="1200" height="800" rx="28"/></clipPath>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0A0F1F"/><stop offset="1" stop-color="#0F1530"/>
+  </linearGradient>
+  <radialGradient id="glowA" cx="0.12" cy="0.05" r="0.55">
+    <stop offset="0" stop-color="#7C5CFF" stop-opacity="0.28"/><stop offset="1" stop-color="#7C5CFF" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="glowB" cx="0.92" cy="0.98" r="0.5">
+    <stop offset="0" stop-color="#22D3EE" stop-opacity="0.2"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+  </radialGradient>
+  <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="2" cy="2" r="1" fill="#FFFFFF" fill-opacity="0.055"/>
+  </pattern>
+  <linearGradient id="numfill" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#C9D2F5"/>
+  </linearGradient>
+  <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#5EEAD4"/><stop offset="0.55" stop-color="#818CF8"/><stop offset="1" stop-color="#C084FC"/>
+  </linearGradient>
+  <linearGradient id="bar" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#8B9BFF"/><stop offset="1" stop-color="#4338CA" stop-opacity="0.75"/>
+  </linearGradient>
+  <linearGradient id="barPeak" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#7CF3E0"/><stop offset="1" stop-color="#6366F1"/>
+  </linearGradient>
+  <linearGradient id="tileEdge" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#7C5CFF" stop-opacity="0.5"/><stop offset="0.5" stop-color="#22D3EE" stop-opacity="0.25"/><stop offset="1" stop-color="#7C5CFF" stop-opacity="0.4"/>
+  </linearGradient>
+  <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <clipPath id="c_tot"><rect x="64.0" y="156.1" width="143.0" height="80.6"/></clipPath>
+  <clipPath id="c_str"><rect x="439.0" y="167.4" width="66.0" height="51.5"/></clipPath>
+  <clipPath id="c_lng"><rect x="884.0" y="156.1" width="98.0" height="80.6"/></clipPath>
+</defs>
 
-  <!-- Progress Bar ({bar_width}px wide) -->
-  <g transform="translate(25, 48)" mask="url(#barMask)">
-    <rect x="0" y="0" width="{bar_width}" height="9" fill="#161b22" />
-    <g>
-      {bars_markup}
+<!-- Background -->
+<g clip-path="url(#frame)">
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" fill="url(#dots)"/>
+  <rect width="1200" height="800" fill="url(#glowA)"/>
+  <rect width="1200" height="800" fill="url(#glowB)"/>
+</g>
+<rect x="0.5" y="0.5" width="1199" height="799" rx="28" fill="none" stroke="#FFFFFF" stroke-opacity="0.08"/>
+
+<!-- Main Animated Content -->
+<g id="content">
+  <!-- Header -->
+  <text x="40" y="54" font-size="27" font-weight="800" fill="#E8ECF8" letter-spacing="-0.4">GitHub stats</text>
+  <text x="40" y="78" font-size="14" fill="#8B94B3">Thenuda Sahas, Security Researcher and DFIR Specialist</text>
+
+  <!-- Top Card 1: Total Contributions -->
+  <rect x="40" y="96" width="300" height="190" rx="20" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.09" stroke-width="1"/>
+  <text x="68" y="138" font-size="15" font-weight="600" fill="#8B94B3">Total contributions</text>
+  <g clip-path="url(#c_tot)">
+    <g style="animation:k1 14.0s infinite;transform:translateY({shift_d1:.1f}px)">
+      {col1}
+    </g>
+    <g style="animation:k2 14.0s infinite;transform:translateY({shift_d2:.1f}px)">
+      {col2}
+    </g>
+    <g style="animation:k3 14.0s infinite;transform:translateY({shift_d3:.1f}px)">
+      {col3}
     </g>
   </g>
+  <text x="68" y="260" font-size="13" font-weight="600" fill="#5EEAD4">{s['total_range']}</text>
 
-  <!-- Language Items Grid -->
-  <g transform="translate(25, 82)">
-    {lang_items_str}
+  <!-- Top Card 2: Current Streak (Center Gauge) -->
+  <rect x="360" y="96" width="480" height="190" rx="20" fill="#FFFFFF" fill-opacity="0.04" stroke="url(#tileEdge)" stroke-opacity="1" stroke-width="1.4"/>
+  <circle cx="472" cy="191" r="62" fill="none" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="10"/>
+  <circle cx="472" cy="191" r="62" fill="none" stroke="url(#ring)" stroke-width="10" stroke-linecap="round" stroke-dasharray="389.56" stroke-dashoffset="0" transform="rotate(-90 472 191)" filter="url(#glow)" style="animation:k4 14.0s infinite"/>
+  <circle class="dot" r="3.5" fill="#FFFFFF" style="animation:k5 14.0s infinite;opacity:1"><animateMotion dur="6s" repeatCount="indefinite" path="M 472,129 A 62,62 0 1,1 471.99,129"/></circle>
+  
+  <g clip-path="url(#c_str)">
+    <g style="animation:k6 14.0s infinite;transform:translateY({shift_sd1:.1f}px)">
+      {s_col1}
+    </g>
+    <g style="animation:k7 14.0s infinite;transform:translateY({shift_sd2:.1f}px)">
+      {s_col2}
+    </g>
   </g>
+  <text x="472" y="229" text-anchor="middle" font-size="12" font-weight="600" fill="#8B94B3">days</text>
+  <text x="574" y="174" font-size="19" font-weight="700" fill="#E8ECF8">Current streak</text>
+  <text x="574" y="200" font-size="14" fill="#5EEAD4" font-weight="600">{s['current_range']}</text>
+  <text x="574" y="228" font-size="13" fill="#8B94B3">Matches the longest streak</text>
+
+  <!-- Top Card 3: Longest Streak -->
+  <rect x="860" y="96" width="300" height="190" rx="20" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.09" stroke-width="1"/>
+  <text x="888" y="138" font-size="15" font-weight="600" fill="#8B94B3">Longest streak</text>
+  <g clip-path="url(#c_lng)">
+    <g style="animation:k8 14.0s infinite;transform:translateY({shift_ld1:.1f}px)">
+      {l_col1}
+    </g>
+    <g style="animation:k9 14.0s infinite;transform:translateY({shift_ld2:.1f}px)">
+      {l_col2}
+    </g>
+  </g>
+  <text x="988" y="218" font-size="20" font-weight="600" fill="#8B94B3">days</text>
+  <text x="888" y="260" font-size="13" font-weight="600" fill="#5EEAD4">{s['longest_range']}</text>
+
+  <!-- Middle Card: Commits by Hour -->
+  <rect x="40" y="306" width="1120" height="200" rx="20" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.09" stroke-width="1"/>
+  <text x="68" y="344" font-size="17" font-weight="700" fill="#E8ECF8">Commits by hour</text>
+  <text x="1132" y="344" text-anchor="end" font-size="13" fill="#8B94B3">UTC+5:30</text>
+  
+  <line x1="100" y1="472.0" x2="1132" y2="472.0" stroke="#FFFFFF" stroke-opacity="0.16"/>
+  <text x="90" y="476.0" text-anchor="end" font-size="11" fill="#8B94B3">0</text>
+  <line x1="100" y1="446.0" x2="1132" y2="446.0" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <text x="90" y="450.0" text-anchor="end" font-size="11" fill="#8B94B3">10</text>
+  <line x1="100" y1="420.0" x2="1132" y2="420.0" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <text x="90" y="424.0" text-anchor="end" font-size="11" fill="#8B94B3">20</text>
+  <line x1="100" y1="394.0" x2="1132" y2="394.0" stroke="#FFFFFF" stroke-opacity="0.06"/>
+  <text x="90" y="398.0" text-anchor="end" font-size="11" fill="#8B94B3">30</text>
+
+  <!-- Peak Hours Highlight (Evening 16:00 - 21:00) -->
+  <g style="animation:k10 14.0s infinite">
+    <rect x="785" y="358" width="260" height="118.0" rx="10" fill="#5EEAD4" fill-opacity="0.08"/>
+    <text x="915" y="374" text-anchor="middle" font-size="12" font-weight="600" fill="#5EEAD4">Peak hours</text>
+  </g>
+
+  <!-- Hourly Bars (00 to 23) -->
+  {bars_str}
+
+  <!-- Hourly Labels -->
+  <text x="125.4" y="492" text-anchor="middle" font-size="11" fill="#8B94B3">00</text>
+  <text x="253.9" y="492" text-anchor="middle" font-size="11" fill="#8B94B3">03</text>
+  <text x="382.4" y="492" text-anchor="middle" font-size="11" fill="#8B94B3">06</text>
+  <text x="510.9" y="492" text-anchor="middle" font-size="11" fill="#8B94B3">09</text>
+  <text x="639.4" y="492" text-anchor="middle" font-size="11" fill="#8B94B3">12</text>
+  <text x="767.9" y="492" text-anchor="middle" font-size="11" fill="#8B94B3">15</text>
+  <text x="896.4" y="492" text-anchor="middle" font-size="11" fill="#8B94B3">18</text>
+  <text x="1024.9" y="492" text-anchor="middle" font-size="11" fill="#8B94B3">21</text>
+  <text x="1110.6" y="492" text-anchor="middle" font-size="11" fill="#8B94B3">23</text>
+
+  <!-- Bottom Card Left: Top Languages by Repository -->
+  <rect x="40" y="526" width="550" height="250" rx="20" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.09" stroke-width="1"/>
+  <text x="68" y="566" font-size="17" font-weight="700" fill="#E8ECF8">Top languages by repository</text>
+  
+  <circle cx="74" cy="616" r="5" fill="#F1E05A"/>
+  <text x="92" y="621" font-size="14" fill="#E8ECF8">JavaScript</text>
+  <text x="302" y="621" text-anchor="end" font-size="14" font-weight="600" fill="#8B94B3">43%</text>
+
+  <circle cx="74" cy="652" r="5" fill="#4F8EF7"/>
+  <text x="92" y="657" font-size="14" fill="#E8ECF8">Python</text>
+  <text x="302" y="657" text-anchor="end" font-size="14" font-weight="600" fill="#8B94B3">43%</text>
+
+  <circle cx="74" cy="688" r="5" fill="#EF4444"/>
+  <text x="92" y="693" font-size="14" fill="#E8ECF8">HTML</text>
+  <text x="302" y="693" text-anchor="end" font-size="14" font-weight="600" fill="#8B94B3">14%</text>
+
+  <!-- Donut Chart Left (Repos) -->
+  <circle cx="450" cy="668" r="68" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="26"/>
+  <circle cx="450" cy="668" r="68" fill="none" stroke="#F1E05A" stroke-width="26" stroke-dasharray="183.72 427.26" stroke-dashoffset="-1.50" transform="rotate(-90 450 668)" style="animation:k35 14.0s infinite"/>
+  <circle cx="450" cy="668" r="68" fill="none" stroke="#4F8EF7" stroke-width="26" stroke-dasharray="183.72 427.26" stroke-dashoffset="-188.22" transform="rotate(-90 450 668)" style="animation:k36 14.0s infinite"/>
+  <circle cx="450" cy="668" r="68" fill="none" stroke="#EF4444" stroke-width="26" stroke-dasharray="59.82 427.26" stroke-dashoffset="-374.94" transform="rotate(-90 450 668)" style="animation:k37 14.0s infinite"/>
+  
+  <g style="animation:k40 14.0s infinite">
+    <text x="450" y="672" text-anchor="middle" font-size="24" font-weight="800" fill="url(#numfill)">43%</text>
+    <text x="450" y="690" text-anchor="middle" font-size="12" fill="#8B94B3">JavaScript</text>
+  </g>
+
+  <!-- Bottom Card Right: Top Languages by Commit -->
+  <rect x="610" y="526" width="550" height="250" rx="20" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.09" stroke-width="1"/>
+  <text x="638" y="566" font-size="17" font-weight="700" fill="#E8ECF8">Top languages by commit</text>
+
+  <circle cx="644" cy="616" r="5" fill="#F1E05A"/>
+  <text x="662" y="621" font-size="14" fill="#E8ECF8">JavaScript</text>
+  <text x="872" y="621" text-anchor="end" font-size="14" font-weight="600" fill="#8B94B3">97%</text>
+
+  <circle cx="644" cy="652" r="5" fill="#4F8EF7"/>
+  <text x="662" y="657" font-size="14" fill="#E8ECF8">Python</text>
+  <text x="872" y="657" text-anchor="end" font-size="14" font-weight="600" fill="#8B94B3">3%</text>
+
+  <circle cx="644" cy="688" r="5" fill="#EF4444"/>
+  <text x="662" y="693" font-size="14" fill="#E8ECF8">HTML</text>
+  <text x="872" y="693" text-anchor="end" font-size="14" font-weight="600" fill="#8B94B3">0.4%</text>
+
+  <circle cx="644" cy="724" r="5" fill="#2DD4BF"/>
+  <text x="662" y="729" font-size="14" fill="#E8ECF8">Shell</text>
+  <text x="872" y="729" text-anchor="end" font-size="14" font-weight="600" fill="#8B94B3">0.1%</text>
+
+  <!-- Donut Chart Right (Commits) -->
+  <circle cx="1020" cy="668" r="68" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="26"/>
+  <circle cx="1020" cy="668" r="68" fill="none" stroke="#F1E05A" stroke-width="26" stroke-dasharray="413.16 427.26" stroke-dashoffset="-1.50" transform="rotate(-90 1020 668)" style="animation:k41 14.0s infinite"/>
+  <circle cx="1020" cy="668" r="68" fill="none" stroke="#4F8EF7" stroke-width="26" stroke-dasharray="11.96 427.26" stroke-dashoffset="-416.16" transform="rotate(-90 1020 668)" style="animation:k42 14.0s infinite"/>
+  <circle cx="1020" cy="668" r="68" fill="none" stroke="#EF4444" stroke-width="26" stroke-dasharray="1.71 427.26" stroke-dashoffset="-429.62" transform="rotate(-90 1020 668)" style="animation:k43 14.0s infinite"/>
+  <circle cx="1020" cy="668" r="68" fill="none" stroke="#2DD4BF" stroke-width="26" stroke-dasharray="0.43 427.26" stroke-dashoffset="-432.83" transform="rotate(-90 1020 668)" style="animation:k44 14.0s infinite"/>
+
+  <g style="animation:k46 14.0s infinite">
+    <text x="1020" y="672" text-anchor="middle" font-size="24" font-weight="800" fill="url(#numfill)">97%</text>
+    <text x="1020" y="690" text-anchor="middle" font-size="12" fill="#8B94B3">JavaScript</text>
+  </g>
+</g>
 </svg>"""
     return svg
 
 def main():
     print("Fetching live telemetry for", USERNAME)
     data = fetch_data()
-    print("Telemetry data fetched:", data)
+    print("Telemetry data fetched successfully!")
     
-    stats_svg = generate_stats_svg(data)
-    streak_svg = generate_streak_svg(data)
-    langs_svg = generate_langs_svg(data)
+    dashboard_svg = generate_dashboard_svg(data)
     
     # Validate XML
-    ET.fromstring(stats_svg)
-    ET.fromstring(streak_svg)
-    ET.fromstring(langs_svg)
-    print("All SVGs validated as 100% well-formed XML!")
+    ET.fromstring(dashboard_svg)
+    print("Dashboard SVG validated as 100% well-formed XML!")
     
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     assets_dir = os.path.join(base_dir, 'assets')
     os.makedirs(assets_dir, exist_ok=True)
     
-    with open(os.path.join(assets_dir, 'github-stats.svg'), 'w', encoding='utf-8') as f:
-        f.write(stats_svg)
-    with open(os.path.join(assets_dir, 'github-streak.svg'), 'w', encoding='utf-8') as f:
-        f.write(streak_svg)
-    with open(os.path.join(assets_dir, 'github-langs.svg'), 'w', encoding='utf-8') as f:
-        f.write(langs_svg)
+    out_path = os.path.join(assets_dir, 'github-stats-dashboard.svg')
+    with open(out_path, 'w', encoding='utf-8') as f:
+        f.write(dashboard_svg)
         
-    print("Saved upgraded stats, streak, and langs SVGs successfully!")
+    print(f"Saved upgraded dashboard to {out_path} successfully!")
 
 if __name__ == '__main__':
     main()

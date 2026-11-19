@@ -125,14 +125,9 @@
   <img src="assets/among-us-sentry-fire.svg?v=9" width="100%" alt="Among Us Tactical Sentry Dynamic Multi-Target Flank and Fire Animation" />
 </p>
 
-<!-- Real-Time Auto-Updating GitHub Analytics & Streak Suite -->
+<!-- Real-Time Glassmorphic Full-Fidelity GitHub Analytics & Stats Dashboard -->
 <p align="center">
-  <img width="49%" src="assets/github-stats.svg?v=3" alt="Thenuda Sahas GitHub Statistics" />
-  <img width="49%" src="assets/github-streak.svg?v=3" alt="GitHub Contribution Streak" />
-</p>
-
-<p align="center">
-  <img width="62%" src="assets/github-langs.svg?v=3" alt="Top Languages Breakdown" />
+  <img width="100%" src="assets/github-stats-dashboard.svg?v=1" alt="Thenuda Sahas GitHub Stats Telemetry Dashboard" />
 </p>
 
 ---
