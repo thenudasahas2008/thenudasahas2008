@@ -2,7 +2,6 @@ import os
 import json
 import urllib.request
 import xml.etree.ElementTree as ET
-from datetime import datetime
 
 USERNAME = "thenudasahas2008"
 TIMEZONE = "Asia/Colombo"
@@ -40,34 +39,7 @@ def fetch_data():
         print("Issues fetch fallback:", e)
         total_issues = 1
 
-    # 4. Streak Stats
-    streak_data = {
-        'totalContributions': 201,
-        'currentStreak': 8,
-        'longestStreak': 8,
-        'firstContrib': 'Aug 19, 2025',
-        'currentDates': 'Nov 13 - Nov 20',
-        'longestDates': 'Nov 13 - Nov 20'
-    }
-    try:
-        u_streak = f'https://streak-stats.demolab.com?user={USERNAME}&timezone={TIMEZONE}&type=json'
-        req_streak = urllib.request.Request(u_streak, headers=headers)
-        raw_streak = json.loads(urllib.request.urlopen(req_streak, timeout=10).read().decode('utf-8'))
-        streak_data['totalContributions'] = raw_streak.get('totalContributions', 201)
-        
-        cs = raw_streak.get('currentStreak', {})
-        streak_data['currentStreak'] = cs.get('length', 8)
-        if cs.get('start') and cs.get('end'):
-            streak_data['currentDates'] = f"{cs['start']} - {cs['end']}"
-            
-        ls = raw_streak.get('longestStreak', {})
-        streak_data['longestStreak'] = ls.get('length', 8)
-        if ls.get('start') and ls.get('end'):
-            streak_data['longestDates'] = f"{ls['start']} - {ls['end']}"
-    except Exception as e:
-        print("Streak fetch fallback:", e)
-
-    # 5. Language bytes
+    # 4. Language bytes
     lang_bytes = {'JavaScript': 2187041, 'Python': 47404, 'HTML': 9261}
     try:
         req_repos = urllib.request.Request(f'https://api.github.com/users/{USERNAME}/repos?per_page=100', headers=headers)
@@ -88,7 +60,6 @@ def fetch_data():
     except Exception as e:
         print("Repos fetch fallback:", e)
 
-    # Calculate filtered language percentages
     filtered_langs = {k: v for k, v in lang_bytes.items() if k not in ['Procfile', 'Dockerfile', 'Shell']}
     tot = sum(filtered_langs.values()) or 1
     lang_pcts = []
@@ -108,7 +79,6 @@ def fetch_data():
         'commits': total_commits,
         'prs': total_prs,
         'issues': total_issues,
-        'streak': streak_data,
         'langs': lang_pcts
     }
 
@@ -117,35 +87,32 @@ def generate_stats_svg(data):
     prs = data['prs']
     issues = data['issues']
     
-    svg = f"""<svg width="467" height="170" viewBox="0 0 467 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+    # Perfectly matches Streak Stats 195px height!
+    svg = f"""<svg width="467" height="195" viewBox="0 0 467 195" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0d1117" />
       <stop offset="100%" stop-color="#090d16" />
     </linearGradient>
-    <filter id="octoGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
     <style>
-      .header {{ font: 600 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif; fill: #58A6FF; }}
-      .stat-label {{ font: 400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif; fill: #c9d1d9; }}
-      .stat-val {{ font: 700 13.5px -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif; fill: #ffffff; }}
-      .octo-ring {{ animation: ringRotate 10s linear infinite; transform-origin: 395px 95px; }}
+      .header {{ font: 600 18px -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif; fill: #58A6FF; }}
+      .stat-label {{ font: 400 13.5px -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif; fill: #c9d1d9; }}
+      .stat-val {{ font: 700 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif; fill: #ffffff; }}
+      .octo-ring {{ animation: ringRotate 10s linear infinite; transform-origin: 395px 105px; }}
       @keyframes ringRotate {{ 0% {{ transform: rotate(0deg); }} 100% {{ transform: rotate(360deg); }} }}
     </style>
   </defs>
 
-  <!-- Container Box -->
-  <rect x="0.5" y="0.5" width="466" height="169" rx="6" fill="url(#bg)" stroke="#30363d" />
+  <!-- Container Box (195px height) -->
+  <rect x="0.5" y="0.5" width="466" height="194" rx="6" fill="url(#bg)" stroke="#30363d" />
 
   <!-- Title -->
-  <g transform="translate(25, 32)">
+  <g transform="translate(25, 36)">
     <text x="0" y="0" class="header">Thenuda Sahas' GitHub Stats</text>
   </g>
 
   <!-- Stats Rows -->
-  <g transform="translate(25, 62)">
+  <g transform="translate(25, 72)">
     <!-- Total Commits -->
     <g transform="translate(0, 0)">
       <path d="M1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm.5 4.75a.75.75 0 0 0-1.5 0v3.5a.75.75 0 0 0 .37.65l2.5 1.5a.75.75 0 0 0 .76-1.3L8.5 7.92V4.75z" fill="#22D3EE" />
@@ -154,14 +121,14 @@ def generate_stats_svg(data):
     </g>
 
     <!-- Total PRs -->
-    <g transform="translate(0, 28)">
+    <g transform="translate(0, 32)">
       <path d="M7.177 3.073L4.405.5a.75.75 0 00-1.01.037L.64 3.292a.75.75 0 001.06 1.06l1.55-1.55V9a2.5 2.5 0 002.5 2.5h1a.75.75 0 000-1.5h-1A1 1 0 014.75 9V2.803l1.366 1.367a.75.75 0 001.06-1.06l-.001-.001zM11.75 1.5a2.5 2.5 0 00-2.5 2.5v6.197l-1.366-1.367a.75.75 0 00-1.06 1.06l2.75 2.75a.75.75 0 001.06 0l2.75-2.75a.75.75 0 00-1.06-1.06l-1.574 1.574V4a1 1 0 011-1h1a.75.75 0 000-1.5h-1z" fill="#22D3EE" />
       <text x="25" y="12" class="stat-label">Total PRs:</text>
       <text x="210" y="12" class="stat-val" text-anchor="end">{prs}</text>
     </g>
 
     <!-- Total Issues -->
-    <g transform="translate(0, 56)">
+    <g transform="translate(0, 64)">
       <path d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z" fill="#22D3EE" />
       <text x="25" y="12" class="stat-label">Total Issues:</text>
       <text x="210" y="12" class="stat-val" text-anchor="end">{issues}</text>
@@ -169,90 +136,25 @@ def generate_stats_svg(data):
   </g>
 
   <!-- GitHub Octocat Logo on Right -->
-  <g transform="translate(395, 95)">
-    <!-- Cyan Ring -->
-    <circle cx="0" cy="0" r="42" fill="none" stroke="#21262d" stroke-width="4.5" />
-    <circle cx="0" cy="0" r="42" fill="none" stroke="#22D3EE" stroke-width="4.5" stroke-dasharray="190 75" class="octo-ring" />
-    <!-- Background Circle -->
-    <circle cx="0" cy="0" r="38" fill="#161b22" />
-    <!-- Octocat Silhouette Vector -->
+  <g transform="translate(395, 105)">
+    <circle cx="0" cy="0" r="44" fill="none" stroke="#21262d" stroke-width="4.5" />
+    <circle cx="0" cy="0" r="44" fill="none" stroke="#22D3EE" stroke-width="4.5" stroke-dasharray="200 80" class="octo-ring" />
+    <circle cx="0" cy="0" r="40" fill="#161b22" />
     <path d="M 0 -26 C -14.4 -26 -26 -14.4 -26 0 C -26 11.5 -18.5 21.3 -8.2 24.7 C -6.9 25 -6.4 24.1 -6.4 23.4 C -6.4 22.8 -6.4 20.6 -6.4 18.5 C -13.6 20.1 -15.1 15.5 -15.1 15.5 C -16.3 12.5 -18 11.7 -18 11.7 C -20.3 10.1 -17.8 10.1 -17.8 10.1 C -15.3 10.3 -13.9 12.7 -13.9 12.7 C -11.6 16.6 -7.9 15.5 -6.4 14.8 C -6.2 13.1 -5.5 12 -4.7 11.3 C -10.5 10.6 -16.5 8.4 -16.5 -1.6 C -16.5 -4.5 -15.5 -6.8 -13.8 -8.6 C -14.1 -9.3 -15 -12 -13.5 -15.6 C -13.5 -15.6 -11.3 -16.3 -6.3 -12.9 C -4.2 -13.5 -2 -13.8 0.2 -13.8 C 2.4 -13.8 4.6 -13.5 6.7 -12.9 C 11.7 -16.3 13.9 -15.6 13.9 -15.6 C 15.4 -12 14.5 -9.3 14.2 -8.6 C 15.9 -6.8 16.9 -4.5 16.9 -1.6 C 16.9 8.4 10.9 10.6 5.1 11.3 C 6 12.1 6.8 13.6 6.8 15.9 C 6.8 19.2 6.8 21.9 6.8 23.4 C 6.8 24.1 7.3 25 8.6 24.7 C 18.9 21.3 26.4 11.5 26.4 0 C 26.4 -14.4 14.8 -26 0 -26 Z" fill="#e6edf3" />
   </g>
 </svg>"""
     return svg
 
-def generate_streak_svg(data):
-    s = data['streak']
-    tot = s['totalContributions']
-    cur = s['currentStreak']
-    long = s['longestStreak']
-    cur_dates = s['currentDates']
-    long_dates = s['longestDates']
-    
-    svg = f"""<svg width="495" height="170" viewBox="0 0 495 170" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bgStreak" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d1117" />
-      <stop offset="100%" stop-color="#090d16" />
-    </linearGradient>
-    <filter id="fireGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="3.5" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
-    <style>
-      .num-val {{ font: 700 28px -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif; fill: #ffffff; text-anchor: middle; }}
-      .title-mid {{ font: 700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif; fill: #22D3EE; text-anchor: middle; }}
-      .title-side {{ font: 600 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif; fill: #58A6FF; text-anchor: middle; }}
-      .sub-date {{ font: 400 10px -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif; fill: #7d8590; text-anchor: middle; }}
-      .fire-pulse {{ animation: flamePulse 1.8s ease-in-out infinite; transform-origin: 247px 62px; }}
-      @keyframes flamePulse {{ 0%, 100% {{ transform: scale(1); filter: drop-shadow(0 0 3px rgba(34, 211, 238, 0.4)); }} 50% {{ transform: scale(1.08); filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.8)); }} }}
-    </style>
-  </defs>
-
-  <!-- Container Box -->
-  <rect x="0.5" y="0.5" width="494" height="169" rx="6" fill="url(#bgStreak)" stroke="#30363d" />
-
-  <!-- Separator Dividers -->
-  <line x1="165" y1="25" x2="165" y2="145" stroke="#21262d" stroke-width="1.2" />
-  <line x1="330" y1="25" x2="330" y2="145" stroke="#21262d" stroke-width="1.2" />
-
-  <!-- Left: Total Contributions -->
-  <g transform="translate(82, 0)">
-    <text x="0" y="70" class="num-val">{tot}</text>
-    <text x="0" y="98" class="title-side">Total Contributions</text>
-    <text x="0" y="118" class="sub-date">Aug 19, 2025 - Present</text>
-  </g>
-
-  <!-- Center: Current Streak -->
-  <g transform="translate(247, 0)">
-    <!-- Fire Ring -->
-    <circle cx="0" cy="58" r="32" fill="none" stroke="#21262d" stroke-width="4" />
-    <circle cx="0" cy="58" r="32" fill="none" stroke="#22D3EE" stroke-width="4" stroke-dasharray="150 50" />
-    <!-- Flame Icon Top of Ring -->
-    <g transform="translate(0, 24)" class="fire-pulse">
-      <path d="M 0 -8 C 2 -4 4 -3 5 0 C 6 3 4 7 0 9 C -4 7 -6 3 -5 0 C -4 -3 -2 -4 0 -8 Z" fill="#22D3EE" />
-      <path d="M 0 -4 C 1 -2 2 -1 2.5 0.5 C 3 2 2 4.5 0 5.5 C -2 4.5 -3 2 -2.5 0.5 C -2 -1 -1 -2 0 -4 Z" fill="#ffffff" />
-    </g>
-    <!-- Streak Number -->
-    <text x="0" y="68" class="num-val">{cur}</text>
-    <!-- Labels -->
-    <text x="0" y="114" class="title-mid">Current Streak</text>
-    <text x="0" y="132" class="sub-date">{cur_dates}</text>
-  </g>
-
-  <!-- Right: Longest Streak -->
-  <g transform="translate(412, 0)">
-    <text x="0" y="70" class="num-val">{long}</text>
-    <text x="0" y="98" class="title-side">Longest Streak</text>
-    <text x="0" y="118" class="sub-date">{long_dates}</text>
-  </g>
-</svg>"""
+def fetch_default_streak_svg():
+    # Official default demolab streak stats SVG
+    u_streak = f'https://streak-stats.demolab.com?user={USERNAME}&theme=dark&border=30363D&background=0D1117&ring=22D3EE&fire=22D3EE&currStreakLabel=58A6FF&timezone={TIMEZONE}'
+    req = urllib.request.Request(u_streak, headers={'User-Agent': 'Mozilla/5.0'})
+    svg = urllib.request.urlopen(req, timeout=10).read().decode('utf-8')
     return svg
 
 def generate_langs_svg(data):
     langs = data['langs']
     
-    # Generate progress bar rects
     bar_width = 300
     bar_rects = []
     accum_x = 0
@@ -264,8 +166,6 @@ def generate_langs_svg(data):
 
     bars_markup = "\n        ".join(bar_rects)
 
-    # Generate language list text
-    # Column 1 (x=0), Column 2 (x=160)
     col1 = langs[:2]
     col2 = langs[2:]
 
@@ -325,7 +225,7 @@ def main():
     print("Data fetched:", data)
     
     stats_svg = generate_stats_svg(data)
-    streak_svg = generate_streak_svg(data)
+    streak_svg = fetch_default_streak_svg()
     langs_svg = generate_langs_svg(data)
     
     # Validate XML
@@ -345,7 +245,7 @@ def main():
     with open(os.path.join(assets_dir, 'github-langs.svg'), 'w', encoding='utf-8') as f:
         f.write(langs_svg)
         
-    print("Saved all 3 SVGs to", assets_dir)
+    print("Saved all 3 SVGs successfully!")
 
 if __name__ == '__main__':
     main()
