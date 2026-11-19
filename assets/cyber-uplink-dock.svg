@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 280" width="100%" height="100%" fill="none">
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, "Fira Code", Menlo, monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+
+      /* Animation: Oscilloscope Wave Pulse */
+      @keyframes waveScroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-240px); }
+      }
+      .wave-track {
+        animation: waveScroll 3.8s linear infinite;
+      }
+
+      /* Animation: Beacon Pulse */
+      @keyframes beaconPulse {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 1; filter: drop-shadow(0 0 6px #39D353); }
+      }
+      .beacon {
+        animation: beaconPulse 1.8s ease-in-out infinite;
+      }
+
+      /* Animation: Scanning Glow */
+      @keyframes borderScan {
+        0% { stop-color: #22D3EE; }
+        50% { stop-color: #38BDF8; }
+        100% { stop-color: #818CF8; }
+      }
+    </style>
+
+    <!-- Glowing Cyber Gradients -->
+    <linearGradient id="dockGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+
+    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="#22D3EE" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#39D353" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <!-- Background Grid Pattern -->
+    <pattern id="dockGrid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#21262D" stroke-width="0.5" stroke-opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Outer Card Frame -->
+  <rect x="1.5" y="1.5" width="877" height="277" rx="10" fill="#0D1117" stroke="#30363D" stroke-width="1.3" />
+
+  <!-- Top Terminal Header Bar -->
+  <path d="M 1.5 10 A 8.5 8.5 0 0 1 10 1.5 L 870 1.5 A 8.5 8.5 0 0 1 878.5 10 L 878.5 36 L 1.5 36 Z" fill="#161B22" />
+  <line x1="1.5" y1="36" x2="878.5" y2="36" stroke="#30363D" stroke-width="1" />
+
+  <!-- Window Traffic Lights -->
+  <circle cx="20" cy="19" r="4.5" fill="#FF5F56" />
+  <circle cx="36" cy="19" r="4.5" fill="#FFBD2E" />
+  <circle cx="52" cy="19" r="4.5" fill="#27C93F" />
+
+  <!-- Terminal Title -->
+  <text x="74" y="23" class="mono" font-size="11" font-weight="700" fill="#8B949E">
+    THENUDA SAHAS // ENCRYPTED COMMUNICATIONS &amp; TACTICAL UPLINK DOCK
+  </text>
+
+  <!-- Live Status Beacon Right -->
+  <rect x="685" y="9" width="175" height="20" rx="10" fill="#0E4429" stroke="#238636" stroke-width="1" />
+  <circle cx="698" cy="19" r="3.5" fill="#39D353" class="beacon" />
+  <text x="708" y="23" class="mono" font-size="9" font-weight="700" fill="#39D353">UPLINK ESTABLISHED [OK]</text>
+
+  <!-- ==================== 2x2 COMMUNICATIONS MATRIX ==================== -->
+
+  <!-- PORTAL 1: EMAIL (DIRECT DISPATCH) -->
+  <g transform="translate(20, 50)">
+    <rect width="410" height="74" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1" />
+    <rect width="410" height="74" rx="8" fill="url(#dockGrid)" />
+
+    <!-- Icon & Title Row -->
+    <text x="16" y="22" class="mono" font-size="9" font-weight="700" fill="#22D3EE">01 // DIRECT DISPATCH (EMAIL)</text>
+    <rect x="306" y="10" width="88" height="16" rx="8" fill="#0E2D3B" stroke="#22D3EE" stroke-width="0.7" />
+    <text x="350" y="21.5" class="mono" font-size="7.5" font-weight="700" fill="#22D3EE" text-anchor="middle">SLA &lt; 24H</text>
+
+    <!-- Address -->
+    <text x="16" y="44" class="sans" font-size="14.5" font-weight="700" fill="#F0F6FC">sahas.thenu@gmail.com</text>
+    <!-- Subtitle -->
+    <text x="16" y="60" class="sans" font-size="10.5" fill="#8B949E">PGP / GPG Supported • Verified Inbox Triage</text>
+  </g>
+
+  <!-- PORTAL 2: PORTFOLIO WEBSITE -->
+  <g transform="translate(450, 50)">
+    <rect width="410" height="74" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1" />
+    <rect width="410" height="74" rx="8" fill="url(#dockGrid)" />
+
+    <!-- Icon & Title Row -->
+    <text x="16" y="22" class="mono" font-size="9" font-weight="700" fill="#00C7B7">02 // PRODUCTION WEB PORTAL</text>
+    <rect x="296" y="10" width="98" height="16" rx="8" fill="#0E332B" stroke="#00C7B7" stroke-width="0.7" />
+    <text x="345" y="21.5" class="mono" font-size="7.5" font-weight="700" fill="#00C7B7" text-anchor="middle">LIVE SSL SECURE</text>
+
+    <!-- Address -->
+    <text x="16" y="44" class="sans" font-size="14.5" font-weight="700" fill="#F0F6FC">https://thenudasahas.site</text>
+    <!-- Subtitle -->
+    <text x="16" y="60" class="sans" font-size="10.5" fill="#8B949E">Official Academic Research &amp; Security Platform</text>
+  </g>
+
+  <!-- PORTAL 3: GITHUB HUB -->
+  <g transform="translate(20, 134)">
+    <rect width="410" height="74" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1" />
+    <rect width="410" height="74" rx="8" fill="url(#dockGrid)" />
+
+    <!-- Icon & Title Row -->
+    <text x="16" y="22" class="mono" font-size="9" font-weight="700" fill="#58A6FF">03 // OPEN SOURCE VAULT (GITHUB)</text>
+    <rect x="290" y="10" width="104" height="16" rx="8" fill="#0E2342" stroke="#58A6FF" stroke-width="0.7" />
+    <text x="342" y="21.5" class="mono" font-size="7.5" font-weight="700" fill="#58A6FF" text-anchor="middle">CONTINUOUS CI/CD</text>
+
+    <!-- Address -->
+    <text x="16" y="44" class="sans" font-size="14.5" font-weight="700" fill="#F0F6FC">@thenudasahas2008</text>
+    <!-- Subtitle -->
+    <text x="16" y="60" class="sans" font-size="10.5" fill="#8B949E">Explore Repositories, AI Defense &amp; Audio Daemons</text>
+  </g>
+
+  <!-- PORTAL 4: DISCORD COMMS -->
+  <g transform="translate(450, 134)">
+    <rect width="410" height="74" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1" />
+    <rect width="410" height="74" rx="8" fill="url(#dockGrid)" />
+
+    <!-- Icon & Title Row -->
+    <text x="16" y="22" class="mono" font-size="9" font-weight="700" fill="#A371F7">04 // DIRECT SECURE COMMS (DISCORD)</text>
+    <rect x="306" y="10" width="88" height="16" rx="8" fill="#241B42" stroke="#A371F7" stroke-width="0.7" />
+    <text x="350" y="21.5" class="mono" font-size="7.5" font-weight="700" fill="#A371F7" text-anchor="middle">ACTIVE CHAT</text>
+
+    <!-- Address -->
+    <text x="16" y="44" class="sans" font-size="14.5" font-weight="700" fill="#F0F6FC">zyrox_01xi</text>
+    <!-- Subtitle -->
+    <text x="16" y="60" class="sans" font-size="10.5" fill="#8B949E">Available for Cybersecurity &amp; DFIR Collaborations</text>
+  </g>
+
+  <!-- ==================== ANIMATED OSCILLOSCOPE WAVEFORM ==================== -->
+  <g transform="translate(20, 218)">
+    <rect width="840" height="24" rx="4" fill="#080D17" stroke="#21262D" stroke-width="0.8" />
+    
+    <!-- Moving Oscilloscope Wave -->
+    <g class="wave-track">
+      <!-- Wave Segment 1 -->
+      <path d="M 0 12 Q 15 2, 30 12 T 60 12 T 90 22 T 120 12 T 150 2 T 180 12 T 210 20 T 240 12 T 270 4 T 300 12 T 330 20 T 360 12 T 390 2 T 420 12 T 450 22 T 480 12 T 510 4 T 540 12 T 570 20 T 600 12 T 630 2 T 660 12 T 690 22 T 720 12 T 750 4 T 780 12 T 810 20 T 840 12 T 870 2 T 900 12 T 930 22 T 960 12 T 990 4 T 1020 12 T 1050 20 T 1080 12" fill="none" stroke="url(#waveGrad)" stroke-width="1.8" />
+    </g>
+
+    <!-- Terminal Prompt Overlay -->
+    <text x="12" y="16" class="mono" font-size="9" font-weight="700" fill="#39D353">
+      $ comms --status=active --handshake=established [READY]
+    </text>
+    <text x="828" y="16" class="mono" font-size="9" font-weight="700" fill="#22D3EE" text-anchor="end">
+      [SIGNAL: 100% • ENCRYPTION: SHA-256]
+    </text>
+  </g>
+
+  <!-- Bottom Motto -->
+  <g transform="translate(20, 262)">
+    <text x="420" y="0" class="mono" font-size="10.5" font-weight="700" fill="#F0F6FC" text-anchor="middle">
+      Stay Curious. Learn Responsibly. Build Securely. 🔐
+    </text>
+  </g>
+</svg>
