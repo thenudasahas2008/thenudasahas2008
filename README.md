@@ -15,7 +15,7 @@
   <a href="#-forensic--security-terminal-whoami"><img src="https://img.shields.io/badge/Terminal-0D1117?style=flat-square&logo=gnubash&logoColor=22D3EE" alt="Terminal" /></a>
   <a href="#-core-pillars--security-specializations"><img src="https://img.shields.io/badge/Specializations-0D1117?style=flat-square&logo=securityscorecard&logoColor=22D3EE" alt="Specializations" /></a>
   <a href="#-technical-arsenal--tooling-matrix"><img src="https://img.shields.io/badge/Tech_Arsenal-0D1117?style=flat-square&logo=target&logoColor=22D3EE" alt="Arsenal" /></a>
-  <a href="#-featured-engineering-projects"><img src="https://img.shields.io/badge/Projects-0D1117?style=flat-square&logo=github&logoColor=22D3EE" alt="Projects" /></a>
+  <a href="#-featured-projects"><img src="https://img.shields.io/badge/Projects-0D1117?style=flat-square&logo=github&logoColor=22D3EE" alt="Projects" /></a>
   <a href="#-activity--development-velocity"><img src="https://img.shields.io/badge/Analytics-0D1117?style=flat-square&logo=chartdotjs&logoColor=22D3EE" alt="Analytics" /></a>
   <a href="#-strategic-roadmap--certifications"><img src="https://img.shields.io/badge/Roadmap-0D1117?style=flat-square&logo=git&logoColor=22D3EE" alt="Roadmap" /></a>
   <a href="#-connect--inquiries"><img src="https://img.shields.io/badge/Contact-0D1117?style=flat-square&logo=gmail&logoColor=22D3EE" alt="Contact" /></a>
