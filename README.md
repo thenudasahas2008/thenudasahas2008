@@ -4,10 +4,10 @@
 
 <div align="center">
   <!-- Dynamic Cybersecurity Waving Banner -->
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=230&section=header&text=THENUDA%20SAHAS&fontSize=48&fontColor=E6FCFF&fontAlignY=36&desc=CYBERSECURITY%20%7C%20DIGITAL%20FORENSICS%20%7C%20SOFTWARE%20ENGINEERING&descSize=13&descAlignY=58&color=0:020617,35:0B3D4F,70:00BFA6,100:22D3EE" width="100%" alt="Thenuda Sahas Header Banner" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=230&section=header&text=THENUDA%20SAHAS&fontSize=48&fontColor=E6FCFF&fontAlignY=36&desc=CYBERSECURITY%20%E2%80%A2%20DIGITAL%20FORENSICS%20%E2%80%A2%20SOFTWARE%20ENGINEERING&descSize=13&descAlignY=58&color=0:020617,35:0B3D4F,70:00BFA6,100:22D3EE" width="100%" alt="Thenuda Sahas Header Banner" />
 
   <!-- Dynamic Typing Title -->
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=2500&pause=800&color=22D3EE&center=true&vCenter=true&repeat=true&width=800&height=50&lines=Computing+Student+%7C+Pearson+BTEC+HND+%F0%9F%8E%93;Cybersecurity+%26+Digital+Forensics+Enthusiast+%F0%9F%94%8E;Defensive+Network+Security+%26+Packet+Analysis+%F0%9F%9B%A1%EF%B8%8F;Python+Developer+%E2%80%A2+Creator+of+PromptSentry+%E2%9A%A1;Digital+Evidence+Preservation+%26+Incident+Response+%F0%9F%94%90" alt="Dynamic Typing Intro" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=2500&pause=800&color=22D3EE&center=true&vCenter=true&repeat=true&width=820&height=50&lines=Computing+Student+%7C+Pearson+BTEC+HND+%F0%9F%8E%93;Cybersecurity+%26+Digital+Forensics+Enthusiast+%F0%9F%94%8E;Defensive+Network+Security+%26+Packet+Analysis+%F0%9F%9B%A1%EF%B8%8F;Python+Developer+%E2%80%A2+Creator+of+PromptSentry+%E2%9A%A1;Digital+Evidence+Preservation+%26+Incident+Response+%F0%9F%94%90" alt="Dynamic Typing Intro" />
 
   <br />
 
@@ -29,17 +29,22 @@
 ### 🖥️ Forensic & Security Terminal (`whoami`)
 
 ```bash
-╔═════════════════════════════════════════════════════════════════════════════════════════════════╗
-║  ● ● ● sahas@forensics-station:~ (zsh)                                                         ║
-║  ---------------------------------------------------------------------------------------------  ║
-║  ● Full Name     : Thenuda Sahas Sooriyaarachchi                                                ║
-║  ● Academic Base : Computing Student — Pearson BTEC Higher National Diploma (HND)              ║
-║  ● Location      : Colombo, Sri Lanka 🇱🇰                                                        ║
-║  ● Field Focus   : Cybersecurity • Digital Forensics & Incident Response (DFIR) • Software Dev ║
-║  ● Technical Core: Packet Analysis • Evidence Integrity • Web Application Security • Python     ║
-║  ● OS Workspace  : Kali Linux (Security Testing) • Ubuntu LTS • Windows 11 (WSL2)               ║
-║  ● Security Code : "Verify integrity. Preserve the evidence. Harden every perimeter."           ║
-╚═════════════════════════════════════════════════════════════════════════════════════════════════╝
+┌──(sahas㉿cyber-forensics)-[~]
+└─$ neofetch --profile
+       _,met$$$$$gg.          OS: Kali GNU/Linux / Ubuntu LTS x86_64
+    ,g$$$$$$$$$$$$$$$P.       Host: Digital Forensics & Defense Lab
+  ,g$$P"     """Y$$.".        Kernel: 6.8.0-security-hardened
+ ,$$P'              `$$$.     Uptime: Always Learning & Defending
+',$$P       ,ggs.     `$$b:   Shell: zsh 5.9 (x86_64-debian-linux-gnu)
+`d$$'     ,$P"'   .    $$$    Name: Thenuda Sahas Sooriyaarachchi
+ $$P      d$'     ,    $$P    Degree: Pearson BTEC HND in Computing
+ $$:      $$.   -    ,d$$'    Focus: Cybersecurity • Digital Forensics (DFIR)
+ $$;      Y$b._   _,d$P'      Core Tools: Wireshark • Python • Bash • Linux
+ Y$$.    `.`"Y$$$$P"'         Key Project: PromptSentry (AI Heuristic Firewall)
+  `$$b      "-.__             Status: Defensive Perimeters Active [OK]
+   `Y$$b                      Location: Colombo, Sri Lanka 🇱🇰
+    `"Y$b._
+        `"""
 ```
 
 ---
@@ -51,15 +56,15 @@
     <td width="33.3%" valign="top">
       <h4>🔍 Digital Forensics (DFIR)</h4>
       <ul>
-        <li><b>Evidence Preservation:</b> Hash verification (MD5/SHA256) and chain of custody basics.</li>
+        <li><b>Evidence Preservation:</b> Hash integrity verification (MD5/SHA256) and chain of custody.</li>
         <li><b>Log & Artifact Analysis:</b> Investigating authentication logs, system journals, and timeline forensics.</li>
-        <li><b>Incident Response:</b> Understanding breach indicators, post-incident triage, and threat mitigation.</li>
+        <li><b>Incident Response:</b> Identifying breach indicators, post-incident triage, and mitigation.</li>
       </ul>
     </td>
     <td width="33.3%" valign="top">
       <h4>🌐 Defensive Network Security</h4>
       <ul>
-        <li><b>Packet Capture:</b> Deep protocol analysis using Wireshark and Tshark.</li>
+        <li><b>Packet Inspection:</b> Deep protocol analysis using Wireshark and Tshark.</li>
         <li><b>Network Architecture:</b> Subnetting, firewall rules, TCP/IP handshakes, and routing.</li>
         <li><b>Host Hardening:</b> Linux security permissions, port auditing, and service isolation.</li>
       </ul>
@@ -69,7 +74,7 @@
       <ul>
         <li><b>OWASP Top 10:</b> Researching injection flaws, broken access control, and API weaknesses.</li>
         <li><b>LLM Guardrails:</b> Building input sanitization & prompt-injection defense with <i>PromptSentry</i>.</li>
-        <li><b>Secure Coding:</b> Developing modular, defensively structured Python and Bash applications.</li>
+        <li><b>Secure Coding:</b> Developing modular, defensively structured Python and Bash tools.</li>
       </ul>
     </td>
   </tr>
@@ -77,26 +82,43 @@
 
 ---
 
-## 🧰 Technical Arsenal & Tooling
+## 🎯 Practical Security Labs & Research Platforms
 
 <div align="center">
-  <p>
-    <b>🖥️ Operating Systems & Shell Environments</b><br />
-    <img src="https://skillicons.dev/icons?i=linux,kali,ubuntu,debian,windows,bash,powershell&theme=dark" height="42" alt="Operating Systems & Shell" />
-  </p>
+  <a href="https://tryhackme.com"><img src="https://img.shields.io/badge/TryHackMe-Practical%20Labs-1A2332?style=for-the-badge&logo=tryhackme&logoColor=FF4742" alt="TryHackMe" /></a>
+  &nbsp;
+  <a href="https://hackthebox.com"><img src="https://img.shields.io/badge/Hack%20The%20Box-Pentesting-111927?style=for-the-badge&logo=hackthebox&logoColor=9FEF00" alt="Hack The Box" /></a>
+  &nbsp;
+  <a href="https://portswigger.net/web-security"><img src="https://img.shields.io/badge/PortSwigger-Web%20Security-1A1A1A?style=for-the-badge&logo=portswigger&logoColor=FF6633" alt="PortSwigger" /></a>
+  &nbsp;
+  <a href="https://owasp.org"><img src="https://img.shields.io/badge/OWASP-Defensive%20Practices-000000?style=for-the-badge&logo=owasp&logoColor=white" alt="OWASP" /></a>
+</div>
 
-  <p>
-    <b>💻 Languages & Core Scripting</b><br />
-    <img src="https://skillicons.dev/icons?i=python,c,cpp,js,html,css&theme=dark" height="42" alt="Languages" />
-  </p>
+---
 
-  <p>
-    <b>🛡️ Security, Forensics & Developer Tooling</b><br />
-    <img src="https://skillicons.dev/icons?i=git,github,vscode,docker,postman,cloudflare&theme=dark" height="42" alt="Security & Tools" />
-  </p>
+## 🧰 Technical Arsenal & Tooling Matrix
 
+<div align="center">
+  <!-- Symmetrical 2x9 Tech Stack Grid -->
+  <img src="https://skillicons.dev/icons?i=kali,linux,ubuntu,windows,bash,powershell,python,c,cpp&theme=dark" height="42" alt="Operating Systems & Languages" />
   <br />
+  <img src="https://skillicons.dev/icons?i=js,html,css,git,github,vscode,docker,postman,cloudflare&theme=dark" height="42" alt="Web & DevOps Tools" />
 
+  <br /><br />
+
+  <!-- Specific Technology Badges -->
+  <img src="https://img.shields.io/badge/Kali%20Linux-557C94?style=flat-square&logo=kalilinux&logoColor=white" alt="Kali Linux" />
+  <img src="https://img.shields.io/badge/Ubuntu-E95420?style=flat-square&logo=ubuntu&logoColor=white" alt="Ubuntu" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white" alt="Bash" />
+  <img src="https://img.shields.io/badge/Wireshark-1679A7?style=flat-square&logo=wireshark&logoColor=white" alt="Wireshark" />
+  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
+  <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white" alt="VS Code" />
+
+  <br /><br />
+
+  <!-- Specialization Capability Badges -->
   <a href="https://www.thenudasahas.site/"><img src="https://img.shields.io/badge/FORENSICS-Digital%20Evidence%20Preservation-0B3D4F?style=for-the-badge&logo=target&logoColor=22D3EE" alt="Forensics Badge" /></a>
   &nbsp;
   <a href="https://www.thenudasahas.site/"><img src="https://img.shields.io/badge/NETWORK-Packet%20Inspection%20%26%20Firewalls-123344?style=for-the-badge&logo=wireshark&logoColor=67E8F9" alt="Network Badge" /></a>
@@ -150,8 +172,9 @@
 
 <!-- Streak and Language Analytics -->
 <div align="center">
-  <img height="175" src="https://github-readme-stats-fast.vercel.app/api?username=thenudasahas2008&show_icons=true&rank_icon=github&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=00BFA6" alt="GitHub Statistics" />
-  <img height="175" src="https://streak-stats.demolab.com?user=thenudasahas2008&theme=transparent&hide_border=true&background=0D1117&ring=22D3EE&fire=00BFA6&currStreakLabel=22D3EE&sideLabels=C9D1D9&dates=8B949E&currStreakNum=E6EDF3&sideNums=E6EDF3" alt="GitHub Contribution Streak" />
+  <img height="180" src="https://github-readme-stats-fast.vercel.app/api?username=thenudasahas2008&show_icons=true&rank_icon=github&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=00BFA6" alt="GitHub Statistics" />
+  &nbsp;
+  <img height="180" src="https://streak-stats.demolab.com?user=thenudasahas2008&theme=transparent&hide_border=true&background=0D1117&ring=22D3EE&fire=00BFA6&currStreakLabel=22D3EE&sideLabels=C9D1D9&dates=8B949E&currStreakNum=E6EDF3&sideNums=E6EDF3" alt="GitHub Contribution Streak" />
 </div>
 
 <br />
