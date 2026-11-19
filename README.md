@@ -141,40 +141,21 @@
 
 ## 🚀 Featured Projects
 
-<p align="center">
-  <a href="https://github.com/thenudasahas2008/PromptSentry">
-    <img src="https://github-readme-stats-fast.vercel.app/api/pin?username=thenudasahas2008&repo=PromptSentry&theme=github_dark&border_color=30363d" alt="PromptSentry" />
-  </a>
-  <a href="https://github.com/thenudasahas2008/Baduwa">
-    <img src="https://github-readme-stats-fast.vercel.app/api/pin?username=thenudasahas2008&repo=Baduwa&theme=github_dark&border_color=30363d" alt="Baduwa" />
-  </a>
-</p>
-
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h4>🛡️ PromptSentry — AI Defense Gateway &amp; Firewall</h4>
-      <ul>
-        <li><b>Core Purpose:</b> Heuristic security gateway protecting LLM workflows against real-time prompt injections and system jailbreaks.</li>
-        <li><b>Mitigation Scope:</b> Defends against OWASP LLM01 vulnerabilities, systemic prompt leakage, and adversarial payload overrides.</li>
-        <li><b>High Efficiency:</b> Sub-15ms heuristic inspection layer with zero external model overhead.</li>
-        <li><b>Tooling:</b> <code>Python 3.11</code> • <code>Heuristic Defense</code> • <code>AI Safety</code> • <code>Zero-Trust</code></li>
-      </ul>
-      <p>
-        <a href="https://github.com/thenudasahas2008/PromptSentry"><img src="https://img.shields.io/badge/Codebase-PromptSentry-161B22?style=flat-square&logo=github&logoColor=58A6FF" alt="PromptSentry Repo" /></a>
-      </p>
+      <a href="https://github.com/thenudasahas2008/PromptSentry"><h3>🛡️ PromptSentry</h3></a>
+      <p><b>AI Security Gateway &amp; LLM Firewall</b></p>
+      <p>Heuristic defense gateway intercepting real-time prompt injections, system jailbreaks, and OWASP LLM01 threats with sub-15ms inspection.</p>
+      <p><code>Python 3.11</code> • <code>Heuristic Defense</code> • <code>AI Safety</code> • <code>Zero-Trust</code></p>
+      <p><a href="https://github.com/thenudasahas2008/PromptSentry"><b>Inspect Codebase ➔</b></a></p>
     </td>
     <td width="50%" valign="top">
-      <h4>🎵 Baduwa (ZYRO) — 24/7 Discord Audio Automation</h4>
-      <ul>
-        <li><b>Core Purpose:</b> High-availability, 24/7 Discord audio streaming bot featuring interactive button controls and autoplay.</li>
-        <li><b>User Experience:</b> Native in-Discord interactive UI controls, queue optimization, and slash commands.</li>
-        <li><b>Performance:</b> Low-latency audio buffer management with automatic reconnection fallback.</li>
-        <li><b>Tooling:</b> <code>JavaScript</code> • <code>Node.js</code> • <code>Discord API</code> • <code>Async Audio</code></li>
-      </ul>
-      <p>
-        <a href="https://github.com/thenudasahas2008/Baduwa"><img src="https://img.shields.io/badge/Codebase-Baduwa-161B22?style=flat-square&logo=github&logoColor=58A6FF" alt="Baduwa Repo" /></a>
-      </p>
+      <a href="https://github.com/thenudasahas2008/Baduwa"><h3>🎵 Baduwa (ZYRO)</h3></a>
+      <p><b>24/7 Discord Audio Automation</b></p>
+      <p>High-availability 24/7 continuous audio streaming bot with native in-Discord button controls, autoplay queueing, and low-latency playback.</p>
+      <p><code>JavaScript</code> • <code>Node.js</code> • <code>Discord API</code> • <code>Async Audio</code></p>
+      <p><a href="https://github.com/thenudasahas2008/Baduwa"><b>Inspect Codebase ➔</b></a></p>
     </td>
   </tr>
 </table>
