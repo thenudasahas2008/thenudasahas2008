@@ -160,21 +160,8 @@
 
 ## 📈 Activity & Development Velocity
 
-<!-- Animated Contribution Snake -->
-<table width="100%">
-  <tr>
-    <th align="left">🐍 Real-Time Contribution Grid &amp; Activity Stream</th>
-  </tr>
-  <tr>
-    <td align="center">
-      <img src="https://raw.githubusercontent.com/thenudasahas2008/thenudasahas2008/output/github-contribution-grid-snake-dark.svg" alt="GitHub Contribution Snake Animation" width="100%" />
-    </td>
-  </tr>
-</table>
-
-<!-- Developer Telemetry & Activity Dashboard -->
 <p align="center">
-  <img src="assets/developer-telemetry.svg" width="100%" alt="Developer Telemetry &amp; Activity Dashboard" />
+  <img src="assets/cyber-activity-hud.svg" width="100%" alt="Real-Time Cyber Telemetry and Activity Engine" />
 </p>
 
 ---
