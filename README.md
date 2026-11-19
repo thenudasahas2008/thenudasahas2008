@@ -150,6 +150,35 @@
   </a>
 </p>
 
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>🛡️ PromptSentry — AI Defense Gateway &amp; Firewall</h4>
+      <ul>
+        <li><b>Core Purpose:</b> Heuristic security gateway protecting LLM workflows against real-time prompt injections and system jailbreaks.</li>
+        <li><b>Mitigation Scope:</b> Defends against OWASP LLM01 vulnerabilities, systemic prompt leakage, and adversarial payload overrides.</li>
+        <li><b>High Efficiency:</b> Sub-15ms heuristic inspection layer with zero external model overhead.</li>
+        <li><b>Tooling:</b> <code>Python 3.11</code> • <code>Heuristic Defense</code> • <code>AI Safety</code> • <code>Zero-Trust</code></li>
+      </ul>
+      <p>
+        <a href="https://github.com/thenudasahas2008/PromptSentry"><img src="https://img.shields.io/badge/Codebase-PromptSentry-161B22?style=flat-square&logo=github&logoColor=58A6FF" alt="PromptSentry Repo" /></a>
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h4>🎵 Baduwa (ZYRO) — 24/7 Discord Audio Automation</h4>
+      <ul>
+        <li><b>Core Purpose:</b> High-availability, 24/7 Discord audio streaming bot featuring interactive button controls and autoplay.</li>
+        <li><b>User Experience:</b> Native in-Discord interactive UI controls, queue optimization, and slash commands.</li>
+        <li><b>Performance:</b> Low-latency audio buffer management with automatic reconnection fallback.</li>
+        <li><b>Tooling:</b> <code>JavaScript</code> • <code>Node.js</code> • <code>Discord API</code> • <code>Async Audio</code></li>
+      </ul>
+      <p>
+        <a href="https://github.com/thenudasahas2008/Baduwa"><img src="https://img.shields.io/badge/Codebase-Baduwa-161B22?style=flat-square&logo=github&logoColor=58A6FF" alt="Baduwa Repo" /></a>
+      </p>
+    </td>
+  </tr>
+</table>
+
 <p align="center">
   <a href="https://www.thenudasahas.site/"><img src="https://img.shields.io/badge/OFFICIAL%20PORTFOLIO-thenudasahas.site-161B22?style=for-the-badge&logo=googlechrome&logoColor=58A6FF" alt="Portfolio Website" /></a>
   &nbsp;
