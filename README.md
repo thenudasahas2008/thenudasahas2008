@@ -157,45 +157,21 @@ flowchart LR
 
 ---
 
-## 🚀 Featured Engineering Projects
+## 🚀 Featured Projects
 
-<table>
-  <tr>
-    <td width="33.3%" valign="top">
-      <div align="center">
-        <a href="https://github.com/thenudasahas2008/PromptSentry">
-          <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=thenudasahas2008&repo=PromptSentry&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=00BFA6" alt="PromptSentry Project" />
-        </a>
-      </div>
-      <p><b>PromptSentry</b>: AI security firewall and heuristic prompt-injection defense gateway protecting LLM workflows.</p>
-      <p><code>Python</code> • <code>AI Safety</code> • <code>Defense</code></p>
-    </td>
-    <td width="33.3%" valign="top">
-      <div align="center">
-        <a href="https://github.com/thenudasahas2008/Baduwa">
-          <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=thenudasahas2008&repo=Baduwa&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=00BFA6" alt="Baduwa Discord Bot" />
-        </a>
-      </div>
-      <p><b>Baduwa (ZYRO)</b>: 24/7 Discord audio automation bot with interactive in-Discord button controls and slash commands.</p>
-      <p><code>Python</code> • <code>Discord API</code> • <code>Asyncio</code></p>
-    </td>
-    <td width="33.3%" valign="top">
-      <div align="center">
-        <a href="https://github.com/thenudasahas2008/Thenuda-Sahas">
-          <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=thenudasahas2008&repo=Thenuda-Sahas&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=00BFA6" alt="Thenuda-Sahas Portfolio" />
-        </a>
-      </div>
-      <p><b>Thenuda Portfolio</b>: Official production website showcasing Cybersecurity & Digital Forensics qualifications.</p>
-      <p><code>Web</code> • <code>HTML/CSS/JS</code> • <code>Portfolio</code></p>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://github.com/thenudasahas2008/PromptSentry">
+    <img src="https://github-readme-stats-fast.vercel.app/api/pin?username=thenudasahas2008&repo=PromptSentry&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=00BFA6" alt="PromptSentry Project" />
+  </a>
+  <a href="https://github.com/thenudasahas2008/Baduwa">
+    <img src="https://github-readme-stats-fast.vercel.app/api/pin?username=thenudasahas2008&repo=Baduwa&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=00BFA6" alt="Baduwa Discord Bot" />
+  </a>
+</p>
 
-<div align="center">
-  <br />
+<p align="center">
   <a href="https://www.thenudasahas.site/"><img src="https://img.shields.io/badge/OFFICIAL%20PORTFOLIO-Visit%20Website-0D1117?style=for-the-badge&logo=googlechrome&logoColor=22D3EE" alt="Visit Portfolio" /></a>
-  <a href="https://github.com/thenudasahas2008?tab=repositories"><img src="https://img.shields.io/badge/REPOSITORIES-Explore%20All%20Code-0D1117?style=for-the-badge&logo=github&logoColor=00BFA6" alt="Explore Repositories" /></a>
-</div>
+  <a href="https://github.com/thenudasahas2008?tab=repositories"><img src="https://img.shields.io/badge/ALL%20REPOSITORIES-Explore%20Projects-0D1117?style=for-the-badge&logo=github&logoColor=00BFA6" alt="Explore Repositories" /></a>
+</p>
 
 ---
 
