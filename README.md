@@ -137,51 +137,10 @@
 
 ---
 
-## 📫 Connect & Inquiries
-
 <div align="center">
+  <p align="center">
+    <b>⚡ Stay Curious. Learn Responsibly. Build Securely. 🔐</b>
+  </p>
 
-<p align="center">
-  Feel free to reach out for cybersecurity research, DFIR incident triage, or software development inquiries.
-</p>
-
-<table align="center" width="100%">
-  <tr>
-    <td align="center" width="50%" height="80">
-      <a href="mailto:sahas.thenu@gmail.com">
-        <img src="https://img.shields.io/badge/EMAIL-sahas.thenu%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /><br />
-        <sub><b>Direct Dispatch • SLA &lt; 24h</b></sub>
-      </a>
-    </td>
-    <td align="center" width="50%" height="80">
-      <a href="https://www.thenudasahas.site/">
-        <img src="https://img.shields.io/badge/PORTFOLIO-thenudasahas.site-00C7B7?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" /><br />
-        <sub><b>Official Portfolio &amp; DFIR Research Platform</b></sub>
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="50%" height="80">
-      <a href="https://github.com/thenudasahas2008">
-        <img src="https://img.shields.io/badge/GITHUB-thenudasahas2008-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /><br />
-        <sub><b>Explore Repositories &amp; Source Code</b></sub>
-      </a>
-    </td>
-    <td align="center" width="50%" height="80">
-      <a href="https://discordapp.com/users/zyrox_01xi">
-        <img src="https://img.shields.io/badge/DISCORD-zyrox__01xi-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /><br />
-        <sub><b>Direct Chat • Available for Collaborations</b></sub>
-      </a>
-    </td>
-  </tr>
-</table>
-
-<br />
-
-<p align="center">
-  <b>⚡ Stay Curious. Learn Responsibly. Build Securely. 🔐</b>
-</p>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer&color=0:020617,55:0B3D4F,100:00BFA6" width="100%" alt="Cybersecurity Horizon Footer" />
-
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer&color=0:020617,55:0B3D4F,100:00BFA6" width="100%" alt="Cybersecurity Horizon Footer" />
 </div>
