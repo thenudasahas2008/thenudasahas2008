@@ -39,7 +39,7 @@
 ### 🖥️ Forensic & Security Terminal (`whoami`)
 
 <p align="center">
-  <img src="assets/cyber-terminal-animated.svg?v=1" width="100%" alt="Forensic &amp; Security Terminal Live Typewriter whoami" />
+  <img src="assets/cyber-terminal-animated.svg?v=2" width="100%" alt="Forensic &amp; Security Terminal Live Typewriter whoami" />
 </p>
 
 ---
