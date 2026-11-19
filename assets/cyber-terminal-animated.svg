@@ -1,27 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 345" width="100%" height="100%" fill="none">
   <defs>
     <style>
-      .mono { font-family: ui-monospace, SFMono-Regular, "Fira Code", Menlo, "Courier New", monospace; }
+      .mono { font-family: ui-monospace, SFMono-Regular, "Fira Code", "Courier New", monospace; }
       .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-      .glow-cyan { filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.45)); }
-      .glow-green { filter: drop-shadow(0 0 6px rgba(57, 211, 83, 0.45)); }
+      .glow-red { filter: drop-shadow(0 0 6px rgba(239, 68, 68, 0.4)); }
+      .glow-cyan { filter: drop-shadow(0 0 6px rgba(34, 211, 238, 0.4)); }
+      .glow-green { filter: drop-shadow(0 0 6px rgba(57, 211, 83, 0.4)); }
 
       /* ========================================================
-         TRUE LETTER-BY-LETTER TYPEWRITER ANIMATION (14s Loop)
+         RAW TERMINAL TYPEWRITER and LOG STREAM ANIMATION (14s Loop)
          ======================================================== */
 
-      /* 1. Neofetch Command Letter-by-Letter Typing (steps(52)) */
-      @keyframes stepTypeNeofetch {
+      /* 1. Neofetch Command Letter-by-Letter Typing (steps(28)) */
+      @keyframes typeCommand1 {
         0%, 3%    { transform: translateX(0px); }
-        22%, 92%  { transform: translateX(415px); }
+        18%, 92%  { transform: translateX(290px); }
         97%, 100% { transform: translateX(0px); }
       }
 
-      .type-cover-step {
-        animation: stepTypeNeofetch 14s steps(52, end) infinite;
+      .type-cover-cmd {
+        animation: typeCommand1 14s steps(28, end) infinite;
       }
 
-      /* 2. Authentic Blinking Block Cursor */
+      /* 2. Blinking Block Cursor (█) */
       @keyframes blinkBlockCursor {
         0%, 48%  { opacity: 1; }
         50%, 98% { opacity: 0; }
@@ -29,102 +30,93 @@
       }
 
       .cursor-blink {
-        animation: blinkBlockCursor 0.55s infinite;
+        animation: blinkBlockCursor 0.5s infinite;
       }
 
-      /* 3. Panel Container Reveal on Command Execution */
-      @keyframes revealPanel {
-        0%, 21%  { opacity: 0; }
-        24%, 93% { opacity: 1; }
+      /* 3. BlackArch Neofetch Output Stream Reveal */
+      @keyframes streamOutput {
+        0%, 18%  { opacity: 0; }
+        21%, 93% { opacity: 1; }
         97%, 100% { opacity: 0; }
       }
 
-      .panel-body {
-        animation: revealPanel 14s ease-out infinite;
+      .terminal-stream {
+        animation: streamOutput 14s ease-out infinite;
       }
 
-      /* 4. Kali Crest Breathing Glow */
-      @keyframes dragonPulse {
-        0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 6px rgba(34, 211, 238, 0.4)); }
-        50%      { opacity: 1.0; filter: drop-shadow(0 0 14px rgba(34, 211, 238, 0.75)); }
-      }
+      /* 4. Cascading Telemetry Rows (Opacity Only - Rock-Solid Coordinates) */
+      @keyframes cascade0 { 0%, 21% { opacity: 0; } 23%, 93% { opacity: 1; } 97%, 100% { opacity: 0; } }
+      @keyframes cascade1 { 0%, 23% { opacity: 0; } 25%, 93% { opacity: 1; } 97%, 100% { opacity: 0; } }
+      @keyframes cascade2 { 0%, 25% { opacity: 0; } 27%, 93% { opacity: 1; } 97%, 100% { opacity: 0; } }
+      @keyframes cascade3 { 0%, 27% { opacity: 0; } 29%, 93% { opacity: 1; } 97%, 100% { opacity: 0; } }
+      @keyframes cascade4 { 0%, 29% { opacity: 0; } 31%, 93% { opacity: 1; } 97%, 100% { opacity: 0; } }
+      @keyframes cascade5 { 0%, 31% { opacity: 0; } 33%, 93% { opacity: 1; } 97%, 100% { opacity: 0; } }
+      @keyframes cascade6 { 0%, 33% { opacity: 0; } 35%, 93% { opacity: 1; } 97%, 100% { opacity: 0; } }
+      @keyframes cascade7 { 0%, 35% { opacity: 0; } 37%, 93% { opacity: 1; } 97%, 100% { opacity: 0; } }
 
-      .dragon-crest {
-        animation: dragonPulse 3.5s ease-in-out infinite;
-      }
+      .stream-row-0 { animation: cascade0 14s ease-out infinite; }
+      .stream-row-1 { animation: cascade1 14s ease-out infinite; }
+      .stream-row-2 { animation: cascade2 14s ease-out infinite; }
+      .stream-row-3 { animation: cascade3 14s ease-out infinite; }
+      .stream-row-4 { animation: cascade4 14s ease-out infinite; }
+      .stream-row-5 { animation: cascade5 14s ease-out infinite; }
+      .stream-row-6 { animation: cascade6 14s ease-out infinite; }
+      .stream-row-7 { animation: cascade7 14s ease-out infinite; }
 
-      /* 5. Cascading Telemetry Rows (Opacity Only - Prevents Any Transform Conflicts) */
-      @keyframes rowReveal0 { 0%, 23% { opacity: 0; } 26%, 93% { opacity: 1; } 97%, 100% { opacity: 0; } }
-      @keyframes rowReveal1 { 0%, 26% { opacity: 0; } 29%, 93% { opacity: 1; } 97%, 100% { opacity: 0; } }
-      @keyframes rowReveal2 { 0%, 29% { opacity: 0; } 32%, 93% { opacity: 1; } 97%, 100% { opacity: 0; } }
-      @keyframes rowReveal3 { 0%, 32% { opacity: 0; } 35%, 93% { opacity: 1; } 97%, 100% { opacity: 0; } }
-      @keyframes rowReveal4 { 0%, 35% { opacity: 0; } 38%, 93% { opacity: 1; } 97%, 100% { opacity: 0; } }
-      @keyframes rowReveal5 { 0%, 38% { opacity: 0; } 41%, 93% { opacity: 1; } 97%, 100% { opacity: 0; } }
-
-      .row-fade-0 { animation: rowReveal0 14s ease-out infinite; }
-      .row-fade-1 { animation: rowReveal1 14s ease-out infinite; }
-      .row-fade-2 { animation: rowReveal2 14s ease-out infinite; }
-      .row-fade-3 { animation: rowReveal3 14s ease-out infinite; }
-      .row-fade-4 { animation: rowReveal4 14s ease-out infinite; }
-      .row-fade-5 { animation: rowReveal5 14s ease-out infinite; }
-
-      /* 6. Bottom Sysctl Command Letter-by-Letter Typing (steps(55)) */
-      @keyframes stepTypeSysctl {
-        0%, 56%   { transform: translateX(0px); }
-        74%, 93%  { transform: translateX(390px); }
+      /* 5. Footer Sysctl Command Letter-by-Letter (steps(45)) */
+      @keyframes typeFooterCmd {
+        0%, 54%   { transform: translateX(0px); }
+        72%, 93%  { transform: translateX(370px); }
         97%, 100% { transform: translateX(0px); }
       }
 
-      .type-cover-bottom {
-        animation: stepTypeSysctl 14s steps(55, end) infinite;
+      .type-cover-footer {
+        animation: typeFooterCmd 14s steps(45, end) infinite;
       }
 
-      /* 7. Bottom Telemetry Badge Reveal */
-      @keyframes revealTelemetry {
-        0%, 74%  { opacity: 0; }
-        77%, 93% { opacity: 1; }
+      /* 6. Footer Badge Reveal */
+      @keyframes revealFooterBadge {
+        0%, 72%  { opacity: 0; }
+        75%, 93% { opacity: 1; }
         97%, 100% { opacity: 0; }
       }
 
-      .telemetry-badge {
-        animation: revealTelemetry 14s ease-out infinite;
+      .footer-badge {
+        animation: revealFooterBadge 14s ease-out infinite;
       }
 
-      /* 8. Status LED Pulse */
-      @keyframes liveStatusPulse {
+      /* 7. Status LED Pulse */
+      @keyframes statusLedPulse {
         0%, 100% { opacity: 0.6; }
         50%      { opacity: 1.0; }
       }
 
-      .status-light {
-        animation: liveStatusPulse 1.8s ease-in-out infinite;
+      .status-led {
+        animation: statusLedPulse 1.8s ease-in-out infinite;
       }
     </style>
 
-    <!-- Kali Neon Cyan-Blue-Indigo Gradient -->
-    <linearGradient id="kaliGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#22D3EE"/>
-      <stop offset="50%" stop-color="#38BDF8"/>
-      <stop offset="100%" stop-color="#818CF8"/>
+    <!-- BlackArch Blood-Red to Crimson Gradient -->
+    <linearGradient id="blackArchGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="50%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#991b1b"/>
     </linearGradient>
 
-    <!-- Dragon Glow Filter -->
-    <filter id="terminalGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
+    <!-- Cyan Electric Gradient -->
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
 
-    <!-- Background Grid Pattern -->
-    <pattern id="terminalGrid" width="16" height="16" patternUnits="userSpaceOnUse">
-      <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#21262D" stroke-width="0.5" stroke-opacity="0.5"/>
+    <pattern id="terminalPattern" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#21262d" stroke-width="0.5" stroke-opacity="0.3"/>
     </pattern>
   </defs>
 
-  <!-- Terminal Window Outer Container -->
+  <!-- Terminal Window Outer Container (No inner cards!) -->
   <rect x="1.5" y="1.5" width="877" height="342" rx="10" fill="#0D1117" stroke="#30363D" stroke-width="1.3" />
+  <rect x="1.5" y="36" width="877" height="307" fill="url(#terminalPattern)" />
 
   <!-- Terminal Top Header Bar -->
   <path d="M 1.5 10 A 8.5 8.5 0 0 1 10 1.5 L 870 1.5 A 8.5 8.5 0 0 1 878.5 10 L 878.5 36 L 1.5 36 Z" fill="#161B22" />
@@ -137,217 +129,162 @@
 
   <!-- Terminal Tab Title -->
   <text x="74" y="23" class="mono" font-size="11" font-weight="700" fill="#8B949E">
-    sahas@cyber-forensics: ~ (zsh) — neofetch --profile
+    root@blackarch-dfir: ~ (bash) &#8212; 80x24
   </text>
 
   <!-- Live Status Badge Right -->
-  <rect x="690" y="9" width="170" height="20" rx="10" fill="#0E4429" stroke="#238636" stroke-width="1" />
-  <circle cx="703" cy="19" r="3.5" fill="#39D353" class="glow-green status-light" />
-  <text x="714" y="23" class="mono" font-size="9" font-weight="700" fill="#39D353">PERIMETERS ACTIVE [OK]</text>
+  <rect x="670" y="9" width="190" height="20" rx="10" fill="#450a0a" stroke="#b91c1c" stroke-width="1" />
+  <circle cx="683" cy="19" r="3.5" fill="#ef4444" class="glow-red status-led" />
+  <text x="694" y="23" class="mono" font-size="9" font-weight="700" fill="#fca5a5">ROOT PRIVILEGES [ACTIVE]</text>
 
-  <!-- ==================== SHELL PROMPT and TYPEWRITER COMMAND ==================== -->
-  <g transform="translate(24, 56)" class="mono" font-size="11">
-    <!-- Prompt Line 1 -->
+  <!-- ==================== RAW TERMINAL CONTENT (NO BOXES) ==================== -->
+  
+  <!-- Command 1: Root Prompt and Neofetch Command Typing -->
+  <g transform="translate(24, 60)" class="mono" font-size="11">
+    <!-- Prompt: [root@blackarch-dfir ~]# -->
     <text x="0" y="0">
-      <tspan fill="#58A6FF">&#9484;&#9472;&#9472;(</tspan>
-      <tspan fill="#22D3EE" font-weight="700">sahas&#127945;cyber-forensics</tspan>
-      <tspan fill="#58A6FF">)-[</tspan>
-      <tspan fill="#F0F6FC">~/telemetry</tspan>
-      <tspan fill="#58A6FF">]</tspan>
+      <tspan fill="#ef4444" font-weight="700">[root@blackarch-dfir</tspan>
+      <tspan fill="#58a6ff" font-weight="700"> ~</tspan>
+      <tspan fill="#ef4444" font-weight="700">]#</tspan>
     </text>
 
-    <!-- Prompt Line 2 Prefix -->
-    <text x="0" y="17" fill="#58A6FF">&#9492;&#9472;$</text>
-
-    <!-- Typewriter Command Text -->
-    <g transform="translate(28, 17)">
-      <!-- The Full Command Text -->
-      <text x="0" y="0" fill="#39D353" font-weight="700">neofetch --profile --cyber-defense --target=hardened</text>
-
-      <!-- Stepping Cover that Uncovers Text Letter-by-Letter + Blinking Cursor -->
-      <g class="type-cover-step">
-        <!-- Mask covering untyped text -->
-        <rect x="0" y="-12" width="425" height="16" fill="#0D1117" />
-        <!-- Lead Blinking Cursor -->
-        <rect x="0" y="-11" width="8" height="14" rx="1.5" fill="#22D3EE" class="cursor-blink" />
+    <!-- Typing Command Text -->
+    <g transform="translate(195, 0)">
+      <text x="0" y="0" fill="#f0f6fc" font-weight="700">neofetch --security-profile</text>
+      <!-- Stepping Cover that uncovers command letter-by-letter -->
+      <g class="type-cover-cmd">
+        <rect x="0" y="-12" width="310" height="16" fill="#0D1117" />
+        <rect x="0" y="-11" width="8" height="14" rx="1" fill="#ef4444" class="cursor-blink" />
       </g>
     </g>
   </g>
 
-  <!-- ==================== TERMINAL BODY CONTENT (REVEALED ON ENTER) ==================== -->
-  <g class="panel-body">
+  <!-- Terminal Output Stream (Neofetch BlackArch ASCII + System Specs) -->
+  <g class="terminal-stream">
 
-    <!-- ==================== LEFT COLUMN: KALI CYBER CREST PANEL ==================== -->
-    <g transform="translate(24, 86)">
-      <!-- Container Card -->
-      <rect width="210" height="215" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1" />
-      <rect width="210" height="215" rx="8" fill="url(#terminalGrid)" />
-
-      <!-- Subtitle -->
-      <text x="14" y="20" class="mono" font-size="9" font-weight="700" fill="#22D3EE">01 // KALI CYBER CREST</text>
-      
-      <!-- Outer Shield / Hexagon Frame -->
-      <g transform="translate(0, 5)">
-        <!-- Hexagon / Cyber Shield Outline -->
-        <polygon points="105,24 168,44 168,116 105,152 42,116 42,44" fill="#0D1117" stroke="url(#kaliGrad)" stroke-width="1.6" filter="url(#terminalGlow)" />
-        <polygon points="105,30 160,48 160,112 105,144 50,112 50,48" fill="none" stroke="#21262D" stroke-width="1" stroke-dasharray="3,3" />
-
-        <!-- Kali Dragon Stylized Vector Silhouette -->
-        <g transform="translate(52, 38) scale(0.70)" class="glow-cyan dragon-crest">
-          <!-- Dragon Wing Upper -->
-          <path d="M 68 18 C 76 6, 98 2, 116 8 C 110 18, 96 26, 84 28 C 96 30, 112 36, 118 46 C 104 50, 88 50, 78 48 C 90 54, 102 64, 104 74 C 90 72, 78 66, 70 58 C 70 64, 68 76, 64 84 C 54 74, 52 60, 56 46 Z" fill="url(#kaliGrad)" />
-          
-          <!-- Dragon Head and Horns -->
-          <path d="M 64 26 C 60 16, 48 8, 32 10 C 26 14, 30 20, 36 22 C 28 22, 16 26, 12 32 C 22 36, 32 34, 40 32 C 34 38, 26 44, 18 48 C 28 50, 38 46, 46 40 C 44 48, 48 54, 54 58 C 58 50, 60 38, 64 26 Z" fill="url(#kaliGrad)" />
-          
-          <!-- Dragon Eye -->
-          <circle cx="38" cy="24" r="2" fill="#FFFFFF" />
-
-          <!-- Dragon Spine and Coiled Tail -->
-          <path d="M 58 48 C 62 62, 64 78, 56 94 C 48 110, 34 116, 22 120 C 14 116, 18 106, 26 102 C 34 98, 42 90, 44 78 C 46 68, 42 58, 40 48 Z" fill="url(#kaliGrad)" />
-          
-          <!-- Tail Blade and Barb -->
-          <path d="M 52 92 C 58 104, 62 118, 58 132 C 52 144, 38 152, 28 154 C 26 148, 32 142, 38 136 C 44 130, 48 118, 46 106 Z" fill="url(#kaliGrad)" />
-          <polygon points="56,134 68,142 58,150 52,142" fill="url(#kaliGrad)" />
-
-          <!-- Claws and Talons -->
-          <path d="M 72 64 C 82 72, 86 86, 88 96 C 80 94, 76 86, 72 78 Z" fill="url(#kaliGrad)" />
-        </g>
+    <!-- ==================== LEFT: BLACKARCH LINUX ASCII LOGO ==================== -->
+    <g transform="translate(28, 85)" class="mono" font-size="11" font-weight="700">
+      <!-- High-Tech BlackArch Vector Crest -->
+      <g filter="url(#glow-red)" class="glow-red">
+        <!-- Iconic BlackArch Triangle Glyph -->
+        <polygon points="80,10 145,140 120,140 80,48 40,140 15,140" fill="url(#blackArchGrad)"/>
+        <!-- Inner Crossbar & Blade Cutout -->
+        <polygon points="80,68 106,128 54,128" fill="#0D1117"/>
+        <path d="M 80 82 L 95 120 L 65 120 Z" fill="url(#blackArchGrad)"/>
+        <!-- Central Glow Eye -->
+        <circle cx="80" cy="102" r="3" fill="#ffffff"/>
       </g>
-
-      <!-- Label Below Hexagon -->
-      <g transform="translate(105, 186)" text-anchor="middle">
-        <text y="0" class="mono" font-size="10.5" font-weight="700" fill="#F0F6FC">KALI GNU/LINUX</text>
-        <text y="14" class="mono" font-size="8.5" font-weight="700" fill="#38BDF8">OFFENSIVE DEFENSE // DFIR</text>
-      </g>
+      <!-- Sub-label -->
+      <text x="80" y="168" text-anchor="middle" font-size="11" font-weight="800" fill="#ef4444" letter-spacing="1">BLACKARCH</text>
+      <text x="80" y="184" text-anchor="middle" font-size="8.5" font-weight="700" fill="#8b949e">PENETRATION &amp; DFIR OS</text>
     </g>
 
-    <!-- ==================== RIGHT COLUMN: FORENSIC ENVIRONMENT DATA ==================== -->
-    <g transform="translate(246, 86)">
-      <!-- Container Card -->
-      <rect width="610" height="215" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1" />
-      <rect width="610" height="215" rx="8" fill="url(#terminalGrid)" />
+    <!-- Divider Line between ASCII and Data -->
+    <line x1="205" y1="82" x2="205" y2="280" stroke="#21262d" stroke-width="1" stroke-dasharray="3,3"/>
 
-      <!-- Panel Header Title -->
-      <text x="20" y="22" class="mono" font-size="9" font-weight="700" fill="#58A6FF">02 // FORENSIC ENVIRONMENT &amp; IDENTITY PROFILE</text>
-      <line x1="20" y1="30" x2="590" y2="30" stroke="#21262D" stroke-width="1" />
-
-      <!-- Vertical Divider Between Sub-columns -->
-      <line x1="300" y1="42" x2="300" y2="198" stroke="#21262D" stroke-width="1" stroke-dasharray="3,3" />
-
-      <!-- ==================== SUB-COLUMN A: SYSTEM & RUNTIME ==================== -->
-      <!-- Fixed Y coordinates directly on elements: Prevents any CSS transform collision! -->
-      <g transform="translate(20, 50)" class="mono" font-size="10.5">
-        <!-- Row 0: OS (y=0) -->
-        <g class="row-fade-0">
-          <text x="0" y="0" font-weight="700" fill="#22D3EE">OS</text>
-          <text x="56" y="0" fill="#8B949E">:</text>
-          <text x="68" y="0" fill="#F0F6FC" font-weight="600">Kali GNU/Linux x86_64</text>
-        </g>
-
-        <!-- Row 1: Host (y=24) -->
-        <g class="row-fade-1">
-          <text x="0" y="24" font-weight="700" fill="#22D3EE">HOST</text>
-          <text x="56" y="24" fill="#8B949E">:</text>
-          <text x="68" y="24" fill="#F0F6FC">DFIR Defense Lab</text>
-        </g>
-
-        <!-- Row 2: Kernel (y=48) -->
-        <g class="row-fade-2">
-          <text x="0" y="48" font-weight="700" fill="#22D3EE">KERNEL</text>
-          <text x="56" y="48" fill="#8B949E">:</text>
-          <text x="68" y="48" fill="#79C0FF">6.8.0-security-hardened</text>
-        </g>
-
-        <!-- Row 3: Shell (y=72) -->
-        <g class="row-fade-3">
-          <text x="0" y="72" font-weight="700" fill="#22D3EE">SHELL</text>
-          <text x="56" y="72" fill="#8B949E">:</text>
-          <text x="68" y="72" fill="#F0F6FC">zsh 5.9 (debian-gnu)</text>
-        </g>
-
-        <!-- Row 4: Uptime (y=96) -->
-        <g class="row-fade-4">
-          <text x="0" y="96" font-weight="700" fill="#22D3EE">UPTIME</text>
-          <text x="56" y="96" fill="#8B949E">:</text>
-          <text x="68" y="96" fill="#8B949E">Always Defending</text>
-        </g>
-
-        <!-- Row 5: Location (y=120) -->
-        <g class="row-fade-5">
-          <text x="0" y="120" font-weight="700" fill="#22D3EE">GEO</text>
-          <text x="56" y="120" fill="#8B949E">:</text>
-          <text x="68" y="120" fill="#F0F6FC">Colombo, LK (UTC+5:30)</text>
-        </g>
+    <!-- ==================== RIGHT: RAW TERMINAL SYSTEM & ARSENAL SPECS ==================== -->
+    <!-- Direct Y coordinates: 100% Rock-Solid Grid, No Overlapping Transforms! -->
+    <g transform="translate(225, 102)" class="mono" font-size="11">
+      
+      <!-- Row 0: OS -->
+      <g class="stream-row-0">
+        <text x="0" y="0" font-weight="700" fill="#ef4444">OS</text>
+        <text x="85" y="0" fill="#8b949e">:</text>
+        <text x="100" y="0" fill="#f0f6fc" font-weight="700">BlackArch Linux x86_64</text>
+        <text x="310" y="0" fill="#8b949e">(rolling release)</text>
       </g>
 
-      <!-- ==================== SUB-COLUMN B: IDENTITY & ARSENAL ==================== -->
-      <!-- Fixed Y coordinates directly on elements: Prevents any CSS transform collision! -->
-      <g transform="translate(316, 50)" class="mono" font-size="10.5">
-        <!-- Row 0: Identity (y=0) -->
-        <g class="row-fade-0">
-          <text x="0" y="0" font-weight="700" fill="#A371F7">IDENTITY</text>
-          <text x="62" y="0" fill="#8B949E">:</text>
-          <text x="74" y="0" fill="#F0F6FC" font-weight="700">Thenuda Sahas</text>
-        </g>
+      <!-- Row 1: Host and Kernel -->
+      <g class="stream-row-1">
+        <text x="0" y="21" font-weight="700" fill="#ef4444">KERNEL</text>
+        <text x="85" y="21" fill="#8b949e">:</text>
+        <text x="100" y="21" fill="#79c0ff" font-weight="600">6.11.8-hardened-blackarch</text>
+        <text x="310" y="21" fill="#8b949e">#1 SMP PREEMPT_DYNAMIC</text>
+      </g>
 
-        <!-- Row 1: Degree (y=24) -->
-        <g class="row-fade-1">
-          <text x="0" y="24" font-weight="700" fill="#A371F7">DEGREE</text>
-          <text x="62" y="24" fill="#8B949E">:</text>
-          <text x="74" y="24" fill="#58A6FF" font-weight="600">BTEC HND in Computing</text>
-        </g>
+      <!-- Row 2: Arsenal Packages -->
+      <g class="stream-row-2">
+        <text x="0" y="42" font-weight="700" fill="#ef4444">PACKAGES</text>
+        <text x="85" y="42" fill="#8b949e">:</text>
+        <text x="100" y="42" fill="#f0f6fc">2,928 (blackarch), 1,240 (pacman)</text>
+      </g>
 
-        <!-- Row 2: Focus (y=48) -->
-        <g class="row-fade-2">
-          <text x="0" y="48" font-weight="700" fill="#A371F7">FOCUS</text>
-          <text x="62" y="48" fill="#8B949E">:</text>
-          <text x="74" y="48" fill="#38BDF8" font-weight="600">DFIR &amp; Threat Triage</text>
-        </g>
+      <!-- Row 3: Shell & Defense Lab -->
+      <g class="stream-row-3">
+        <text x="0" y="63" font-weight="700" fill="#ef4444">LAB HOST</text>
+        <text x="85" y="63" fill="#8b949e">:</text>
+        <text x="100" y="63" fill="#22d3ee" font-weight="600">DFIR Threat Defense Node</text>
+        <text x="310" y="63" fill="#8b949e">[uptime: 24/7]</text>
+      </g>
 
-        <!-- Row 3: Tools (y=72) -->
-        <g class="row-fade-3">
-          <text x="0" y="72" font-weight="700" fill="#A371F7">STACK</text>
-          <text x="62" y="72" fill="#8B949E">:</text>
-          <text x="74" y="72" fill="#F0F6FC">Wireshark &#8226; Python &#8226; Bash</text>
-        </g>
+      <!-- Row 4: Identity and Credentials -->
+      <g class="stream-row-4">
+        <text x="0" y="84" font-weight="700" fill="#a371f7">OPERATOR</text>
+        <text x="85" y="84" fill="#8b949e">:</text>
+        <text x="100" y="84" fill="#ffffff" font-weight="700">Thenuda Sahas</text>
+        <text x="220" y="84" fill="#58a6ff">(BTEC HND Computing)</text>
+      </g>
 
-        <!-- Row 4: Key Project (y=96) -->
-        <g class="row-fade-4">
-          <text x="0" y="96" font-weight="700" fill="#A371F7">PROJECT</text>
-          <text x="62" y="96" fill="#8B949E">:</text>
-          <text x="74" y="96" fill="#E3B341">PromptSentry (AI Firewall)</text>
-        </g>
+      <!-- Row 5: Focus Domain -->
+      <g class="stream-row-5">
+        <text x="0" y="105" font-weight="700" fill="#a371f7">FOCUS</text>
+        <text x="85" y="105" fill="#8b949e">:</text>
+        <text x="100" y="105" fill="#38bdf8" font-weight="600">Digital Forensics &amp; Threat Triage (DFIR)</text>
+      </g>
 
-        <!-- Row 5: Status (y=120) -->
-        <g class="row-fade-5">
-          <text x="0" y="120" font-weight="700" fill="#A371F7">STATUS</text>
-          <text x="62" y="120" fill="#8B949E">:</text>
-          <text x="74" y="120" fill="#39D353" font-weight="700">Perimeters Active [OK] &#10004;</text>
-        </g>
+      <!-- Row 6: Security Stack -->
+      <g class="stream-row-6">
+        <text x="0" y="126" font-weight="700" fill="#a371f7">ARSENAL</text>
+        <text x="85" y="126" fill="#8b949e">:</text>
+        <text x="100" y="126" fill="#f0f6fc">Wireshark &#8226; Volatility &#8226; Python &#8226; Ghidra &#8226; Bash &#8226; Nmap</text>
+      </g>
+
+      <!-- Row 7: Live Status -->
+      <g class="stream-row-7">
+        <text x="0" y="147" font-weight="700" fill="#39d353">STATUS</text>
+        <text x="85" y="147" fill="#8b949e">:</text>
+        <text x="100" y="147" fill="#39d353" font-weight="700">All Perimeters Enforced [0 Compromises] &#10004;</text>
+      </g>
+
+      <!-- Terminal Color Palette Blocks -->
+      <g transform="translate(100, 164)">
+        <rect x="0" y="0" width="18" height="8" rx="1.5" fill="#0d1117"/>
+        <rect x="22" y="0" width="18" height="8" rx="1.5" fill="#ef4444"/>
+        <rect x="44" y="0" width="18" height="8" rx="1.5" fill="#22c55e"/>
+        <rect x="66" y="0" width="18" height="8" rx="1.5" fill="#eab308"/>
+        <rect x="88" y="0" width="18" height="8" rx="1.5" fill="#3b82f6"/>
+        <rect x="110" y="0" width="18" height="8" rx="1.5" fill="#a855f7"/>
+        <rect x="132" y="0" width="18" height="8" rx="1.5" fill="#06b6d4"/>
+        <rect x="154" y="0" width="18" height="8" rx="1.5" fill="#f0f6fc"/>
       </g>
     </g>
 
   </g>
 
   <!-- ==================== BOTTOM COMMAND and TELEMETRY FOOTER ==================== -->
-  <line x1="24" y1="310" x2="856" y2="310" stroke="#21262D" stroke-width="1" stroke-dasharray="3,3" />
+  <line x1="24" y1="302" x2="856" y2="302" stroke="#21262d" stroke-width="1" stroke-dasharray="3,3" />
 
-  <g transform="translate(24, 326)" class="mono">
-    <!-- Typewriter Command Bottom (steps(55)) -->
-    <g>
-      <text x="0" y="0" font-size="10.5" fill="#39D353" font-weight="700">$ sysctl --security.perimeter=enforce --status=verified</text>
-      <!-- Bottom Stepping Cover + Cursor -->
-      <g class="type-cover-bottom">
-        <rect x="0" y="-12" width="400" height="16" fill="#0D1117" />
-        <rect x="0" y="-11" width="7" height="13" rx="1" fill="#39D353" class="cursor-blink" />
+  <g transform="translate(24, 323)" class="mono" font-size="11">
+    <!-- Prompt: [root@blackarch ~]# sysctl  - security.perimeter=enforce -->
+    <text x="0" y="0">
+      <tspan fill="#ef4444" font-weight="700">[root@blackarch-dfir</tspan>
+      <tspan fill="#58a6ff" font-weight="700"> ~</tspan>
+      <tspan fill="#ef4444" font-weight="700">]#</tspan>
+    </text>
+
+    <!-- Footer Command Typing -->
+    <g transform="translate(195, 0)">
+      <text x="0" y="0" fill="#39d353" font-weight="700">sysctl -p /etc/sysctl.d/99-hardened.conf</text>
+      <g class="type-cover-footer">
+        <rect x="0" y="-12" width="380" height="16" fill="#0D1117" />
+        <rect x="0" y="-11" width="8" height="14" rx="1" fill="#39d353" class="cursor-blink" />
       </g>
     </g>
 
-    <!-- Sleek Telemetry Badges Right -->
-    <g class="telemetry-badge">
-      <text x="832" y="0" font-size="10" font-weight="700" fill="#39D353" text-anchor="end">
-        [&#10004; ZERO-TRUST ENFORCED &#8226; 0 PERIMETER BREACHES]
+    <!-- Sleek Verification Badge Right -->
+    <g class="footer-badge">
+      <text x="832" y="0" font-size="10" font-weight="700" fill="#39d353" text-anchor="end">
+        [&#10004; ZERO-TRUST ENFORCED &#8226; LK DEFENSE ACTIVE]
       </text>
     </g>
   </g>
