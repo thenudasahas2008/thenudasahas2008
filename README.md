@@ -40,7 +40,7 @@
 ### 🖥️ Forensic & Security Terminal (`whoami`)
 
 <p align="center">
-  <img src="assets/cyber-terminal.svg?v=1" width="100%" alt="Forensic &amp; Security Terminal whoami" />
+  <img src="assets/cyber-terminal-v2.svg" width="100%" alt="Forensic &amp; Security Terminal whoami" />
 </p>
 
 ---
