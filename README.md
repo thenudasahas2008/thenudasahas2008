@@ -157,7 +157,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/thenudasahas2008?tab=repositories"><img src="https://img.shields.io/badge/EXPLORE%20ALL%20REPOSITORIES-thenudasahas2008-0D1117?style=for-the-badge&logo=github&logoColor=00BFA6" alt="Explore Repositories" /></a>
+  <a href="https://github.com/thenudasahas2008?tab=repositories"><img src="https://img.shields.io/badge/EXPLORE%20ALL%20REPOSITORIES-thenudasahas2008-161B22?style=for-the-badge&logo=github&logoColor=white" alt="Explore Repositories" /></a>
 </p>
 
 ---
