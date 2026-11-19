@@ -137,36 +137,6 @@
 
 ---
 
-## 🏆 GitHub Achievements & Badges
-
-<div align="center">
-  <a href="https://github.com/thenudasahas2008?tab=achievements">
-    <img src="https://github.githubassets.com/assets/pull-shark-default-498c279a747d.png" width="85" alt="Pull Shark" title="Pull Shark: Merged Pull Requests" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/thenudasahas2008?tab=achievements">
-    <img src="https://github.githubassets.com/assets/yolo-default-be0bbff04951.png" width="85" alt="YOLO" title="YOLO: Merged PR Without Review" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/thenudasahas2008?tab=achievements">
-    <img src="https://github.githubassets.com/assets/quickdraw-default-39c6aec8ff89.png" width="85" alt="Quickdraw" title="Quickdraw: Closed Issue / PR in Record Time" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/thenudasahas2008?tab=achievements">
-    <img src="https://github.githubassets.com/assets/pair-extraordinaire-silver-a0b2b472348c.png" width="85" alt="Pair Extraordinaire" title="Pair Extraordinaire: Co-authored Commits on Merged PR" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/thenudasahas2008?tab=achievements">
-    <img src="https://github.githubassets.com/assets/galaxy-brain-default-847262c21056.png" width="85" alt="Galaxy Brain" title="Galaxy Brain: Community Accepted Discussion Answers" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/thenudasahas2008?tab=achievements">
-    <img src="https://github.githubassets.com/assets/arctic-code-vault-contributor-default-df8d74122a06.png" width="85" alt="Arctic Code Vault" title="Arctic Code Vault: Open Source Archive" />
-  </a>
-</div>
-
----
-
 ## 📫 Connect & Inquiries
 
 <div align="center">
