@@ -40,24 +40,9 @@
 
 ### 🖥️ Forensic & Security Terminal (`whoami`)
 
-```bash
-┌──(sahas㉿cyber-forensics)-[~]
-└─$ neofetch --profile
-       _,met$$$$$gg.          OS: Kali GNU/Linux / Ubuntu LTS x86_64
-    ,g$$$$$$$$$$$$$$$P.       Host: Digital Forensics & Defense Lab
-  ,g$$P"     """Y$$.".        Kernel: 6.8.0-security-hardened
- ,$$P'              `$$$.     Uptime: Always Learning & Defending
-',$$P       ,ggs.     `$$b:   Shell: zsh 5.9 (x86_64-debian-linux-gnu)
-`d$$'     ,$P"'   .    $$$    Name: Thenuda Sahas Sooriyaarachchi
- $$P      d$'     ,    $$P    Degree: Pearson BTEC HND in Computing
- $$:      $$.   -    ,d$$'    Focus: Cybersecurity • Digital Forensics (DFIR)
- $$;      Y$b._   _,d$P'      Core Tools: Wireshark • Python • Bash • Linux
- Y$$.    `.`"Y$$$$P"'         Key Project: PromptSentry (AI Heuristic Firewall)
-  `$$b      "-.__             Status: Defensive Perimeters Active [OK]
-   `Y$$b                      Location: Colombo, Sri Lanka 🇱🇰 (UTC+05:30)
-    `"Y$b._
-        `"""
-```
+<p align="center">
+  <img src="assets/cyber-terminal.svg?v=1" width="100%" alt="Forensic &amp; Security Terminal whoami" />
+</p>
 
 ---
 
