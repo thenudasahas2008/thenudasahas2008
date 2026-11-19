@@ -189,25 +189,21 @@
 
 ## 📈 Activity & Development Velocity
 
-<!-- Real-time GitHub Activity Trend -->
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=thenudasahas2008&theme=react-dark&bg_color=0D1117&color=22D3EE&line=00BFA6&point=34D399&area=true&hide_border=true" width="100%" alt="Thenuda's GitHub Activity Graph" />
-</div>
+<!-- Animated Contribution Snake -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/thenudasahas2008/thenudasahas2008/output/github-contribution-grid-snake-dark.svg" alt="GitHub Contribution Snake Animation" width="100%" />
+</p>
 
-<br />
-
-<!-- Streak and Language Analytics -->
-<div align="center">
-  <img height="180" src="https://github-readme-stats-fast.vercel.app/api?username=thenudasahas2008&show_icons=true&rank_icon=github&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=00BFA6" alt="GitHub Statistics" />
+<!-- GitHub Analytics & Streak Overview -->
+<p align="center">
+  <img height="180" src="https://github-readme-stats-fast.vercel.app/api?username=thenudasahas2008&show_icons=true&rank_icon=github&theme=github_dark&border_color=30363d" alt="GitHub Statistics" />
   &nbsp;
-  <img height="180" src="https://streak-stats.demolab.com?user=thenudasahas2008&theme=transparent&hide_border=true&background=0D1117&ring=22D3EE&fire=00BFA6&currStreakLabel=22D3EE&sideLabels=C9D1D9&dates=8B949E&currStreakNum=E6EDF3&sideNums=E6EDF3" alt="GitHub Contribution Streak" />
-</div>
+  <img height="180" src="https://streak-stats.demolab.com?user=thenudasahas2008&theme=dark&border=30363D&background=0D1117" alt="GitHub Contribution Streak" />
+</p>
 
-<br />
-
-<div align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=thenudasahas2008&layout=compact&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=00BFA6" alt="Top Languages Breakdown" />
-</div>
+<p align="center">
+  <img height="180" src="https://github-readme-stats-fast.vercel.app/api/top-langs?username=thenudasahas2008&layout=compact&theme=github_dark&border_color=30363d" alt="Top Languages Breakdown" />
+</p>
 
 ---
 
