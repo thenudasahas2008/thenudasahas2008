@@ -1,0 +1,47 @@
+<svg width="360" height="150" viewBox="0 0 360 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgLangs" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+    <mask id="barMask">
+      <rect x="0" y="0" width="300" height="8" rx="4" fill="white" />
+    </mask>
+  </defs>
+
+  <!-- Container Box -->
+  <rect x="0.5" y="0.5" width="359" height="149" rx="6" fill="url(#bgLangs)" stroke="#30363d" />
+
+  <!-- Title -->
+  <text x="25" y="32" font-size="17" font-weight="600" fill="#58A6FF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif">Most Used Languages</text>
+
+  <!-- Progress Bar -->
+  <g transform="translate(25, 48)" mask="url(#barMask)">
+    <rect x="0" y="0" width="300" height="8" fill="#161b22" />
+    <g>
+      <rect x="0" y="0" width="292.4" height="8" fill="#f1e05a" />
+        <rect x="292.4" y="0" width="6.3" height="8" fill="#3572A5" />
+        <rect x="298.7" y="0" width="1.2" height="8" fill="#e34c26" />
+    </g>
+  </g>
+
+  <!-- Language Items -->
+  <g transform="translate(25, 75)">
+    <g>
+      <g transform="translate(0, 0)">
+        <circle cx="5" cy="5" r="4.5" fill="#f1e05a" />
+        <text x="16" y="9" font-size="12" fill="#c9d1d9" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">JavaScript <tspan fill="#7d8590" font-size="11">97.47%</tspan></text>
+      </g>
+      <g transform="translate(0, 24)">
+        <circle cx="5" cy="5" r="4.5" fill="#3572A5" />
+        <text x="16" y="9" font-size="12" fill="#c9d1d9" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Python <tspan fill="#7d8590" font-size="11">2.11%</tspan></text>
+      </g>
+    </g>
+    <g>
+      <g transform="translate(160, 0)">
+        <circle cx="5" cy="5" r="4.5" fill="#e34c26" />
+        <text x="16" y="9" font-size="12" fill="#c9d1d9" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">HTML <tspan fill="#7d8590" font-size="11">0.41%</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
