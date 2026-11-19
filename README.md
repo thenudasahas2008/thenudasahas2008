@@ -137,10 +137,47 @@
 
 ---
 
-<div align="center">
-  <p align="center">
-    <b>⚡ Stay Curious. Learn Responsibly. Build Securely. 🔐</b>
-  </p>
+## 📫 Connect & Inquiries
 
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer&color=0:020617,55:0B3D4F,100:00BFA6" width="100%" alt="Cybersecurity Horizon Footer" />
+<div align="center">
+
+<p align="center">
+  Feel free to reach out for cybersecurity research, DFIR incident triage, or software development inquiries.
+</p>
+
+<table align="center" width="100%">
+  <tr>
+    <td align="center" width="50%" height="70">
+      <a href="mailto:sahas.thenu@gmail.com">
+        <img src="https://img.shields.io/badge/EMAIL-sahas.thenu%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" height="35" alt="Email" />
+      </a>
+    </td>
+    <td align="center" width="50%" height="70">
+      <a href="https://www.thenudasahas.site/">
+        <img src="https://img.shields.io/badge/PORTFOLIO-thenudasahas.site-00C7B7?style=for-the-badge&logo=googlechrome&logoColor=white" height="35" alt="Portfolio" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%" height="70">
+      <a href="https://github.com/thenudasahas2008">
+        <img src="https://img.shields.io/badge/GITHUB-thenudasahas2008-181717?style=for-the-badge&logo=github&logoColor=white" height="35" alt="GitHub" />
+      </a>
+    </td>
+    <td align="center" width="50%" height="70">
+      <a href="https://discordapp.com/users/zyrox_01xi">
+        <img src="https://img.shields.io/badge/DISCORD-zyrox__01xi-5865F2?style=for-the-badge&logo=discord&logoColor=white" height="35" alt="Discord" />
+      </a>
+    </td>
+  </tr>
+</table>
+
+<br />
+
+<p align="center">
+  <b>⚡ Stay Curious. Learn Responsibly. Build Securely. 🔐</b>
+</p>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer&color=0:020617,55:0B3D4F,100:00BFA6" width="100%" alt="Cybersecurity Horizon Footer" />
+
 </div>
