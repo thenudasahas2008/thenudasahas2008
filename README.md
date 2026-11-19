@@ -21,13 +21,6 @@
 </div>
 
 <br />
-
-<!-- Animated Among Us Radar & Verification Scanner -->
-<div align="center">
-  <img src="./assets/among-us-scanner.svg" width="100%" alt="Among Us Cybersecurity Scanner" />
-</div>
-
-<br />
 <p align="center">
   <img src="./assets/cyber-divider.svg" width="100%" alt="Cyber Divider" />
 </p>
@@ -84,13 +77,11 @@ $ whoami
   <img src="./assets/cyber-divider.svg" width="100%" alt="Cyber Divider" />
 </p>
 
-## ඞ Among Us Impostor Contribution Sabotage & Fire Blast 🔥
+## ඞ Among Us Impostor Contribution Sentry & Fire Blast 🔥
 
 <!-- Among Us Impostor Incinerating Contributions Animation -->
 <div align="center">
   <img src="./assets/among-us-contribution-fire.svg" width="100%" alt="Among Us Impostor Firing at Contributions" />
-  <br />
-  <sub>🔥 <i>Emergency Meeting: The Red Impostor is patrolling the contribution grid and incinerating commits with a flamethrower!</i> ඞ</sub>
 </div>
 
 <br />
@@ -108,13 +99,7 @@ $ whoami
 ## 📊 GitHub Analytics & Metrics
 
 <div align="center">
-  <img height="185" src="https://github-readme-stats.vercel.app/api?username=thenudasahas2008&show_icons=true&include_all_commits=true&count_private=true&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=00BFA6&rank_icon=github" alt="GitHub Statistics" />
-  <img height="185" src="https://streak-stats.demolab.com?user=thenudasahas2008&theme=transparent&hide_border=true&background=0D1117&ring=22D3EE&fire=00BFA6&currStreakLabel=22D3EE&sideLabels=C9D1D9&dates=8B949E&currStreakNum=E6EDF3&sideNums=E6EDF3" alt="GitHub Contribution Streak" />
-</div>
-
-<br />
-
-<div align="center">
+  <img height="175" src="https://streak-stats.demolab.com?user=thenudasahas2008&theme=transparent&hide_border=true&background=0D1117&ring=22D3EE&fire=00BFA6&currStreakLabel=22D3EE&sideLabels=C9D1D9&dates=8B949E&currStreakNum=E6EDF3&sideNums=E6EDF3" alt="GitHub Contribution Streak" />
   <img height="175" src="https://github-readme-stats.vercel.app/api/top-langs/?username=thenudasahas2008&layout=compact&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=00BFA6" alt="Most Used Languages" />
 </div>
 
@@ -163,15 +148,6 @@ Status: In Progress • Constant Evolution
 <p align="center">
   <img src="./assets/cyber-divider.svg" width="100%" alt="Cyber Divider" />
 </p>
-
-## ඞ Among Us Terminal Log
-
-<div align="center">
-  <img src="./assets/among-us-sus.gif" width="120" alt="Among Us Sus Crewmate" />
-  <p><i>"Emergency Meeting: No bugs or vulnerabilities detected in this repository."</i></p>
-</div>
-
-<br />
 
 ## 📫 Connect & Collaborate
 
