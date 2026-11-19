@@ -27,192 +27,257 @@
     </filter>
     <style>
 
-@keyframes gunRecoil {
+@keyframes impostorPatrolPath {
+  /* Spot 1: Stationed and Aiming */
+  0%, 17.24% {
+    transform: translate(548px, 90px);
+  }
+  /* Walking to Spot 2 */
+  26.21%, 42.76% {
+    transform: translate(576px, 130px);
+  }
+  /* Walking to Spot 3 */
+  51.03%, 67.59% {
+    transform: translate(616px, 104px);
+  }
+  /* Walking to Spot 4 */
+  75.86%, 91.03% {
+    transform: translate(590px, 76px);
+  }
+  /* Walking back to Spot 1 */
+  96.00%, 100% {
+    transform: translate(548px, 90px);
+  }
+}
+
+.impostor-patrol {
+  animation: impostorPatrolPath 14.5s ease-in-out infinite;
+}
+
+/* Walking Leg Waddle */
+@keyframes impostorWalkLegs {
+  0%, 100% { transform: translateY(0px) rotate(-4deg); }
+  50%      { transform: translateY(-2px) rotate(4deg); }
+}
+.waddling-legs {
+  animation: impostorWalkLegs 0.22s ease-in-out infinite alternate;
+  transform-origin: 0px 5px;
+}
+
+@keyframes gunRecoilSeq {
   0%, 100% { transform: translate(0px, 0px); }
-  6.67%    { transform: translate(-3px, 0.5px); }
-  8.00%    { transform: translate(0px, 0px); }
-  30.00%   { transform: translate(-3px, -1px); }
-  31.50%   { transform: translate(0px, 0px); }
-  53.33%   { transform: translate(-3px, -0.5px); }
-  54.80%   { transform: translate(0px, 0px); }
-  75.00%   { transform: translate(-3px, 0.5px); }
-  76.50%   { transform: translate(0px, 0px); }
+  6.90% { transform: translate(-3.5px, 0px); }
+  8.10% { transform: translate(0px, 0px); }
+  31.72% { transform: translate(-3.5px, 0px); }
+  32.92% { transform: translate(0px, 0px); }
+  56.55% { transform: translate(-3.5px, 0px); }
+  57.75% { transform: translate(0px, 0px); }
+  81.38% { transform: translate(-3.5px, 0px); }
+  82.58% { transform: translate(0px, 0px); }
 }
+
 .impostor-blaster {
-  animation: gunRecoil 12s ease-out infinite;
+  animation: gunRecoilSeq 14.5s ease-out infinite;
 }
 
 
-@keyframes muzzleFlashSeq {
-  0%, 6.66%     { opacity: 0; }
-  6.67%, 7.50%  { opacity: 1; }
-  7.51%, 29.99% { opacity: 0; }
-  30.00%, 30.83%{ opacity: 1; }
-  30.84%, 53.32%{ opacity: 0; }
-  53.33%, 54.16%{ opacity: 1; }
-  54.17%, 74.99%{ opacity: 0; }
-  75.00%, 75.83%{ opacity: 1; }
-  75.84%, 100%  { opacity: 0; }
+@keyframes muzzleFlashShot1 {
+  0%, 6.89% { opacity: 0; }
+  6.90%, 7.70% { opacity: 1; }
+  7.71%, 100% { opacity: 0; }
 }
-.muzzle-flash {
-  animation: muzzleFlashSeq 12s ease-out infinite;
-  transform: translate(594px, 104px);
+.muzzle-flash-1 {
+  animation: muzzleFlashShot1 14.5s ease-out infinite;
+  transform: translate(572px, 102px);
 }
 
 
-@keyframes flyBullet1 {
-  0%, 6.66% { opacity: 0; transform: translate(594px, 104px) rotate(-3.65deg); }
-  6.67%            { opacity: 1; transform: translate(594px, 104px) rotate(-3.65deg); }
-  12.49%     { opacity: 1; transform: translate(735px, 95px) rotate(-3.65deg); }
-  12.50%, 100%      { opacity: 0; transform: translate(735px, 95px) rotate(-3.65deg); }
+@keyframes muzzleFlashShot2 {
+  0%, 31.71% { opacity: 0; }
+  31.72%, 32.52% { opacity: 1; }
+  32.53%, 100% { opacity: 0; }
+}
+.muzzle-flash-2 {
+  animation: muzzleFlashShot2 14.5s ease-out infinite;
+  transform: translate(600px, 142px);
+}
+
+
+@keyframes muzzleFlashShot3 {
+  0%, 56.54% { opacity: 0; }
+  56.55%, 57.35% { opacity: 1; }
+  57.36%, 100% { opacity: 0; }
+}
+.muzzle-flash-3 {
+  animation: muzzleFlashShot3 14.5s ease-out infinite;
+  transform: translate(640px, 116px);
+}
+
+
+@keyframes muzzleFlashShot4 {
+  0%, 81.37% { opacity: 0; }
+  81.38%, 82.18% { opacity: 1; }
+  82.19%, 100% { opacity: 0; }
+}
+.muzzle-flash-4 {
+  animation: muzzleFlashShot4 14.5s ease-out infinite;
+  transform: translate(614px, 88px);
+}
+
+
+@keyframes flyBulletShot1 {
+  0%, 6.89% { opacity: 0; transform: translate(572px, 102px) rotate(-2.46deg); }
+  6.90%            { opacity: 1; transform: translate(572px, 102px) rotate(-2.46deg); }
+  11.02%     { opacity: 1; transform: translate(735px, 95px) rotate(-2.46deg); }
+  11.03%, 100%      { opacity: 0; transform: translate(735px, 95px) rotate(-2.46deg); }
 }
 .bullet-1 {
-  animation: flyBullet1 12s linear infinite;
+  animation: flyBulletShot1 14.5s linear infinite;
 }
 
 
-@keyframes impactDetonation1 {
-  0%, 12.49% { opacity: 0; }
-  12.50%            { opacity: 1; }
-  15.00%      { opacity: 0; }
+@keyframes detonationShot1 {
+  0%, 11.02% { opacity: 0; }
+  11.03%            { opacity: 1; }
+  13.03%      { opacity: 0; }
   100%                 { opacity: 0; }
 }
 .detonation-1 {
-  animation: impactDetonation1 12s ease-out infinite;
+  animation: detonationShot1 14.5s ease-out infinite;
   transform: translate(735px, 95px);
 }
 
 
-@keyframes burnTarget1 {
-  0%, 12.49% { fill: #26a641; }
-  12.50%            { fill: #ffffff; }
-  14.00%      { fill: #ffea00; }
-  16.50%      { fill: #ff4500; }
-  19.50%      { fill: #dc2626; }
-  22.50%     { fill: #161b22; }
+@keyframes burnTargetShot1 {
+  0%, 11.02% { fill: #26a641; }
+  11.03%            { fill: #ffffff; }
+  12.23%      { fill: #ffea00; }
+  14.03%      { fill: #ff4500; }
+  16.53%      { fill: #dc2626; }
+  19.03%      { fill: #161b22; }
   93.00%               { fill: #161b22; }
   96.00%               { fill: #006d32; }
   98.00%, 100%         { fill: #26a641; }
 }
 #tgt_47_2 {
-  animation: burnTarget1 12s linear infinite;
+  animation: burnTargetShot1 14.5s linear infinite;
 }
 
 
-@keyframes flyBullet2 {
-  0%, 29.99% { opacity: 0; transform: translate(594px, 104px) rotate(16.87deg); }
-  30.00%            { opacity: 1; transform: translate(594px, 104px) rotate(16.87deg); }
-  35.82%     { opacity: 1; transform: translate(749px, 151px) rotate(16.87deg); }
-  35.83%, 100%      { opacity: 0; transform: translate(749px, 151px) rotate(16.87deg); }
+@keyframes flyBulletShot2 {
+  0%, 31.71% { opacity: 0; transform: translate(600px, 142px) rotate(3.46deg); }
+  31.72%            { opacity: 1; transform: translate(600px, 142px) rotate(3.46deg); }
+  35.85%     { opacity: 1; transform: translate(749px, 151px) rotate(3.46deg); }
+  35.86%, 100%      { opacity: 0; transform: translate(749px, 151px) rotate(3.46deg); }
 }
 .bullet-2 {
-  animation: flyBullet2 12s linear infinite;
+  animation: flyBulletShot2 14.5s linear infinite;
 }
 
 
-@keyframes impactDetonation2 {
-  0%, 35.82% { opacity: 0; }
-  35.83%            { opacity: 1; }
-  38.33%      { opacity: 0; }
+@keyframes detonationShot2 {
+  0%, 35.85% { opacity: 0; }
+  35.86%            { opacity: 1; }
+  37.86%      { opacity: 0; }
   100%                 { opacity: 0; }
 }
 .detonation-2 {
-  animation: impactDetonation2 12s ease-out infinite;
+  animation: detonationShot2 14.5s ease-out infinite;
   transform: translate(749px, 151px);
 }
 
 
-@keyframes burnTarget2 {
-  0%, 35.82% { fill: #39d353; }
-  35.83%            { fill: #ffffff; }
-  37.33%      { fill: #ffea00; }
-  39.83%      { fill: #ff4500; }
-  42.83%      { fill: #dc2626; }
-  45.83%     { fill: #161b22; }
+@keyframes burnTargetShot2 {
+  0%, 35.85% { fill: #39d353; }
+  35.86%            { fill: #ffffff; }
+  37.06%      { fill: #ffea00; }
+  38.86%      { fill: #ff4500; }
+  41.36%      { fill: #dc2626; }
+  43.86%      { fill: #161b22; }
   93.00%               { fill: #161b22; }
   96.00%               { fill: #006d32; }
   98.00%, 100%         { fill: #39d353; }
 }
 #tgt_48_6 {
-  animation: burnTarget2 12s linear infinite;
+  animation: burnTargetShot2 14.5s linear infinite;
 }
 
 
-@keyframes flyBullet3 {
-  0%, 53.32% { opacity: 0; transform: translate(594px, 104px) rotate(1.69deg); }
-  53.33%            { opacity: 1; transform: translate(594px, 104px) rotate(1.69deg); }
-  59.16%     { opacity: 1; transform: translate(763px, 109px) rotate(1.69deg); }
-  59.17%, 100%      { opacity: 0; transform: translate(763px, 109px) rotate(1.69deg); }
+@keyframes flyBulletShot3 {
+  0%, 56.54% { opacity: 0; transform: translate(640px, 116px) rotate(-3.26deg); }
+  56.55%            { opacity: 1; transform: translate(640px, 116px) rotate(-3.26deg); }
+  60.68%     { opacity: 1; transform: translate(763px, 109px) rotate(-3.26deg); }
+  60.69%, 100%      { opacity: 0; transform: translate(763px, 109px) rotate(-3.26deg); }
 }
 .bullet-3 {
-  animation: flyBullet3 12s linear infinite;
+  animation: flyBulletShot3 14.5s linear infinite;
 }
 
 
-@keyframes impactDetonation3 {
-  0%, 59.16% { opacity: 0; }
-  59.17%            { opacity: 1; }
-  61.67%      { opacity: 0; }
+@keyframes detonationShot3 {
+  0%, 60.68% { opacity: 0; }
+  60.69%            { opacity: 1; }
+  62.69%      { opacity: 0; }
   100%                 { opacity: 0; }
 }
 .detonation-3 {
-  animation: impactDetonation3 12s ease-out infinite;
+  animation: detonationShot3 14.5s ease-out infinite;
   transform: translate(763px, 109px);
 }
 
 
-@keyframes burnTarget3 {
-  0%, 59.16% { fill: #006d32; }
-  59.17%            { fill: #ffffff; }
-  60.67%      { fill: #ffea00; }
-  63.17%      { fill: #ff4500; }
-  66.17%      { fill: #dc2626; }
-  69.17%     { fill: #161b22; }
+@keyframes burnTargetShot3 {
+  0%, 60.68% { fill: #006d32; }
+  60.69%            { fill: #ffffff; }
+  61.89%      { fill: #ffea00; }
+  63.69%      { fill: #ff4500; }
+  66.19%      { fill: #dc2626; }
+  68.69%      { fill: #161b22; }
   93.00%               { fill: #161b22; }
   96.00%               { fill: #006d32; }
   98.00%, 100%         { fill: #006d32; }
 }
 #tgt_49_3 {
-  animation: burnTarget3 12s linear infinite;
+  animation: burnTargetShot3 14.5s linear infinite;
 }
 
 
-@keyframes flyBullet4 {
-  0%, 74.99% { opacity: 0; transform: translate(594px, 104px) rotate(-6.66deg); }
-  75.00%            { opacity: 1; transform: translate(594px, 104px) rotate(-6.66deg); }
-  80.82%     { opacity: 1; transform: translate(791px, 81px) rotate(-6.66deg); }
-  80.83%, 100%      { opacity: 0; transform: translate(791px, 81px) rotate(-6.66deg); }
+@keyframes flyBulletShot4 {
+  0%, 81.37% { opacity: 0; transform: translate(614px, 88px) rotate(-2.26deg); }
+  81.38%            { opacity: 1; transform: translate(614px, 88px) rotate(-2.26deg); }
+  85.51%     { opacity: 1; transform: translate(791px, 81px) rotate(-2.26deg); }
+  85.52%, 100%      { opacity: 0; transform: translate(791px, 81px) rotate(-2.26deg); }
 }
 .bullet-4 {
-  animation: flyBullet4 12s linear infinite;
+  animation: flyBulletShot4 14.5s linear infinite;
 }
 
 
-@keyframes impactDetonation4 {
-  0%, 80.82% { opacity: 0; }
-  80.83%            { opacity: 1; }
-  83.33%      { opacity: 0; }
+@keyframes detonationShot4 {
+  0%, 85.51% { opacity: 0; }
+  85.52%            { opacity: 1; }
+  87.52%      { opacity: 0; }
   100%                 { opacity: 0; }
 }
 .detonation-4 {
-  animation: impactDetonation4 12s ease-out infinite;
+  animation: detonationShot4 14.5s ease-out infinite;
   transform: translate(791px, 81px);
 }
 
 
-@keyframes burnTarget4 {
-  0%, 80.82% { fill: #39d353; }
-  80.83%            { fill: #ffffff; }
-  82.33%      { fill: #ffea00; }
-  84.83%      { fill: #ff4500; }
-  87.83%      { fill: #dc2626; }
-  90.83%     { fill: #161b22; }
+@keyframes burnTargetShot4 {
+  0%, 85.51% { fill: #39d353; }
+  85.52%            { fill: #ffffff; }
+  86.72%      { fill: #ffea00; }
+  88.52%      { fill: #ff4500; }
+  91.02%      { fill: #dc2626; }
+  93.52%      { fill: #161b22; }
   93.00%               { fill: #161b22; }
   96.00%               { fill: #006d32; }
   98.00%, 100%         { fill: #39d353; }
 }
 #tgt_51_1 {
-  animation: burnTarget4 12s linear infinite;
+  animation: burnTargetShot4 14.5s linear infinite;
 }
 
 
@@ -236,12 +301,12 @@
       <path d="M -1 -4 C -1 -6, 5 -6, 5 -4 L 5 4 C 5 5, 4 5, 3 5 L 3 7 C 3 8, 2 8, 2 7 L 2 5 L 1 5 L 1 7 C 1 8, 0 8, 0 7 L 0 5 C -0.5 5, -1 4.5, -1 4 Z" fill="#ef4444" stroke="#450a0a" stroke-width="0.8"/>
       <rect x="1" y="-3" width="4.5" height="3" rx="1.5" fill="#38bdf8" stroke="#450a0a" stroke-width="0.6"/>
     </g>
-    <text x="14" y="2" fill="#e6edf3" font-size="11" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" letter-spacing="0.5">AMONG US <tspan fill="#7d8590" font-weight="400">// TACTICAL INCINERATOR (DELAYED FIRE)</tspan></text>
+    <text x="14" y="2" fill="#e6edf3" font-size="11" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" letter-spacing="0.5">AMONG US <tspan fill="#7d8590" font-weight="400">// GRID PATROL SENTRY (TACTICAL WALK and FIRE)</tspan></text>
   </g>
   <g transform="translate(685, 24)" class="badge-pulse">
     <rect x="0" y="-10" width="168" height="20" rx="10" fill="#161b22" stroke="#da3633" stroke-width="1"/>
     <circle cx="10" cy="0" r="3.5" fill="#ff4d4d"/>
-    <text x="20" y="3.5" fill="#ff4d4d" font-size="9" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" letter-spacing="0.5">TARGET FIRING [ACTIVE]</text>
+    <text x="20" y="3.5" fill="#ff4d4d" font-size="9" font-weight="700" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" letter-spacing="0.5">PATROL and ENGAGE [OK]</text>
   </g>
   <!-- Month Labels -->
   <g fill="#7d8590" font-size="9" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
@@ -632,22 +697,38 @@
     <rect x="786" y="132" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="786" y="146" width="10" height="10" rx="2" fill="#161b22"/>
   </g>
-  <!-- Stationed Impostor Sentry at (570, 92) -->
-  <g transform="translate(570, 92)">
-    <!-- Backpack -->
-    <rect x="-9" y="-6" width="4.5" height="13" rx="2" fill="#991b1b" stroke="#450a0a" stroke-width="1.5"/>
-    <path d="M -5 -9 C -5 -13, 5 -13, 5 -9 L 5 6 C 5 8, 4 8.5, 3 8.5 L 3 11 C 3 12.5, 1 12.5, 1 11 L 1 8 L -1 8 L -1 11 C -1 12.5, -3 12.5, -3 11 L -3 8.5 C -4 8.5, -5 8, -5 6 Z" fill="url(#impostorRedGrad)" stroke="#450a0a" stroke-width="1.8" stroke-linejoin="round"/>
-    <rect x="-1" y="-7.5" width="8.5" height="6.5" rx="3.2" fill="url(#visorGrad)" stroke="#450a0a" stroke-width="1.4"/>
-    <ellipse cx="3.2" cy="-5.5" rx="2.2" ry="1.1" fill="#ffffff" opacity="0.85" transform="rotate(-10 3.2 -5.5)"/>
-    <!-- Blaster Cannon -->
-    <g class="impostor-blaster" transform="translate(6, 12)">
-      <rect x="0" y="-3.5" width="12" height="7" rx="1.5" fill="#1e293b" stroke="#0f172a" stroke-width="1.4"/>
-      <rect x="12" y="-4" width="6" height="8" rx="1" fill="#475569" stroke="#0f172a" stroke-width="1.2"/>
-      <rect x="8" y="-4" width="2" height="8" fill="#f97316"/>
+  <!-- Walking and Repositioning Impostor Sentry -->
+  <g class="impostor-patrol">
+    <g class="waddling-legs">
+      <rect x="-9" y="-6" width="4.5" height="13" rx="2" fill="#991b1b" stroke="#450a0a" stroke-width="1.5"/>
+      <path d="M -5 -9 C -5 -13, 5 -13, 5 -9 L 5 6 C 5 8, 4 8.5, 3 8.5 L 3 11 C 3 12.5, 1 12.5, 1 11 L 1 8 L -1 8 L -1 11 C -1 12.5, -3 12.5, -3 11 L -3 8.5 C -4 8.5, -5 8, -5 6 Z" fill="url(#impostorRedGrad)" stroke="#450a0a" stroke-width="1.8" stroke-linejoin="round"/>
+      <rect x="-1" y="-7.5" width="8.5" height="6.5" rx="3.2" fill="url(#visorGrad)" stroke="#450a0a" stroke-width="1.4"/>
+      <ellipse cx="3.2" cy="-5.5" rx="2.2" ry="1.1" fill="#ffffff" opacity="0.85" transform="rotate(-10 3.2 -5.5)"/>
+      <!-- Blaster Cannon -->
+      <g class="impostor-blaster" transform="translate(6, 12)">
+        <rect x="0" y="-3.5" width="12" height="7" rx="1.5" fill="#1e293b" stroke="#0f172a" stroke-width="1.4"/>
+        <rect x="12" y="-4" width="6" height="8" rx="1" fill="#475569" stroke="#0f172a" stroke-width="1.2"/>
+        <rect x="8" y="-4" width="2" height="8" fill="#f97316"/>
+      </g>
     </g>
   </g>
-  <!-- Clean Muzzle Flash (Flases at exact fire moments) -->
-  <g class="muzzle-flash" filter="url(#bulletGlow)">
+  <!-- Muzzle Flash 1 -->
+  <g class="muzzle-flash-1" filter="url(#bulletGlow)">
+    <polygon points="0,-7 2,-2 7,0 2,2 0,7 -2,2 -7,0 -2,-2" fill="#ffea00"/>
+    <circle cx="0" cy="0" r="2.5" fill="#ffffff"/>
+  </g>
+  <!-- Muzzle Flash 2 -->
+  <g class="muzzle-flash-2" filter="url(#bulletGlow)">
+    <polygon points="0,-7 2,-2 7,0 2,2 0,7 -2,2 -7,0 -2,-2" fill="#ffea00"/>
+    <circle cx="0" cy="0" r="2.5" fill="#ffffff"/>
+  </g>
+  <!-- Muzzle Flash 3 -->
+  <g class="muzzle-flash-3" filter="url(#bulletGlow)">
+    <polygon points="0,-7 2,-2 7,0 2,2 0,7 -2,2 -7,0 -2,-2" fill="#ffea00"/>
+    <circle cx="0" cy="0" r="2.5" fill="#ffffff"/>
+  </g>
+  <!-- Muzzle Flash 4 -->
+  <g class="muzzle-flash-4" filter="url(#bulletGlow)">
     <polygon points="0,-7 2,-2 7,0 2,2 0,7 -2,2 -7,0 -2,-2" fill="#ffea00"/>
     <circle cx="0" cy="0" r="2.5" fill="#ffffff"/>
   </g>
@@ -702,7 +783,7 @@
   <!-- Bottom Footer Bar -->
   <g transform="translate(72, 178)">
     <!-- Status Note -->
-    <text x="0" y="8" fill="#7d8590" font-size="9.5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Mode: <tspan fill="#ff4d4d" font-weight="600">Sequential Sentry Fire</tspan> &#8226; <tspan fill="#e6edf3">1 Bullet Delay Loop (12s)</tspan></text>
+    <text x="0" y="8" fill="#7d8590" font-size="9.5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Patrol Mode: <tspan fill="#ff4d4d" font-weight="600">Walk and Reposition Sentry</tspan> &#8226; <tspan fill="#e6edf3">1 Bullet Delay Loop (14.5s)</tspan></text>
     <!-- Legend -->
     <g transform="translate(630, 0)">
       <text x="-26" y="8" fill="#7d8590" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Less</text>

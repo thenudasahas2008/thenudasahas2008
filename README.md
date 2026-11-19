@@ -120,9 +120,9 @@
 
 ## 📈 Activity & Development Velocity
 
-<!-- Among Us Tactical Sentry Single Bullet Fire Animation -->
+<!-- Among Us Tactical Sentry Walk and Delayed Fire Animation -->
 <p align="center">
-  <img src="assets/among-us-sentry-fire.svg?v=6" width="100%" alt="Among Us Tactical Sentry Single Bullet Delayed Fire Animation" />
+  <img src="assets/among-us-sentry-fire.svg?v=7" width="100%" alt="Among Us Tactical Sentry Walk and Delayed Fire Animation" />
 </p>
 
 <!-- Real-Time Auto-Updating GitHub Analytics & Streak Suite -->
