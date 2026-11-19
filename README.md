@@ -95,19 +95,9 @@
 
 ## ⚡ Defensive Security & Forensics Pipeline
 
-```mermaid
-flowchart LR
-    A["⚠️ Inbound Request / Traffic"] --> B["🛡️ PromptSentry Firewall"]
-    B --> C["🔍 Deep Packet & Heuristic Triage"]
-    C --> D["⚖️ Digital Evidence Preservation"]
-    D --> E["✅ Hardened Endpoint / System"]
-
-    style A fill:#0f172a,stroke:#ef4444,stroke-width:1.5px,color:#f8fafc
-    style B fill:#0b3d4f,stroke:#22d3ee,stroke-width:2px,color:#e6fcff
-    style C fill:#064e3b,stroke:#34d399,stroke-width:1.5px,color:#ecfdf5
-    style D fill:#1e1b4b,stroke:#818cf8,stroke-width:1.5px,color:#f5f3ff
-    style E fill:#1e293b,stroke:#00bfa6,stroke-width:1.5px,color:#f8fafc
-```
+<p align="center">
+  <img src="assets/defense-pipeline.svg" width="100%" alt="Defensive Security and Forensics Pipeline" />
+</p>
 
 ---
 
