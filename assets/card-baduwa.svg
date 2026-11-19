@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 215" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="bdBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#120D1E" />
+      <stop offset="60%" stop-color="#181329" />
+      <stop offset="100%" stop-color="#0B0914" />
+    </linearGradient>
+    <linearGradient id="purpleGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="50%" stop-color="#A78BFA" />
+      <stop offset="100%" stop-color="#F43F5E" />
+    </linearGradient>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, "Fira Code", monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Card Border & Background -->
+  <rect x="1" y="1" width="458" height="213" rx="10" fill="url(#bdBg)" stroke="#1E293B" stroke-width="1.5" />
+  
+  <!-- Glowing Top Accent Line -->
+  <path d="M 10 1 L 450 1" stroke="url(#purpleGlow)" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- Corner Tech Markings -->
+  <path d="M 12 12 L 20 12 M 12 12 L 12 20" stroke="#A78BFA" stroke-width="1.5" opacity="0.6" />
+  <path d="M 448 12 L 440 12 M 448 12 L 448 20" stroke="#A78BFA" stroke-width="1.5" opacity="0.6" />
+
+  <!-- Header Section -->
+  <g transform="translate(24, 22)">
+    <!-- Audio Waveform / Disc Icon -->
+    <circle cx="8" cy="10" r="8" fill="#2E1065" stroke="#A78BFA" stroke-width="1.3" />
+    <circle cx="8" cy="10" r="3" fill="#A78BFA" />
+
+    <!-- Project Title -->
+    <text x="24" y="12" class="sans" font-size="16" font-weight="700" fill="#FFFFFF" letter-spacing="0.3">Baduwa (ZYRO)</text>
+    <text x="24" y="24" class="mono" font-size="9" font-weight="600" fill="#A78BFA" letter-spacing="0.8">24/7 DISCORD AUDIO AUTOMATION ENGINE</text>
+
+    <!-- Status Badge -->
+    <rect x="306" y="-2" width="106" height="20" rx="10" fill="#2E1065" stroke="#7C3AED" stroke-width="1" />
+    <circle cx="316" cy="8" r="3" fill="#C084FC" />
+    <text x="324" y="11" class="mono" font-size="8.5" font-weight="700" fill="#E9D5FF">24/7 ONLINE</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="20" y1="58" x2="440" y2="58" stroke="#1E293B" stroke-width="1" />
+
+  <!-- Description -->
+  <text x="24" y="78" class="sans" font-size="11.5" fill="#CBD5E1">High-fidelity 24/7 Discord audio streaming bot with interactive</text>
+  <text x="24" y="94" class="sans" font-size="11.5" fill="#CBD5E1">button controls, low-latency playback buffering, and slash commands.</text>
+
+  <!-- Technical Specs Matrix -->
+  <g transform="translate(24, 108)">
+    <rect width="198" height="34" rx="6" fill="#151226" stroke="#2B2147" stroke-width="1" />
+    <text x="10" y="14" class="mono" font-size="8" fill="#94A3B8" font-weight="600">STREAM UPTIME</text>
+    <text x="10" y="27" class="sans" font-size="10.5" fill="#A78BFA" font-weight="600">24/7 Continuous Audio</text>
+
+    <rect x="210" width="202" height="34" rx="6" fill="#151226" stroke="#2B2147" stroke-width="1" />
+    <text x="220" y="14" class="mono" font-size="8" fill="#94A3B8" font-weight="600">UI / INTERACTION</text>
+    <text x="220" y="27" class="sans" font-size="10.5" fill="#F472B6" font-weight="600">In-Discord Button UI</text>
+  </g>
+
+  <!-- Tech Stack Badges -->
+  <g transform="translate(24, 154)">
+    <!-- Badge 1: JavaScript -->
+    <rect width="76" height="20" rx="4" fill="#0F172A" stroke="#FACC15" stroke-width="0.8" />
+    <text x="38" y="13.5" class="mono" font-size="9" fill="#FACC15" font-weight="600" text-anchor="middle">JavaScript</text>
+
+    <!-- Badge 2: Node.js -->
+    <rect x="82" width="68" height="20" rx="4" fill="#0F172A" stroke="#4ADE80" stroke-width="0.8" />
+    <text x="116" y="13.5" class="mono" font-size="9" fill="#4ADE80" font-weight="600" text-anchor="middle">Node.js</text>
+
+    <!-- Badge 3: Discord API -->
+    <rect x="156" width="86" height="20" rx="4" fill="#0F172A" stroke="#818CF8" stroke-width="0.8" />
+    <text x="199" y="13.5" class="mono" font-size="9" fill="#818CF8" font-weight="600" text-anchor="middle">Discord API</text>
+
+    <!-- Badge 4: Async Audio -->
+    <rect x="248" width="84" height="20" rx="4" fill="#0F172A" stroke="#F472B6" stroke-width="0.8" />
+    <text x="290" y="13.5" class="mono" font-size="9" fill="#F472B6" font-weight="600" text-anchor="middle">Async Audio</text>
+  </g>
+
+  <!-- Footer Link Strip -->
+  <line x1="20" y1="184" x2="440" y2="184" stroke="#1E293B" stroke-width="1" />
+  <g transform="translate(24, 198)">
+    <text x="0" y="4" class="mono" font-size="9.5" fill="#64748B">thenudasahas2008 / Baduwa</text>
+    <text x="345" y="4" class="mono" font-size="9.5" font-weight="700" fill="#A78BFA">VIEW REPO ➔</text>
+  </g>
+</svg>

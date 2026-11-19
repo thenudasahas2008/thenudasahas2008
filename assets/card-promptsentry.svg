@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 215" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="psBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080F1E" />
+      <stop offset="60%" stop-color="#0B1528" />
+      <stop offset="100%" stop-color="#060A14" />
+    </linearGradient>
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00BFA6" />
+      <stop offset="50%" stop-color="#22D3EE" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, "Fira Code", monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Card Border & Background -->
+  <rect x="1" y="1" width="458" height="213" rx="10" fill="url(#psBg)" stroke="#1E293B" stroke-width="1.5" />
+  
+  <!-- Glowing Top Accent Line -->
+  <path d="M 10 1 L 450 1" stroke="url(#cyanGlow)" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- Corner Tech Markings -->
+  <path d="M 12 12 L 20 12 M 12 12 L 12 20" stroke="#22D3EE" stroke-width="1.5" opacity="0.6" />
+  <path d="M 448 12 L 440 12 M 448 12 L 448 20" stroke="#22D3EE" stroke-width="1.5" opacity="0.6" />
+
+  <!-- Header Section -->
+  <g transform="translate(24, 22)">
+    <!-- Shield Icon -->
+    <path d="M 0 4 L 8 0 L 16 4 L 16 11 C 16 16 8 20 8 20 C 8 20 0 16 0 11 Z" fill="#0E3746" stroke="#22D3EE" stroke-width="1.3" />
+    <path d="M 8 5 L 8 15 M 5 9 L 11 9" stroke="#22D3EE" stroke-width="1.2" />
+
+    <!-- Project Title -->
+    <text x="24" y="12" class="sans" font-size="16" font-weight="700" fill="#FFFFFF" letter-spacing="0.3">PromptSentry</text>
+    <text x="24" y="24" class="mono" font-size="9" font-weight="600" fill="#22D3EE" letter-spacing="0.8">AI SECURITY GATEWAY &amp; LLM FIREWALL</text>
+
+    <!-- Status Badge -->
+    <rect x="306" y="-2" width="106" height="20" rx="10" fill="#064E3B" stroke="#059669" stroke-width="1" />
+    <circle cx="316" cy="8" r="3" fill="#34D399" />
+    <text x="324" y="11" class="mono" font-size="8.5" font-weight="700" fill="#6EE7B7">DEFENSE ACTIVE</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="20" y1="58" x2="440" y2="58" stroke="#1E293B" stroke-width="1" />
+
+  <!-- Description -->
+  <text x="24" y="78" class="sans" font-size="11.5" fill="#CBD5E1">Production-grade AI firewall neutralizing heuristic prompt injections,</text>
+  <text x="24" y="94" class="sans" font-size="11.5" fill="#CBD5E1">adversarial jailbreaks, and toxic payloads before reaching LLMs.</text>
+
+  <!-- Technical Specs Matrix -->
+  <g transform="translate(24, 108)">
+    <rect width="198" height="34" rx="6" fill="#0B1324" stroke="#1E2E4A" stroke-width="1" />
+    <text x="10" y="14" class="mono" font-size="8" fill="#94A3B8" font-weight="600">CORE MITIGATION</text>
+    <text x="10" y="27" class="sans" font-size="10.5" fill="#67E8F9" font-weight="600">OWASP LLM01 Injection</text>
+
+    <rect x="210" width="202" height="34" rx="6" fill="#0B1324" stroke="#1E2E4A" stroke-width="1" />
+    <text x="220" y="14" class="mono" font-size="8" fill="#94A3B8" font-weight="600">INSPECTION SPEED</text>
+    <text x="220" y="27" class="sans" font-size="10.5" fill="#34D399" font-weight="600">&lt; 15ms Sub-Heuristic</text>
+  </g>
+
+  <!-- Tech Stack Badges -->
+  <g transform="translate(24, 154)">
+    <!-- Badge 1: Python -->
+    <rect width="64" height="20" rx="4" fill="#0F172A" stroke="#38BDF8" stroke-width="0.8" />
+    <text x="32" y="13.5" class="mono" font-size="9" fill="#38BDF8" font-weight="600" text-anchor="middle">Python</text>
+
+    <!-- Badge 2: AI Safety -->
+    <rect x="70" width="76" height="20" rx="4" fill="#0F172A" stroke="#00BFA6" stroke-width="0.8" />
+    <text x="108" y="13.5" class="mono" font-size="9" fill="#00BFA6" font-weight="600" text-anchor="middle">AI Safety</text>
+
+    <!-- Badge 3: Heuristics -->
+    <rect x="152" width="78" height="20" rx="4" fill="#0F172A" stroke="#A78BFA" stroke-width="0.8" />
+    <text x="191" y="13.5" class="mono" font-size="9" fill="#A78BFA" font-weight="600" text-anchor="middle">Heuristics</text>
+
+    <!-- Badge 4: Gateway -->
+    <rect x="236" width="70" height="20" rx="4" fill="#0F172A" stroke="#F43F5E" stroke-width="0.8" />
+    <text x="271" y="13.5" class="mono" font-size="9" fill="#FDA4AF" font-weight="600" text-anchor="middle">Gateway</text>
+  </g>
+
+  <!-- Footer Link Strip -->
+  <line x1="20" y1="184" x2="440" y2="184" stroke="#1E293B" stroke-width="1" />
+  <g transform="translate(24, 198)">
+    <text x="0" y="4" class="mono" font-size="9.5" fill="#64748B">thenudasahas2008 / PromptSentry</text>
+    <text x="345" y="4" class="mono" font-size="9.5" font-weight="700" fill="#22D3EE">VIEW REPO ➔</text>
+  </g>
+</svg>

@@ -151,16 +151,23 @@
 
 <p align="center">
   <a href="https://github.com/thenudasahas2008/PromptSentry">
-    <img src="https://github-readme-stats-fast.vercel.app/api/pin?username=thenudasahas2008&repo=PromptSentry&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=00BFA6" alt="PromptSentry Project" />
+    <img src="assets/card-promptsentry.svg" width="49%" alt="PromptSentry Project" />
   </a>
   <a href="https://github.com/thenudasahas2008/Baduwa">
-    <img src="https://github-readme-stats-fast.vercel.app/api/pin?username=thenudasahas2008&repo=Baduwa&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=00BFA6" alt="Baduwa Discord Bot" />
+    <img src="assets/card-baduwa.svg" width="49%" alt="Baduwa Discord Bot" />
   </a>
 </p>
 
 <p align="center">
-  <a href="https://www.thenudasahas.site/"><img src="https://img.shields.io/badge/OFFICIAL%20PORTFOLIO-Visit%20Website-0D1117?style=for-the-badge&logo=googlechrome&logoColor=22D3EE" alt="Visit Portfolio" /></a>
-  <a href="https://github.com/thenudasahas2008?tab=repositories"><img src="https://img.shields.io/badge/ALL%20REPOSITORIES-Explore%20Projects-0D1117?style=for-the-badge&logo=github&logoColor=00BFA6" alt="Explore Repositories" /></a>
+  <a href="https://www.thenudasahas.site/">
+    <img src="assets/card-portfolio.svg" width="99%" alt="Thenuda Sahas Official Portfolio" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/thenudasahas2008?tab=repositories"><img src="https://img.shields.io/badge/ALL%20REPOSITORIES-Explore%20Full%20Codebase-0D1117?style=for-the-badge&logo=github&logoColor=00BFA6" alt="Explore Repositories" /></a>
+  &nbsp;
+  <a href="https://www.thenudasahas.site/"><img src="https://img.shields.io/badge/LIVE%20DEMOS-Visit%20Platform-0D1117?style=for-the-badge&logo=googlechrome&logoColor=22D3EE" alt="Visit Platform" /></a>
 </p>
 
 ---
