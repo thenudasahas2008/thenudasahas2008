@@ -49,50 +49,45 @@
 
   <style>
     /* ========================================================
-       AMONG US SNAKE PATROL: Continuous Roaming Route (20s)
+       AMONG US CONTRIBUTION HUNTER: CLOSE-RANGE COMBAT (12s)
+       Constantly stalking, circling and blasting green dots!
        ======================================================== */
-    @keyframes impostorSnakePatrol {
-      /* --- ROW 1: SPRINTING EAST (Nov -> May) --- */
-      0%    { transform: translate(65px, 52px) scaleX(1); }
-      14%   { transform: translate(460px, 52px) scaleX(1); }
+    @keyframes impostorCombatHunt {
+      /* 1. Advance from staging into point-blank range of Target 1 (732, 95) */
+      0%    { transform: translate(640px, 86px) scaleX(1); }
+      12%   { transform: translate(695px, 86px) scaleX(1); }
       
-      /* --- TURN 1: CORRIDOR TRANSITION DOWN --- */
-      16.5% { transform: translate(525px, 68px) scaleX(1); }
-      17.2% { transform: translate(530px, 76px) scaleX(0.1); }
-      18%   { transform: translate(525px, 84px) scaleX(-1); }
+      /* 2. Step down to lower row right in front of bottom green dots (718, 732) */
+      20%   { transform: translate(685px, 116px) scaleX(1); }
+      30%   { transform: translate(708px, 116px) scaleX(1); }
       
-      /* --- ROW 3: SPRINTING WEST (Jun -> Dec, facing left) --- */
-      32%   { transform: translate(160px, 84px) scaleX(-1); }
+      /* 3. Infiltrate deep between green columns */
+      40%   { transform: translate(740px, 116px) scaleX(1); }
       
-      /* --- TURN 2: CORRIDOR TRANSITION DOWN --- */
-      34.5% { transform: translate(105px, 100px) scaleX(-1); }
-      35.2% { transform: translate(95px, 108px) scaleX(0.1); }
-      36%   { transform: translate(105px, 116px) scaleX(1); }
+      /* 4. Step up into center of cluster - Point blank at Target 2 and Target 4 */
+      48%   { transform: translate(748px, 82px) scaleX(1); }
+      56%   { transform: translate(748px, 82px) scaleX(1); }
       
-      /* --- ROW 5: SPRINTING EAST TOWARDS ACTIVE SECTOR --- */
-      52%   { transform: translate(520px, 116px) scaleX(1); }
-      60%   { transform: translate(705px, 116px) scaleX(1); }
+      /* 5. Climb to top row green dots */
+      64%   { transform: translate(758px, 54px) scaleX(1); }
+      70%   { transform: translate(780px, 54px) scaleX(1); }
       
-      /* --- ACTIVE CONTRIBUTION HUNTING ZONE (Infiltrating dots) --- */
-      63%   { transform: translate(730px, 98px) scaleX(1); }
-      67%   { transform: translate(758px, 82px) scaleX(1); }
-      71%   { transform: translate(782px, 64px) scaleX(1); }
-      74%   { transform: translate(782px, 52px) scaleX(1); }
+      /* 6. Smooth 3D turn around at top-right corner */
+      72.5% { transform: translate(780px, 54px) scaleX(0.1); }
+      74%   { transform: translate(775px, 54px) scaleX(-1); }
       
-      /* --- TURN 3: TOP-RIGHT EDGE FLIP WEST --- */
-      76.5% { transform: translate(780px, 52px) scaleX(0.1); }
-      77.5% { transform: translate(770px, 52px) scaleX(-1); }
+      /* 7. Sweep west across top of cluster, firing back into the dots */
+      83%   { transform: translate(710px, 54px) scaleX(-1); }
       
-      /* --- RETURN SWEEP WEST ALONG TOP LANE (Facing left) --- */
-      87%   { transform: translate(460px, 52px) scaleX(-1); }
-      95%   { transform: translate(140px, 52px) scaleX(-1); }
-      98.5% { transform: translate(65px, 52px) scaleX(-1); }
-      99.3% { transform: translate(65px, 52px) scaleX(0.1); }
-      100%  { transform: translate(65px, 52px) scaleX(1); }
+      /* 8. Maneuver down to reset staging position */
+      90%   { transform: translate(650px, 72px) scaleX(-1); }
+      96%   { transform: translate(640px, 86px) scaleX(-1); }
+      97.5% { transform: translate(640px, 86px) scaleX(0.1); }
+      100%  { transform: translate(640px, 86px) scaleX(1); }
     }
 
     .impostor-patrol {
-      animation: impostorSnakePatrol 20s linear infinite;
+      animation: impostorCombatHunt 12s linear infinite;
     }
 
     /* ========================================================
@@ -105,7 +100,7 @@
     }
 
     .impostor-waddle {
-      animation: impostorWaddle 0.28s ease-in-out infinite alternate;
+      animation: impostorWaddle 0.26s ease-in-out infinite alternate;
       transform-origin: 16px 20px;
     }
 
@@ -118,7 +113,7 @@
     }
 
     .patrol-muzzle-flash {
-      animation: patrolMuzzle 0.16s ease-in-out infinite alternate;
+      animation: patrolMuzzle 0.15s ease-in-out infinite alternate;
       filter: url(#bulletGlow);
       transform-origin: center;
     }
@@ -130,87 +125,94 @@
       0%   { transform: translate(25px, 0px) scale(0.7); opacity: 0; }
       15%  { opacity: 1; }
       80%  { opacity: 1; }
-      100% { transform: translate(75px, 0px) scale(1.1); opacity: 0; }
+      100% { transform: translate(70px, 0px) scale(1.1); opacity: 0; }
     }
     @keyframes boltFlight2 {
       0%   { transform: translate(25px, 0px) scale(0.7); opacity: 0; }
       15%  { opacity: 1; }
       80%  { opacity: 1; }
-      100% { transform: translate(75px, 0px) scale(1.1); opacity: 0; }
+      100% { transform: translate(70px, 0px) scale(1.1); opacity: 0; }
     }
     @keyframes boltFlight3 {
       0%   { transform: translate(25px, 0px) scale(0.7); opacity: 0; }
       15%  { opacity: 1; }
       80%  { opacity: 1; }
-      100% { transform: translate(75px, 0px) scale(1.1); opacity: 0; }
+      100% { transform: translate(70px, 0px) scale(1.1); opacity: 0; }
     }
 
-    .bolt-1 { animation: boltFlight1 0.36s linear infinite; }
-    .bolt-2 { animation: boltFlight2 0.36s linear 0.12s infinite; }
-    .bolt-3 { animation: boltFlight3 0.36s linear 0.24s infinite; }
+    .bolt-1 { animation: boltFlight1 0.32s linear infinite; }
+    .bolt-2 { animation: boltFlight2 0.32s linear 0.10s infinite; }
+    .bolt-3 { animation: boltFlight3 0.32s linear 0.21s infinite; }
     .fire-bullet { filter: url(#bulletGlow); }
 
     /* ========================================================
-       INTERACTIVE TARGET SQUARES: Burning when hunted (60-76%)
+       TARGET BURNING and IMPACT (Synced to 12s Combat Timeline)
        ======================================================== */
+    /* Target 1: x=732.4, y=94.9 (Attacked at 8% - 16%) */
     @keyframes burn_t1 {
-      0%, 61%, 70%, 100% { fill: #39d353; filter: none; }
-      63%   { fill: #ffea00; filter: url(#bulletGlow); }
-      64.5% { fill: #ff4500; filter: url(#impactGlow); }
-      67%   { fill: #ef4444; filter: url(#bulletGlow); }
-    }
-    @keyframes burn_t2 {
-      0%, 65%, 74%, 100% { fill: #0e4429; filter: none; }
-      67%   { fill: #ffea00; filter: url(#bulletGlow); }
-      68.5% { fill: #ff4500; filter: url(#impactGlow); }
-      71%   { fill: #ef4444; filter: url(#bulletGlow); }
-    }
-    @keyframes burn_t3 {
-      0%, 59%, 67%, 100% { fill: #39d353; filter: none; }
-      61%   { fill: #ffea00; filter: url(#bulletGlow); }
-      62.5% { fill: #ff4500; filter: url(#impactGlow); }
-      65%   { fill: #ef4444; filter: url(#bulletGlow); }
-    }
-    @keyframes burn_t4 {
-      0%, 69%, 78%, 100% { fill: #006d32; filter: none; }
-      71%   { fill: #ffea00; filter: url(#bulletGlow); }
-      72.5% { fill: #ff4500; filter: url(#impactGlow); }
-      75%   { fill: #ef4444; filter: url(#bulletGlow); }
+      0%, 6%, 20%, 100% { fill: #39d353; filter: none; }
+      9%   { fill: #ffea00; filter: url(#bulletGlow); }
+      11%  { fill: #ff4500; filter: url(#impactGlow); }
+      15%  { fill: #ef4444; filter: url(#bulletGlow); }
     }
 
-    .target-1 { animation: burn_t1 20s ease-in-out infinite; }
-    .target-2 { animation: burn_t2 20s ease-in-out infinite; }
-    .target-3 { animation: burn_t3 20s ease-in-out infinite; }
-    .target-4 { animation: burn_t4 20s ease-in-out infinite; }
+    /* Target 3: x=775.3, y=137.8 (Attacked at 26% - 35%) */
+    @keyframes burn_t3 {
+      0%, 24%, 38%, 100% { fill: #39d353; filter: none; }
+      28%  { fill: #ffea00; filter: url(#bulletGlow); }
+      30%  { fill: #ff4500; filter: url(#impactGlow); }
+      34%  { fill: #ef4444; filter: url(#bulletGlow); }
+    }
+
+    /* Target 2: x=761.0, y=80.6 (Attacked at 46% - 55%) */
+    @keyframes burn_t2 {
+      0%, 44%, 58%, 100% { fill: #0e4429; filter: none; }
+      48%  { fill: #ffea00; filter: url(#bulletGlow); }
+      50%  { fill: #ff4500; filter: url(#impactGlow); }
+      54%  { fill: #ef4444; filter: url(#bulletGlow); }
+    }
+
+    /* Target 4: x=789.6, y=80.6 (Attacked at 52% - 62%) */
+    @keyframes burn_t4 {
+      0%, 50%, 65%, 100% { fill: #006d32; filter: none; }
+      53%  { fill: #ffea00; filter: url(#bulletGlow); }
+      55%  { fill: #ff4500; filter: url(#impactGlow); }
+      60%  { fill: #ef4444; filter: url(#bulletGlow); }
+    }
+
+    .target-1 { animation: burn_t1 12s ease-in-out infinite; }
+    .target-2 { animation: burn_t2 12s ease-in-out infinite; }
+    .target-3 { animation: burn_t3 12s ease-in-out infinite; }
+    .target-4 { animation: burn_t4 12s ease-in-out infinite; }
 
     /* ========================================================
-       IMPACT SPARKS BURSTING
+       IMPACT SPARKS (Bursting at exact hit timings)
        ======================================================== */
     @keyframes spark_t1 {
-      0%, 62%, 69%, 100% { opacity: 0; transform: scale(0.1); }
-      64%  { opacity: 1; transform: scale(1.4) rotate(15deg); }
-      66%  { opacity: 0; transform: scale(1.8) rotate(35deg); }
-    }
-    @keyframes spark_t2 {
-      0%, 66%, 73%, 100% { opacity: 0; transform: scale(0.1); }
-      68%  { opacity: 1; transform: scale(1.4) rotate(-20deg); }
-      70%  { opacity: 0; transform: scale(1.8) rotate(-40deg); }
+      0%, 7%, 18%, 100% { opacity: 0; transform: scale(0.1); }
+      10%  { opacity: 1; transform: scale(1.5) rotate(15deg); }
+      14%  { opacity: 0; transform: scale(2.0) rotate(35deg); }
     }
     @keyframes spark_t3 {
-      0%, 60%, 67%, 100% { opacity: 0; transform: scale(0.1); }
-      62%  { opacity: 1; transform: scale(1.4) rotate(25deg); }
-      64%  { opacity: 0; transform: scale(1.8) rotate(45deg); }
+      0%, 25%, 36%, 100% { opacity: 0; transform: scale(0.1); }
+      29%  { opacity: 1; transform: scale(1.5) rotate(25deg); }
+      33%  { opacity: 0; transform: scale(2.0) rotate(45deg); }
+    }
+    @keyframes spark_t2 {
+      0%, 45%, 56%, 100% { opacity: 0; transform: scale(0.1); }
+      49%  { opacity: 1; transform: scale(1.5) rotate(-20deg); }
+      53%  { opacity: 0; transform: scale(2.0) rotate(-40deg); }
     }
     @keyframes spark_t4 {
-      0%, 70%, 77%, 100% { opacity: 0; transform: scale(0.1); }
-      72%  { opacity: 1; transform: scale(1.4) rotate(10deg); }
-      74%  { opacity: 0; transform: scale(1.8) rotate(30deg); }
+      0%, 51%, 63%, 100% { opacity: 0; transform: scale(0.1); }
+      54%  { opacity: 1; transform: scale(1.5) rotate(10deg); }
+      58%  { opacity: 0; transform: scale(2.0) rotate(30deg); }
     }
 
-    .sparks-1 { animation: spark_t1 20s ease-out infinite; transform-origin: center; }
-    .sparks-2 { animation: spark_t2 20s ease-out infinite; transform-origin: center; }
-    .sparks-3 { animation: spark_t3 20s ease-out infinite; transform-origin: center; }
-    .sparks-4 { animation: spark_t4 20s ease-out infinite; transform-origin: center; }
+    .sparks-1 { animation: spark_t1 12s ease-out infinite; transform-origin: center; }
+    .sparks-2 { animation: spark_t2 12s ease-out infinite; transform-origin: center; }
+    .sparks-3 { animation: spark_t3 12s ease-out infinite; transform-origin: center; }
+    .sparks-4 { animation: spark_t4 12s ease-out infinite; transform-origin: center; }
   </style>
 
   <!-- Clean Container -->
@@ -234,18 +236,19 @@
       <text font-family="'Fira Code', 'Courier New', monospace" font-size="12" font-weight="700">
         <tspan fill="#f87171">AMONG US</tspan>
         <tspan fill="#484f58"> // </tspan>
-        <tspan fill="#f0f6fc">GRID HUNTER PATROL</tspan>
+        <tspan fill="#f0f6fc">CONTRIBUTION HUNTER</tspan>
       </text>
     </g>
 
     <!-- Sleek Status Pill -->
-    <g transform="translate(270, 2)">
-      <rect width="76" height="17" rx="8.5" fill="#1c1917" stroke="#ef4444" stroke-width="0.8"/>
+    <g transform="translate(265, 2)">
+      <rect width="85" height="17" rx="8.5" fill="#1c1917" stroke="#ef4444" stroke-width="0.8"/>
       <circle cx="9" cy="8.5" r="3" fill="#ef4444" filter="url(#bulletGlow)"/>
-      <text x="16" y="11.5" fill="#f87171" font-family="'Fira Code', monospace" font-size="8.5" font-weight="700">PATROLLING 🔥</text>
+      <text x="16" y="11.5" fill="#f87171" font-family="'Fira Code', monospace" font-size="8.5" font-weight="700">FIRE COMBAT 🔥</text>
     </g>
   </g>
 
+  <!-- Month Labels -->
   <!-- Month Labels -->
   <!-- Month Labels -->
   <text x="46.0" y="42" fill="#7d8590" font-size="9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">Nov</text>
@@ -264,9 +267,12 @@
 
   <!-- Day Labels -->
   <!-- Day Labels -->
+  <!-- Day Labels -->
   <text x="36" y="74" text-anchor="end" fill="#7d8590" font-size="9" font-family="-apple-system, sans-serif">Mon</text>
   <text x="36" y="103" text-anchor="end" fill="#7d8590" font-size="9" font-family="-apple-system, sans-serif">Wed</text>
   <text x="36" y="131" text-anchor="end" fill="#7d8590" font-size="9" font-family="-apple-system, sans-serif">Fri</text>
+
+  <!-- 53x7 Contribution Squares -->
 
   <!-- 53x7 Contribution Squares -->
 
@@ -668,7 +674,7 @@
   </g>
 
   <!-- ========================================================
-       AMONG US SNAKE-PATROL CHARACTER (ROAMING ACROSS GRID)
+       AMONG US COMBAT CHARACTER (HUNTING CLOSE TO GREEN DOTS)
        ======================================================== -->
   <g class="impostor-patrol">
     <g class="impostor-waddle">
@@ -700,7 +706,7 @@
             <circle cx="0" cy="0" r="2.5" fill="#ffffff"/>
           </g>
 
-          <!-- Streaming Fire Laser Bullets (Traveling with Gun) -->
+          <!-- Streaming Fire Laser Bullets (Impacting Green Dots) -->
           <g class="fire-bullet bolt-1">
             <path d="M -14 -2 Q 0 -3 5 0 Q 0 3 -14 2 Z" fill="url(#fireBulletGrad)"/>
             <ellipse cx="2" cy="0" rx="5" ry="2" fill="#ffffff"/>
@@ -718,6 +724,7 @@
     </g>
   </g>
 
+  <!-- Clean Bottom Bar with Legend -->
   <!-- Clean Bottom Bar with Legend -->
   <!-- Clean Bottom Bar -->
   <g transform="translate(46, 172)">

@@ -122,7 +122,7 @@
 
 <!-- Among Us Impostor Incinerating Contributions Animation -->
 <p align="center">
-  <img src="assets/among-us-snake-patrol.svg?v=2" width="100%" alt="Among Us Impostor Contribution Grid Patrol Hunter" />
+  <img src="assets/among-us-snake-patrol.svg?v=3" width="100%" alt="Among Us Impostor Contribution Grid Patrol Hunter" />
 </p>
 
 <!-- Real-Time Auto-Updating GitHub Analytics & Streak Suite -->
