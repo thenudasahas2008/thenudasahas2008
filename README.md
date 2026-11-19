@@ -132,7 +132,7 @@
 </p>
 
 <p align="center">
-  <img width="49%" src="https://github-readme-stats-fast.vercel.app/api/top-langs?username=thenudasahas2008&layout=compact&theme=github_dark&border_color=30363d&bg_color=0D1117&title_color=58A6FF&hide=procfile,dockerfile,shell" alt="Top Languages Breakdown" />
+  <img height="150" src="https://github-readme-stats-fast.vercel.app/api/top-langs?username=thenudasahas2008&layout=compact&theme=github_dark&border_color=30363d&bg_color=0D1117&title_color=58A6FF&hide=procfile,dockerfile,shell" alt="Top Languages Breakdown" />
 </p>
 
 ---
