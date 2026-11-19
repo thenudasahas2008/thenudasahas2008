@@ -13,10 +13,12 @@
 
   <!-- Quick Navigation Pills -->
   <a href="#-forensic--security-terminal-whoami"><img src="https://img.shields.io/badge/Terminal-0D1117?style=flat-square&logo=gnubash&logoColor=22D3EE" alt="Terminal" /></a>
+  <a href="#-practical-security-labs--research-platforms"><img src="https://img.shields.io/badge/Labs-0D1117?style=flat-square&logo=tryhackme&logoColor=22D3EE" alt="Labs" /></a>
   <a href="#-technical-arsenal--tooling-matrix"><img src="https://img.shields.io/badge/Tech_Arsenal-0D1117?style=flat-square&logo=target&logoColor=22D3EE" alt="Arsenal" /></a>
   <a href="#-featured-projects"><img src="https://img.shields.io/badge/Projects-0D1117?style=flat-square&logo=github&logoColor=22D3EE" alt="Projects" /></a>
   <a href="#-activity--development-velocity"><img src="https://img.shields.io/badge/Analytics-0D1117?style=flat-square&logo=chartdotjs&logoColor=22D3EE" alt="Analytics" /></a>
   <a href="#-strategic-roadmap--certifications"><img src="https://img.shields.io/badge/Roadmap-0D1117?style=flat-square&logo=git&logoColor=22D3EE" alt="Roadmap" /></a>
+  <a href="#-security-policy--responsible-disclosure"><img src="https://img.shields.io/badge/Policy-0D1117?style=flat-square&logo=securityscorecard&logoColor=22D3EE" alt="Policy" /></a>
   <a href="#-connect--inquiries"><img src="https://img.shields.io/badge/Contact-0D1117?style=flat-square&logo=gmail&logoColor=22D3EE" alt="Contact" /></a>
 
   <br /><br />
@@ -147,15 +149,15 @@
 ## 🎯 Strategic Roadmap & Certifications
 
 <p align="center">
-  <img src="assets/strategic-roadmap.svg?v=1" width="100%" alt="Strategic Academic &amp; Certification Roadmap" />
+  <img src="assets/strategic-roadmap.svg?v=1" width="100%" alt="Strategic Academic & Certification Roadmap" />
 </p>
 
 ---
 
-## 🔐 Security Policy &amp; Responsible Disclosure
+## 🔐 Security Policy & Responsible Disclosure
 
 <p align="center">
-  <img src="assets/security-disclosure.svg?v=1" width="100%" alt="Coordinated Vulnerability Disclosure &amp; Security Policy" />
+  <img src="assets/security-disclosure.svg?v=1" width="100%" alt="Coordinated Vulnerability Disclosure & Security Policy" />
 </p>
 
 ---
@@ -164,8 +166,11 @@
 
 <p align="center">
   <a href="mailto:sahas.thenu@gmail.com"><img src="https://img.shields.io/badge/EMAIL-sahas.thenu%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  &nbsp;
   <a href="https://github.com/thenudasahas2008"><img src="https://img.shields.io/badge/GITHUB-thenudasahas2008-161B22?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+  &nbsp;
   <a href="https://www.thenudasahas.site/"><img src="https://img.shields.io/badge/WEBSITE-thenudasahas.site-0D1117?style=for-the-badge&logo=googlechrome&logoColor=22D3EE" alt="Portfolio Website" /></a>
+  &nbsp;
   <a href="https://discordapp.com/users/zyrox_01xi"><img src="https://img.shields.io/badge/DISCORD-zyrox__01xi-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
 </p>
 
