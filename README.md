@@ -18,6 +18,7 @@
   <a href="#-featured-projects"><img src="https://img.shields.io/badge/Projects-0D1117?style=flat-square&logo=github&logoColor=22D3EE" alt="Projects" /></a>
   <a href="#-activity--development-velocity"><img src="https://img.shields.io/badge/Analytics-0D1117?style=flat-square&logo=chartdotjs&logoColor=22D3EE" alt="Analytics" /></a>
   <a href="#-live-cyber-defense--network-telemetry"><img src="https://img.shields.io/badge/Telemetry-0D1117?style=flat-square&logo=wireshark&logoColor=22D3EE" alt="Telemetry" /></a>
+  <a href="#-strategic-roadmap--certifications-2026---2027"><img src="https://img.shields.io/badge/Roadmap-0D1117?style=flat-square&logo=git&logoColor=22D3EE" alt="Roadmap" /></a>
   <a href="#-connect--inquiries"><img src="https://img.shields.io/badge/Contact-0D1117?style=flat-square&logo=gmail&logoColor=22D3EE" alt="Contact" /></a>
 
   <br /><br />
@@ -143,6 +144,21 @@
 <p align="center">
   <img src="assets/cyber-telemetry-stream.svg?v=1" width="100%" alt="Real-Time Network Packet and Defense Telemetry" />
 </p>
+
+---
+
+## 🎯 Strategic Roadmap & Certifications (2026 - 2027)
+
+<p align="center">
+  <img src="assets/animated-cyber-roadmap.svg?v=1" width="100%" alt="Strategic Academic and Certification Roadmap" />
+</p>
+
+<div align="center">
+
+> [!NOTE]
+> **Coordinated Vulnerability Disclosure & Safe Harbor:** Security research conducted in good faith within `*.thenudasahas.site` and open-source repositories is welcomed. Responsible reports will receive response within 24 hours. Contact: `sahas.thenu@gmail.com`.
+
+</div>
 
 ---
 
