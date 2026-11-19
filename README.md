@@ -157,9 +157,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/thenudasahas2008?tab=repositories"><img src="https://img.shields.io/badge/ALL%20REPOSITORIES-Explore%20Full%20Codebase-0D1117?style=for-the-badge&logo=github&logoColor=00BFA6" alt="Explore Repositories" /></a>
-  &nbsp;
-  <a href="https://www.thenudasahas.site/"><img src="https://img.shields.io/badge/LIVE%20DEMOS-Visit%20Platform-0D1117?style=for-the-badge&logo=googlechrome&logoColor=22D3EE" alt="Visit Platform" /></a>
+  <a href="https://github.com/thenudasahas2008?tab=repositories"><img src="https://img.shields.io/badge/EXPLORE%20ALL%20REPOSITORIES-thenudasahas2008-0D1117?style=for-the-badge&logo=github&logoColor=00BFA6" alt="Explore Repositories" /></a>
 </p>
 
 ---
