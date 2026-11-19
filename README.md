@@ -131,9 +131,15 @@
   <img src="assets/among-us-contribution-fire.svg?v=3" width="100%" alt="Among Us Impostor Firing at Contributions" />
 </p>
 
-<!-- Developer Telemetry & Activity Dashboard -->
+<!-- Real-Time Auto-Updating GitHub Analytics & Streak Suite -->
 <p align="center">
-  <img src="assets/developer-telemetry.svg?v=2" width="100%" alt="Developer Telemetry &amp; Activity Dashboard" />
+  <img height="180" src="https://github-readme-stats-fast.vercel.app/api?username=thenudasahas2008&show_icons=true&include_all_commits=true&count_private=true&theme=github_dark&border_color=30363d&bg_color=0D1117&title_color=58A6FF&icon_color=22D3EE" alt="GitHub Statistics" />
+  &nbsp;
+  <img height="180" src="https://streak-stats.demolab.com?user=thenudasahas2008&theme=dark&border=30363D&background=0D1117" alt="GitHub Contribution Streak" />
+</p>
+
+<p align="center">
+  <img height="180" src="https://github-readme-stats-fast.vercel.app/api/top-langs?username=thenudasahas2008&layout=compact&theme=github_dark&border_color=30363d&bg_color=0D1117&title_color=58A6FF" alt="Top Languages Breakdown" />
 </p>
 
 ---
