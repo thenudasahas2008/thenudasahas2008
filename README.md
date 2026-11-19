@@ -17,7 +17,7 @@
   <a href="#-technical-arsenal--tooling-matrix"><img src="https://img.shields.io/badge/Tech_Arsenal-0D1117?style=flat-square&logo=target&logoColor=22D3EE" alt="Arsenal" /></a>
   <a href="#-featured-projects"><img src="https://img.shields.io/badge/Projects-0D1117?style=flat-square&logo=github&logoColor=22D3EE" alt="Projects" /></a>
   <a href="#-activity--development-velocity"><img src="https://img.shields.io/badge/Analytics-0D1117?style=flat-square&logo=chartdotjs&logoColor=22D3EE" alt="Analytics" /></a>
-  <a href="#-encrypted-uplink--direct-communications"><img src="https://img.shields.io/badge/Comms-0D1117?style=flat-square&logo=signal&logoColor=22D3EE" alt="Comms" /></a>
+  <a href="#-connect--inquiries"><img src="https://img.shields.io/badge/Contact-0D1117?style=flat-square&logo=gmail&logoColor=22D3EE" alt="Contact" /></a>
 
   <br /><br />
 
@@ -137,23 +137,51 @@
 
 ---
 
-## 📡 Encrypted Uplink & Direct Communications
-
-<p align="center">
-  <img src="assets/clean-cyber-comms.svg?v=1" width="100%" alt="Direct Communications and Verified Channels" />
-</p>
-
-<!-- 100% Clickable One-Click Dispatch Badges -->
-<p align="center">
-  <a href="mailto:sahas.thenu@gmail.com"><img src="https://img.shields.io/badge/EMAIL-sahas.thenu%40gmail.com-0D1117?style=for-the-badge&logo=gmail&logoColor=22D3EE" alt="Email" /></a>
-  &nbsp;&nbsp;
-  <a href="https://www.thenudasahas.site/"><img src="https://img.shields.io/badge/PORTFOLIO-thenudasahas.site-0D1117?style=for-the-badge&logo=googlechrome&logoColor=22D3EE" alt="Portfolio" /></a>
-  <br /><br />
-  <a href="https://github.com/thenudasahas2008"><img src="https://img.shields.io/badge/GITHUB-thenudasahas2008-0D1117?style=for-the-badge&logo=github&logoColor=22D3EE" alt="GitHub" /></a>
-  &nbsp;&nbsp;
-  <a href="https://discordapp.com/users/zyrox_01xi"><img src="https://img.shields.io/badge/DISCORD-zyrox__01xi-0D1117?style=for-the-badge&logo=discord&logoColor=22D3EE" alt="Discord" /></a>
-</p>
+## 📫 Connect & Inquiries
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=150&section=footer&text=THENUDA%20SAHAS%20%E2%80%A2%20DEFENSIVE%20CYBERSECURITY&fontSize=18&fontColor=E6FCFF&fontAlignY=65&desc=Digital%20Forensics%20%E2%80%A2%20Incident%20Response%20%E2%80%A2%20Ethical%20Hardening&descSize=11&descAlignY=82&color=0:020617,40:0B3D4F,80:0284C7,100:22D3EE" width="100%" alt="Cybersecurity Horizon Footer" />
+
+<p align="center">
+  Feel free to reach out for cybersecurity research, DFIR incident triage, or software development inquiries.
+</p>
+
+<table align="center" width="100%">
+  <tr>
+    <td align="center" width="50%" height="80">
+      <a href="mailto:sahas.thenu@gmail.com">
+        <img src="https://img.shields.io/badge/EMAIL-sahas.thenu%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /><br />
+        <sub><b>Direct Dispatch • SLA &lt; 24h</b></sub>
+      </a>
+    </td>
+    <td align="center" width="50%" height="80">
+      <a href="https://www.thenudasahas.site/">
+        <img src="https://img.shields.io/badge/PORTFOLIO-thenudasahas.site-00C7B7?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" /><br />
+        <sub><b>Official Portfolio &amp; DFIR Research Platform</b></sub>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%" height="80">
+      <a href="https://github.com/thenudasahas2008">
+        <img src="https://img.shields.io/badge/GITHUB-thenudasahas2008-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /><br />
+        <sub><b>Explore Repositories &amp; Source Code</b></sub>
+      </a>
+    </td>
+    <td align="center" width="50%" height="80">
+      <a href="https://discordapp.com/users/zyrox_01xi">
+        <img src="https://img.shields.io/badge/DISCORD-zyrox__01xi-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /><br />
+        <sub><b>Direct Chat • Available for Collaborations</b></sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+<br />
+
+<p align="center">
+  <b>⚡ Stay Curious. Learn Responsibly. Build Securely. 🔐</b>
+</p>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer&color=0:020617,55:0B3D4F,100:00BFA6" width="100%" alt="Cybersecurity Horizon Footer" />
+
 </div>
