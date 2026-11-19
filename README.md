@@ -120,9 +120,9 @@
 
 ## 📈 Activity & Development Velocity
 
-<!-- Among Us Impostor Incinerating Contributions Animation -->
+<!-- Among Us Crewmate Snake Eat Contributions Grid Animation -->
 <p align="center">
-  <img src="assets/among-us-sentry-fire.svg?v=4" width="100%" alt="Among Us Impostor Sentry Flying Star Incinerator" />
+  <img src="assets/among-us-sentry-fire.svg?v=5" width="100%" alt="Among Us Devouring Contributions Snake Eat Animation" />
 </p>
 
 <!-- Real-Time Auto-Updating GitHub Analytics & Streak Suite -->
