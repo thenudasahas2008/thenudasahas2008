@@ -11,6 +11,17 @@
 
   <br />
 
+  <!-- Quick Navigation Pills -->
+  <a href="#-forensic--security-terminal-whoami"><img src="https://img.shields.io/badge/Terminal-0D1117?style=flat-square&logo=gnubash&logoColor=22D3EE" alt="Terminal" /></a>
+  <a href="#-core-pillars--security-specializations"><img src="https://img.shields.io/badge/Specializations-0D1117?style=flat-square&logo=securityscorecard&logoColor=22D3EE" alt="Specializations" /></a>
+  <a href="#-technical-arsenal--tooling-matrix"><img src="https://img.shields.io/badge/Tech_Arsenal-0D1117?style=flat-square&logo=target&logoColor=22D3EE" alt="Arsenal" /></a>
+  <a href="#-featured-engineering-projects"><img src="https://img.shields.io/badge/Projects-0D1117?style=flat-square&logo=github&logoColor=22D3EE" alt="Projects" /></a>
+  <a href="#-activity--development-velocity"><img src="https://img.shields.io/badge/Analytics-0D1117?style=flat-square&logo=chartdotjs&logoColor=22D3EE" alt="Analytics" /></a>
+  <a href="#-strategic-roadmap--certifications"><img src="https://img.shields.io/badge/Roadmap-0D1117?style=flat-square&logo=git&logoColor=22D3EE" alt="Roadmap" /></a>
+  <a href="#-connect--inquiries"><img src="https://img.shields.io/badge/Contact-0D1117?style=flat-square&logo=gmail&logoColor=22D3EE" alt="Contact" /></a>
+
+  <br /><br />
+
   <!-- Direct Communication & Social Links -->
   <a href="https://www.thenudasahas.site/"><img src="https://img.shields.io/badge/PORTFOLIO-thenudasahas.site-0D1117?style=for-the-badge&logo=googlechrome&logoColor=22D3EE" alt="Portfolio website" /></a>
   <a href="mailto:sahas.thenu@gmail.com"><img src="https://img.shields.io/badge/EMAIL-sahas.thenu%40gmail.com-0D1117?style=for-the-badge&logo=gmail&logoColor=EA4335" alt="Email" /></a>
@@ -42,7 +53,7 @@
  $$;      Y$b._   _,d$P'      Core Tools: Wireshark • Python • Bash • Linux
  Y$$.    `.`"Y$$$$P"'         Key Project: PromptSentry (AI Heuristic Firewall)
   `$$b      "-.__             Status: Defensive Perimeters Active [OK]
-   `Y$$b                      Location: Colombo, Sri Lanka 🇱🇰
+   `Y$$b                      Location: Colombo, Sri Lanka 🇱🇰 (UTC+05:30)
     `"Y$b._
         `"""
 ```
@@ -79,6 +90,24 @@
     </td>
   </tr>
 </table>
+
+---
+
+## ⚡ Defensive Security & Forensics Pipeline
+
+```mermaid
+flowchart LR
+    A["⚠️ Inbound Request / Traffic"] --> B["🛡️ PromptSentry Firewall"]
+    B --> C["🔍 Deep Packet & Heuristic Triage"]
+    C --> D["⚖️ Digital Evidence Preservation"]
+    D --> E["✅ Hardened Endpoint / System"]
+
+    style A fill:#0f172a,stroke:#ef4444,stroke-width:1.5px,color:#f8fafc
+    style B fill:#0b3d4f,stroke:#22d3ee,stroke-width:2px,color:#e6fcff
+    style C fill:#064e3b,stroke:#34d399,stroke-width:1.5px,color:#ecfdf5
+    style D fill:#1e1b4b,stroke:#818cf8,stroke-width:1.5px,color:#f5f3ff
+    style E fill:#1e293b,stroke:#00bfa6,stroke-width:1.5px,color:#f8fafc
+```
 
 ---
 
@@ -132,23 +161,32 @@
 
 <table>
   <tr>
-    <td width="50%" valign="top">
+    <td width="33.3%" valign="top">
       <div align="center">
         <a href="https://github.com/thenudasahas2008/PromptSentry">
           <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=thenudasahas2008&repo=PromptSentry&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=00BFA6" alt="PromptSentry Project" />
         </a>
       </div>
-      <p><b>PromptSentry</b> is an AI security firewall and heuristic prompt-injection defense gateway designed to protect LLM pipelines against adversarial inputs, jailbreaks, and sensitive data leakage.</p>
-      <p><code>Python</code> • <code>AI Safety</code> • <code>Heuristic Defense</code> • <code>Input Validation</code></p>
+      <p><b>PromptSentry</b>: AI security firewall and heuristic prompt-injection defense gateway protecting LLM workflows.</p>
+      <p><code>Python</code> • <code>AI Safety</code> • <code>Defense</code></p>
     </td>
-    <td width="50%" valign="top">
+    <td width="33.3%" valign="top">
       <div align="center">
         <a href="https://github.com/thenudasahas2008/Baduwa">
           <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=thenudasahas2008&repo=Baduwa&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=00BFA6" alt="Baduwa Discord Bot" />
         </a>
       </div>
-      <p><b>Baduwa (ZYRO)</b> is a 24/7 high-availability Discord audio automation and music bot featuring interactive in-Discord button controls, auto-reconnection, and slash command integration.</p>
-      <p><code>Python</code> • <code>Discord API</code> • <code>Asyncio</code> • <code>Media Streaming</code></p>
+      <p><b>Baduwa (ZYRO)</b>: 24/7 Discord audio automation bot with interactive in-Discord button controls and slash commands.</p>
+      <p><code>Python</code> • <code>Discord API</code> • <code>Asyncio</code></p>
+    </td>
+    <td width="33.3%" valign="top">
+      <div align="center">
+        <a href="https://github.com/thenudasahas2008/Thenuda-Sahas">
+          <img src="https://github-readme-stats-fast.vercel.app/api/pin/?username=thenudasahas2008&repo=Thenuda-Sahas&theme=transparent&hide_border=true&bg_color=0D1117&title_color=22D3EE&text_color=C9D1D9&icon_color=00BFA6" alt="Thenuda-Sahas Portfolio" />
+        </a>
+      </div>
+      <p><b>Thenuda Portfolio</b>: Official production website showcasing Cybersecurity & Digital Forensics qualifications.</p>
+      <p><code>Web</code> • <code>HTML/CSS/JS</code> • <code>Portfolio</code></p>
     </td>
   </tr>
 </table>
@@ -203,6 +241,19 @@ MISSION TIMELINE [2026 - 2027]:
 └── [TARGET CERTIFICATIONS]
     ├── CompTIA Security+ (In Preparation)
     └── eJPT / Certified Digital Forensics Examiner (Roadmap)
+```
+
+---
+
+## 🔐 Security Policy & Responsible Disclosure
+
+```bash
+# Security & Vulnerability Reporting Policy:
+Target Domain : *.thenudasahas.site & Open Source Repositories
+Contact       : sahas.thenu@gmail.com
+Guidelines    : Prompt, responsible disclosure in authorized testing scopes
+GPG Status    : Communication channels verified • Encryption supported
+Timezone      : Asia/Colombo (UTC+05:30) • Sri Lanka 🇱🇰
 ```
 
 ---
