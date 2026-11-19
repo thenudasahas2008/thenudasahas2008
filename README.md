@@ -146,36 +146,17 @@
 
 ## 🎯 Strategic Roadmap & Certifications
 
-```yaml
-MISSION TIMELINE [2026 - 2027]:
-├── [ACADEMIC] Pearson BTEC Higher National Diploma (HND) in Computing
-│   ├── Network Engineering & Protocol Analysis (Active)
-│   ├── Information Systems & Secure Database Architecture (Active)
-│   └── Software Engineering & Object-Oriented Design (Completed)
-│
-├── [SECURITY & DFIR LABS] Practical Exploitation, Forensics & Defense
-│   ├── Digital Forensics Artifacts & Evidence Preservation Methodology
-│   ├── Linux Hardening, Privilege Escalation & Bash Automation
-│   ├── OWASP Web Application Security & API Vulnerability Labs
-│   └── Wireshark Packet Inspection & Network Forensic Triage
-│
-└── [TARGET CERTIFICATIONS]
-    ├── CompTIA Security+ (In Preparation)
-    └── eJPT / Certified Digital Forensics Examiner (Roadmap)
-```
+<p align="center">
+  <img src="assets/strategic-roadmap.svg?v=1" width="100%" alt="Strategic Academic &amp; Certification Roadmap" />
+</p>
 
 ---
 
-## 🔐 Security Policy & Responsible Disclosure
+## 🔐 Security Policy &amp; Responsible Disclosure
 
-```bash
-# Security & Vulnerability Reporting Policy:
-Target Domain : *.thenudasahas.site & Open Source Repositories
-Contact       : sahas.thenu@gmail.com
-Guidelines    : Prompt, responsible disclosure in authorized testing scopes
-GPG Status    : Communication channels verified • Encryption supported
-Timezone      : Asia/Colombo (UTC+05:30) • Sri Lanka 🇱🇰
-```
+<p align="center">
+  <img src="assets/security-disclosure.svg?v=1" width="100%" alt="Coordinated Vulnerability Disclosure &amp; Security Policy" />
+</p>
 
 ---
 
