@@ -149,7 +149,7 @@
 ## 🎯 Strategic Roadmap & Certifications
 
 <p align="center">
-  <img src="assets/strategic-roadmap.svg?v=1" width="100%" alt="Strategic Academic & Certification Roadmap" />
+  <img src="assets/strategic-roadmap.svg?v=2" width="100%" alt="Strategic Academic & Certification Roadmap" />
 </p>
 
 ---
@@ -157,7 +157,7 @@
 ## 🔐 Security Policy & Responsible Disclosure
 
 <p align="center">
-  <img src="assets/security-disclosure.svg?v=1" width="100%" alt="Coordinated Vulnerability Disclosure & Security Policy" />
+  <img src="assets/security-disclosure.svg?v=2" width="100%" alt="Coordinated Vulnerability Disclosure & Security Policy" />
 </p>
 
 ---
@@ -165,16 +165,17 @@
 ## 📫 Connect & Inquiries
 
 <p align="center">
-  <a href="mailto:sahas.thenu@gmail.com"><img src="https://img.shields.io/badge/EMAIL-sahas.thenu%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-  &nbsp;
-  <a href="https://github.com/thenudasahas2008"><img src="https://img.shields.io/badge/GITHUB-thenudasahas2008-161B22?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-  &nbsp;
-  <a href="https://www.thenudasahas.site/"><img src="https://img.shields.io/badge/WEBSITE-thenudasahas.site-0D1117?style=for-the-badge&logo=googlechrome&logoColor=22D3EE" alt="Portfolio Website" /></a>
-  &nbsp;
-  <a href="https://discordapp.com/users/zyrox_01xi"><img src="https://img.shields.io/badge/DISCORD-zyrox__01xi-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="mailto:sahas.thenu@gmail.com"><img src="https://img.shields.io/badge/EMAIL-sahas.thenu%40gmail.com-0D1117?style=for-the-badge&logo=gmail&logoColor=EA4335" alt="Email" /></a>
+  &nbsp;&nbsp;
+  <a href="https://www.thenudasahas.site/"><img src="https://img.shields.io/badge/PORTFOLIO-thenudasahas.site-0D1117?style=for-the-badge&logo=googlechrome&logoColor=22D3EE" alt="Portfolio" /></a>
+  <br /><br />
+  <a href="https://github.com/thenudasahas2008"><img src="https://img.shields.io/badge/GITHUB-thenudasahas2008-0D1117?style=for-the-badge&logo=github&logoColor=FFFFFF" alt="GitHub" /></a>
+  &nbsp;&nbsp;
+  <a href="https://discordapp.com/users/zyrox_01xi"><img src="https://img.shields.io/badge/DISCORD-zyrox__01xi-0D1117?style=for-the-badge&logo=discord&logoColor=5865F2" alt="Discord" /></a>
 </p>
 
 <div align="center">
-  <h3>🔐 Stay Curious. Learn Responsibly. Build Securely.</h3>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=16&duration=3000&pause=1000&color=22D3EE&center=true&vCenter=true&repeat=true&width=600&height=35&lines=Stay+Curious.+Learn+Responsibly.+Build+Securely.+%F0%9F%94%90" alt="Footer Cyber Motto" />
+  <br />
   <img src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer&color=0:020617,55:0B3D4F,100:00BFA6" width="100%" alt="Cybersecurity-themed footer" />
 </div>
