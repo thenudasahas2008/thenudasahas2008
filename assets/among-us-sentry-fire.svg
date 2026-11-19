@@ -45,27 +45,26 @@
       </feMerge>
     </filter>
   
-    <!-- Superheated Plasma Flame Gradient -->
-    <linearGradient id="plasmaBeamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ffea00"/>
-      <stop offset="30%" stop-color="#ff6b00"/>
-      <stop offset="70%" stop-color="#ff2200"/>
-      <stop offset="100%" stop-color="#ffffff"/>
+    <!-- Fire Bullet Trail Gradient -->
+    <linearGradient id="fireTrailGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff2200" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#ff5500" stop-opacity="0.7"/>
+      <stop offset="85%" stop-color="#ffcc00" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="1"/>
     </linearGradient>
 
-    <!-- Heavy Energy Glow -->
-    <filter id="plasmaGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3.5" result="blur1"/>
-      <feGaussianBlur stdDeviation="1.5" result="blur2"/>
+    <!-- Projectile Glow Filter -->
+    <filter id="starGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
       <feMerge>
-        <feMergeNode in="blur1"/>
-        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <filter id="detonationGlow" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
+    <!-- Impact Detonation Glow Filter -->
+    <filter id="burstGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -81,213 +80,204 @@
     .title-text { fill: #e6edf3; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1px; }
 
     /* ========================================================
-       ADVANCED COMBAT ASSAULT SEQUENCE (8s Loop)
+       AMONG US SENTRY COMBAT ANIMATION (8s Seamless Loop)
        ======================================================== */
 
-    /* Impostor Combat Stance and Recoil:
-       Stationed at September (x ≈ 640px - 665px).
-       Steps forward into battle stance, aims up/down with precise angles, absorbs heavy cannon recoil! */
-    @keyframes impostorTacticalAssault {
-      /* Phase 1: Aim Upper (Angle: -15deg) */
-      0%   { transform: translate(638px, 80px) rotate(0deg); }
-      3%   { transform: translate(646px, 78px) rotate(-14deg); }
-      5%   { transform: translate(650px, 78px) rotate(-14deg); }
-      6%   { transform: translate(642px, 79px) rotate(-14deg); }
-      8%   { transform: translate(648px, 78px) rotate(-14deg); }
-      11%  { transform: translate(640px, 79px) rotate(-14deg); }
-      14%  { transform: translate(646px, 78px) rotate(-14deg); }
-      22%  { transform: translate(646px, 78px) rotate(0deg); }
+    /* Impostor Sentry Stance and Recoil:
+       Stationed stably at x ≈ 545px - 565px, facing right toward contributions.
+       Subtle advance, realistic recoil on shot, and aim elevation. */
+    @keyframes sentryCombatStance {
+      /* Phase 1: Target 1 (0s - 2s) */
+      0%   { transform: translate(545px, 80px); }
+      3%   { transform: translate(550px, 80px); } /* Step into firing stance */
+      5%   { transform: translate(552px, 80px); } /* Fire */
+      6%   { transform: translate(546px, 80px); } /* Gun Recoil */
+      8%   { transform: translate(550px, 80px); } /* Recover */
+      23%  { transform: translate(550px, 80px); }
 
-      /* Phase 2: Aim Mid-Left (Angle: +4deg) */
-      25%  { transform: translate(652px, 82px) rotate(4deg); }
-      28%  { transform: translate(656px, 82px) rotate(4deg); }
-      30%  { transform: translate(648px, 83px) rotate(4deg); }
-      33%  { transform: translate(654px, 82px) rotate(4deg); }
-      36%  { transform: translate(646px, 83px) rotate(4deg); }
-      39%  { transform: translate(652px, 82px) rotate(4deg); }
-      47%  { transform: translate(650px, 84px) rotate(0deg); }
+      /* Phase 2: Target 2 (2s - 4s) - Elevate slightly up */
+      26%  { transform: translate(553px, 75px); } /* Aim up */
+      30%  { transform: translate(555px, 75px); } /* Fire */
+      31%  { transform: translate(549px, 75px); } /* Gun Recoil */
+      33%  { transform: translate(553px, 75px); } /* Recover */
+      48%  { transform: translate(553px, 75px); }
 
-      /* Phase 3: Aim Lower Sector (Angle: +24deg) */
-      50%  { transform: translate(645px, 86px) rotate(22deg); }
-      53%  { transform: translate(648px, 86px) rotate(22deg); }
-      55%  { transform: translate(640px, 87px) rotate(22deg); }
-      58%  { transform: translate(646px, 86px) rotate(22deg); }
-      61%  { transform: translate(638px, 87px) rotate(22deg); }
-      64%  { transform: translate(645px, 86px) rotate(22deg); }
-      72%  { transform: translate(650px, 80px) rotate(0deg); }
+      /* Phase 3: Target 3 (4s - 6s) - Shift slightly down */
+      51%  { transform: translate(547px, 88px); } /* Aim down */
+      55%  { transform: translate(550px, 88px); } /* Fire */
+      56%  { transform: translate(544px, 88px); } /* Gun Recoil */
+      58%  { transform: translate(548px, 88px); } /* Recover */
+      73%  { transform: translate(548px, 88px); }
 
-      /* Phase 4: Point-Blank Aggressive Overcharge Finish! */
-      75%  { transform: translate(660px, 78px) rotate(-3deg); }
-      78%  { transform: translate(668px, 78px) rotate(-3deg); }
-      80%  { transform: translate(658px, 79px) rotate(-3deg); }
-      83%  { transform: translate(665px, 78px) rotate(-3deg); }
-      86%  { transform: translate(656px, 79px) rotate(-3deg); }
-      89%  { transform: translate(662px, 78px) rotate(-3deg); }
-      95%  { transform: translate(648px, 80px) rotate(0deg); }
-      100% { transform: translate(638px, 80px) rotate(0deg); }
+      /* Phase 4: Target 4 (6s - 8s) - Step forward */
+      76%  { transform: translate(558px, 80px); } /* Advance */
+      80%  { transform: translate(562px, 80px); } /* Fire */
+      81%  { transform: translate(555px, 80px); } /* Gun Recoil */
+      83%  { transform: translate(560px, 80px); } /* Recover */
+      93%  { transform: translate(552px, 80px); } /* Step back */
+      100% { transform: translate(545px, 80px); } /* Reset */
     }
 
-    .impostor-assault {
-      animation: impostorTacticalAssault 8s cubic-bezier(0.25, 1, 0.5, 1) infinite;
-      transform-origin: 15px 20px;
+    .impostor-sentry {
+      animation: sentryCombatStance 8s cubic-bezier(0.3, 0.9, 0.4, 1) infinite;
     }
 
-    /* Tactical Red Laser Targeting Sights (Reticle Lock-on) */
-    @keyframes targetReticle1 {
-      0%, 2%   { opacity: 0; transform: scale(2.2); }
-      3%, 22%  { opacity: 1; transform: scale(1); }
-      23%, 100% { opacity: 0; }
-    }
-    @keyframes targetReticle2 {
-      0%, 24%  { opacity: 0; transform: scale(2.2); }
-      25%, 47% { opacity: 1; transform: scale(1); }
-      48%, 100% { opacity: 0; }
-    }
-    @keyframes targetReticle3 {
-      0%, 49%  { opacity: 0; transform: scale(2.2); }
-      50%, 72% { opacity: 1; transform: scale(1); }
-      73%, 100% { opacity: 0; }
-    }
-    @keyframes targetReticle4 {
-      0%, 74%  { opacity: 0; transform: scale(2.2); }
-      75%, 95% { opacity: 1; transform: scale(1); }
-      96%, 100% { opacity: 0; }
+    /* Clean Muzzle Flash mounted at gun tip (23, 0) */
+    @keyframes muzzleFlashAnim {
+      0%, 100% { opacity: 0; transform: scale(0.1); }
+      5%, 5.8%   { opacity: 1; transform: scale(1.3); }
+      6.6%       { opacity: 0; transform: scale(0.2); }
+      30%, 30.8% { opacity: 1; transform: scale(1.3); }
+      31.6%      { opacity: 0; transform: scale(0.2); }
+      55%, 55.8% { opacity: 1; transform: scale(1.3); }
+      56.6%      { opacity: 0; transform: scale(0.2); }
+      80%, 80.8% { opacity: 1; transform: scale(1.4); }
+      81.6%      { opacity: 0; transform: scale(0.2); }
     }
 
-    .reticle-1 { animation: targetReticle1 8s ease-out infinite; transform-origin: 766px 71.5px; }
-    .reticle-2 { animation: targetReticle2 8s ease-out infinite; transform-origin: 737.6px 100px; }
-    .reticle-3 { animation: targetReticle3 8s ease-out infinite; transform-origin: 780.5px 143px; }
-    .reticle-4 { animation: targetReticle4 8s ease-out infinite; transform-origin: 794.8px 86px; }
-
-    /* Continuous High-Energy Plasma Flamethrower / Laser Beams */
-    @keyframes plasmaBeam1 {
-      0%, 4.9%   { opacity: 0; stroke-dashoffset: 200; }
-      5.0%       { opacity: 1; stroke-dashoffset: 0; }
-      8.0%       { opacity: 0.9; }
-      10.0%      { opacity: 1; }
-      13.5%      { opacity: 1; }
-      14.5%, 100% { opacity: 0; }
-    }
-    @keyframes plasmaBeam2 {
-      0%, 29.9%  { opacity: 0; stroke-dashoffset: 200; }
-      30.0%      { opacity: 1; stroke-dashoffset: 0; }
-      33.0%      { opacity: 0.9; }
-      35.0%      { opacity: 1; }
-      38.5%      { opacity: 1; }
-      39.5%, 100% { opacity: 0; }
-    }
-    @keyframes plasmaBeam3 {
-      0%, 54.9%  { opacity: 0; stroke-dashoffset: 200; }
-      55.0%      { opacity: 1; stroke-dashoffset: 0; }
-      58.0%      { opacity: 0.9; }
-      60.0%      { opacity: 1; }
-      63.5%      { opacity: 1; }
-      64.5%, 100% { opacity: 0; }
-    }
-    @keyframes plasmaBeam4 {
-      0%, 79.9%  { opacity: 0; stroke-dashoffset: 200; }
-      80.0%      { opacity: 1; stroke-dashoffset: 0; }
-      83.0%      { opacity: 0.9; }
-      85.0%      { opacity: 1; }
-      89.0%      { opacity: 1; }
-      90.0%, 100% { opacity: 0; }
-    }
-
-    .beam-1 { animation: plasmaBeam1 8s ease-out infinite; }
-    .beam-2 { animation: plasmaBeam2 8s ease-out infinite; }
-    .beam-3 { animation: plasmaBeam3 8s ease-out infinite; }
-    .beam-4 { animation: plasmaBeam4 8s ease-out infinite; }
-
-    /* Muzzle Flare Burst at Gun Barrel */
-    @keyframes muzzleFlare {
-      0%, 100% { opacity: 0; transform: scale(0.2); }
-      5%, 10%, 30%, 35%, 55%, 60%, 80%, 85% { opacity: 1; transform: scale(1.6); }
-      7%, 12%, 32%, 37%, 57%, 62%, 82%, 87% { opacity: 0.3; transform: scale(0.6); }
-      14%, 39%, 64%, 90% { opacity: 0; transform: scale(0.2); }
-    }
-
-    .muzzle-burst {
-      animation: muzzleFlare 8s ease-out infinite;
+    .muzzle-flash-tip {
+      animation: muzzleFlashAnim 8s ease-out infinite;
       transform-origin: 0px 0px;
     }
 
-    /* Target Contribution Squares: Superheat and Roaring Flame Incineration */
-    @keyframes burnSquare1 {
-      0%, 4.9%   { fill: #006d32; filter: none; }
-      5.0%       { fill: #ffffff; filter: url(#detonationGlow); }
-      7.0%       { fill: #ffea00; filter: url(#plasmaGlow); }
-      10.0%      { fill: #ff3700; filter: url(#plasmaGlow); }
-      14%, 94%   { fill: #ff3700; filter: url(#plasmaGlow); }
-      99%, 100%  { fill: #006d32; filter: none; }
-    }
-    @keyframes burnSquare2 {
-      0%, 29.9%  { fill: #39d353; filter: none; }
-      30.0%      { fill: #ffffff; filter: url(#detonationGlow); }
-      32.0%      { fill: #ffea00; filter: url(#plasmaGlow); }
-      35.0%      { fill: #ff3700; filter: url(#plasmaGlow); }
-      39%, 95%   { fill: #ff3700; filter: url(#plasmaGlow); }
-      99%, 100%  { fill: #39d353; filter: none; }
-    }
-    @keyframes burnSquare3 {
-      0%, 54.9%  { fill: #39d353; filter: none; }
-      55.0%      { fill: #ffffff; filter: url(#detonationGlow); }
-      57.0%      { fill: #ffea00; filter: url(#plasmaGlow); }
-      60.0%      { fill: #ff3700; filter: url(#plasmaGlow); }
-      64%, 96%   { fill: #ff3700; filter: url(#plasmaGlow); }
-      99%, 100%  { fill: #39d353; filter: none; }
-    }
-    @keyframes burnSquare4 {
-      0%, 79.9%  { fill: #006d32; filter: none; }
-      80.0%      { fill: #ffffff; filter: url(#detonationGlow); }
-      82.0%      { fill: #ffea00; filter: url(#plasmaGlow); }
-      85.0%      { fill: #ff3700; filter: url(#plasmaGlow); }
-      89%, 98%   { fill: #ff3700; filter: url(#plasmaGlow); }
-      100%       { fill: #006d32; filter: none; }
+    /* ========================================================
+       FLYING STAR BULLETS ("wisi wela yana widihta")
+       Every bullet spawns at the gun tip and streaks across directly to target!
+       ======================================================== */
+    .star-bullet {
+      filter: url(#starGlow);
     }
 
-    .target-1 { animation: burnSquare1 8s ease-in-out infinite; }
-    .target-2 { animation: burnSquare2 8s ease-in-out infinite; }
-    .target-3 { animation: burnSquare3 8s ease-in-out infinite; }
-    .target-4 { animation: burnSquare4 8s ease-in-out infinite; }
-
-    /* Detonation Sparks and Heat Particles */
-    @keyframes sparkDetonation1 {
-      0%, 4.9%   { opacity: 0; transform: scale(0.1); }
-      5.0%       { opacity: 1; transform: scale(1.8); }
-      7.5%       { opacity: 0; transform: scale(0.4); }
-      10.0%      { opacity: 1; transform: scale(2.0); }
-      13.0%      { opacity: 0; transform: scale(0.4); }
-      100%       { opacity: 0; }
-    }
-    @keyframes sparkDetonation2 {
-      0%, 29.9%  { opacity: 0; transform: scale(0.1); }
-      30.0%      { opacity: 1; transform: scale(1.8); }
-      32.5%      { opacity: 0; transform: scale(0.4); }
-      35.0%      { opacity: 1; transform: scale(2.0); }
-      38.0%      { opacity: 0; transform: scale(0.4); }
-      100%       { opacity: 0; }
-    }
-    @keyframes sparkDetonation3 {
-      0%, 54.9%  { opacity: 0; transform: scale(0.1); }
-      55.0%      { opacity: 1; transform: scale(1.8); }
-      57.5%      { opacity: 0; transform: scale(0.4); }
-      60.0%      { opacity: 1; transform: scale(2.0); }
-      63.0%      { opacity: 0; transform: scale(0.4); }
-      100%       { opacity: 0; }
-    }
-    @keyframes sparkDetonation4 {
-      0%, 79.9%  { opacity: 0; transform: scale(0.1); }
-      80.0%      { opacity: 1; transform: scale(2.0); }
-      82.5%      { opacity: 0; transform: scale(0.4); }
-      85.0%      { opacity: 1; transform: scale(2.2); }
-      88.0%      { opacity: 0; transform: scale(0.4); }
+    /* Bullet 1: Gun (593, 95) -> Target 1 (737.6, 100.1) */
+    @keyframes flyBullet1 {
+      0%, 4.9%   { opacity: 0; transform: translate(593px, 95px) rotate(2deg); }
+      5.1%       { opacity: 1; transform: translate(593px, 95px) rotate(2deg); }
+      8.8%       { opacity: 1; transform: translate(737.6px, 100.1px) rotate(2deg); }
+      9.1%       { opacity: 0; transform: translate(737.6px, 100.1px) rotate(2deg); }
       100%       { opacity: 0; }
     }
 
-    .sparks-1 { animation: sparkDetonation1 8s ease-out infinite; transform-origin: 766px 71.5px; }
-    .sparks-2 { animation: sparkDetonation2 8s ease-out infinite; transform-origin: 737.6px 100px; }
-    .sparks-3 { animation: sparkDetonation3 8s ease-out infinite; transform-origin: 780.5px 143px; }
-    .sparks-4 { animation: sparkDetonation4 8s ease-out infinite; transform-origin: 794.8px 86px; }
+    /* Bullet 2: Gun (596, 90) -> Target 2 (766.2, 85.8) */
+    @keyframes flyBullet2 {
+      0%, 29.9%  { opacity: 0; transform: translate(596px, 90px) rotate(-1.4deg); }
+      30.1%      { opacity: 1; transform: translate(596px, 90px) rotate(-1.4deg); }
+      33.8%      { opacity: 1; transform: translate(766.2px, 85.8px) rotate(-1.4deg); }
+      34.1%      { opacity: 0; transform: translate(766.2px, 85.8px) rotate(-1.4deg); }
+      100%       { opacity: 0; }
+    }
+
+    /* Bullet 3: Gun (591, 103) -> Target 3 (780.5, 143.0) */
+    @keyframes flyBullet3 {
+      0%, 54.9%  { opacity: 0; transform: translate(591px, 103px) rotate(12deg); }
+      55.1%      { opacity: 1; transform: translate(591px, 103px) rotate(12deg); }
+      58.8%      { opacity: 1; transform: translate(780.5px, 143.0px) rotate(12deg); }
+      59.1%      { opacity: 0; transform: translate(780.5px, 143.0px) rotate(12deg); }
+      100%       { opacity: 0; }
+    }
+
+    /* Bullet 4: Gun (603, 95) -> Target 4 (794.8, 85.8) */
+    @keyframes flyBullet4 {
+      0%, 79.9%  { opacity: 0; transform: translate(603px, 95px) rotate(-2.7deg); }
+      80.1%      { opacity: 1; transform: translate(603px, 95px) rotate(-2.7deg); }
+      83.8%      { opacity: 1; transform: translate(794.8px, 85.8px) rotate(-2.7deg); }
+      84.1%      { opacity: 0; transform: translate(794.8px, 85.8px) rotate(-2.7deg); }
+      100%       { opacity: 0; }
+    }
+
+    .bullet-1 { animation: flyBullet1 8s linear infinite; }
+    .bullet-2 { animation: flyBullet2 8s linear infinite; }
+    .bullet-3 { animation: flyBullet3 8s linear infinite; }
+    .bullet-4 { animation: flyBullet4 8s linear infinite; }
+
+    /* ========================================================
+       IMPACT DETONATIONS and STARBURST SPARK PARTICLES
+       ======================================================== */
+    @keyframes sparkBurst1 {
+      0%, 8.8%   { opacity: 0; transform: scale(0.1); }
+      9.0%       { opacity: 1; transform: scale(1.8); }
+      12.0%      { opacity: 0; transform: scale(0.3); }
+      100%       { opacity: 0; }
+    }
+    @keyframes sparkBurst2 {
+      0%, 33.8%  { opacity: 0; transform: scale(0.1); }
+      34.0%      { opacity: 1; transform: scale(1.8); }
+      37.0%      { opacity: 0; transform: scale(0.3); }
+      100%       { opacity: 0; }
+    }
+    @keyframes sparkBurst3 {
+      0%, 58.8%  { opacity: 0; transform: scale(0.1); }
+      59.0%      { opacity: 1; transform: scale(1.8); }
+      62.0%      { opacity: 0; transform: scale(0.3); }
+      100%       { opacity: 0; }
+    }
+    @keyframes sparkBurst4 {
+      0%, 83.8%  { opacity: 0; transform: scale(0.1); }
+      84.0%      { opacity: 1; transform: scale(1.9); }
+      87.0%      { opacity: 0; transform: scale(0.3); }
+      100%       { opacity: 0; }
+    }
+
+    .sparks-1 { animation: sparkBurst1 8s ease-out infinite; transform-origin: 737.6px 100.1px; }
+    .sparks-2 { animation: sparkBurst2 8s ease-out infinite; transform-origin: 766.2px 85.8px; }
+    .sparks-3 { animation: sparkBurst3 8s ease-out infinite; transform-origin: 780.5px 143.0px; }
+    .sparks-4 { animation: sparkBurst4 8s ease-out infinite; transform-origin: 794.8px 85.8px; }
+
+    /* ========================================================
+       TARGET REACTION: BURN INTENSELY, THEN DISAPPEAR (ASHES),
+       THEN RESTORE CLEANLY AT END TO REPEAT!
+       ======================================================== */
+    /* Target 1 (732.4, 94.9) */
+    @keyframes burnAndDisappear1 {
+      0%, 8.9%   { fill: #39d353; opacity: 1; filter: none; }
+      9.0%       { fill: #ffffff; opacity: 1; filter: url(#burstGlow); }
+      10.5%      { fill: #ffea00; filter: url(#starGlow); }
+      12.0%      { fill: #ff4500; filter: url(#starGlow); }
+      16.0%      { fill: #ff2200; opacity: 0.9; }
+      18.5%      { fill: #161b22; opacity: 0.25; filter: none; } /* Disappeared / Burned out */
+      96.0%      { fill: #161b22; opacity: 0.25; }
+      98.5%, 100% { fill: #39d353; opacity: 1; } /* Restore to repeat! */
+    }
+
+    /* Target 2 (761.0, 80.6) */
+    @keyframes burnAndDisappear2 {
+      0%, 33.9%  { fill: #0e4429; opacity: 1; filter: none; }
+      34.0%      { fill: #ffffff; opacity: 1; filter: url(#burstGlow); }
+      35.5%      { fill: #ffea00; filter: url(#starGlow); }
+      37.0%      { fill: #ff4500; filter: url(#starGlow); }
+      41.0%      { fill: #ff2200; opacity: 0.9; }
+      43.5%      { fill: #161b22; opacity: 0.25; filter: none; } /* Disappeared / Burned out */
+      96.0%      { fill: #161b22; opacity: 0.25; }
+      98.5%, 100% { fill: #0e4429; opacity: 1; } /* Restore to repeat! */
+    }
+
+    /* Target 3 (775.3, 137.8) */
+    @keyframes burnAndDisappear3 {
+      0%, 58.9%  { fill: #39d353; opacity: 1; filter: none; }
+      59.0%      { fill: #ffffff; opacity: 1; filter: url(#burstGlow); }
+      60.5%      { fill: #ffea00; filter: url(#starGlow); }
+      62.0%      { fill: #ff4500; filter: url(#starGlow); }
+      66.0%      { fill: #ff2200; opacity: 0.9; }
+      68.5%      { fill: #161b22; opacity: 0.25; filter: none; } /* Disappeared / Burned out */
+      96.0%      { fill: #161b22; opacity: 0.25; }
+      98.5%, 100% { fill: #39d353; opacity: 1; } /* Restore to repeat! */
+    }
+
+    /* Target 4 (789.6, 80.6) */
+    @keyframes burnAndDisappear4 {
+      0%, 83.9%  { fill: #006d32; opacity: 1; filter: none; }
+      84.0%      { fill: #ffffff; opacity: 1; filter: url(#burstGlow); }
+      85.5%      { fill: #ffea00; filter: url(#starGlow); }
+      87.0%      { fill: #ff4500; filter: url(#starGlow); }
+      90.0%      { fill: #ff2200; opacity: 0.9; }
+      92.5%      { fill: #161b22; opacity: 0.25; filter: none; } /* Disappeared / Burned out */
+      96.0%      { fill: #161b22; opacity: 0.25; }
+      98.5%, 100% { fill: #006d32; opacity: 1; } /* Restore to repeat! */
+    }
+
+    .target-1 { animation: burnAndDisappear1 8s ease-in-out infinite; }
+    .target-2 { animation: burnAndDisappear2 8s ease-in-out infinite; }
+    .target-3 { animation: burnAndDisappear3 8s ease-in-out infinite; }
+    .target-4 { animation: burnAndDisappear4 8s ease-in-out infinite; }
   </style>
 
 
@@ -312,7 +302,7 @@
       <text font-family="'Fira Code', 'Courier New', monospace" font-size="12" font-weight="700">
         <tspan fill="#f87171">AMONG US</tspan>
         <tspan fill="#484f58"> // </tspan>
-        <tspan fill="#f0f6fc">TACTICAL INCINERATOR</tspan>
+        <tspan fill="#f0f6fc">IMPOSTOR SENTRY</tspan>
       </text>
     </g>
 
@@ -320,7 +310,7 @@
     <g transform="translate(250, 2)">
       <rect width="64" height="17" rx="8.5" fill="#1c1917" stroke="#ef4444" stroke-width="0.8"/>
       <circle cx="9" cy="8.5" r="3" fill="#ef4444" filter="url(#bulletGlow)"/>
-      <text x="17" y="11.5" fill="#f87171" font-family="'Fira Code', monospace" font-size="8.5" font-weight="700">PURGING 🔥</text>
+      <text x="17" y="11.5" fill="#f87171" font-family="'Fira Code', monospace" font-size="8.5" font-weight="700">ACTIVE 🔥</text>
     </g>
   </g>
 
@@ -718,152 +708,96 @@
     <rect x="789.6" y="123.5" width="10.5" height="10.5" rx="2.5" fill="#161b22" class="square-base"/>
     <rect x="789.6" y="137.8" width="10.5" height="10.5" rx="2.5" fill="#161b22" class="square-base"/>
   </g>
-  <!-- ==================== TACTICAL TARGETING RETICLES ==================== -->
-  <g id="tactical-hud" filter="url(#plasmaGlow)">
-    <!-- Reticle 1: Target 1 (766.2, 71.5) -->
-    <g class="reticle-1" transform="translate(766.2, 71.5)">
-      <circle cx="0" cy="0" r="9" fill="none" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="4,2"/>
-      <path d="M -13 0 L -8 0 M 13 0 L 8 0 M 0 -13 L 0 -8 M 0 13 L 0 8" stroke="#ef4444" stroke-width="1.6"/>
-      <circle cx="0" cy="0" r="2.2" fill="#ffea00"/>
+  <!-- ==================== FLYING STAR BULLETS ("wisi wela yana widihta") ==================== -->
+  <g id="flying-projectiles">
+    <!-- Bullet 1: Flies directly to Target 1 -->
+    <g class="bullet-1 star-bullet">
+      <!-- Flame Trail -->
+      <path d="M -20 -2 Q -8 -4 8 0 Q -8 4 -20 2 Q -12 0 -20 -2 Z" fill="url(#fireTrailGrad)"/>
+      <!-- Starburst Bullet Head -->
+      <polygon points="8,-7 10,-2 15,0 10,2 8,7 6,2 1,0 6,-2" fill="#ffea00"/>
+      <circle cx="8" cy="0" r="2.8" fill="#ffffff"/>
     </g>
 
-    <!-- Reticle 2: Target 2 (737.6, 100.1) -->
-    <g class="reticle-2" transform="translate(737.6, 100.1)">
-      <circle cx="0" cy="0" r="9" fill="none" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="4,2"/>
-      <path d="M -13 0 L -8 0 M 13 0 L 8 0 M 0 -13 L 0 -8 M 0 13 L 0 8" stroke="#ef4444" stroke-width="1.6"/>
-      <circle cx="0" cy="0" r="2.2" fill="#ffea00"/>
+    <!-- Bullet 2: Flies directly to Target 2 -->
+    <g class="bullet-2 star-bullet">
+      <path d="M -20 -2 Q -8 -4 8 0 Q -8 4 -20 2 Q -12 0 -20 -2 Z" fill="url(#fireTrailGrad)"/>
+      <polygon points="8,-7 10,-2 15,0 10,2 8,7 6,2 1,0 6,-2" fill="#ffea00"/>
+      <circle cx="8" cy="0" r="2.8" fill="#ffffff"/>
     </g>
 
-    <!-- Reticle 3: Target 3 (780.5, 143.0) -->
-    <g class="reticle-3" transform="translate(780.5, 143.0)">
-      <circle cx="0" cy="0" r="9" fill="none" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="4,2"/>
-      <path d="M -13 0 L -8 0 M 13 0 L 8 0 M 0 -13 L 0 -8 M 0 13 L 0 8" stroke="#ef4444" stroke-width="1.6"/>
-      <circle cx="0" cy="0" r="2.2" fill="#ffea00"/>
+    <!-- Bullet 3: Flies directly to Target 3 -->
+    <g class="bullet-3 star-bullet">
+      <path d="M -20 -2 Q -8 -4 8 0 Q -8 4 -20 2 Q -12 0 -20 -2 Z" fill="url(#fireTrailGrad)"/>
+      <polygon points="8,-7 10,-2 15,0 10,2 8,7 6,2 1,0 6,-2" fill="#ffea00"/>
+      <circle cx="8" cy="0" r="2.8" fill="#ffffff"/>
     </g>
 
-    <!-- Reticle 4: Target 4 (794.8, 85.8) -->
-    <g class="reticle-4" transform="translate(794.8, 85.8)">
-      <circle cx="0" cy="0" r="9" fill="none" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="4,2"/>
-      <path d="M -13 0 L -8 0 M 13 0 L 8 0 M 0 -13 L 0 -8 M 0 13 L 0 8" stroke="#ef4444" stroke-width="1.6"/>
-      <circle cx="0" cy="0" r="2.2" fill="#ffea00"/>
-    </g>
-  </g>
-
-  <!-- ==================== SUPERHEATED PLASMA FLAMETHROWER / LASER BEAMS ==================== -->
-  <g id="plasma-beams" filter="url(#plasmaGlow)">
-    <!-- Beam 1: Gun (686, 78) to Target 1 (766.2, 71.5) -->
-    <g class="beam-1">
-      <line x1="686" y1="78" x2="766.2" y2="71.5" stroke="url(#plasmaBeamGrad)" stroke-width="9" stroke-linecap="round" opacity="0.85"/>
-      <line x1="686" y1="78" x2="766.2" y2="71.5" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
-      <circle cx="715" cy="76" r="3.5" fill="#ffffff"/>
-      <circle cx="745" cy="73" r="4.2" fill="#ffea00"/>
-    </g>
-
-    <!-- Beam 2: Gun (692, 97) to Target 2 (737.6, 100.1) -->
-    <g class="beam-2">
-      <line x1="692" y1="97" x2="737.6" y2="100.1" stroke="url(#plasmaBeamGrad)" stroke-width="10" stroke-linecap="round" opacity="0.85"/>
-      <line x1="692" y1="97" x2="737.6" y2="100.1" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round"/>
-      <circle cx="710" cy="98" r="4" fill="#ffffff"/>
-      <circle cx="728" cy="99" r="4.5" fill="#ffea00"/>
-    </g>
-
-    <!-- Beam 3: Gun (685, 108) to Target 3 (780.5, 143.0) -->
-    <g class="beam-3">
-      <line x1="685" y1="108" x2="780.5" y2="143.0" stroke="url(#plasmaBeamGrad)" stroke-width="9" stroke-linecap="round" opacity="0.85"/>
-      <line x1="685" y1="108" x2="780.5" y2="143.0" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
-      <circle cx="720" cy="120" r="3.5" fill="#ffffff"/>
-      <circle cx="755" cy="133" r="4.5" fill="#ffea00"/>
-    </g>
-
-    <!-- Beam 4: Point-Blank Blast: Gun (705, 93) to Target 4 (794.8, 85.8) -->
-    <g class="beam-4">
-      <line x1="705" y1="93" x2="794.8" y2="85.8" stroke="url(#plasmaBeamGrad)" stroke-width="12" stroke-linecap="round" opacity="0.9"/>
-      <line x1="705" y1="93" x2="794.8" y2="85.8" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round"/>
-      <circle cx="735" cy="90" r="5" fill="#ffffff"/>
-      <circle cx="765" cy="88" r="5.5" fill="#ffea00"/>
+    <!-- Bullet 4: Flies directly to Target 4 -->
+    <g class="bullet-4 star-bullet">
+      <path d="M -22 -2.5 Q -8 -4.5 9 0 Q -8 4.5 -22 2.5 Q -12 0 -22 -2.5 Z" fill="url(#fireTrailGrad)"/>
+      <polygon points="9,-8 11,-2 17,0 11,2 9,8 7,2 1,0 7,-2" fill="#ffea00"/>
+      <circle cx="9" cy="0" r="3.2" fill="#ffffff"/>
     </g>
   </g>
 
-  <!-- ==================== IMPACT DETONATIONS and SHOWERING SPARKS ==================== -->
-  <g id="impact-detonations" filter="url(#detonationGlow)">
-    <!-- Detonation 1 on Target 1 (766.2, 71.5) -->
-    <g class="sparks-1" transform="translate(766.2, 71.5)">
-      <circle cx="0" cy="0" r="11" fill="#ff4500" opacity="0.7"/>
-      <polygon points="0,-16 4,-4 16,0 4,4 0,16 -4,4 -16,0 -4,-4" fill="#ffea00"/>
-      <circle cx="0" cy="0" r="5" fill="#ffffff"/>
-      <circle cx="-10" cy="-9" r="1.8" fill="#ffea00"/>
-      <circle cx="12" cy="-8" r="1.8" fill="#ff3700"/>
-      <circle cx="9" cy="11" r="1.8" fill="#ffea00"/>
-      <circle cx="-11" cy="9" r="1.8" fill="#ff3700"/>
+  <!-- ==================== IMPACT DETONATIONS ON SQUARES ==================== -->
+  <g id="impact-detonations" filter="url(#burstGlow)">
+    <!-- Target 1 Impact Burst -->
+    <g class="sparks-1" transform="translate(737.6, 100.1)">
+      <circle cx="0" cy="0" r="8" fill="#ff4500" opacity="0.6"/>
+      <polygon points="0,-13 3,-3 13,0 3,3 0,13 -3,3 -13,0 -3,-3" fill="#ffea00"/>
+      <circle cx="0" cy="0" r="3.5" fill="#ffffff"/>
     </g>
 
-    <!-- Detonation 2 on Target 2 (737.6, 100.1) -->
-    <g class="sparks-2" transform="translate(737.6, 100.1)">
-      <circle cx="0" cy="0" r="12" fill="#ff4500" opacity="0.75"/>
-      <polygon points="0,-16 4,-4 16,0 4,4 0,16 -4,4 -16,0 -4,-4" fill="#ffea00"/>
-      <circle cx="0" cy="0" r="5.5" fill="#ffffff"/>
-      <circle cx="-12" cy="-8" r="2" fill="#ffea00"/>
-      <circle cx="11" cy="-10" r="2" fill="#ff3700"/>
-      <circle cx="10" cy="11" r="2" fill="#ffea00"/>
-      <circle cx="-9" cy="12" r="2" fill="#ff3700"/>
+    <!-- Target 2 Impact Burst -->
+    <g class="sparks-2" transform="translate(766.2, 85.8)">
+      <circle cx="0" cy="0" r="8" fill="#ff4500" opacity="0.6"/>
+      <polygon points="0,-13 3,-3 13,0 3,3 0,13 -3,3 -13,0 -3,-3" fill="#ffea00"/>
+      <circle cx="0" cy="0" r="3.5" fill="#ffffff"/>
     </g>
 
-    <!-- Detonation 3 on Target 3 (780.5, 143.0) -->
+    <!-- Target 3 Impact Burst -->
     <g class="sparks-3" transform="translate(780.5, 143.0)">
-      <circle cx="0" cy="0" r="12" fill="#ff4500" opacity="0.75"/>
-      <polygon points="0,-16 4,-4 16,0 4,4 0,16 -4,4 -16,0 -4,-4" fill="#ffea00"/>
-      <circle cx="0" cy="0" r="5" fill="#ffffff"/>
-      <circle cx="-11" cy="-10" r="1.8" fill="#ffea00"/>
-      <circle cx="13" cy="-7" r="1.8" fill="#ff3700"/>
-      <circle cx="8" cy="12" r="1.8" fill="#ffea00"/>
-      <circle cx="-10" cy="10" r="1.8" fill="#ff3700"/>
+      <circle cx="0" cy="0" r="8" fill="#ff4500" opacity="0.6"/>
+      <polygon points="0,-13 3,-3 13,0 3,3 0,13 -3,3 -13,0 -3,-3" fill="#ffea00"/>
+      <circle cx="0" cy="0" r="3.5" fill="#ffffff"/>
     </g>
 
-    <!-- Detonation 4 on Target 4 (794.8, 85.8) -->
+    <!-- Target 4 Impact Burst -->
     <g class="sparks-4" transform="translate(794.8, 85.8)">
-      <circle cx="0" cy="0" r="15" fill="#ff3700" opacity="0.85"/>
-      <polygon points="0,-20 5,-5 20,0 5,5 0,20 -5,5 -20,0 -5,-5" fill="#ffea00"/>
-      <circle cx="0" cy="0" r="7" fill="#ffffff"/>
-      <circle cx="-14" cy="-12" r="2.2" fill="#ffea00"/>
-      <circle cx="15" cy="-10" r="2.2" fill="#ffffff"/>
-      <circle cx="12" cy="14" r="2.2" fill="#ffea00"/>
-      <circle cx="-13" cy="13" r="2.2" fill="#ff3700"/>
+      <circle cx="0" cy="0" r="10" fill="#ff4500" opacity="0.7"/>
+      <polygon points="0,-15 3.5,-3.5 15,0 3.5,3.5 0,15 -3.5,3.5 -15,0 -3.5,-3.5" fill="#ffea00"/>
+      <circle cx="0" cy="0" r="4.2" fill="#ffffff"/>
     </g>
   </g>
 
-  <!-- ==================== AMONG US HEAVY INCINERATOR CHARACTER ==================== -->
-  <g class="impostor-assault">
+  <!-- ==================== AMONG US SENTRY CHARACTER ==================== -->
+  <g class="impostor-sentry">
     <!-- Oxygen Tank / Backpack -->
     <rect x="-8" y="10" width="8" height="23" rx="4" fill="#991b1b" stroke="#450a0a" stroke-width="2.2"/>
 
-    <!-- Main Impostor Body -->
+    <!-- Main Body -->
     <path d="M 5 6 C 5 -1, 25 -1, 25 6 L 25 33 C 25 36, 22 38, 19 38 L 17 38 C 14 38, 14 35, 14 31 L 14 31 C 14 35, 14 38, 10 38 L 8 38 C 5 38, 4 36, 4 33 Z" 
           fill="url(#impostorRed)" stroke="#450a0a" stroke-width="2.5" stroke-linejoin="round"/>
     
-    <!-- Impostor Visor with Menacing Cyan Reflection -->
+    <!-- Impostor Visor -->
     <rect x="11" y="8" width="16" height="11" rx="5.5" fill="url(#impostorVisor)" stroke="#450a0a" stroke-width="2"/>
     <ellipse cx="18" cy="11" rx="4" ry="1.8" fill="#ffffff" opacity="0.8" transform="rotate(-10 18 11)"/>
 
-    <!-- Dual Heavy Plasma Railgun / Incinerator Weapon -->
+    <!-- Blaster Cannon / Gun -->
     <g transform="translate(18, 15)">
-      <!-- Cannon Main Receiver -->
-      <rect x="0" y="-5" width="18" height="10" rx="2" fill="#1e293b" stroke="#0f172a" stroke-width="1.8"/>
-      <!-- Dual Energy Coils (Glowing Orange and Cyan) -->
-      <rect x="5" y="-5.5" width="3" height="11" fill="#f97316"/>
-      <rect x="11" y="-5.5" width="3" height="11" fill="#22d3ee"/>
-      
-      <!-- Upper Barrel -->
-      <rect x="18" y="-4.5" width="12" height="4" rx="1" fill="#475569" stroke="#0f172a" stroke-width="1.2"/>
-      <!-- Lower Barrel -->
-      <rect x="18" y="0.5" width="12" height="4" rx="1" fill="#475569" stroke="#0f172a" stroke-width="1.2"/>
-      <!-- Cannon Nozzle Shroud -->
-      <rect x="27" y="-5.5" width="4" height="11" rx="1" fill="#0f172a"/>
+      <!-- Gun Body -->
+      <rect x="0" y="-3.5" width="16" height="7" rx="1.5" fill="#1e293b" stroke="#0f172a" stroke-width="1.5"/>
+      <!-- Gun Barrel and Nozzle -->
+      <rect x="16" y="-4" width="7" height="8" rx="1" fill="#475569" stroke="#0f172a" stroke-width="1.3"/>
+      <!-- Glow Ring on Gun -->
+      <rect x="10" y="-4" width="2.5" height="8" fill="#f97316"/>
 
-      <!-- Muzzle Flash Burst mounted right at cannon tip (x=31, y=0) -->
-      <g transform="translate(31, 0)" class="muzzle-burst" filter="url(#plasmaGlow)">
-        <circle cx="0" cy="0" r="10" fill="#f97316" opacity="0.85"/>
-        <polygon points="0,-14 4,-4 14,0 4,4 0,14 -4,4 -14,0 -4,-4" fill="#ffea00"/>
-        <circle cx="0" cy="0" r="4.5" fill="#ffffff"/>
+      <!-- Small Clean Muzzle Flash ONLY at the tip of the gun barrel (x=23, y=0) -->
+      <g transform="translate(23, 0)" class="muzzle-flash-tip" filter="url(#starGlow)">
+        <polygon points="0,-8 2,-2 8,0 2,2 0,8 -2,2 -8,0 -2,-2" fill="#ffea00"/>
+        <circle cx="0" cy="0" r="2.5" fill="#ffffff"/>
       </g>
     </g>
   </g>
@@ -877,7 +811,7 @@
       <rect x="26" y="2" width="9" height="9" rx="2" fill="#006d32"/>
       <rect x="39" y="2" width="9" height="9" rx="2" fill="#26a641"/>
       <rect x="52" y="2" width="9" height="9" rx="2" fill="#ff4500" filter="url(#bulletGlow)"/>
-      <text x="66" y="10" fill="#f97316" font-size="8.5" font-weight="bold" font-family="-apple-system, sans-serif">100% INCINERATED 🔥</text>
+      <text x="66" y="10" fill="#f97316" font-size="8.5" font-weight="bold" font-family="-apple-system, sans-serif">BURNING 🔥</text>
     </g>
   </g>
 </svg>
