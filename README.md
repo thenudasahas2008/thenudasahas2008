@@ -127,12 +127,12 @@
 
 <!-- Real-Time Auto-Updating GitHub Analytics & Streak Suite -->
 <p align="center">
-  <img width="49%" src="assets/github-stats.svg" alt="Thenuda Sahas GitHub Statistics" />
-  <img width="49%" src="https://streak-stats.demolab.com?user=thenudasahas2008&theme=dark&border=30363D&background=0D1117&ring=22D3EE&fire=22D3EE&currStreakLabel=58A6FF&timezone=Asia/Colombo" alt="GitHub Contribution Streak" />
+  <img width="49%" src="assets/github-stats.svg?v=3" alt="Thenuda Sahas GitHub Statistics" />
+  <img width="49%" src="assets/github-streak.svg?v=3" alt="GitHub Contribution Streak" />
 </p>
 
 <p align="center">
-  <img height="150" src="assets/github-langs.svg" alt="Top Languages Breakdown" />
+  <img width="62%" src="assets/github-langs.svg?v=3" alt="Top Languages Breakdown" />
 </p>
 
 ---

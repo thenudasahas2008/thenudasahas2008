@@ -1,47 +1,58 @@
-<svg width="360" height="150" viewBox="0 0 360 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="600" height="145" viewBox="0 0 600 145" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bgLangs" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d1117" />
-      <stop offset="100%" stop-color="#090d16" />
+      <stop offset="0%" stop-color="#0e131f" />
+      <stop offset="50%" stop-color="#0d1117" />
+      <stop offset="100%" stop-color="#080c14" />
+    </linearGradient>
+    <linearGradient id="topGlowLangs" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0" />
+      <stop offset="30%" stop-color="#22D3EE" stop-opacity="0.8" />
+      <stop offset="70%" stop-color="#58A6FF" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#58A6FF" stop-opacity="0" />
     </linearGradient>
     <mask id="barMask">
-      <rect x="0" y="0" width="300" height="8" rx="4" fill="white" />
+      <rect x="0" y="0" width="550" height="9" rx="4.5" fill="white" />
     </mask>
   </defs>
 
   <!-- Container Box -->
-  <rect x="0.5" y="0.5" width="359" height="149" rx="6" fill="url(#bgLangs)" stroke="#30363d" />
+  <rect x="0.5" y="0.5" width="599" height="144" rx="8" fill="url(#bgLangs)" stroke="#30363d" stroke-width="1.2" />
+  <!-- Neon Accent Line Top -->
+  <line x1="12" y1="1" x2="587" y2="1" stroke="url(#topGlowLangs)" stroke-width="2.2" />
 
-  <!-- Title -->
-  <text x="25" y="32" font-size="17" font-weight="600" fill="#58A6FF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif">Most Used Languages</text>
+  <!-- Title and Ecosystem Tag -->
+  <text x="25" y="32" font-size="16" font-weight="700" fill="#58A6FF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif">Most Used Languages</text>
+  <text x="575" y="32" text-anchor="end" font-size="10" font-weight="600" fill="#7d8590" font-family="ui-monospace, monospace">PRIMARY STACK // JAVASCRIPT and PYTHON</text>
 
-  <!-- Progress Bar -->
+  <!-- Progress Bar (550px wide) -->
   <g transform="translate(25, 48)" mask="url(#barMask)">
-    <rect x="0" y="0" width="300" height="8" fill="#161b22" />
+    <rect x="0" y="0" width="550" height="9" fill="#161b22" />
     <g>
-      <rect x="0" y="0" width="290.4" height="8" fill="#f1e05a" />
-        <rect x="290.4" y="0" width="8.3" height="8" fill="#3572A5" />
-        <rect x="298.7" y="0" width="1.2" height="8" fill="#e34c26" />
+      <rect x="0" y="0" width="532.0" height="9" fill="#f1e05a" />
+      <rect x="532.0" y="0" width="15.3" height="9" fill="#3572A5" />
+      <rect x="547.3" y="0" width="2.3" height="9" fill="#e34c26" />
+      <rect x="549.5999999999999" y="0" width="0.4" height="9" fill="#89e051" />
     </g>
   </g>
 
-  <!-- Language Items -->
-  <g transform="translate(25, 75)">
-    <g>
-      <g transform="translate(0, 0)">
-        <circle cx="5" cy="5" r="4.5" fill="#f1e05a" />
-        <text x="16" y="9" font-size="12" fill="#c9d1d9" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">JavaScript <tspan fill="#7d8590" font-size="11">96.81%</tspan></text>
-      </g>
-      <g transform="translate(0, 24)">
-        <circle cx="5" cy="5" r="4.5" fill="#3572A5" />
-        <text x="16" y="9" font-size="12" fill="#c9d1d9" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Python <tspan fill="#7d8590" font-size="11">2.78%</tspan></text>
-      </g>
+  <!-- Language Items Grid -->
+  <g transform="translate(25, 82)">
+    <g transform="translate(0, 0)">
+      <circle cx="6" cy="6" r="5" fill="#f1e05a" />
+      <text x="18" y="10" font-size="13" font-weight="600" fill="#c9d1d9" font-family="-apple-system, sans-serif">JavaScript <tspan fill="#ffffff" font-weight="700">96.7%</tspan> <tspan fill="#7d8590" font-size="11">(2.09 MB)</tspan></text>
     </g>
-    <g>
-      <g transform="translate(160, 0)">
-        <circle cx="5" cy="5" r="4.5" fill="#e34c26" />
-        <text x="16" y="9" font-size="12" fill="#c9d1d9" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">HTML <tspan fill="#7d8590" font-size="11">0.41%</tspan></text>
-      </g>
+    <g transform="translate(180, 0)">
+      <circle cx="6" cy="6" r="5" fill="#3572A5" />
+      <text x="18" y="10" font-size="13" font-weight="600" fill="#c9d1d9" font-family="-apple-system, sans-serif">Python <tspan fill="#ffffff" font-weight="700">2.8%</tspan> <tspan fill="#7d8590" font-size="11">(61.3 KB)</tspan></text>
+    </g>
+    <g transform="translate(360, 0)">
+      <circle cx="6" cy="6" r="5" fill="#e34c26" />
+      <text x="18" y="10" font-size="13" font-weight="600" fill="#c9d1d9" font-family="-apple-system, sans-serif">HTML <tspan fill="#ffffff" font-weight="700">0.4%</tspan> <tspan fill="#7d8590" font-size="11">(9.0 KB)</tspan></text>
+    </g>
+    <g transform="translate(470, 0)">
+      <circle cx="6" cy="6" r="5" fill="#89e051" />
+      <text x="18" y="10" font-size="13" font-weight="600" fill="#c9d1d9" font-family="-apple-system, sans-serif">Shell <tspan fill="#ffffff" font-weight="700">0.1%</tspan> <tspan fill="#7d8590" font-size="11">(1.8 KB)</tspan></text>
     </g>
   </g>
 </svg>

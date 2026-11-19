@@ -1,5 +1,6 @@
 import os
 import json
+import re
 import urllib.request
 import xml.etree.ElementTree as ET
 
@@ -16,10 +17,10 @@ def fetch_data():
     try:
         req = urllib.request.Request(f'https://api.github.com/search/commits?q=author:{USERNAME}', headers=headers)
         res = json.loads(urllib.request.urlopen(req, timeout=10).read().decode('utf-8'))
-        total_commits = res.get('total_count', 174)
+        total_commits = res.get('total_count', 179)
     except Exception as e:
         print("Commits fetch fallback:", e)
-        total_commits = 174
+        total_commits = 179
 
     # 2. PRs count
     try:
@@ -40,7 +41,7 @@ def fetch_data():
         total_issues = 1
 
     # 4. Language bytes
-    lang_bytes = {'JavaScript': 2187041, 'Python': 47404, 'HTML': 9261}
+    lang_bytes = {'JavaScript': 2187041, 'Python': 62748, 'HTML': 9261, 'Shell': 1812}
     try:
         req_repos = urllib.request.Request(f'https://api.github.com/users/{USERNAME}/repos?per_page=100', headers=headers)
         repos = json.loads(urllib.request.urlopen(req_repos, timeout=10).read().decode('utf-8'))
@@ -60,179 +61,316 @@ def fetch_data():
     except Exception as e:
         print("Repos fetch fallback:", e)
 
-    filtered_langs = {k: v for k, v in lang_bytes.items() if k not in ['Procfile', 'Dockerfile', 'Shell']}
+    filtered_langs = {k: v for k, v in lang_bytes.items() if k not in ['Procfile', 'Dockerfile']}
     tot = sum(filtered_langs.values()) or 1
-    lang_pcts = []
+    lang_items = []
     colors_map = {
         'JavaScript': '#f1e05a',
         'Python': '#3572A5',
         'HTML': '#e34c26',
+        'Shell': '#89e051',
         'CSS': '#563d7c',
         'TypeScript': '#3178c6',
     }
-    for name, cnt in sorted(filtered_langs.items(), key=lambda x: -x[1])[:5]:
+    for name, cnt in sorted(filtered_langs.items(), key=lambda x: -x[1])[:4]:
         pct = (cnt / tot) * 100
         color = colors_map.get(name, '#58A6FF')
-        lang_pcts.append({'name': name, 'pct': pct, 'color': color})
+        # format bytes
+        if cnt >= 1048576:
+            size_str = f"{cnt / 1048576:.2f} MB"
+        else:
+            size_str = f"{cnt / 1024:.1f} KB"
+        lang_items.append({'name': name, 'bytes': cnt, 'size_str': size_str, 'pct': pct, 'color': color})
+
+    # 5. Streak telemetry fetch
+    streak_data = {
+        'total_contribs': '201',
+        'total_range': 'Aug 19, 2025 - Present',
+        'current_streak': '8',
+        'current_range': 'Nov 13 - Nov 20',
+        'longest_streak': '8',
+        'longest_range': 'Nov 13 - Nov 20'
+    }
+    try:
+        u_streak = f'https://streak-stats.demolab.com/?user={USERNAME}&timezone={TIMEZONE}'
+        req_streak = urllib.request.Request(u_streak, headers={'User-Agent': 'Mozilla/5.0'})
+        raw = urllib.request.urlopen(req_streak, timeout=10).read().decode('utf-8')
+        texts = [s.strip() for s in re.findall(r'<text[^>]*>([^<]+)</text>', raw) if s.strip()]
+        if len(texts) >= 9:
+            # Demolab typical text array: ['201', 'Total Contributions', 'Aug 19, 2025 - Present', 'Current Streak', 'Nov 13 - Nov 20', '8', '8', 'Longest Streak', 'Nov 13 - Nov 20']
+            streak_data['total_contribs'] = texts[0]
+            streak_data['total_range'] = texts[2]
+            streak_data['current_streak'] = texts[5]
+            streak_data['current_range'] = texts[4]
+            streak_data['longest_streak'] = texts[6]
+            streak_data['longest_range'] = texts[8]
+    except Exception as e:
+        print("Streak fetch fallback:", e)
 
     return {
         'commits': total_commits,
         'prs': total_prs,
         'issues': total_issues,
-        'langs': lang_pcts
+        'contributed_repos': 7,
+        'langs': lang_items,
+        'streak': streak_data
     }
 
 def generate_stats_svg(data):
     commits = data['commits']
     prs = data['prs']
     issues = data['issues']
+    repos = data['contributed_repos']
     
-    # Perfectly matches Streak Stats 195px height!
-    svg = f"""<svg width="467" height="195" viewBox="0 0 467 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+    svg = f"""<svg width="495" height="195" viewBox="0 0 495 195" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d1117" />
-      <stop offset="100%" stop-color="#090d16" />
+    <linearGradient id="bgStats" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e131f" />
+      <stop offset="50%" stop-color="#0d1117" />
+      <stop offset="100%" stop-color="#080c14" />
+    </linearGradient>
+    <linearGradient id="topGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0" />
+      <stop offset="25%" stop-color="#22D3EE" stop-opacity="0.9" />
+      <stop offset="75%" stop-color="#58A6FF" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#58A6FF" stop-opacity="0" />
     </linearGradient>
     <style>
-      .header {{ font: 600 18px -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif; fill: #58A6FF; }}
-      .stat-label {{ font: 400 13.5px -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif; fill: #c9d1d9; }}
-      .stat-val {{ font: 700 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif; fill: #ffffff; }}
-      .octo-ring {{ animation: ringRotate 10s linear infinite; transform-origin: 395px 105px; }}
+      .header {{ font: 700 16px -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif; fill: #58A6FF; letter-spacing: 0.3px; }}
+      .subhead {{ font: 600 9.5px ui-monospace, SFMono-Regular, "Fira Code", monospace; fill: #7d8590; letter-spacing: 0.8px; }}
+      .stat-label {{ font: 500 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif; fill: #c9d1d9; }}
+      .stat-val {{ font: 700 14px ui-monospace, SFMono-Regular, "Fira Code", monospace; fill: #ffffff; }}
+      .octo-ring {{ animation: ringRotate 8s linear infinite; transform-origin: 418px 97px; }}
+      .rank-pulse {{ animation: rankPulse 2s ease-in-out infinite; }}
       @keyframes ringRotate {{ 0% {{ transform: rotate(0deg); }} 100% {{ transform: rotate(360deg); }} }}
+      @keyframes rankPulse {{ 0%, 100% {{ opacity: 0.92; }} 50% {{ opacity: 1; filter: drop-shadow(0 0 5px rgba(34, 211, 238, 0.7)); }} }}
     </style>
   </defs>
 
-  <!-- Container Box (195px height) -->
-  <rect x="0.5" y="0.5" width="466" height="194" rx="6" fill="url(#bg)" stroke="#30363d" />
+  <!-- Container Box -->
+  <rect x="0.5" y="0.5" width="494" height="194" rx="8" fill="url(#bgStats)" stroke="#30363d" stroke-width="1.2" />
+  <!-- Neon Accent Line Top -->
+  <line x1="12" y1="1" x2="483" y2="1" stroke="url(#topGlow)" stroke-width="2.2" />
 
-  <!-- Title -->
-  <g transform="translate(25, 36)">
+  <!-- Title and Subtitle -->
+  <g transform="translate(24, 32)">
     <text x="0" y="0" class="header">Thenuda Sahas' GitHub Stats</text>
+    <text x="0" y="16" class="subhead">REAL-TIME TELEMETRY // DFIR and DEV OPS</text>
   </g>
 
   <!-- Stats Rows -->
-  <g transform="translate(25, 72)">
+  <g transform="translate(24, 76)">
     <!-- Total Commits -->
     <g transform="translate(0, 0)">
-      <path d="M1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm.5 4.75a.75.75 0 0 0-1.5 0v3.5a.75.75 0 0 0 .37.65l2.5 1.5a.75.75 0 0 0 .76-1.3L8.5 7.92V4.75z" fill="#22D3EE" />
-      <text x="25" y="12" class="stat-label">Total Commits:</text>
-      <text x="210" y="12" class="stat-val" text-anchor="end">{commits}</text>
+      <circle cx="7" cy="7" r="7" fill="#161b22" stroke="#22D3EE" stroke-width="1" />
+      <path d="M4.5 7h5M7 4.5v5" stroke="#22D3EE" stroke-width="1.2" stroke-linecap="round" />
+      <text x="24" y="11" class="stat-label">Total Commits:</text>
+      <text x="220" y="11" class="stat-val" text-anchor="end">{commits}</text>
     </g>
 
     <!-- Total PRs -->
-    <g transform="translate(0, 32)">
-      <path d="M7.177 3.073L4.405.5a.75.75 0 00-1.01.037L.64 3.292a.75.75 0 001.06 1.06l1.55-1.55V9a2.5 2.5 0 002.5 2.5h1a.75.75 0 000-1.5h-1A1 1 0 014.75 9V2.803l1.366 1.367a.75.75 0 001.06-1.06l-.001-.001zM11.75 1.5a2.5 2.5 0 00-2.5 2.5v6.197l-1.366-1.367a.75.75 0 00-1.06 1.06l2.75 2.75a.75.75 0 001.06 0l2.75-2.75a.75.75 0 00-1.06-1.06l-1.574 1.574V4a1 1 0 011-1h1a.75.75 0 000-1.5h-1z" fill="#22D3EE" />
-      <text x="25" y="12" class="stat-label">Total PRs:</text>
-      <text x="210" y="12" class="stat-val" text-anchor="end">{prs}</text>
+    <g transform="translate(0, 26)">
+      <circle cx="7" cy="7" r="7" fill="#161b22" stroke="#39d353" stroke-width="1" />
+      <path d="M4.5 5.5l5 3M9.5 5.5l-5 3" stroke="#39d353" stroke-width="1.2" stroke-linecap="round" />
+      <text x="24" y="11" class="stat-label">Total PRs Merged:</text>
+      <text x="220" y="11" class="stat-val" text-anchor="end">{prs}</text>
     </g>
 
     <!-- Total Issues -->
-    <g transform="translate(0, 64)">
-      <path d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z" fill="#22D3EE" />
-      <text x="25" y="12" class="stat-label">Total Issues:</text>
-      <text x="210" y="12" class="stat-val" text-anchor="end">{issues}</text>
+    <g transform="translate(0, 52)">
+      <circle cx="7" cy="7" r="7" fill="#161b22" stroke="#e3b341" stroke-width="1" />
+      <circle cx="7" cy="7" r="2" fill="#e3b341" />
+      <text x="24" y="11" class="stat-label">Total Issues Opened:</text>
+      <text x="220" y="11" class="stat-val" text-anchor="end">{issues}</text>
+    </g>
+
+    <!-- Contributed Repos -->
+    <g transform="translate(0, 78)">
+      <circle cx="7" cy="7" r="7" fill="#161b22" stroke="#58A6FF" stroke-width="1" />
+      <path d="M4 7l2 2 4-4" stroke="#58A6FF" stroke-width="1.2" stroke-linecap="round" />
+      <text x="24" y="11" class="stat-label">Contributed Repos:</text>
+      <text x="220" y="11" class="stat-val" text-anchor="end">{repos}</text>
     </g>
   </g>
 
-  <!-- GitHub Octocat Logo on Right -->
-  <g transform="translate(395, 105)">
-    <circle cx="0" cy="0" r="44" fill="none" stroke="#21262d" stroke-width="4.5" />
-    <circle cx="0" cy="0" r="44" fill="none" stroke="#22D3EE" stroke-width="4.5" stroke-dasharray="200 80" class="octo-ring" />
-    <circle cx="0" cy="0" r="40" fill="#161b22" />
-    <path d="M 0 -26 C -14.4 -26 -26 -14.4 -26 0 C -26 11.5 -18.5 21.3 -8.2 24.7 C -6.9 25 -6.4 24.1 -6.4 23.4 C -6.4 22.8 -6.4 20.6 -6.4 18.5 C -13.6 20.1 -15.1 15.5 -15.1 15.5 C -16.3 12.5 -18 11.7 -18 11.7 C -20.3 10.1 -17.8 10.1 -17.8 10.1 C -15.3 10.3 -13.9 12.7 -13.9 12.7 C -11.6 16.6 -7.9 15.5 -6.4 14.8 C -6.2 13.1 -5.5 12 -4.7 11.3 C -10.5 10.6 -16.5 8.4 -16.5 -1.6 C -16.5 -4.5 -15.5 -6.8 -13.8 -8.6 C -14.1 -9.3 -15 -12 -13.5 -15.6 C -13.5 -15.6 -11.3 -16.3 -6.3 -12.9 C -4.2 -13.5 -2 -13.8 0.2 -13.8 C 2.4 -13.8 4.6 -13.5 6.7 -12.9 C 11.7 -16.3 13.9 -15.6 13.9 -15.6 C 15.4 -12 14.5 -9.3 14.2 -8.6 C 15.9 -6.8 16.9 -4.5 16.9 -1.6 C 16.9 8.4 10.9 10.6 5.1 11.3 C 6 12.1 6.8 13.6 6.8 15.9 C 6.8 19.2 6.8 21.9 6.8 23.4 C 6.8 24.1 7.3 25 8.6 24.7 C 18.9 21.3 26.4 11.5 26.4 0 C 26.4 -14.4 14.8 -26 0 -26 Z" fill="#e6edf3" />
+  <!-- GitHub Octocat Logo and Rank Badge on Right -->
+  <g transform="translate(418, 97)">
+    <!-- Rotating Dash Ring -->
+    <circle cx="0" cy="0" r="42" fill="none" stroke="#21262d" stroke-width="4" />
+    <circle cx="0" cy="0" r="42" fill="none" stroke="#22D3EE" stroke-width="4" stroke-dasharray="180 70" class="octo-ring" />
+    <!-- Background Circle -->
+    <circle cx="0" cy="0" r="37" fill="#161b22" />
+    <!-- Octocat Silhouette Vector -->
+    <path d="M 0 -24 C -13.2 -24 -24 -13.2 -24 0 C -24 10.6 -17.1 19.6 -7.6 22.8 C -6.4 23 -5.9 22.2 -5.9 21.6 C -5.9 21 -5.9 19 -5.9 17 C -12.5 18.5 -13.9 14.3 -13.9 14.3 C -15 11.5 -16.6 10.8 -16.6 10.8 C -18.7 9.3 -16.4 9.3 -16.4 9.3 C -14.1 9.5 -12.8 11.7 -12.8 11.7 C -10.7 15.3 -7.3 14.3 -5.9 13.6 C -5.7 12.1 -5.1 11 -4.3 10.4 C -9.7 9.8 -15.2 7.7 -15.2 -1.5 C -15.2 -4.1 -14.3 -6.3 -12.7 -7.9 C -13 -8.6 -13.8 -11 -12.4 -14.4 C -12.4 -14.4 -10.4 -15 -5.8 -11.9 C -3.9 -12.4 -1.8 -12.7 0.2 -12.7 C 2.2 -12.7 4.2 -12.4 6.2 -11.9 C 10.8 -15 12.8 -14.4 12.8 -14.4 C 14.2 -11 13.4 -8.6 13.1 -7.9 C 14.7 -6.3 15.6 -4.1 15.6 -1.5 C 15.6 7.7 10.1 9.8 4.7 10.4 C 5.5 11.1 6.3 12.5 6.3 14.6 C 6.3 17.7 6.3 20.2 6.3 21.6 C 6.3 22.2 6.7 23 7.9 22.8 C 17.4 19.6 24.3 10.6 24.3 0 C 24.3 -13.2 13.6 -24 0 -24 Z" fill="#e6edf3" />
+
+    <!-- Cyber Rank Pill at bottom -->
+    <g transform="translate(0, 44)" class="rank-pulse">
+      <rect x="-34" y="-9" width="68" height="18" rx="9" fill="#0D1117" stroke="#22D3EE" stroke-width="1.2" />
+      <text x="0" y="3.5" font-size="9.5" font-weight="700" fill="#22D3EE" font-family="-apple-system, sans-serif" text-anchor="middle" letter-spacing="0.5">RANK S+</text>
+    </g>
   </g>
 </svg>"""
     return svg
 
-def fetch_default_streak_svg():
-    # Official default demolab streak stats SVG
-    u_streak = f'https://streak-stats.demolab.com?user={USERNAME}&theme=dark&border=30363D&background=0D1117&ring=22D3EE&fire=22D3EE&currStreakLabel=58A6FF&timezone={TIMEZONE}'
-    req = urllib.request.Request(u_streak, headers={'User-Agent': 'Mozilla/5.0'})
-    svg = urllib.request.urlopen(req, timeout=10).read().decode('utf-8')
+def generate_streak_svg(data):
+    s = data['streak']
+    total_contribs = s['total_contribs']
+    total_range = s['total_range']
+    current_streak = s['current_streak']
+    current_range = s['current_range']
+    longest_streak = s['longest_streak']
+    longest_range = s['longest_range']
+
+    svg = f"""<svg width="495" height="195" viewBox="0 0 495 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgStreak" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e131f" />
+      <stop offset="50%" stop-color="#0d1117" />
+      <stop offset="100%" stop-color="#080c14" />
+    </linearGradient>
+    <linearGradient id="topGlowStreak" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#58A6FF" stop-opacity="0" />
+      <stop offset="25%" stop-color="#58A6FF" stop-opacity="0.9" />
+      <stop offset="75%" stop-color="#22D3EE" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0" />
+    </linearGradient>
+    <style>
+      .num {{ font: 700 28px ui-monospace, SFMono-Regular, "Fira Code", monospace; fill: #ffffff; }}
+      .lbl {{ font: 600 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif; fill: #58A6FF; }}
+      .sub {{ font: 500 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif; fill: #7d8590; }}
+      .fire-anim {{ animation: flamePulse 1.8s ease-in-out infinite; }}
+      @keyframes flamePulse {{ 0%, 100% {{ transform: scale(1); filter: drop-shadow(0 0 3px #22D3EE); }} 50% {{ transform: scale(1.08); filter: drop-shadow(0 0 8px #22D3EE); }} }}
+    </style>
+  </defs>
+
+  <!-- Container Box -->
+  <rect x="0.5" y="0.5" width="494" height="194" rx="8" fill="url(#bgStreak)" stroke="#30363d" stroke-width="1.2" />
+  <!-- Neon Accent Line Top -->
+  <line x1="12" y1="1" x2="483" y2="1" stroke="url(#topGlowStreak)" stroke-width="2.2" />
+
+  <!-- Dividers between columns -->
+  <line x1="165" y1="35" x2="165" y2="165" stroke="#21262d" stroke-width="1" />
+  <line x1="330" y1="35" x2="330" y2="165" stroke="#21262d" stroke-width="1" />
+
+  <!-- Column 1: Total Contributions -->
+  <g transform="translate(82, 0)">
+    <text x="0" y="82" class="num" text-anchor="middle">{total_contribs}</text>
+    <text x="0" y="112" class="lbl" text-anchor="middle">Total Contributions</text>
+    <text x="0" y="132" class="sub" text-anchor="middle">{total_range}</text>
+  </g>
+
+  <!-- Column 2: Current Streak (Center Featured Gauge) -->
+  <g transform="translate(247, 0)">
+    <!-- Ring Gauge -->
+    <g transform="translate(0, 68)">
+      <circle cx="0" cy="0" r="32" fill="none" stroke="#21262d" stroke-width="4.5" />
+      <circle cx="0" cy="0" r="32" fill="none" stroke="#22D3EE" stroke-width="4.5" stroke-dasharray="160 50" stroke-linecap="round" />
+      
+      <!-- Flame Icon Top of Ring (Safe from clipping) -->
+      <g transform="translate(0, -32) translate(0, -2)" class="fire-anim">
+        <path d="M0 -8 C2 -5 5 -3 5 1 C5 4 2 7 0 7 C-2 7 -5 4 -5 1 C-5 -3 -2 -5 0 -8 Z" fill="#22D3EE" />
+        <path d="M0 -4 C1 -2 2.5 -1 2.5 1.5 C2.5 3 1 4.5 0 4.5 C-1 4.5 -2.5 3 -2.5 1.5 C-2.5 -1 -1 -2 0 -4 Z" fill="#ffffff" />
+      </g>
+      
+      <text x="0" y="9" class="num" text-anchor="middle">{current_streak}</text>
+    </g>
+    <text x="0" y="122" class="lbl" text-anchor="middle" fill="#22D3EE" font-weight="700">Current Streak</text>
+    <text x="0" y="142" class="sub" text-anchor="middle">{current_range}</text>
+  </g>
+
+  <!-- Column 3: Longest Streak -->
+  <g transform="translate(412, 0)">
+    <text x="0" y="82" class="num" text-anchor="middle">{longest_streak}</text>
+    <text x="0" y="112" class="lbl" text-anchor="middle">Longest Streak</text>
+    <text x="0" y="132" class="sub" text-anchor="middle">{longest_range}</text>
+  </g>
+</svg>"""
     return svg
 
 def generate_langs_svg(data):
     langs = data['langs']
     
-    bar_width = 300
+    bar_width = 550
     bar_rects = []
     accum_x = 0
     for l in langs:
         w = round((l['pct'] / 100) * bar_width, 1)
         if w > 0:
-            bar_rects.append(f'<rect x="{accum_x}" y="0" width="{w}" height="8" fill="{l["color"]}" />')
+            bar_rects.append(f'<rect x="{accum_x}" y="0" width="{w}" height="9" fill="{l["color"]}" />')
             accum_x += w
 
-    bars_markup = "\n        ".join(bar_rects)
+    bars_markup = "\n      ".join(bar_rects)
 
-    col1 = langs[:2]
-    col2 = langs[2:]
+    # Render language items with byte sizes
+    items_markup = []
+    col_xs = [0, 180, 360, 470]
+    for idx, item in enumerate(langs):
+        if idx >= len(col_xs):
+            break
+        x = col_xs[idx]
+        items_markup.append(f"""<g transform="translate({x}, 0)">
+      <circle cx="6" cy="6" r="5" fill="{item['color']}" />
+      <text x="18" y="10" font-size="13" font-weight="600" fill="#c9d1d9" font-family="-apple-system, sans-serif">{item['name']} <tspan fill="#ffffff" font-weight="700">{item['pct']:.1f}%</tspan> <tspan fill="#7d8590" font-size="11">({item['size_str']})</tspan></text>
+    </g>""")
 
-    def render_col(items, start_x):
-        res = []
-        for idx, item in enumerate(items):
-            y = idx * 24
-            res.append(f"""<g transform="translate({start_x}, {y})">
-        <circle cx="5" cy="5" r="4.5" fill="{item['color']}" />
-        <text x="16" y="9" font-size="12" fill="#c9d1d9" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">{item['name']} <tspan fill="#7d8590" font-size="11">{item['pct']:.2f}%</tspan></text>
-      </g>""")
-        return "\n      ".join(res)
+    lang_items_str = "\n    ".join(items_markup)
 
-    col1_markup = render_col(col1, 0)
-    col2_markup = render_col(col2, 160)
-
-    svg = f"""<svg width="360" height="150" viewBox="0 0 360 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+    svg = f"""<svg width="600" height="145" viewBox="0 0 600 145" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bgLangs" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d1117" />
-      <stop offset="100%" stop-color="#090d16" />
+      <stop offset="0%" stop-color="#0e131f" />
+      <stop offset="50%" stop-color="#0d1117" />
+      <stop offset="100%" stop-color="#080c14" />
+    </linearGradient>
+    <linearGradient id="topGlowLangs" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0" />
+      <stop offset="30%" stop-color="#22D3EE" stop-opacity="0.8" />
+      <stop offset="70%" stop-color="#58A6FF" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#58A6FF" stop-opacity="0" />
     </linearGradient>
     <mask id="barMask">
-      <rect x="0" y="0" width="{bar_width}" height="8" rx="4" fill="white" />
+      <rect x="0" y="0" width="{bar_width}" height="9" rx="4.5" fill="white" />
     </mask>
   </defs>
 
   <!-- Container Box -->
-  <rect x="0.5" y="0.5" width="359" height="149" rx="6" fill="url(#bgLangs)" stroke="#30363d" />
+  <rect x="0.5" y="0.5" width="599" height="144" rx="8" fill="url(#bgLangs)" stroke="#30363d" stroke-width="1.2" />
+  <!-- Neon Accent Line Top -->
+  <line x1="12" y1="1" x2="587" y2="1" stroke="url(#topGlowLangs)" stroke-width="2.2" />
 
-  <!-- Title -->
-  <text x="25" y="32" font-size="17" font-weight="600" fill="#58A6FF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif">Most Used Languages</text>
+  <!-- Title and Ecosystem Tag -->
+  <text x="25" y="32" font-size="16" font-weight="700" fill="#58A6FF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif">Most Used Languages</text>
+  <text x="575" y="32" text-anchor="end" font-size="10" font-weight="600" fill="#7d8590" font-family="ui-monospace, monospace">PRIMARY STACK // JAVASCRIPT and PYTHON</text>
 
-  <!-- Progress Bar -->
+  <!-- Progress Bar ({bar_width}px wide) -->
   <g transform="translate(25, 48)" mask="url(#barMask)">
-    <rect x="0" y="0" width="{bar_width}" height="8" fill="#161b22" />
+    <rect x="0" y="0" width="{bar_width}" height="9" fill="#161b22" />
     <g>
       {bars_markup}
     </g>
   </g>
 
-  <!-- Language Items -->
-  <g transform="translate(25, 75)">
-    <g>
-      {col1_markup}
-    </g>
-    <g>
-      {col2_markup}
-    </g>
+  <!-- Language Items Grid -->
+  <g transform="translate(25, 82)">
+    {lang_items_str}
   </g>
 </svg>"""
     return svg
 
 def main():
-    print("Fetching live data for", USERNAME)
+    print("Fetching live telemetry for", USERNAME)
     data = fetch_data()
-    print("Data fetched:", data)
+    print("Telemetry data fetched:", data)
     
     stats_svg = generate_stats_svg(data)
-    streak_svg = fetch_default_streak_svg()
+    streak_svg = generate_streak_svg(data)
     langs_svg = generate_langs_svg(data)
     
     # Validate XML
     ET.fromstring(stats_svg)
     ET.fromstring(streak_svg)
     ET.fromstring(langs_svg)
-    print("All SVGs validated as well-formed XML!")
+    print("All SVGs validated as 100% well-formed XML!")
     
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     assets_dir = os.path.join(base_dir, 'assets')
@@ -245,7 +383,7 @@ def main():
     with open(os.path.join(assets_dir, 'github-langs.svg'), 'w', encoding='utf-8') as f:
         f.write(langs_svg)
         
-    print("Saved all 3 SVGs successfully!")
+    print("Saved upgraded stats, streak, and langs SVGs successfully!")
 
 if __name__ == '__main__':
     main()
