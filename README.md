@@ -122,7 +122,7 @@
 
 <!-- Among Us Impostor Incinerating Contributions Animation -->
 <p align="center">
-  <img src="assets/among-us-sentry-fire.svg?v=2" width="100%" alt="Among Us Impostor Contribution Sentry Incinerator" />
+  <img src="assets/among-us-sentry-fire.svg?v=3" width="100%" alt="Among Us Impostor Tactical Incinerator Assault" />
 </p>
 
 <!-- Real-Time Auto-Updating GitHub Analytics & Streak Suite -->
