@@ -127,12 +127,12 @@
 
 <!-- Real-Time Auto-Updating GitHub Analytics & Streak Suite -->
 <p align="center">
-  <img width="49%" src="https://github-readme-stats-fast.vercel.app/api?username=thenudasahas2008&show_icons=true&include_all_commits=true&count_private=true&hide=stars,contribs&rank_icon=github&theme=github_dark&border_color=30363d&bg_color=0D1117&title_color=58A6FF&icon_color=22D3EE" alt="GitHub Statistics" />
-  <img width="49%" src="https://streak-stats.demolab.com?user=thenudasahas2008&theme=dark&border=30363D&background=0D1117&ring=22D3EE&fire=22D3EE&currStreakLabel=58A6FF" alt="GitHub Contribution Streak" />
+  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=thenudasahas2008&show_icons=true&include_all_commits=true&count_private=true&hide=stars,contribs&rank_icon=github&theme=github_dark&border_color=30363d&bg_color=0D1117&title_color=58A6FF&icon_color=22D3EE&cache_seconds=1800" alt="GitHub Statistics" />
+  <img width="49%" src="https://streak-stats.demolab.com?user=thenudasahas2008&theme=dark&border=30363D&background=0D1117&ring=22D3EE&fire=22D3EE&currStreakLabel=58A6FF&timezone=Asia/Colombo" alt="GitHub Contribution Streak" />
 </p>
 
 <p align="center">
-  <img height="150" src="https://github-readme-stats-fast.vercel.app/api/top-langs?username=thenudasahas2008&layout=compact&theme=github_dark&border_color=30363d&bg_color=0D1117&title_color=58A6FF&hide=procfile,dockerfile,shell" alt="Top Languages Breakdown" />
+  <img height="150" src="https://github-readme-stats.vercel.app/api/top-langs?username=thenudasahas2008&layout=compact&theme=github_dark&border_color=30363d&bg_color=0D1117&title_color=58A6FF&hide=procfile,dockerfile,shell&cache_seconds=1800" alt="Top Languages Breakdown" />
 </p>
 
 ---
