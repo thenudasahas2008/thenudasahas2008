@@ -71,14 +71,6 @@
 @keyframes gunRecoilSeq { 0% { transform: translate(6px, -2px) rotate(0deg); } 7.19% { transform: translate(6px, -2px) rotate(0deg); } 7.50% { transform: translate(3px, -2px) rotate(-8deg); } 8.25% { transform: translate(6px, -2px) rotate(0deg); } 15.94% { transform: translate(6px, -2px) rotate(0deg); } 16.25% { transform: translate(3px, -2px) rotate(-8deg); } 17.00% { transform: translate(6px, -2px) rotate(0deg); } 29.69% { transform: translate(6px, -2px) rotate(0deg); } 30.00% { transform: translate(3px, -2px) rotate(-8deg); } 30.75% { transform: translate(6px, -2px) rotate(0deg); } 37.19% { transform: translate(6px, -2px) rotate(0deg); } 37.50% { transform: translate(3px, -2px) rotate(-8deg); } 38.25% { transform: translate(6px, -2px) rotate(0deg); } 44.69% { transform: translate(6px, -2px) rotate(0deg); } 45.00% { transform: translate(3px, -2px) rotate(-8deg); } 45.75% { transform: translate(6px, -2px) rotate(0deg); } 58.44% { transform: translate(6px, -2px) rotate(0deg); } 58.75% { transform: translate(3px, -2px) rotate(-8deg); } 59.50% { transform: translate(6px, -2px) rotate(0deg); } 65.94% { transform: translate(6px, -2px) rotate(0deg); } 66.25% { transform: translate(3px, -2px) rotate(-8deg); } 67.00% { transform: translate(6px, -2px) rotate(0deg); } 77.19% { transform: translate(6px, -2px) rotate(0deg); } 77.50% { transform: translate(3px, -2px) rotate(-8deg); } 78.25% { transform: translate(6px, -2px) rotate(0deg); } 83.44% { transform: translate(6px, -2px) rotate(0deg); } 83.75% { transform: translate(3px, -2px) rotate(-8deg); } 84.50% { transform: translate(6px, -2px) rotate(0deg); } 89.69% { transform: translate(6px, -2px) rotate(0deg); } 90.00% { transform: translate(3px, -2px) rotate(-8deg); } 90.75% { transform: translate(6px, -2px) rotate(0deg); } 100% { transform: translate(6px, -2px) rotate(0deg); } }
 .impostor-blaster { animation: gunRecoilSeq 16.0s ease-out infinite; }
 
-@keyframes laserSight1 {
-  0%, 5.81% { opacity: 0; }
-  5.94%, 7.38% { opacity: 0.85; stroke-dashoffset: 0; }
-  7.50%, 100% { opacity: 0; }
-}
-.laser-sight-1 { animation: laserSight1 16.0s ease-in-out infinite; }
-
-
 @keyframes muzzleFlash1 {
   0%, 7.38% { opacity: 0; transform: translate(553px, 93px) scale(0); }
   7.50% { opacity: 1; transform: translate(553px, 93px) scale(1.4); }
@@ -124,14 +116,6 @@
   98.5%, 100% { fill: #006d32; stroke: none; filter: none; }
 }
 .target-block-1 { animation: targetBurn1 16.0s ease-in-out infinite; }
-
-
-@keyframes laserSight2 {
-  0%, 14.56% { opacity: 0; }
-  14.69%, 16.12% { opacity: 0.85; stroke-dashoffset: 0; }
-  16.25%, 100% { opacity: 0; }
-}
-.laser-sight-2 { animation: laserSight2 16.0s ease-in-out infinite; }
 
 
 @keyframes muzzleFlash2 {
@@ -181,14 +165,6 @@
 .target-block-2 { animation: targetBurn2 16.0s ease-in-out infinite; }
 
 
-@keyframes laserSight3 {
-  0%, 28.31% { opacity: 0; }
-  28.44%, 29.88% { opacity: 0.85; stroke-dashoffset: 0; }
-  30.00%, 100% { opacity: 0; }
-}
-.laser-sight-3 { animation: laserSight3 16.0s ease-in-out infinite; }
-
-
 @keyframes muzzleFlash3 {
   0%, 29.88% { opacity: 0; transform: translate(638px, 78px) scale(0); }
   30.00% { opacity: 1; transform: translate(638px, 78px) scale(1.4); }
@@ -234,14 +210,6 @@
   98.5%, 100% { fill: #39d353; stroke: none; filter: none; }
 }
 .target-block-3 { animation: targetBurn3 16.0s ease-in-out infinite; }
-
-
-@keyframes laserSight4 {
-  0%, 35.81% { opacity: 0; }
-  35.94%, 37.38% { opacity: 0.85; stroke-dashoffset: 0; }
-  37.50%, 100% { opacity: 0; }
-}
-.laser-sight-4 { animation: laserSight4 16.0s ease-in-out infinite; }
 
 
 @keyframes muzzleFlash4 {
@@ -291,14 +259,6 @@
 .target-block-4 { animation: targetBurn4 16.0s ease-in-out infinite; }
 
 
-@keyframes laserSight5 {
-  0%, 43.31% { opacity: 0; }
-  43.44%, 44.88% { opacity: 0.85; stroke-dashoffset: 0; }
-  45.00%, 100% { opacity: 0; }
-}
-.laser-sight-5 { animation: laserSight5 16.0s ease-in-out infinite; }
-
-
 @keyframes muzzleFlash5 {
   0%, 44.88% { opacity: 0; transform: translate(638px, 78px) scale(0); }
   45.00% { opacity: 1; transform: translate(638px, 78px) scale(1.4); }
@@ -344,14 +304,6 @@
   98.5%, 100% { fill: #26a641; stroke: none; filter: none; }
 }
 .target-block-5 { animation: targetBurn5 16.0s ease-in-out infinite; }
-
-
-@keyframes laserSight6 {
-  0%, 57.06% { opacity: 0; }
-  57.19%, 58.63% { opacity: 0.85; stroke-dashoffset: 0; }
-  58.75%, 100% { opacity: 0; }
-}
-.laser-sight-6 { animation: laserSight6 16.0s ease-in-out infinite; }
 
 
 @keyframes muzzleFlash6 {
@@ -401,14 +353,6 @@
 .target-block-6 { animation: targetBurn6 16.0s ease-in-out infinite; }
 
 
-@keyframes laserSight7 {
-  0%, 64.56% { opacity: 0; }
-  64.69%, 66.12% { opacity: 0.85; stroke-dashoffset: 0; }
-  66.25%, 100% { opacity: 0; }
-}
-.laser-sight-7 { animation: laserSight7 16.0s ease-in-out infinite; }
-
-
 @keyframes muzzleFlash7 {
   0%, 66.12% { opacity: 0; transform: translate(688px, 128px) scale(0); }
   66.25% { opacity: 1; transform: translate(688px, 128px) scale(1.4); }
@@ -454,14 +398,6 @@
   98.5%, 100% { fill: #26a641; stroke: none; filter: none; }
 }
 .target-block-7 { animation: targetBurn7 16.0s ease-in-out infinite; }
-
-
-@keyframes laserSight8 {
-  0%, 75.81% { opacity: 0; }
-  75.94%, 77.38% { opacity: 0.85; stroke-dashoffset: 0; }
-  77.50%, 100% { opacity: 0; }
-}
-.laser-sight-8 { animation: laserSight8 16.0s ease-in-out infinite; }
 
 
 @keyframes muzzleFlash8 {
@@ -511,14 +447,6 @@
 .target-block-8 { animation: targetBurn8 16.0s ease-in-out infinite; }
 
 
-@keyframes laserSight9 {
-  0%, 82.06% { opacity: 0; }
-  82.19%, 83.62% { opacity: 0.85; stroke-dashoffset: 0; }
-  83.75%, 100% { opacity: 0; }
-}
-.laser-sight-9 { animation: laserSight9 16.0s ease-in-out infinite; }
-
-
 @keyframes muzzleFlash9 {
   0%, 83.62% { opacity: 0; transform: translate(723px, 96px) scale(0); }
   83.75% { opacity: 1; transform: translate(723px, 96px) scale(1.4); }
@@ -564,14 +492,6 @@
   98.5%, 100% { fill: #0e4429; stroke: none; filter: none; }
 }
 .target-block-9 { animation: targetBurn9 16.0s ease-in-out infinite; }
-
-
-@keyframes laserSight10 {
-  0%, 88.31% { opacity: 0; }
-  88.44%, 89.88% { opacity: 0.85; stroke-dashoffset: 0; }
-  90.00%, 100% { opacity: 0; }
-}
-.laser-sight-10 { animation: laserSight10 16.0s ease-in-out infinite; }
 
 
 @keyframes muzzleFlash10 {
@@ -1083,128 +1003,6 @@
     <rect x="800" y="146" width="10" height="10" rx="2" fill="#161b22"/>
   </g>
 
-  <!-- Targeting Laser Sights -->
-  
-    <!-- Laser Sight & Reticle 1 -->
-    <g class="laser-sight-1">
-      <line x1="553" y1="93" x2="735" y2="137" stroke="#ff3b30" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.8" />
-      <g transform="translate(735, 137)">
-        <circle cx="0" cy="0" r="8" fill="none" stroke="#22d3ee" stroke-width="1.2" stroke-dasharray="4,3" />
-        <line x1="-10" y1="0" x2="-4" y2="0" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="4" y1="0" x2="10" y2="0" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="0" y1="-10" x2="0" y2="-4" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="0" y1="4" x2="0" y2="10" stroke="#22d3ee" stroke-width="1.2"/>
-      </g>
-    </g>
-
-    <!-- Laser Sight & Reticle 2 -->
-    <g class="laser-sight-2">
-      <line x1="553" y1="93" x2="749" y2="95" stroke="#ff3b30" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.8" />
-      <g transform="translate(749, 95)">
-        <circle cx="0" cy="0" r="8" fill="none" stroke="#22d3ee" stroke-width="1.2" stroke-dasharray="4,3" />
-        <line x1="-10" y1="0" x2="-4" y2="0" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="4" y1="0" x2="10" y2="0" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="0" y1="-10" x2="0" y2="-4" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="0" y1="4" x2="0" y2="10" stroke="#22d3ee" stroke-width="1.2"/>
-      </g>
-    </g>
-
-    <!-- Laser Sight & Reticle 3 -->
-    <g class="laser-sight-3">
-      <line x1="638" y1="78" x2="749" y2="109" stroke="#ff3b30" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.8" />
-      <g transform="translate(749, 109)">
-        <circle cx="0" cy="0" r="8" fill="none" stroke="#22d3ee" stroke-width="1.2" stroke-dasharray="4,3" />
-        <line x1="-10" y1="0" x2="-4" y2="0" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="4" y1="0" x2="10" y2="0" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="0" y1="-10" x2="0" y2="-4" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="0" y1="4" x2="0" y2="10" stroke="#22d3ee" stroke-width="1.2"/>
-      </g>
-    </g>
-
-    <!-- Laser Sight & Reticle 4 -->
-    <g class="laser-sight-4">
-      <line x1="638" y1="78" x2="777" y2="81" stroke="#ff3b30" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.8" />
-      <g transform="translate(777, 81)">
-        <circle cx="0" cy="0" r="8" fill="none" stroke="#22d3ee" stroke-width="1.2" stroke-dasharray="4,3" />
-        <line x1="-10" y1="0" x2="-4" y2="0" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="4" y1="0" x2="10" y2="0" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="0" y1="-10" x2="0" y2="-4" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="0" y1="4" x2="0" y2="10" stroke="#22d3ee" stroke-width="1.2"/>
-      </g>
-    </g>
-
-    <!-- Laser Sight & Reticle 5 -->
-    <g class="laser-sight-5">
-      <line x1="638" y1="78" x2="777" y2="95" stroke="#ff3b30" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.8" />
-      <g transform="translate(777, 95)">
-        <circle cx="0" cy="0" r="8" fill="none" stroke="#22d3ee" stroke-width="1.2" stroke-dasharray="4,3" />
-        <line x1="-10" y1="0" x2="-4" y2="0" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="4" y1="0" x2="10" y2="0" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="0" y1="-10" x2="0" y2="-4" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="0" y1="4" x2="0" y2="10" stroke="#22d3ee" stroke-width="1.2"/>
-      </g>
-    </g>
-
-    <!-- Laser Sight & Reticle 6 -->
-    <g class="laser-sight-6">
-      <line x1="688" y1="128" x2="749" y2="137" stroke="#ff3b30" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.8" />
-      <g transform="translate(749, 137)">
-        <circle cx="0" cy="0" r="8" fill="none" stroke="#22d3ee" stroke-width="1.2" stroke-dasharray="4,3" />
-        <line x1="-10" y1="0" x2="-4" y2="0" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="4" y1="0" x2="10" y2="0" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="0" y1="-10" x2="0" y2="-4" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="0" y1="4" x2="0" y2="10" stroke="#22d3ee" stroke-width="1.2"/>
-      </g>
-    </g>
-
-    <!-- Laser Sight & Reticle 7 -->
-    <g class="laser-sight-7">
-      <line x1="688" y1="128" x2="777" y2="151" stroke="#ff3b30" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.8" />
-      <g transform="translate(777, 151)">
-        <circle cx="0" cy="0" r="8" fill="none" stroke="#22d3ee" stroke-width="1.2" stroke-dasharray="4,3" />
-        <line x1="-10" y1="0" x2="-4" y2="0" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="4" y1="0" x2="10" y2="0" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="0" y1="-10" x2="0" y2="-4" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="0" y1="4" x2="0" y2="10" stroke="#22d3ee" stroke-width="1.2"/>
-      </g>
-    </g>
-
-    <!-- Laser Sight & Reticle 8 -->
-    <g class="laser-sight-8">
-      <line x1="723" y1="96" x2="777" y2="109" stroke="#ff3b30" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.8" />
-      <g transform="translate(777, 109)">
-        <circle cx="0" cy="0" r="8" fill="none" stroke="#22d3ee" stroke-width="1.2" stroke-dasharray="4,3" />
-        <line x1="-10" y1="0" x2="-4" y2="0" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="4" y1="0" x2="10" y2="0" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="0" y1="-10" x2="0" y2="-4" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="0" y1="4" x2="0" y2="10" stroke="#22d3ee" stroke-width="1.2"/>
-      </g>
-    </g>
-
-    <!-- Laser Sight & Reticle 9 -->
-    <g class="laser-sight-9">
-      <line x1="723" y1="96" x2="791" y2="95" stroke="#ff3b30" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.8" />
-      <g transform="translate(791, 95)">
-        <circle cx="0" cy="0" r="8" fill="none" stroke="#22d3ee" stroke-width="1.2" stroke-dasharray="4,3" />
-        <line x1="-10" y1="0" x2="-4" y2="0" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="4" y1="0" x2="10" y2="0" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="0" y1="-10" x2="0" y2="-4" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="0" y1="4" x2="0" y2="10" stroke="#22d3ee" stroke-width="1.2"/>
-      </g>
-    </g>
-
-    <!-- Laser Sight & Reticle 10 -->
-    <g class="laser-sight-10">
-      <line x1="723" y1="96" x2="805" y2="95" stroke="#ff3b30" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.8" />
-      <g transform="translate(805, 95)">
-        <circle cx="0" cy="0" r="8" fill="none" stroke="#22d3ee" stroke-width="1.2" stroke-dasharray="4,3" />
-        <line x1="-10" y1="0" x2="-4" y2="0" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="4" y1="0" x2="10" y2="0" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="0" y1="-10" x2="0" y2="-4" stroke="#22d3ee" stroke-width="1.2"/>
-        <line x1="0" y1="4" x2="0" y2="10" stroke="#22d3ee" stroke-width="1.2"/>
-      </g>
-    </g>
-
   <!-- Shockwaves -->
   
     <!-- Shockwave Ring 1 -->
@@ -1237,7 +1035,7 @@
     <!-- Shockwave Ring 10 -->
     <circle class="shockwave-10" cx="0" cy="0" r="10" fill="none" stroke="#22d3ee" stroke-width="2" />
 
-  <!-- Flying Plasma Bullets -->
+  <!-- Flying Plasma Bullets (Pure bullets, NO guide lines) -->
   
     <!-- Plasma Bullet 1 -->
     <g class="bullet-1" filter="url(#bulletGlow)">
@@ -1431,7 +1229,6 @@
         <rect x="0" y="-3.5" width="13" height="7" rx="1.5" fill="#1e293b" stroke="#0f172a" stroke-width="1.4"/>
         <rect x="13" y="-4" width="5" height="8" rx="1" fill="#475569" stroke="#0f172a" stroke-width="1.2"/>
         <line x1="8" y1="-3.5" x2="8" y2="3.5" stroke="#f97316" stroke-width="2"/>
-        <!-- Plasma Heat Indicator Core -->
         <circle cx="5" cy="0" r="1.8" fill="#22d3ee"/>
       </g>
     </g>
@@ -1439,7 +1236,6 @@
 
   <!-- Bottom Footer Telemetry Bar -->
   <g transform="translate(72, 196)">
-
     <!-- Legend -->
     <g transform="translate(630, 0)">
       <text x="-26" y="8" fill="#7d8590" font-size="8.5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Less</text>
