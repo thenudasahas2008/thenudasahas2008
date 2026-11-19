@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 180" width="100%" height="100%" fill="none">
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, "Fira Code", Menlo, monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Card Frame (100% Clickable Target) -->
+  <rect x="1" y="1" width="428" height="178" rx="8" fill="#0D1117" stroke="#30363D" stroke-width="1.2" />
+
+  <!-- Top Header Row -->
+  <g transform="translate(20, 20)">
+    <!-- GitHub Book Icon -->
+    <path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z" fill="#58A6FF" />
+
+    <!-- Project Title -->
+    <text x="24" y="12" class="sans" font-size="16" font-weight="700" fill="#58A6FF">PromptSentry</text>
+
+    <!-- Language Pill Right -->
+    <rect x="290" y="-3" width="98" height="20" rx="10" fill="#161B22" stroke="#30363D" stroke-width="1" />
+    <circle cx="302" cy="7" r="3.5" fill="#3572A5" />
+    <text x="312" y="10.5" class="mono" font-size="8.5" font-weight="700" fill="#C9D1D9">Python 3.11</text>
+  </g>
+
+  <!-- Subtitle -->
+  <text x="20" y="58" class="sans" font-size="11.5" font-weight="600" fill="#F0F6FC">AI Security Gateway &amp; Heuristic LLM Firewall</text>
+
+  <!-- Clear Description -->
+  <g transform="translate(20, 78)">
+    <text class="sans" font-size="11" fill="#C9D1D9">
+      Heuristic defense gateway intercepting real-time prompt injections,
+    </text>
+    <text y="16" class="sans" font-size="11" fill="#C9D1D9">
+      system jailbreaks, and OWASP LLM01 threats with &lt; 15ms inspection.
+    </text>
+  </g>
+
+  <!-- Tech Tags Row -->
+  <g transform="translate(20, 118)">
+    <rect width="78" height="20" rx="4" fill="#161B22" stroke="#30363D" stroke-width="1" />
+    <text x="39" y="13.5" class="mono" font-size="9" fill="#8B949E" font-weight="600" text-anchor="middle">Heuristics</text>
+
+    <rect x="84" width="70" height="20" rx="4" fill="#161B22" stroke="#30363D" stroke-width="1" />
+    <text x="119" y="13.5" class="mono" font-size="9" fill="#8B949E" font-weight="600" text-anchor="middle">AI Safety</text>
+
+    <rect x="160" width="80" height="20" rx="4" fill="#161B22" stroke="#30363D" stroke-width="1" />
+    <text x="200" y="13.5" class="mono" font-size="9" fill="#8B949E" font-weight="600" text-anchor="middle">Zero-Trust</text>
+  </g>
+
+  <!-- Divider & Action Footer -->
+  <line x1="20" y1="148" x2="410" y2="148" stroke="#21262D" stroke-width="1" />
+  <g transform="translate(20, 164)">
+    <text x="0" y="0" class="mono" font-size="9" fill="#8B949E">thenudasahas2008 / PromptSentry</text>
+    <text x="312" y="0" class="sans" font-size="10.5" font-weight="700" fill="#58A6FF">Inspect Codebase ➔</text>
+  </g>
+</svg>

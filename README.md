@@ -141,24 +141,14 @@
 
 ## 🚀 Featured Projects
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="https://github.com/thenudasahas2008/PromptSentry"><h3>🛡️ PromptSentry</h3></a>
-      <p><b>AI Security Gateway &amp; LLM Firewall</b></p>
-      <p>Heuristic defense gateway intercepting real-time prompt injections, system jailbreaks, and OWASP LLM01 threats with sub-15ms inspection.</p>
-      <p><code>Python 3.11</code> • <code>Heuristic Defense</code> • <code>AI Safety</code> • <code>Zero-Trust</code></p>
-      <p><a href="https://github.com/thenudasahas2008/PromptSentry"><b>Inspect Codebase ➔</b></a></p>
-    </td>
-    <td width="50%" valign="top">
-      <a href="https://github.com/thenudasahas2008/Baduwa"><h3>🎵 Baduwa (ZYRO)</h3></a>
-      <p><b>24/7 Discord Audio Automation</b></p>
-      <p>High-availability 24/7 continuous audio streaming bot with native in-Discord button controls, autoplay queueing, and low-latency playback.</p>
-      <p><code>JavaScript</code> • <code>Node.js</code> • <code>Discord API</code> • <code>Async Audio</code></p>
-      <p><a href="https://github.com/thenudasahas2008/Baduwa"><b>Inspect Codebase ➔</b></a></p>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://github.com/thenudasahas2008/PromptSentry">
+    <img src="assets/project-promptsentry.svg" width="49%" alt="PromptSentry AI Defense Gateway" />
+  </a>
+  <a href="https://github.com/thenudasahas2008/Baduwa">
+    <img src="assets/project-baduwa.svg" width="49%" alt="Baduwa Discord Audio Bot" />
+  </a>
+</p>
 
 <p align="center">
   <a href="https://www.thenudasahas.site/"><img src="https://img.shields.io/badge/OFFICIAL%20PORTFOLIO-thenudasahas.site-161B22?style=for-the-badge&logo=googlechrome&logoColor=58A6FF" alt="Portfolio Website" /></a>
