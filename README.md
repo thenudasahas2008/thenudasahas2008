@@ -175,15 +175,9 @@
   <img src="https://raw.githubusercontent.com/thenudasahas2008/thenudasahas2008/output/github-contribution-grid-snake-dark.svg" alt="GitHub Contribution Snake Animation" width="100%" />
 </p>
 
-<!-- GitHub Analytics & Streak Overview -->
+<!-- Developer Telemetry & Activity Dashboard -->
 <p align="center">
-  <img height="180" src="https://github-readme-stats-fast.vercel.app/api?username=thenudasahas2008&show_icons=true&rank_icon=github&theme=github_dark&border_color=30363d" alt="GitHub Statistics" />
-  &nbsp;
-  <img height="180" src="https://streak-stats.demolab.com?user=thenudasahas2008&theme=dark&border=30363D&background=0D1117" alt="GitHub Contribution Streak" />
-</p>
-
-<p align="center">
-  <img height="180" src="https://github-readme-stats-fast.vercel.app/api/top-langs?username=thenudasahas2008&layout=compact&theme=github_dark&border_color=30363d" alt="Top Languages Breakdown" />
+  <img src="assets/developer-telemetry.svg" width="100%" alt="Developer Telemetry & Activity Dashboard" />
 </p>
 
 ---
