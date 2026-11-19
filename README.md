@@ -13,7 +13,6 @@
 
   <!-- Quick Navigation Pills -->
   <a href="#-forensic--security-terminal-whoami"><img src="https://img.shields.io/badge/Terminal-0D1117?style=flat-square&logo=gnubash&logoColor=22D3EE" alt="Terminal" /></a>
-  <a href="#-core-pillars--security-specializations"><img src="https://img.shields.io/badge/Specializations-0D1117?style=flat-square&logo=securityscorecard&logoColor=22D3EE" alt="Specializations" /></a>
   <a href="#-technical-arsenal--tooling-matrix"><img src="https://img.shields.io/badge/Tech_Arsenal-0D1117?style=flat-square&logo=target&logoColor=22D3EE" alt="Arsenal" /></a>
   <a href="#-featured-projects"><img src="https://img.shields.io/badge/Projects-0D1117?style=flat-square&logo=github&logoColor=22D3EE" alt="Projects" /></a>
   <a href="#-activity--development-velocity"><img src="https://img.shields.io/badge/Analytics-0D1117?style=flat-square&logo=chartdotjs&logoColor=22D3EE" alt="Analytics" /></a>
@@ -57,39 +56,6 @@
     `"Y$b._
         `"""
 ```
-
----
-
-## 🛡️ Core Pillars & Security Specializations
-
-<table>
-  <tr>
-    <td width="33.3%" valign="top">
-      <h4>🔍 Digital Forensics (DFIR)</h4>
-      <ul>
-        <li><b>Evidence Preservation:</b> Hash integrity verification (MD5/SHA256) and chain of custody.</li>
-        <li><b>Log & Artifact Analysis:</b> Investigating authentication logs, system journals, and timeline forensics.</li>
-        <li><b>Incident Response:</b> Identifying breach indicators, post-incident triage, and mitigation.</li>
-      </ul>
-    </td>
-    <td width="33.3%" valign="top">
-      <h4>🌐 Defensive Network Security</h4>
-      <ul>
-        <li><b>Packet Inspection:</b> Deep protocol analysis using Wireshark and Tshark.</li>
-        <li><b>Network Architecture:</b> Subnetting, firewall rules, TCP/IP handshakes, and routing.</li>
-        <li><b>Host Hardening:</b> Linux security permissions, port auditing, and service isolation.</li>
-      </ul>
-    </td>
-    <td width="33.3%" valign="top">
-      <h4>🔐 Application & AI Security</h4>
-      <ul>
-        <li><b>OWASP Top 10:</b> Researching injection flaws, broken access control, and API weaknesses.</li>
-        <li><b>LLM Guardrails:</b> Building input sanitization & prompt-injection defense with <i>PromptSentry</i>.</li>
-        <li><b>Secure Coding:</b> Developing modular, defensively structured Python and Bash tools.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
 
 ---
 
@@ -143,10 +109,10 @@
 
 <p align="center">
   <a href="https://github.com/thenudasahas2008/PromptSentry">
-    <img src="assets/project-promptsentry.svg?v=2" width="49%" alt="PromptSentry AI Defense Gateway" />
+    <img src="assets/project-promptsentry.svg?v=3" width="49%" alt="PromptSentry AI Defense Gateway" />
   </a>
   <a href="https://github.com/thenudasahas2008/Baduwa">
-    <img src="assets/project-baduwa.svg?v=3" width="49%" alt="Baduwa Discord Audio Bot" />
+    <img src="assets/project-baduwa.svg?v=4" width="49%" alt="Baduwa Discord Audio Bot" />
   </a>
 </p>
 
@@ -162,12 +128,12 @@
 
 <!-- Among Us Impostor Incinerating Contributions Animation -->
 <p align="center">
-  <img src="assets/among-us-contribution-fire.svg" width="100%" alt="Among Us Impostor Firing at Contributions" />
+  <img src="assets/among-us-contribution-fire.svg?v=2" width="100%" alt="Among Us Impostor Firing at Contributions" />
 </p>
 
 <!-- Developer Telemetry & Activity Dashboard -->
 <p align="center">
-  <img src="assets/developer-telemetry.svg" width="100%" alt="Developer Telemetry &amp; Activity Dashboard" />
+  <img src="assets/developer-telemetry.svg?v=2" width="100%" alt="Developer Telemetry &amp; Activity Dashboard" />
 </p>
 
 ---
