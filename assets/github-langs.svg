@@ -19,8 +19,8 @@
   <g transform="translate(25, 48)" mask="url(#barMask)">
     <rect x="0" y="0" width="300" height="8" fill="#161b22" />
     <g>
-      <rect x="0" y="0" width="292.4" height="8" fill="#f1e05a" />
-        <rect x="292.4" y="0" width="6.3" height="8" fill="#3572A5" />
+      <rect x="0" y="0" width="290.4" height="8" fill="#f1e05a" />
+        <rect x="290.4" y="0" width="8.3" height="8" fill="#3572A5" />
         <rect x="298.7" y="0" width="1.2" height="8" fill="#e34c26" />
     </g>
   </g>
@@ -30,11 +30,11 @@
     <g>
       <g transform="translate(0, 0)">
         <circle cx="5" cy="5" r="4.5" fill="#f1e05a" />
-        <text x="16" y="9" font-size="12" fill="#c9d1d9" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">JavaScript <tspan fill="#7d8590" font-size="11">97.47%</tspan></text>
+        <text x="16" y="9" font-size="12" fill="#c9d1d9" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">JavaScript <tspan fill="#7d8590" font-size="11">96.81%</tspan></text>
       </g>
       <g transform="translate(0, 24)">
         <circle cx="5" cy="5" r="4.5" fill="#3572A5" />
-        <text x="16" y="9" font-size="12" fill="#c9d1d9" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Python <tspan fill="#7d8590" font-size="11">2.11%</tspan></text>
+        <text x="16" y="9" font-size="12" fill="#c9d1d9" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Python <tspan fill="#7d8590" font-size="11">2.78%</tspan></text>
       </g>
     </g>
     <g>
