@@ -21,7 +21,7 @@
 
   <!-- Live Status & Verification -->
   <img src="https://img.shields.io/badge/SPECIALIZATION-Cybersecurity%20%26%20Digital%20Forensics-0B3D4F?style=for-the-badge&logo=securityscorecard&logoColor=22D3EE" alt="Specialization" />
-  <img src="https://hits.sh/github.com/thenudasahas2008.svg?style=for-the-badge&label=PROFILE%20VIEWS&color=0891B2" alt="Profile views" />
+  <img src="https://komarev.com/ghpvc/?username=thenudasahas2008&label=%F0%9F%91%81%EF%B8%8F%20PROFILE%20VIEWS&color=00BFA6&style=for-the-badge" alt="Profile views" />
 </div>
 
 ---
@@ -77,23 +77,32 @@
 
 ---
 
-## 🧰 Technical Arsenal & Tooling Matrix
+## 🧰 Technical Arsenal & Tooling
 
 <div align="center">
+  <p>
+    <b>🖥️ Operating Systems & Shell Environments</b><br />
+    <img src="https://skillicons.dev/icons?i=linux,kali,ubuntu,debian,windows,bash,powershell&theme=dark" height="42" alt="Operating Systems & Shell" />
+  </p>
 
-| Domain | Technologies & Environments |
-| :--- | :--- |
-| **Operating Systems & Shell** | <img src="https://skillicons.dev/icons?i=linux,kali,ubuntu,debian,windows,bash,powershell&theme=dark" height="38" alt="OS and Shell" /> |
-| **Development & Scripting** | <img src="https://skillicons.dev/icons?i=python,c,cpp,js,html,css&theme=dark" height="38" alt="Languages" /> |
-| **Security & Developer Tools** | <img src="https://skillicons.dev/icons?i=git,github,vscode,docker,postman,cloudflare&theme=dark" height="38" alt="Tools" /> |
+  <p>
+    <b>💻 Languages & Core Scripting</b><br />
+    <img src="https://skillicons.dev/icons?i=python,c,cpp,js,html,css&theme=dark" height="42" alt="Languages" />
+  </p>
 
+  <p>
+    <b>🛡️ Security, Forensics & Developer Tooling</b><br />
+    <img src="https://skillicons.dev/icons?i=git,github,vscode,docker,postman,cloudflare&theme=dark" height="42" alt="Security & Tools" />
+  </p>
+
+  <br />
+
+  <a href="https://www.thenudasahas.site/"><img src="https://img.shields.io/badge/FORENSICS-Digital%20Evidence%20Preservation-0B3D4F?style=for-the-badge&logo=target&logoColor=22D3EE" alt="Forensics Badge" /></a>
+  &nbsp;
+  <a href="https://www.thenudasahas.site/"><img src="https://img.shields.io/badge/NETWORK-Packet%20Inspection%20%26%20Firewalls-123344?style=for-the-badge&logo=wireshark&logoColor=67E8F9" alt="Network Badge" /></a>
+  &nbsp;
+  <a href="https://github.com/thenudasahas2008/PromptSentry"><img src="https://img.shields.io/badge/AI%20SECURITY-PromptSentry%20Defense-123C35?style=for-the-badge&logo=shield&logoColor=6EE7B7" alt="AI Security Badge" /></a>
 </div>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/FORENSICS-Digital%20Evidence%20Preservation-0B3D4F?style=for-the-badge&logo=target&logoColor=22D3EE" alt="Forensics Badge" />
-  <img src="https://img.shields.io/badge/NETWORK-Packet%20Inspection%20%26%20Firewalls-123344?style=for-the-badge&logo=wireshark&logoColor=67E8F9" alt="Network Badge" />
-  <img src="https://img.shields.io/badge/AI%20SECURITY-PromptSentry%20Defense-123C35?style=for-the-badge&logo=shield&logoColor=6EE7B7" alt="AI Security Badge" />
-</p>
 
 ---
 
