@@ -127,7 +127,7 @@
 
 <!-- Real-Time Glassmorphic Full-Fidelity GitHub Analytics & Stats Dashboard -->
 <p align="center">
-  <img width="100%" src="assets/github-stats-dashboard.svg?v=7" alt="Thenuda Sahas GitHub Stats Telemetry Dashboard" />
+  <img width="100%" src="assets/github-stats-dashboard.svg?v=8" alt="Thenuda Sahas GitHub Stats Telemetry Dashboard" />
 </p>
 
 ---
