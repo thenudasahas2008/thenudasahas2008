@@ -125,6 +125,11 @@
   <img src="assets/among-us-sentry-fire.svg?v=16" width="100%" alt="Among Us Tactical Sentry Dynamic Multi-Target Flank and Fire Animation" />
 </p>
 
+<!-- Real-Time Glassmorphic Full-Fidelity GitHub Analytics & Stats Dashboard -->
+<p align="center">
+  <img width="100%" src="assets/github-stats-dashboard.svg?v=4" alt="Thenuda Sahas GitHub Stats Telemetry Dashboard" />
+</p>
+
 ---
 
 ## 📫 Connect & Inquiries
