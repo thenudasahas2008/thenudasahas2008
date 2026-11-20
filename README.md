@@ -122,12 +122,12 @@
 
 <!-- Among Us Tactical Sentry Walk and Delayed Fire Animation -->
 <p align="center">
-  <img src="assets/among-us-sentry-fire.svg?v=15" width="100%" alt="Among Us Tactical Sentry Dynamic Multi-Target Flank and Fire Animation" />
+  <img src="assets/among-us-sentry-fire.svg?v=16" width="100%" alt="Among Us Tactical Sentry Dynamic Multi-Target Flank and Fire Animation" />
 </p>
 
 <!-- Real-Time Glassmorphic Full-Fidelity GitHub Analytics & Stats Dashboard -->
 <p align="center">
-  <img width="100%" src="assets/github-stats-dashboard.svg?v=2" alt="Thenuda Sahas GitHub Stats Telemetry Dashboard" />
+  <img width="100%" src="assets/github-stats-dashboard.svg?v=3" alt="Thenuda Sahas GitHub Stats Telemetry Dashboard" />
 </p>
 
 ---

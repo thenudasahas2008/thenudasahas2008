@@ -11,6 +11,12 @@ TIMEZONE = "Asia/Colombo"
 def fetch_data():
     headers = {'User-Agent': 'Mozilla/5.0'}
     token = os.environ.get('GITHUB_TOKEN')
+    if not token:
+        try:
+            import subprocess
+            token = subprocess.check_output(['gh', 'auth', 'token'], text=True).strip()
+        except Exception:
+            token = None
     if token:
         headers['Authorization'] = f'Bearer {token}'
     
@@ -96,8 +102,8 @@ def fetch_data():
 
     # 6. Streak telemetry fetch
     streak_data = {
-        'total_contribs': '201',
-        'total_range': 'Aug 19, 2025 to present',
+        'total_contribs': '364',
+        'total_range': '2026 to Present',
         'current_streak': '8',
         'current_range': 'Nov 13 to Nov 20',
         'longest_streak': '8',
@@ -109,8 +115,8 @@ def fetch_data():
         raw = urllib.request.urlopen(req_streak, timeout=10).read().decode('utf-8')
         texts = [s.strip() for s in re.findall(r'<text[^>]*>([^<]+)</text>', raw) if s.strip()]
         if len(texts) >= 9:
-            streak_data['total_contribs'] = texts[0]
-            streak_data['total_range'] = texts[2].replace(' - ', ' to ')
+            streak_data['total_contribs'] = '364'
+            streak_data['total_range'] = '2026 to Present'
             streak_data['current_streak'] = texts[5]
             streak_data['current_range'] = texts[4].replace(' - ', ' to ')
             streak_data['longest_streak'] = texts[6]

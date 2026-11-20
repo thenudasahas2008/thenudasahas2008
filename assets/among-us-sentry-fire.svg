@@ -37,23 +37,24 @@
     <style>
       
 @keyframes impostorPatrolPath {
-  0%, 12.78%      { transform: translate(580px, 137px); }
-  15.00%, 20.56%  { transform: translate(630px, 95px); }
-  21.67%, 27.22%  { transform: translate(630px, 109px); }
-  28.89%, 33.89%  { transform: translate(675px, 81px); }
-  35.00%, 39.44%  { transform: translate(675px, 95px); }
-  40.56%, 45.00%  { transform: translate(675px, 109px); }
-  46.11%, 51.11%  { transform: translate(675px, 95px); }
-  53.33%, 64.44% { transform: translate(710px, 151px); }
-  66.67%, 71.11% { transform: translate(745px, 67px); }
-  72.22%, 76.11% { transform: translate(745px, 81px); }
-  77.22%, 81.11% { transform: translate(745px, 95px); }
-  82.22%, 87.22% { transform: translate(745px, 123px); }
-  88.89%              { transform: translate(745px, 95px); }
-  91.11%              { transform: translate(745px, 75px) rotate(-10deg); }
-  93.33%              { transform: translate(745px, 68px) rotate(360deg); }
-  95.56%              { transform: translate(745px, 95px); }
-  98.33%, 100%        { transform: translate(580px, 137px); }
+  0%, 12.78%      { transform: translate(530px, 137px); }
+  14.44%, 20.00%  { transform: translate(560px, 109px); }
+  21.67%, 26.11%  { transform: translate(590px, 81px); }
+  27.22%, 31.67%  { transform: translate(590px, 95px); }
+  32.78%, 37.22%  { transform: translate(590px, 109px); }
+  38.33%, 43.33%  { transform: translate(590px, 151px); }
+  44.44%, 49.44%  { transform: translate(620px, 95px); }
+  50.56%, 55.56% { transform: translate(620px, 151px); }
+  56.67%, 61.11% { transform: translate(640px, 67px); }
+  62.22%, 66.67% { transform: translate(640px, 81px); }
+  67.22%, 71.67% { transform: translate(640px, 95px); }
+  72.22%, 76.67% { transform: translate(640px, 123px); }
+  77.22%, 82.22% { transform: translate(640px, 137px); }
+  84.44%              { transform: translate(640px, 95px); }
+  86.67%              { transform: translate(640px, 75px) rotate(-10deg); }
+  88.89%              { transform: translate(640px, 68px) rotate(360deg); }
+  92.22%              { transform: translate(640px, 95px); }
+  97.22%, 100%        { transform: translate(530px, 137px); }
 }
 .impostor-patrol { animation: impostorPatrolPath 18.0s ease-in-out infinite; }
 
@@ -64,739 +65,673 @@
 }
 .waddling-legs { animation: impostorWalkLegs 0.25s ease-in-out infinite; }
 
-@keyframes gunRecoilSeq { 0% { transform: translate(6px, 0px) rotate(0deg); } 4.78% { transform: translate(6px, 0px) rotate(0deg); } 5.00% { transform: translate(2px, 0px) rotate(-6deg); } 5.56% { transform: translate(6px, 0px) rotate(0deg); } 9.78% { transform: translate(6px, 0px) rotate(0deg); } 10.00% { transform: translate(2px, 0px) rotate(-6deg); } 10.56% { transform: translate(6px, 0px) rotate(0deg); } 17.56% { transform: translate(6px, 0px) rotate(0deg); } 17.78% { transform: translate(2px, 0px) rotate(-6deg); } 18.33% { transform: translate(6px, 0px) rotate(0deg); } 23.11% { transform: translate(6px, 0px) rotate(0deg); } 23.33% { transform: translate(2px, 0px) rotate(-6deg); } 23.89% { transform: translate(6px, 0px) rotate(0deg); } 30.89% { transform: translate(6px, 0px) rotate(0deg); } 31.11% { transform: translate(2px, 0px) rotate(-6deg); } 31.67% { transform: translate(6px, 0px) rotate(0deg); } 36.44% { transform: translate(6px, 0px) rotate(0deg); } 36.67% { transform: translate(2px, 0px) rotate(-6deg); } 37.22% { transform: translate(6px, 0px) rotate(0deg); } 42.00% { transform: translate(6px, 0px) rotate(0deg); } 42.22% { transform: translate(2px, 0px) rotate(-6deg); } 42.78% { transform: translate(6px, 0px) rotate(0deg); } 47.56% { transform: translate(6px, 0px) rotate(0deg); } 47.78% { transform: translate(2px, 0px) rotate(-6deg); } 48.33% { transform: translate(6px, 0px) rotate(0deg); } 55.33% { transform: translate(6px, 0px) rotate(0deg); } 55.56% { transform: translate(2px, 0px) rotate(-6deg); } 56.11% { transform: translate(6px, 0px) rotate(0deg); } 60.89% { transform: translate(6px, 0px) rotate(0deg); } 61.11% { transform: translate(2px, 0px) rotate(-6deg); } 61.67% { transform: translate(6px, 0px) rotate(0deg); } 68.67% { transform: translate(6px, 0px) rotate(0deg); } 68.89% { transform: translate(2px, 0px) rotate(-6deg); } 69.44% { transform: translate(6px, 0px) rotate(0deg); } 73.67% { transform: translate(6px, 0px) rotate(0deg); } 73.89% { transform: translate(2px, 0px) rotate(-6deg); } 74.44% { transform: translate(6px, 0px) rotate(0deg); } 78.67% { transform: translate(6px, 0px) rotate(0deg); } 78.89% { transform: translate(2px, 0px) rotate(-6deg); } 79.44% { transform: translate(6px, 0px) rotate(0deg); } 83.67% { transform: translate(6px, 0px) rotate(0deg); } 83.89% { transform: translate(2px, 0px) rotate(-6deg); } 84.44% { transform: translate(6px, 0px) rotate(0deg); } 100% { transform: translate(6px, 0px) rotate(0deg); } }
+@keyframes gunRecoilSeq { 0% { transform: translate(6px, 0px) rotate(0deg); } 4.78% { transform: translate(6px, 0px) rotate(0deg); } 5.00% { transform: translate(2px, 0px) rotate(-6deg); } 5.56% { transform: translate(6px, 0px) rotate(0deg); } 9.78% { transform: translate(6px, 0px) rotate(0deg); } 10.00% { transform: translate(2px, 0px) rotate(-6deg); } 10.56% { transform: translate(6px, 0px) rotate(0deg); } 16.44% { transform: translate(6px, 0px) rotate(0deg); } 16.67% { transform: translate(2px, 0px) rotate(-6deg); } 17.22% { transform: translate(6px, 0px) rotate(0deg); } 23.11% { transform: translate(6px, 0px) rotate(0deg); } 23.33% { transform: translate(2px, 0px) rotate(-6deg); } 23.89% { transform: translate(6px, 0px) rotate(0deg); } 28.67% { transform: translate(6px, 0px) rotate(0deg); } 28.89% { transform: translate(2px, 0px) rotate(-6deg); } 29.44% { transform: translate(6px, 0px) rotate(0deg); } 34.22% { transform: translate(6px, 0px) rotate(0deg); } 34.44% { transform: translate(2px, 0px) rotate(-6deg); } 35.00% { transform: translate(6px, 0px) rotate(0deg); } 39.78% { transform: translate(6px, 0px) rotate(0deg); } 40.00% { transform: translate(2px, 0px) rotate(-6deg); } 40.56% { transform: translate(6px, 0px) rotate(0deg); } 46.44% { transform: translate(6px, 0px) rotate(0deg); } 46.67% { transform: translate(2px, 0px) rotate(-6deg); } 47.22% { transform: translate(6px, 0px) rotate(0deg); } 52.00% { transform: translate(6px, 0px) rotate(0deg); } 52.22% { transform: translate(2px, 0px) rotate(-6deg); } 52.78% { transform: translate(6px, 0px) rotate(0deg); } 58.67% { transform: translate(6px, 0px) rotate(0deg); } 58.89% { transform: translate(2px, 0px) rotate(-6deg); } 59.44% { transform: translate(6px, 0px) rotate(0deg); } 63.67% { transform: translate(6px, 0px) rotate(0deg); } 63.89% { transform: translate(2px, 0px) rotate(-6deg); } 64.44% { transform: translate(6px, 0px) rotate(0deg); } 68.67% { transform: translate(6px, 0px) rotate(0deg); } 68.89% { transform: translate(2px, 0px) rotate(-6deg); } 69.44% { transform: translate(6px, 0px) rotate(0deg); } 73.67% { transform: translate(6px, 0px) rotate(0deg); } 73.89% { transform: translate(2px, 0px) rotate(-6deg); } 74.44% { transform: translate(6px, 0px) rotate(0deg); } 78.67% { transform: translate(6px, 0px) rotate(0deg); } 78.89% { transform: translate(2px, 0px) rotate(-6deg); } 79.44% { transform: translate(6px, 0px) rotate(0deg); } 100% { transform: translate(6px, 0px) rotate(0deg); } }
 .impostor-blaster { animation: gunRecoilSeq 18.0s ease-out infinite; }
 
 @keyframes muzzleFlash1 {
-  0%, 4.89% { opacity: 0; transform: translate(598px, 137px) scale(0); }
-  5.00% { opacity: 1; transform: translate(598px, 137px) scale(1.4); }
-  5.44% { opacity: 0; transform: translate(598px, 137px) scale(0.2); }
+  0%, 4.89% { opacity: 0; transform: translate(548px, 137px) scale(0); }
+  5.00% { opacity: 1; transform: translate(548px, 137px) scale(1.4); }
+  5.44% { opacity: 0; transform: translate(548px, 137px) scale(0.2); }
   100% { opacity: 0; }
 }
 .muzzle-flash-1 { animation: muzzleFlash1 18.0s ease-out infinite; }
 
 
 @keyframes flyBullet1 {
-  0%, 4.94% { opacity: 0; transform: translate(598px, 137px) scale(0.4); }
-  5.00% { opacity: 1; transform: translate(598px, 137px) scale(1); }
-  5.56% { opacity: 1; transform: translate(735px, 137px) scale(1.1); }
-  5.72%, 100% { opacity: 0; transform: translate(735px, 137px); }
+  0%, 4.94% { opacity: 0; transform: translate(548px, 137px) scale(0.4); }
+  5.00% { opacity: 1; transform: translate(548px, 137px) scale(1.0); }
+  5.56% { opacity: 1; transform: translate(651px, 137px) scale(1.1); }
+  5.72%, 100% { opacity: 0; transform: translate(651px, 137px); }
 }
 .bullet-1 { animation: flyBullet1 18.0s linear infinite; }
 
 
 @keyframes shockwave1 {
-  0%, 5.50% { opacity: 0; transform: translate(735px, 137px) scale(0.2); }
-  5.56% { opacity: 1; transform: translate(735px, 137px) scale(0.5); }
-  6.78% { opacity: 0; transform: translate(735px, 137px) scale(2.2); }
+  0%, 5.50% { opacity: 0; transform: translate(651px, 137px) scale(0.2); }
+  5.56% { opacity: 1; transform: translate(651px, 137px) scale(0.5); }
+  6.78% { opacity: 0; transform: translate(651px, 137px) scale(2.2); }
   100% { opacity: 0; }
 }
 .shockwave-1 { animation: shockwave1 18.0s ease-out infinite; }
 
 
 @keyframes sparkExplosion1 {
-  0%, 5.50% { opacity: 0; transform: translate(735px, 137px) scale(0); }
-  5.56% { opacity: 1; transform: translate(735px, 137px) scale(1); }
-  6.67% { opacity: 0; transform: translate(735px, 137px) scale(1.8) rotate(35deg); }
+  0%, 5.50% { opacity: 0; transform: translate(651px, 137px) scale(0); }
+  5.56% { opacity: 1; transform: translate(651px, 137px) scale(1.0); }
+  6.67% { opacity: 0; transform: translate(651px, 137px) scale(1.8) rotate(35deg); }
   100% { opacity: 0; }
 }
 .detonation-1 { animation: sparkExplosion1 18.0s ease-out infinite; }
 
 
 @keyframes targetBurn1 {
-  0%, 5.50% { fill: #006d32; stroke: none; filter: none; opacity: 1; }
-  5.56% { fill: #ffffff; filter: drop-shadow(0 0 6px #ffffff); opacity: 1; }
-  5.83% { fill: #ffea00; filter: drop-shadow(0 0 8px #ff6600); opacity: 1; }
-  6.39% { fill: #ff4500; filter: drop-shadow(0 0 6px #ff2200); opacity: 1; }
-  7.50% { fill: #b91c1c; filter: drop-shadow(0 0 2px #ff4500); opacity: 0.8; }
-  /* DISAPPEARS! Becomes empty dark square #161b22, completely wiped out! */
-  8.33%, 97.0% { fill: #161b22; stroke: none; filter: none; opacity: 1; }
-  /* Respawns green at end of loop for fresh cycle */
-  98.5%, 100% { fill: #006d32; stroke: none; filter: none; opacity: 1; }
+  0%, 5.56% { fill: #40c463; stroke: none; }
+  5.67% { fill: #ffffff; stroke: #ffea00; stroke-width: 1.5; }
+  6.00% { fill: #ff4500; stroke: #ff8c00; stroke-width: 1.0; }
+  7.50% { fill: #7f1d1d; stroke: none; }
+  8.61%, 97.22% { fill: #161b22; stroke: none; }
+  98.33%, 100% { fill: #40c463; stroke: none; }
 }
-.target-block-1 { animation: targetBurn1 18.0s ease-in-out infinite; }
+.target-block-1 { animation: targetBurn1 18.0s ease-out infinite; }
 
 
 @keyframes muzzleFlash2 {
-  0%, 9.89% { opacity: 0; transform: translate(598px, 137px) scale(0); }
-  10.00% { opacity: 1; transform: translate(598px, 137px) scale(1.4); }
-  10.44% { opacity: 0; transform: translate(598px, 137px) scale(0.2); }
+  0%, 9.89% { opacity: 0; transform: translate(548px, 137px) scale(0); }
+  10.00% { opacity: 1; transform: translate(548px, 137px) scale(1.4); }
+  10.44% { opacity: 0; transform: translate(548px, 137px) scale(0.2); }
   100% { opacity: 0; }
 }
 .muzzle-flash-2 { animation: muzzleFlash2 18.0s ease-out infinite; }
 
 
 @keyframes flyBullet2 {
-  0%, 9.94% { opacity: 0; transform: translate(598px, 137px) scale(0.4); }
-  10.00% { opacity: 1; transform: translate(598px, 137px) scale(1); }
-  10.56% { opacity: 1; transform: translate(749px, 137px) scale(1.1); }
-  10.72%, 100% { opacity: 0; transform: translate(749px, 137px); }
+  0%, 9.94% { opacity: 0; transform: translate(548px, 137px) scale(0.4); }
+  10.00% { opacity: 1; transform: translate(548px, 137px) scale(1.0); }
+  10.56% { opacity: 1; transform: translate(665px, 137px) scale(1.1); }
+  10.72%, 100% { opacity: 0; transform: translate(665px, 137px); }
 }
 .bullet-2 { animation: flyBullet2 18.0s linear infinite; }
 
 
 @keyframes shockwave2 {
-  0%, 10.50% { opacity: 0; transform: translate(749px, 137px) scale(0.2); }
-  10.56% { opacity: 1; transform: translate(749px, 137px) scale(0.5); }
-  11.78% { opacity: 0; transform: translate(749px, 137px) scale(2.2); }
+  0%, 10.50% { opacity: 0; transform: translate(665px, 137px) scale(0.2); }
+  10.56% { opacity: 1; transform: translate(665px, 137px) scale(0.5); }
+  11.78% { opacity: 0; transform: translate(665px, 137px) scale(2.2); }
   100% { opacity: 0; }
 }
 .shockwave-2 { animation: shockwave2 18.0s ease-out infinite; }
 
 
 @keyframes sparkExplosion2 {
-  0%, 10.50% { opacity: 0; transform: translate(749px, 137px) scale(0); }
-  10.56% { opacity: 1; transform: translate(749px, 137px) scale(1); }
-  11.67% { opacity: 0; transform: translate(749px, 137px) scale(1.8) rotate(35deg); }
+  0%, 10.50% { opacity: 0; transform: translate(665px, 137px) scale(0); }
+  10.56% { opacity: 1; transform: translate(665px, 137px) scale(1.0); }
+  11.67% { opacity: 0; transform: translate(665px, 137px) scale(1.8) rotate(35deg); }
   100% { opacity: 0; }
 }
 .detonation-2 { animation: sparkExplosion2 18.0s ease-out infinite; }
 
 
 @keyframes targetBurn2 {
-  0%, 10.50% { fill: #26a641; stroke: none; filter: none; opacity: 1; }
-  10.56% { fill: #ffffff; filter: drop-shadow(0 0 6px #ffffff); opacity: 1; }
-  10.83% { fill: #ffea00; filter: drop-shadow(0 0 8px #ff6600); opacity: 1; }
-  11.39% { fill: #ff4500; filter: drop-shadow(0 0 6px #ff2200); opacity: 1; }
-  12.50% { fill: #b91c1c; filter: drop-shadow(0 0 2px #ff4500); opacity: 0.8; }
-  /* DISAPPEARS! Becomes empty dark square #161b22, completely wiped out! */
-  13.33%, 97.0% { fill: #161b22; stroke: none; filter: none; opacity: 1; }
-  /* Respawns green at end of loop for fresh cycle */
-  98.5%, 100% { fill: #26a641; stroke: none; filter: none; opacity: 1; }
+  0%, 10.56% { fill: #9be9a8; stroke: none; }
+  10.67% { fill: #ffffff; stroke: #ffea00; stroke-width: 1.5; }
+  11.00% { fill: #ff4500; stroke: #ff8c00; stroke-width: 1.0; }
+  12.50% { fill: #7f1d1d; stroke: none; }
+  13.61%, 97.22% { fill: #161b22; stroke: none; }
+  98.33%, 100% { fill: #9be9a8; stroke: none; }
 }
-.target-block-2 { animation: targetBurn2 18.0s ease-in-out infinite; }
+.target-block-2 { animation: targetBurn2 18.0s ease-out infinite; }
 
 
 @keyframes muzzleFlash3 {
-  0%, 17.67% { opacity: 0; transform: translate(648px, 95px) scale(0); }
-  17.78% { opacity: 1; transform: translate(648px, 95px) scale(1.4); }
-  18.22% { opacity: 0; transform: translate(648px, 95px) scale(0.2); }
+  0%, 16.56% { opacity: 0; transform: translate(578px, 109px) scale(0); }
+  16.67% { opacity: 1; transform: translate(578px, 109px) scale(1.4); }
+  17.11% { opacity: 0; transform: translate(578px, 109px) scale(0.2); }
   100% { opacity: 0; }
 }
 .muzzle-flash-3 { animation: muzzleFlash3 18.0s ease-out infinite; }
 
 
 @keyframes flyBullet3 {
-  0%, 17.72% { opacity: 0; transform: translate(648px, 95px) scale(0.4); }
-  17.78% { opacity: 1; transform: translate(648px, 95px) scale(1); }
-  18.33% { opacity: 1; transform: translate(749px, 95px) scale(1.1); }
-  18.50%, 100% { opacity: 0; transform: translate(749px, 95px); }
+  0%, 16.61% { opacity: 0; transform: translate(578px, 109px) scale(0.4); }
+  16.67% { opacity: 1; transform: translate(578px, 109px) scale(1.0); }
+  17.22% { opacity: 1; transform: translate(665px, 109px) scale(1.1); }
+  17.39%, 100% { opacity: 0; transform: translate(665px, 109px); }
 }
 .bullet-3 { animation: flyBullet3 18.0s linear infinite; }
 
 
 @keyframes shockwave3 {
-  0%, 18.28% { opacity: 0; transform: translate(749px, 95px) scale(0.2); }
-  18.33% { opacity: 1; transform: translate(749px, 95px) scale(0.5); }
-  19.56% { opacity: 0; transform: translate(749px, 95px) scale(2.2); }
+  0%, 17.17% { opacity: 0; transform: translate(665px, 109px) scale(0.2); }
+  17.22% { opacity: 1; transform: translate(665px, 109px) scale(0.5); }
+  18.44% { opacity: 0; transform: translate(665px, 109px) scale(2.2); }
   100% { opacity: 0; }
 }
 .shockwave-3 { animation: shockwave3 18.0s ease-out infinite; }
 
 
 @keyframes sparkExplosion3 {
-  0%, 18.28% { opacity: 0; transform: translate(749px, 95px) scale(0); }
-  18.33% { opacity: 1; transform: translate(749px, 95px) scale(1); }
-  19.44% { opacity: 0; transform: translate(749px, 95px) scale(1.8) rotate(35deg); }
+  0%, 17.17% { opacity: 0; transform: translate(665px, 109px) scale(0); }
+  17.22% { opacity: 1; transform: translate(665px, 109px) scale(1.0); }
+  18.33% { opacity: 0; transform: translate(665px, 109px) scale(1.8) rotate(35deg); }
   100% { opacity: 0; }
 }
 .detonation-3 { animation: sparkExplosion3 18.0s ease-out infinite; }
 
 
 @keyframes targetBurn3 {
-  0%, 18.28% { fill: #0e4429; stroke: none; filter: none; opacity: 1; }
-  18.33% { fill: #ffffff; filter: drop-shadow(0 0 6px #ffffff); opacity: 1; }
-  18.61% { fill: #ffea00; filter: drop-shadow(0 0 8px #ff6600); opacity: 1; }
-  19.17% { fill: #ff4500; filter: drop-shadow(0 0 6px #ff2200); opacity: 1; }
-  20.28% { fill: #b91c1c; filter: drop-shadow(0 0 2px #ff4500); opacity: 0.8; }
-  /* DISAPPEARS! Becomes empty dark square #161b22, completely wiped out! */
-  21.11%, 97.0% { fill: #161b22; stroke: none; filter: none; opacity: 1; }
-  /* Respawns green at end of loop for fresh cycle */
-  98.5%, 100% { fill: #0e4429; stroke: none; filter: none; opacity: 1; }
+  0%, 17.22% { fill: #216e39; stroke: none; }
+  17.33% { fill: #ffffff; stroke: #ffea00; stroke-width: 1.5; }
+  17.67% { fill: #ff4500; stroke: #ff8c00; stroke-width: 1.0; }
+  19.17% { fill: #7f1d1d; stroke: none; }
+  20.28%, 97.22% { fill: #161b22; stroke: none; }
+  98.33%, 100% { fill: #216e39; stroke: none; }
 }
-.target-block-3 { animation: targetBurn3 18.0s ease-in-out infinite; }
+.target-block-3 { animation: targetBurn3 18.0s ease-out infinite; }
 
 
 @keyframes muzzleFlash4 {
-  0%, 23.22% { opacity: 0; transform: translate(648px, 109px) scale(0); }
-  23.33% { opacity: 1; transform: translate(648px, 109px) scale(1.4); }
-  23.78% { opacity: 0; transform: translate(648px, 109px) scale(0.2); }
+  0%, 23.22% { opacity: 0; transform: translate(608px, 81px) scale(0); }
+  23.33% { opacity: 1; transform: translate(608px, 81px) scale(1.4); }
+  23.78% { opacity: 0; transform: translate(608px, 81px) scale(0.2); }
   100% { opacity: 0; }
 }
 .muzzle-flash-4 { animation: muzzleFlash4 18.0s ease-out infinite; }
 
 
 @keyframes flyBullet4 {
-  0%, 23.28% { opacity: 0; transform: translate(648px, 109px) scale(0.4); }
-  23.33% { opacity: 1; transform: translate(648px, 109px) scale(1); }
-  23.89% { opacity: 1; transform: translate(749px, 109px) scale(1.1); }
-  24.06%, 100% { opacity: 0; transform: translate(749px, 109px); }
+  0%, 23.28% { opacity: 0; transform: translate(608px, 81px) scale(0.4); }
+  23.33% { opacity: 1; transform: translate(608px, 81px) scale(1.0); }
+  23.89% { opacity: 1; transform: translate(693px, 81px) scale(1.1); }
+  24.06%, 100% { opacity: 0; transform: translate(693px, 81px); }
 }
 .bullet-4 { animation: flyBullet4 18.0s linear infinite; }
 
 
 @keyframes shockwave4 {
-  0%, 23.83% { opacity: 0; transform: translate(749px, 109px) scale(0.2); }
-  23.89% { opacity: 1; transform: translate(749px, 109px) scale(0.5); }
-  25.11% { opacity: 0; transform: translate(749px, 109px) scale(2.2); }
+  0%, 23.83% { opacity: 0; transform: translate(693px, 81px) scale(0.2); }
+  23.89% { opacity: 1; transform: translate(693px, 81px) scale(0.5); }
+  25.11% { opacity: 0; transform: translate(693px, 81px) scale(2.2); }
   100% { opacity: 0; }
 }
 .shockwave-4 { animation: shockwave4 18.0s ease-out infinite; }
 
 
 @keyframes sparkExplosion4 {
-  0%, 23.83% { opacity: 0; transform: translate(749px, 109px) scale(0); }
-  23.89% { opacity: 1; transform: translate(749px, 109px) scale(1); }
-  25.00% { opacity: 0; transform: translate(749px, 109px) scale(1.8) rotate(35deg); }
+  0%, 23.83% { opacity: 0; transform: translate(693px, 81px) scale(0); }
+  23.89% { opacity: 1; transform: translate(693px, 81px) scale(1.0); }
+  25.00% { opacity: 0; transform: translate(693px, 81px) scale(1.8) rotate(35deg); }
   100% { opacity: 0; }
 }
 .detonation-4 { animation: sparkExplosion4 18.0s ease-out infinite; }
 
 
 @keyframes targetBurn4 {
-  0%, 23.83% { fill: #39d353; stroke: none; filter: none; opacity: 1; }
-  23.89% { fill: #ffffff; filter: drop-shadow(0 0 6px #ffffff); opacity: 1; }
-  24.17% { fill: #ffea00; filter: drop-shadow(0 0 8px #ff6600); opacity: 1; }
-  24.72% { fill: #ff4500; filter: drop-shadow(0 0 6px #ff2200); opacity: 1; }
-  25.83% { fill: #b91c1c; filter: drop-shadow(0 0 2px #ff4500); opacity: 0.8; }
-  /* DISAPPEARS! Becomes empty dark square #161b22, completely wiped out! */
-  26.67%, 97.0% { fill: #161b22; stroke: none; filter: none; opacity: 1; }
-  /* Respawns green at end of loop for fresh cycle */
-  98.5%, 100% { fill: #39d353; stroke: none; filter: none; opacity: 1; }
+  0%, 23.89% { fill: #40c463; stroke: none; }
+  24.00% { fill: #ffffff; stroke: #ffea00; stroke-width: 1.5; }
+  24.33% { fill: #ff4500; stroke: #ff8c00; stroke-width: 1.0; }
+  25.83% { fill: #7f1d1d; stroke: none; }
+  26.94%, 97.22% { fill: #161b22; stroke: none; }
+  98.33%, 100% { fill: #40c463; stroke: none; }
 }
-.target-block-4 { animation: targetBurn4 18.0s ease-in-out infinite; }
+.target-block-4 { animation: targetBurn4 18.0s ease-out infinite; }
 
 
 @keyframes muzzleFlash5 {
-  0%, 31.00% { opacity: 0; transform: translate(693px, 81px) scale(0); }
-  31.11% { opacity: 1; transform: translate(693px, 81px) scale(1.4); }
-  31.56% { opacity: 0; transform: translate(693px, 81px) scale(0.2); }
+  0%, 28.78% { opacity: 0; transform: translate(608px, 95px) scale(0); }
+  28.89% { opacity: 1; transform: translate(608px, 95px) scale(1.4); }
+  29.33% { opacity: 0; transform: translate(608px, 95px) scale(0.2); }
   100% { opacity: 0; }
 }
 .muzzle-flash-5 { animation: muzzleFlash5 18.0s ease-out infinite; }
 
 
 @keyframes flyBullet5 {
-  0%, 31.06% { opacity: 0; transform: translate(693px, 81px) scale(0.4); }
-  31.11% { opacity: 1; transform: translate(693px, 81px) scale(1); }
-  31.67% { opacity: 1; transform: translate(777px, 81px) scale(1.1); }
-  31.83%, 100% { opacity: 0; transform: translate(777px, 81px); }
+  0%, 28.83% { opacity: 0; transform: translate(608px, 95px) scale(0.4); }
+  28.89% { opacity: 1; transform: translate(608px, 95px) scale(1.0); }
+  29.44% { opacity: 1; transform: translate(693px, 95px) scale(1.1); }
+  29.61%, 100% { opacity: 0; transform: translate(693px, 95px); }
 }
 .bullet-5 { animation: flyBullet5 18.0s linear infinite; }
 
 
 @keyframes shockwave5 {
-  0%, 31.61% { opacity: 0; transform: translate(777px, 81px) scale(0.2); }
-  31.67% { opacity: 1; transform: translate(777px, 81px) scale(0.5); }
-  32.89% { opacity: 0; transform: translate(777px, 81px) scale(2.2); }
+  0%, 29.39% { opacity: 0; transform: translate(693px, 95px) scale(0.2); }
+  29.44% { opacity: 1; transform: translate(693px, 95px) scale(0.5); }
+  30.67% { opacity: 0; transform: translate(693px, 95px) scale(2.2); }
   100% { opacity: 0; }
 }
 .shockwave-5 { animation: shockwave5 18.0s ease-out infinite; }
 
 
 @keyframes sparkExplosion5 {
-  0%, 31.61% { opacity: 0; transform: translate(777px, 81px) scale(0); }
-  31.67% { opacity: 1; transform: translate(777px, 81px) scale(1); }
-  32.78% { opacity: 0; transform: translate(777px, 81px) scale(1.8) rotate(35deg); }
+  0%, 29.39% { opacity: 0; transform: translate(693px, 95px) scale(0); }
+  29.44% { opacity: 1; transform: translate(693px, 95px) scale(1.0); }
+  30.56% { opacity: 0; transform: translate(693px, 95px) scale(1.8) rotate(35deg); }
   100% { opacity: 0; }
 }
 .detonation-5 { animation: sparkExplosion5 18.0s ease-out infinite; }
 
 
 @keyframes targetBurn5 {
-  0%, 31.61% { fill: #39d353; stroke: none; filter: none; opacity: 1; }
-  31.67% { fill: #ffffff; filter: drop-shadow(0 0 6px #ffffff); opacity: 1; }
-  31.94% { fill: #ffea00; filter: drop-shadow(0 0 8px #ff6600); opacity: 1; }
-  32.50% { fill: #ff4500; filter: drop-shadow(0 0 6px #ff2200); opacity: 1; }
-  33.61% { fill: #b91c1c; filter: drop-shadow(0 0 2px #ff4500); opacity: 0.8; }
-  /* DISAPPEARS! Becomes empty dark square #161b22, completely wiped out! */
-  34.44%, 97.0% { fill: #161b22; stroke: none; filter: none; opacity: 1; }
-  /* Respawns green at end of loop for fresh cycle */
-  98.5%, 100% { fill: #39d353; stroke: none; filter: none; opacity: 1; }
+  0%, 29.44% { fill: #9be9a8; stroke: none; }
+  29.56% { fill: #ffffff; stroke: #ffea00; stroke-width: 1.5; }
+  29.89% { fill: #ff4500; stroke: #ff8c00; stroke-width: 1.0; }
+  31.39% { fill: #7f1d1d; stroke: none; }
+  32.50%, 97.22% { fill: #161b22; stroke: none; }
+  98.33%, 100% { fill: #9be9a8; stroke: none; }
 }
-.target-block-5 { animation: targetBurn5 18.0s ease-in-out infinite; }
+.target-block-5 { animation: targetBurn5 18.0s ease-out infinite; }
 
 
 @keyframes muzzleFlash6 {
-  0%, 36.56% { opacity: 0; transform: translate(693px, 95px) scale(0); }
-  36.67% { opacity: 1; transform: translate(693px, 95px) scale(1.4); }
-  37.11% { opacity: 0; transform: translate(693px, 95px) scale(0.2); }
+  0%, 34.33% { opacity: 0; transform: translate(608px, 109px) scale(0); }
+  34.44% { opacity: 1; transform: translate(608px, 109px) scale(1.4); }
+  34.89% { opacity: 0; transform: translate(608px, 109px) scale(0.2); }
   100% { opacity: 0; }
 }
 .muzzle-flash-6 { animation: muzzleFlash6 18.0s ease-out infinite; }
 
 
 @keyframes flyBullet6 {
-  0%, 36.61% { opacity: 0; transform: translate(693px, 95px) scale(0.4); }
-  36.67% { opacity: 1; transform: translate(693px, 95px) scale(1); }
-  37.22% { opacity: 1; transform: translate(777px, 95px) scale(1.1); }
-  37.39%, 100% { opacity: 0; transform: translate(777px, 95px); }
+  0%, 34.39% { opacity: 0; transform: translate(608px, 109px) scale(0.4); }
+  34.44% { opacity: 1; transform: translate(608px, 109px) scale(1.0); }
+  35.00% { opacity: 1; transform: translate(693px, 109px) scale(1.1); }
+  35.17%, 100% { opacity: 0; transform: translate(693px, 109px); }
 }
 .bullet-6 { animation: flyBullet6 18.0s linear infinite; }
 
 
 @keyframes shockwave6 {
-  0%, 37.17% { opacity: 0; transform: translate(777px, 95px) scale(0.2); }
-  37.22% { opacity: 1; transform: translate(777px, 95px) scale(0.5); }
-  38.44% { opacity: 0; transform: translate(777px, 95px) scale(2.2); }
+  0%, 34.94% { opacity: 0; transform: translate(693px, 109px) scale(0.2); }
+  35.00% { opacity: 1; transform: translate(693px, 109px) scale(0.5); }
+  36.22% { opacity: 0; transform: translate(693px, 109px) scale(2.2); }
   100% { opacity: 0; }
 }
 .shockwave-6 { animation: shockwave6 18.0s ease-out infinite; }
 
 
 @keyframes sparkExplosion6 {
-  0%, 37.17% { opacity: 0; transform: translate(777px, 95px) scale(0); }
-  37.22% { opacity: 1; transform: translate(777px, 95px) scale(1); }
-  38.33% { opacity: 0; transform: translate(777px, 95px) scale(1.8) rotate(35deg); }
+  0%, 34.94% { opacity: 0; transform: translate(693px, 109px) scale(0); }
+  35.00% { opacity: 1; transform: translate(693px, 109px) scale(1.0); }
+  36.11% { opacity: 0; transform: translate(693px, 109px) scale(1.8) rotate(35deg); }
   100% { opacity: 0; }
 }
 .detonation-6 { animation: sparkExplosion6 18.0s ease-out infinite; }
 
 
 @keyframes targetBurn6 {
-  0%, 37.17% { fill: #26a641; stroke: none; filter: none; opacity: 1; }
-  37.22% { fill: #ffffff; filter: drop-shadow(0 0 6px #ffffff); opacity: 1; }
-  37.50% { fill: #ffea00; filter: drop-shadow(0 0 8px #ff6600); opacity: 1; }
-  38.06% { fill: #ff4500; filter: drop-shadow(0 0 6px #ff2200); opacity: 1; }
-  39.17% { fill: #b91c1c; filter: drop-shadow(0 0 2px #ff4500); opacity: 0.8; }
-  /* DISAPPEARS! Becomes empty dark square #161b22, completely wiped out! */
-  40.00%, 97.0% { fill: #161b22; stroke: none; filter: none; opacity: 1; }
-  /* Respawns green at end of loop for fresh cycle */
-  98.5%, 100% { fill: #26a641; stroke: none; filter: none; opacity: 1; }
+  0%, 35.00% { fill: #9be9a8; stroke: none; }
+  35.11% { fill: #ffffff; stroke: #ffea00; stroke-width: 1.5; }
+  35.44% { fill: #ff4500; stroke: #ff8c00; stroke-width: 1.0; }
+  36.94% { fill: #7f1d1d; stroke: none; }
+  38.06%, 97.22% { fill: #161b22; stroke: none; }
+  98.33%, 100% { fill: #9be9a8; stroke: none; }
 }
-.target-block-6 { animation: targetBurn6 18.0s ease-in-out infinite; }
+.target-block-6 { animation: targetBurn6 18.0s ease-out infinite; }
 
 
 @keyframes muzzleFlash7 {
-  0%, 42.11% { opacity: 0; transform: translate(693px, 109px) scale(0); }
-  42.22% { opacity: 1; transform: translate(693px, 109px) scale(1.4); }
-  42.67% { opacity: 0; transform: translate(693px, 109px) scale(0.2); }
+  0%, 39.89% { opacity: 0; transform: translate(608px, 151px) scale(0); }
+  40.00% { opacity: 1; transform: translate(608px, 151px) scale(1.4); }
+  40.44% { opacity: 0; transform: translate(608px, 151px) scale(0.2); }
   100% { opacity: 0; }
 }
 .muzzle-flash-7 { animation: muzzleFlash7 18.0s ease-out infinite; }
 
 
 @keyframes flyBullet7 {
-  0%, 42.17% { opacity: 0; transform: translate(693px, 109px) scale(0.4); }
-  42.22% { opacity: 1; transform: translate(693px, 109px) scale(1); }
-  42.78% { opacity: 1; transform: translate(777px, 109px) scale(1.1); }
-  42.94%, 100% { opacity: 0; transform: translate(777px, 109px); }
+  0%, 39.94% { opacity: 0; transform: translate(608px, 151px) scale(0.4); }
+  40.00% { opacity: 1; transform: translate(608px, 151px) scale(1.0); }
+  40.56% { opacity: 1; transform: translate(693px, 151px) scale(1.1); }
+  40.72%, 100% { opacity: 0; transform: translate(693px, 151px); }
 }
 .bullet-7 { animation: flyBullet7 18.0s linear infinite; }
 
 
 @keyframes shockwave7 {
-  0%, 42.72% { opacity: 0; transform: translate(777px, 109px) scale(0.2); }
-  42.78% { opacity: 1; transform: translate(777px, 109px) scale(0.5); }
-  44.00% { opacity: 0; transform: translate(777px, 109px) scale(2.2); }
+  0%, 40.50% { opacity: 0; transform: translate(693px, 151px) scale(0.2); }
+  40.56% { opacity: 1; transform: translate(693px, 151px) scale(0.5); }
+  41.78% { opacity: 0; transform: translate(693px, 151px) scale(2.2); }
   100% { opacity: 0; }
 }
 .shockwave-7 { animation: shockwave7 18.0s ease-out infinite; }
 
 
 @keyframes sparkExplosion7 {
-  0%, 42.72% { opacity: 0; transform: translate(777px, 109px) scale(0); }
-  42.78% { opacity: 1; transform: translate(777px, 109px) scale(1); }
-  43.89% { opacity: 0; transform: translate(777px, 109px) scale(1.8) rotate(35deg); }
+  0%, 40.50% { opacity: 0; transform: translate(693px, 151px) scale(0); }
+  40.56% { opacity: 1; transform: translate(693px, 151px) scale(1.0); }
+  41.67% { opacity: 0; transform: translate(693px, 151px) scale(1.8) rotate(35deg); }
   100% { opacity: 0; }
 }
 .detonation-7 { animation: sparkExplosion7 18.0s ease-out infinite; }
 
 
 @keyframes targetBurn7 {
-  0%, 42.72% { fill: #0e4429; stroke: none; filter: none; opacity: 1; }
-  42.78% { fill: #ffffff; filter: drop-shadow(0 0 6px #ffffff); opacity: 1; }
-  43.06% { fill: #ffea00; filter: drop-shadow(0 0 8px #ff6600); opacity: 1; }
-  43.61% { fill: #ff4500; filter: drop-shadow(0 0 6px #ff2200); opacity: 1; }
-  44.72% { fill: #b91c1c; filter: drop-shadow(0 0 2px #ff4500); opacity: 0.8; }
-  /* DISAPPEARS! Becomes empty dark square #161b22, completely wiped out! */
-  45.56%, 97.0% { fill: #161b22; stroke: none; filter: none; opacity: 1; }
-  /* Respawns green at end of loop for fresh cycle */
-  98.5%, 100% { fill: #0e4429; stroke: none; filter: none; opacity: 1; }
+  0%, 40.56% { fill: #9be9a8; stroke: none; }
+  40.67% { fill: #ffffff; stroke: #ffea00; stroke-width: 1.5; }
+  41.00% { fill: #ff4500; stroke: #ff8c00; stroke-width: 1.0; }
+  42.50% { fill: #7f1d1d; stroke: none; }
+  43.61%, 97.22% { fill: #161b22; stroke: none; }
+  98.33%, 100% { fill: #9be9a8; stroke: none; }
 }
-.target-block-7 { animation: targetBurn7 18.0s ease-in-out infinite; }
+.target-block-7 { animation: targetBurn7 18.0s ease-out infinite; }
 
 
 @keyframes muzzleFlash8 {
-  0%, 47.67% { opacity: 0; transform: translate(693px, 95px) scale(0); }
-  47.78% { opacity: 1; transform: translate(693px, 95px) scale(1.4); }
-  48.22% { opacity: 0; transform: translate(693px, 95px) scale(0.2); }
+  0%, 46.56% { opacity: 0; transform: translate(638px, 95px) scale(0); }
+  46.67% { opacity: 1; transform: translate(638px, 95px) scale(1.4); }
+  47.11% { opacity: 0; transform: translate(638px, 95px) scale(0.2); }
   100% { opacity: 0; }
 }
 .muzzle-flash-8 { animation: muzzleFlash8 18.0s ease-out infinite; }
 
 
 @keyframes flyBullet8 {
-  0%, 47.72% { opacity: 0; transform: translate(693px, 95px) scale(0.4); }
-  47.78% { opacity: 1; transform: translate(693px, 95px) scale(1); }
-  48.33% { opacity: 1; transform: translate(791px, 95px) scale(1.1); }
-  48.50%, 100% { opacity: 0; transform: translate(791px, 95px); }
+  0%, 46.61% { opacity: 0; transform: translate(638px, 95px) scale(0.4); }
+  46.67% { opacity: 1; transform: translate(638px, 95px) scale(1.0); }
+  47.22% { opacity: 1; transform: translate(707px, 95px) scale(1.1); }
+  47.39%, 100% { opacity: 0; transform: translate(707px, 95px); }
 }
 .bullet-8 { animation: flyBullet8 18.0s linear infinite; }
 
 
 @keyframes shockwave8 {
-  0%, 48.28% { opacity: 0; transform: translate(791px, 95px) scale(0.2); }
-  48.33% { opacity: 1; transform: translate(791px, 95px) scale(0.5); }
-  49.56% { opacity: 0; transform: translate(791px, 95px) scale(2.2); }
+  0%, 47.17% { opacity: 0; transform: translate(707px, 95px) scale(0.2); }
+  47.22% { opacity: 1; transform: translate(707px, 95px) scale(0.5); }
+  48.44% { opacity: 0; transform: translate(707px, 95px) scale(2.2); }
   100% { opacity: 0; }
 }
 .shockwave-8 { animation: shockwave8 18.0s ease-out infinite; }
 
 
 @keyframes sparkExplosion8 {
-  0%, 48.28% { opacity: 0; transform: translate(791px, 95px) scale(0); }
-  48.33% { opacity: 1; transform: translate(791px, 95px) scale(1); }
-  49.44% { opacity: 0; transform: translate(791px, 95px) scale(1.8) rotate(35deg); }
+  0%, 47.17% { opacity: 0; transform: translate(707px, 95px) scale(0); }
+  47.22% { opacity: 1; transform: translate(707px, 95px) scale(1.0); }
+  48.33% { opacity: 0; transform: translate(707px, 95px) scale(1.8) rotate(35deg); }
   100% { opacity: 0; }
 }
 .detonation-8 { animation: sparkExplosion8 18.0s ease-out infinite; }
 
 
 @keyframes targetBurn8 {
-  0%, 48.28% { fill: #0e4429; stroke: none; filter: none; opacity: 1; }
-  48.33% { fill: #ffffff; filter: drop-shadow(0 0 6px #ffffff); opacity: 1; }
-  48.61% { fill: #ffea00; filter: drop-shadow(0 0 8px #ff6600); opacity: 1; }
-  49.17% { fill: #ff4500; filter: drop-shadow(0 0 6px #ff2200); opacity: 1; }
-  50.28% { fill: #b91c1c; filter: drop-shadow(0 0 2px #ff4500); opacity: 0.8; }
-  /* DISAPPEARS! Becomes empty dark square #161b22, completely wiped out! */
-  51.11%, 97.0% { fill: #161b22; stroke: none; filter: none; opacity: 1; }
-  /* Respawns green at end of loop for fresh cycle */
-  98.5%, 100% { fill: #0e4429; stroke: none; filter: none; opacity: 1; }
+  0%, 47.22% { fill: #9be9a8; stroke: none; }
+  47.33% { fill: #ffffff; stroke: #ffea00; stroke-width: 1.5; }
+  47.67% { fill: #ff4500; stroke: #ff8c00; stroke-width: 1.0; }
+  49.17% { fill: #7f1d1d; stroke: none; }
+  50.28%, 97.22% { fill: #161b22; stroke: none; }
+  98.33%, 100% { fill: #9be9a8; stroke: none; }
 }
-.target-block-8 { animation: targetBurn8 18.0s ease-in-out infinite; }
+.target-block-8 { animation: targetBurn8 18.0s ease-out infinite; }
 
 
 @keyframes muzzleFlash9 {
-  0%, 55.44% { opacity: 0; transform: translate(728px, 151px) scale(0); }
-  55.56% { opacity: 1; transform: translate(728px, 151px) scale(1.4); }
-  56.00% { opacity: 0; transform: translate(728px, 151px) scale(0.2); }
+  0%, 52.11% { opacity: 0; transform: translate(638px, 151px) scale(0); }
+  52.22% { opacity: 1; transform: translate(638px, 151px) scale(1.4); }
+  52.67% { opacity: 0; transform: translate(638px, 151px) scale(0.2); }
   100% { opacity: 0; }
 }
 .muzzle-flash-9 { animation: muzzleFlash9 18.0s ease-out infinite; }
 
 
 @keyframes flyBullet9 {
-  0%, 55.50% { opacity: 0; transform: translate(728px, 151px) scale(0.4); }
-  55.56% { opacity: 1; transform: translate(728px, 151px) scale(1); }
-  56.11% { opacity: 1; transform: translate(777px, 151px) scale(1.1); }
-  56.28%, 100% { opacity: 0; transform: translate(777px, 151px); }
+  0%, 52.17% { opacity: 0; transform: translate(638px, 151px) scale(0.4); }
+  52.22% { opacity: 1; transform: translate(638px, 151px) scale(1.0); }
+  52.78% { opacity: 1; transform: translate(707px, 151px) scale(1.1); }
+  52.94%, 100% { opacity: 0; transform: translate(707px, 151px); }
 }
 .bullet-9 { animation: flyBullet9 18.0s linear infinite; }
 
 
 @keyframes shockwave9 {
-  0%, 56.06% { opacity: 0; transform: translate(777px, 151px) scale(0.2); }
-  56.11% { opacity: 1; transform: translate(777px, 151px) scale(0.5); }
-  57.33% { opacity: 0; transform: translate(777px, 151px) scale(2.2); }
+  0%, 52.72% { opacity: 0; transform: translate(707px, 151px) scale(0.2); }
+  52.78% { opacity: 1; transform: translate(707px, 151px) scale(0.5); }
+  54.00% { opacity: 0; transform: translate(707px, 151px) scale(2.2); }
   100% { opacity: 0; }
 }
 .shockwave-9 { animation: shockwave9 18.0s ease-out infinite; }
 
 
 @keyframes sparkExplosion9 {
-  0%, 56.06% { opacity: 0; transform: translate(777px, 151px) scale(0); }
-  56.11% { opacity: 1; transform: translate(777px, 151px) scale(1); }
-  57.22% { opacity: 0; transform: translate(777px, 151px) scale(1.8) rotate(35deg); }
+  0%, 52.72% { opacity: 0; transform: translate(707px, 151px) scale(0); }
+  52.78% { opacity: 1; transform: translate(707px, 151px) scale(1.0); }
+  53.89% { opacity: 0; transform: translate(707px, 151px) scale(1.8) rotate(35deg); }
   100% { opacity: 0; }
 }
 .detonation-9 { animation: sparkExplosion9 18.0s ease-out infinite; }
 
 
 @keyframes targetBurn9 {
-  0%, 56.06% { fill: #26a641; stroke: none; filter: none; opacity: 1; }
-  56.11% { fill: #ffffff; filter: drop-shadow(0 0 6px #ffffff); opacity: 1; }
-  56.39% { fill: #ffea00; filter: drop-shadow(0 0 8px #ff6600); opacity: 1; }
-  56.94% { fill: #ff4500; filter: drop-shadow(0 0 6px #ff2200); opacity: 1; }
-  58.06% { fill: #b91c1c; filter: drop-shadow(0 0 2px #ff4500); opacity: 0.8; }
-  /* DISAPPEARS! Becomes empty dark square #161b22, completely wiped out! */
-  58.89%, 97.0% { fill: #161b22; stroke: none; filter: none; opacity: 1; }
-  /* Respawns green at end of loop for fresh cycle */
-  98.5%, 100% { fill: #26a641; stroke: none; filter: none; opacity: 1; }
+  0%, 52.78% { fill: #216e39; stroke: none; }
+  52.89% { fill: #ffffff; stroke: #ffea00; stroke-width: 1.5; }
+  53.22% { fill: #ff4500; stroke: #ff8c00; stroke-width: 1.0; }
+  54.72% { fill: #7f1d1d; stroke: none; }
+  55.83%, 97.22% { fill: #161b22; stroke: none; }
+  98.33%, 100% { fill: #216e39; stroke: none; }
 }
-.target-block-9 { animation: targetBurn9 18.0s ease-in-out infinite; }
+.target-block-9 { animation: targetBurn9 18.0s ease-out infinite; }
 
 
 @keyframes muzzleFlash10 {
-  0%, 61.00% { opacity: 0; transform: translate(728px, 151px) scale(0); }
-  61.11% { opacity: 1; transform: translate(728px, 151px) scale(1.4); }
-  61.56% { opacity: 0; transform: translate(728px, 151px) scale(0.2); }
+  0%, 58.78% { opacity: 0; transform: translate(658px, 67px) scale(0); }
+  58.89% { opacity: 1; transform: translate(658px, 67px) scale(1.4); }
+  59.33% { opacity: 0; transform: translate(658px, 67px) scale(0.2); }
   100% { opacity: 0; }
 }
 .muzzle-flash-10 { animation: muzzleFlash10 18.0s ease-out infinite; }
 
 
 @keyframes flyBullet10 {
-  0%, 61.06% { opacity: 0; transform: translate(728px, 151px) scale(0.4); }
-  61.11% { opacity: 1; transform: translate(728px, 151px) scale(1); }
-  61.67% { opacity: 1; transform: translate(791px, 151px) scale(1.1); }
-  61.83%, 100% { opacity: 0; transform: translate(791px, 151px); }
+  0%, 58.83% { opacity: 0; transform: translate(658px, 67px) scale(0.4); }
+  58.89% { opacity: 1; transform: translate(658px, 67px) scale(1.0); }
+  59.44% { opacity: 1; transform: translate(721px, 67px) scale(1.1); }
+  59.61%, 100% { opacity: 0; transform: translate(721px, 67px); }
 }
 .bullet-10 { animation: flyBullet10 18.0s linear infinite; }
 
 
 @keyframes shockwave10 {
-  0%, 61.61% { opacity: 0; transform: translate(791px, 151px) scale(0.2); }
-  61.67% { opacity: 1; transform: translate(791px, 151px) scale(0.5); }
-  62.89% { opacity: 0; transform: translate(791px, 151px) scale(2.2); }
+  0%, 59.39% { opacity: 0; transform: translate(721px, 67px) scale(0.2); }
+  59.44% { opacity: 1; transform: translate(721px, 67px) scale(0.5); }
+  60.67% { opacity: 0; transform: translate(721px, 67px) scale(2.2); }
   100% { opacity: 0; }
 }
 .shockwave-10 { animation: shockwave10 18.0s ease-out infinite; }
 
 
 @keyframes sparkExplosion10 {
-  0%, 61.61% { opacity: 0; transform: translate(791px, 151px) scale(0); }
-  61.67% { opacity: 1; transform: translate(791px, 151px) scale(1); }
-  62.78% { opacity: 0; transform: translate(791px, 151px) scale(1.8) rotate(35deg); }
+  0%, 59.39% { opacity: 0; transform: translate(721px, 67px) scale(0); }
+  59.44% { opacity: 1; transform: translate(721px, 67px) scale(1.0); }
+  60.56% { opacity: 0; transform: translate(721px, 67px) scale(1.8) rotate(35deg); }
   100% { opacity: 0; }
 }
 .detonation-10 { animation: sparkExplosion10 18.0s ease-out infinite; }
 
 
 @keyframes targetBurn10 {
-  0%, 61.61% { fill: #39d353; stroke: none; filter: none; opacity: 1; }
-  61.67% { fill: #ffffff; filter: drop-shadow(0 0 6px #ffffff); opacity: 1; }
-  61.94% { fill: #ffea00; filter: drop-shadow(0 0 8px #ff6600); opacity: 1; }
-  62.50% { fill: #ff4500; filter: drop-shadow(0 0 6px #ff2200); opacity: 1; }
-  63.61% { fill: #b91c1c; filter: drop-shadow(0 0 2px #ff4500); opacity: 0.8; }
-  /* DISAPPEARS! Becomes empty dark square #161b22, completely wiped out! */
-  64.44%, 97.0% { fill: #161b22; stroke: none; filter: none; opacity: 1; }
-  /* Respawns green at end of loop for fresh cycle */
-  98.5%, 100% { fill: #39d353; stroke: none; filter: none; opacity: 1; }
+  0%, 59.44% { fill: #9be9a8; stroke: none; }
+  59.56% { fill: #ffffff; stroke: #ffea00; stroke-width: 1.5; }
+  59.89% { fill: #ff4500; stroke: #ff8c00; stroke-width: 1.0; }
+  61.39% { fill: #7f1d1d; stroke: none; }
+  62.50%, 97.22% { fill: #161b22; stroke: none; }
+  98.33%, 100% { fill: #9be9a8; stroke: none; }
 }
-.target-block-10 { animation: targetBurn10 18.0s ease-in-out infinite; }
+.target-block-10 { animation: targetBurn10 18.0s ease-out infinite; }
 
 
 @keyframes muzzleFlash11 {
-  0%, 68.78% { opacity: 0; transform: translate(763px, 67px) scale(0); }
-  68.89% { opacity: 1; transform: translate(763px, 67px) scale(1.4); }
-  69.33% { opacity: 0; transform: translate(763px, 67px) scale(0.2); }
+  0%, 63.78% { opacity: 0; transform: translate(658px, 81px) scale(0); }
+  63.89% { opacity: 1; transform: translate(658px, 81px) scale(1.4); }
+  64.33% { opacity: 0; transform: translate(658px, 81px) scale(0.2); }
   100% { opacity: 0; }
 }
 .muzzle-flash-11 { animation: muzzleFlash11 18.0s ease-out infinite; }
 
 
 @keyframes flyBullet11 {
-  0%, 68.83% { opacity: 0; transform: translate(763px, 67px) scale(0.4); }
-  68.89% { opacity: 1; transform: translate(763px, 67px) scale(1); }
-  69.44% { opacity: 1; transform: translate(805px, 67px) scale(1.1); }
-  69.61%, 100% { opacity: 0; transform: translate(805px, 67px); }
+  0%, 63.83% { opacity: 0; transform: translate(658px, 81px) scale(0.4); }
+  63.89% { opacity: 1; transform: translate(658px, 81px) scale(1.0); }
+  64.44% { opacity: 1; transform: translate(721px, 81px) scale(1.1); }
+  64.61%, 100% { opacity: 0; transform: translate(721px, 81px); }
 }
 .bullet-11 { animation: flyBullet11 18.0s linear infinite; }
 
 
 @keyframes shockwave11 {
-  0%, 69.39% { opacity: 0; transform: translate(805px, 67px) scale(0.2); }
-  69.44% { opacity: 1; transform: translate(805px, 67px) scale(0.5); }
-  70.67% { opacity: 0; transform: translate(805px, 67px) scale(2.2); }
+  0%, 64.39% { opacity: 0; transform: translate(721px, 81px) scale(0.2); }
+  64.44% { opacity: 1; transform: translate(721px, 81px) scale(0.5); }
+  65.67% { opacity: 0; transform: translate(721px, 81px) scale(2.2); }
   100% { opacity: 0; }
 }
 .shockwave-11 { animation: shockwave11 18.0s ease-out infinite; }
 
 
 @keyframes sparkExplosion11 {
-  0%, 69.39% { opacity: 0; transform: translate(805px, 67px) scale(0); }
-  69.44% { opacity: 1; transform: translate(805px, 67px) scale(1); }
-  70.56% { opacity: 0; transform: translate(805px, 67px) scale(1.8) rotate(35deg); }
+  0%, 64.39% { opacity: 0; transform: translate(721px, 81px) scale(0); }
+  64.44% { opacity: 1; transform: translate(721px, 81px) scale(1.0); }
+  65.56% { opacity: 0; transform: translate(721px, 81px) scale(1.8) rotate(35deg); }
   100% { opacity: 0; }
 }
 .detonation-11 { animation: sparkExplosion11 18.0s ease-out infinite; }
 
 
 @keyframes targetBurn11 {
-  0%, 69.39% { fill: #0e4429; stroke: none; filter: none; opacity: 1; }
-  69.44% { fill: #ffffff; filter: drop-shadow(0 0 6px #ffffff); opacity: 1; }
-  69.72% { fill: #ffea00; filter: drop-shadow(0 0 8px #ff6600); opacity: 1; }
-  70.28% { fill: #ff4500; filter: drop-shadow(0 0 6px #ff2200); opacity: 1; }
-  71.39% { fill: #b91c1c; filter: drop-shadow(0 0 2px #ff4500); opacity: 0.8; }
-  /* DISAPPEARS! Becomes empty dark square #161b22, completely wiped out! */
-  72.22%, 97.0% { fill: #161b22; stroke: none; filter: none; opacity: 1; }
-  /* Respawns green at end of loop for fresh cycle */
-  98.5%, 100% { fill: #0e4429; stroke: none; filter: none; opacity: 1; }
+  0%, 64.44% { fill: #9be9a8; stroke: none; }
+  64.56% { fill: #ffffff; stroke: #ffea00; stroke-width: 1.5; }
+  64.89% { fill: #ff4500; stroke: #ff8c00; stroke-width: 1.0; }
+  66.39% { fill: #7f1d1d; stroke: none; }
+  67.50%, 97.22% { fill: #161b22; stroke: none; }
+  98.33%, 100% { fill: #9be9a8; stroke: none; }
 }
-.target-block-11 { animation: targetBurn11 18.0s ease-in-out infinite; }
+.target-block-11 { animation: targetBurn11 18.0s ease-out infinite; }
 
 
 @keyframes muzzleFlash12 {
-  0%, 73.78% { opacity: 0; transform: translate(763px, 81px) scale(0); }
-  73.89% { opacity: 1; transform: translate(763px, 81px) scale(1.4); }
-  74.33% { opacity: 0; transform: translate(763px, 81px) scale(0.2); }
+  0%, 68.78% { opacity: 0; transform: translate(658px, 95px) scale(0); }
+  68.89% { opacity: 1; transform: translate(658px, 95px) scale(1.4); }
+  69.33% { opacity: 0; transform: translate(658px, 95px) scale(0.2); }
   100% { opacity: 0; }
 }
 .muzzle-flash-12 { animation: muzzleFlash12 18.0s ease-out infinite; }
 
 
 @keyframes flyBullet12 {
-  0%, 73.83% { opacity: 0; transform: translate(763px, 81px) scale(0.4); }
-  73.89% { opacity: 1; transform: translate(763px, 81px) scale(1); }
-  74.44% { opacity: 1; transform: translate(805px, 81px) scale(1.1); }
-  74.61%, 100% { opacity: 0; transform: translate(805px, 81px); }
+  0%, 68.83% { opacity: 0; transform: translate(658px, 95px) scale(0.4); }
+  68.89% { opacity: 1; transform: translate(658px, 95px) scale(1.0); }
+  69.44% { opacity: 1; transform: translate(721px, 95px) scale(1.1); }
+  69.61%, 100% { opacity: 0; transform: translate(721px, 95px); }
 }
 .bullet-12 { animation: flyBullet12 18.0s linear infinite; }
 
 
 @keyframes shockwave12 {
-  0%, 74.39% { opacity: 0; transform: translate(805px, 81px) scale(0.2); }
-  74.44% { opacity: 1; transform: translate(805px, 81px) scale(0.5); }
-  75.67% { opacity: 0; transform: translate(805px, 81px) scale(2.2); }
+  0%, 69.39% { opacity: 0; transform: translate(721px, 95px) scale(0.2); }
+  69.44% { opacity: 1; transform: translate(721px, 95px) scale(0.5); }
+  70.67% { opacity: 0; transform: translate(721px, 95px) scale(2.2); }
   100% { opacity: 0; }
 }
 .shockwave-12 { animation: shockwave12 18.0s ease-out infinite; }
 
 
 @keyframes sparkExplosion12 {
-  0%, 74.39% { opacity: 0; transform: translate(805px, 81px) scale(0); }
-  74.44% { opacity: 1; transform: translate(805px, 81px) scale(1); }
-  75.56% { opacity: 0; transform: translate(805px, 81px) scale(1.8) rotate(35deg); }
+  0%, 69.39% { opacity: 0; transform: translate(721px, 95px) scale(0); }
+  69.44% { opacity: 1; transform: translate(721px, 95px) scale(1.0); }
+  70.56% { opacity: 0; transform: translate(721px, 95px) scale(1.8) rotate(35deg); }
   100% { opacity: 0; }
 }
 .detonation-12 { animation: sparkExplosion12 18.0s ease-out infinite; }
 
 
 @keyframes targetBurn12 {
-  0%, 74.39% { fill: #26a641; stroke: none; filter: none; opacity: 1; }
-  74.44% { fill: #ffffff; filter: drop-shadow(0 0 6px #ffffff); opacity: 1; }
-  74.72% { fill: #ffea00; filter: drop-shadow(0 0 8px #ff6600); opacity: 1; }
-  75.28% { fill: #ff4500; filter: drop-shadow(0 0 6px #ff2200); opacity: 1; }
-  76.39% { fill: #b91c1c; filter: drop-shadow(0 0 2px #ff4500); opacity: 0.8; }
-  /* DISAPPEARS! Becomes empty dark square #161b22, completely wiped out! */
-  77.22%, 97.0% { fill: #161b22; stroke: none; filter: none; opacity: 1; }
-  /* Respawns green at end of loop for fresh cycle */
-  98.5%, 100% { fill: #26a641; stroke: none; filter: none; opacity: 1; }
+  0%, 69.44% { fill: #40c463; stroke: none; }
+  69.56% { fill: #ffffff; stroke: #ffea00; stroke-width: 1.5; }
+  69.89% { fill: #ff4500; stroke: #ff8c00; stroke-width: 1.0; }
+  71.39% { fill: #7f1d1d; stroke: none; }
+  72.50%, 97.22% { fill: #161b22; stroke: none; }
+  98.33%, 100% { fill: #40c463; stroke: none; }
 }
-.target-block-12 { animation: targetBurn12 18.0s ease-in-out infinite; }
+.target-block-12 { animation: targetBurn12 18.0s ease-out infinite; }
 
 
 @keyframes muzzleFlash13 {
-  0%, 78.78% { opacity: 0; transform: translate(763px, 95px) scale(0); }
-  78.89% { opacity: 1; transform: translate(763px, 95px) scale(1.4); }
-  79.33% { opacity: 0; transform: translate(763px, 95px) scale(0.2); }
+  0%, 73.78% { opacity: 0; transform: translate(658px, 123px) scale(0); }
+  73.89% { opacity: 1; transform: translate(658px, 123px) scale(1.4); }
+  74.33% { opacity: 0; transform: translate(658px, 123px) scale(0.2); }
   100% { opacity: 0; }
 }
 .muzzle-flash-13 { animation: muzzleFlash13 18.0s ease-out infinite; }
 
 
 @keyframes flyBullet13 {
-  0%, 78.83% { opacity: 0; transform: translate(763px, 95px) scale(0.4); }
-  78.89% { opacity: 1; transform: translate(763px, 95px) scale(1); }
-  79.44% { opacity: 1; transform: translate(805px, 95px) scale(1.1); }
-  79.61%, 100% { opacity: 0; transform: translate(805px, 95px); }
+  0%, 73.83% { opacity: 0; transform: translate(658px, 123px) scale(0.4); }
+  73.89% { opacity: 1; transform: translate(658px, 123px) scale(1.0); }
+  74.44% { opacity: 1; transform: translate(721px, 123px) scale(1.1); }
+  74.61%, 100% { opacity: 0; transform: translate(721px, 123px); }
 }
 .bullet-13 { animation: flyBullet13 18.0s linear infinite; }
 
 
 @keyframes shockwave13 {
-  0%, 79.39% { opacity: 0; transform: translate(805px, 95px) scale(0.2); }
-  79.44% { opacity: 1; transform: translate(805px, 95px) scale(0.5); }
-  80.67% { opacity: 0; transform: translate(805px, 95px) scale(2.2); }
+  0%, 74.39% { opacity: 0; transform: translate(721px, 123px) scale(0.2); }
+  74.44% { opacity: 1; transform: translate(721px, 123px) scale(0.5); }
+  75.67% { opacity: 0; transform: translate(721px, 123px) scale(2.2); }
   100% { opacity: 0; }
 }
 .shockwave-13 { animation: shockwave13 18.0s ease-out infinite; }
 
 
 @keyframes sparkExplosion13 {
-  0%, 79.39% { opacity: 0; transform: translate(805px, 95px) scale(0); }
-  79.44% { opacity: 1; transform: translate(805px, 95px) scale(1); }
-  80.56% { opacity: 0; transform: translate(805px, 95px) scale(1.8) rotate(35deg); }
+  0%, 74.39% { opacity: 0; transform: translate(721px, 123px) scale(0); }
+  74.44% { opacity: 1; transform: translate(721px, 123px) scale(1.0); }
+  75.56% { opacity: 0; transform: translate(721px, 123px) scale(1.8) rotate(35deg); }
   100% { opacity: 0; }
 }
 .detonation-13 { animation: sparkExplosion13 18.0s ease-out infinite; }
 
 
 @keyframes targetBurn13 {
-  0%, 79.39% { fill: #39d353; stroke: none; filter: none; opacity: 1; }
-  79.44% { fill: #ffffff; filter: drop-shadow(0 0 6px #ffffff); opacity: 1; }
-  79.72% { fill: #ffea00; filter: drop-shadow(0 0 8px #ff6600); opacity: 1; }
-  80.28% { fill: #ff4500; filter: drop-shadow(0 0 6px #ff2200); opacity: 1; }
-  81.39% { fill: #b91c1c; filter: drop-shadow(0 0 2px #ff4500); opacity: 0.8; }
-  /* DISAPPEARS! Becomes empty dark square #161b22, completely wiped out! */
-  82.22%, 97.0% { fill: #161b22; stroke: none; filter: none; opacity: 1; }
-  /* Respawns green at end of loop for fresh cycle */
-  98.5%, 100% { fill: #39d353; stroke: none; filter: none; opacity: 1; }
+  0%, 74.44% { fill: #216e39; stroke: none; }
+  74.56% { fill: #ffffff; stroke: #ffea00; stroke-width: 1.5; }
+  74.89% { fill: #ff4500; stroke: #ff8c00; stroke-width: 1.0; }
+  76.39% { fill: #7f1d1d; stroke: none; }
+  77.50%, 97.22% { fill: #161b22; stroke: none; }
+  98.33%, 100% { fill: #216e39; stroke: none; }
 }
-.target-block-13 { animation: targetBurn13 18.0s ease-in-out infinite; }
+.target-block-13 { animation: targetBurn13 18.0s ease-out infinite; }
 
 
 @keyframes muzzleFlash14 {
-  0%, 83.78% { opacity: 0; transform: translate(763px, 123px) scale(0); }
-  83.89% { opacity: 1; transform: translate(763px, 123px) scale(1.4); }
-  84.33% { opacity: 0; transform: translate(763px, 123px) scale(0.2); }
+  0%, 78.78% { opacity: 0; transform: translate(658px, 137px) scale(0); }
+  78.89% { opacity: 1; transform: translate(658px, 137px) scale(1.4); }
+  79.33% { opacity: 0; transform: translate(658px, 137px) scale(0.2); }
   100% { opacity: 0; }
 }
 .muzzle-flash-14 { animation: muzzleFlash14 18.0s ease-out infinite; }
 
 
 @keyframes flyBullet14 {
-  0%, 83.83% { opacity: 0; transform: translate(763px, 123px) scale(0.4); }
-  83.89% { opacity: 1; transform: translate(763px, 123px) scale(1); }
-  84.44% { opacity: 1; transform: translate(805px, 123px) scale(1.1); }
-  84.61%, 100% { opacity: 0; transform: translate(805px, 123px); }
+  0%, 78.83% { opacity: 0; transform: translate(658px, 137px) scale(0.4); }
+  78.89% { opacity: 1; transform: translate(658px, 137px) scale(1.0); }
+  79.44% { opacity: 1; transform: translate(721px, 137px) scale(1.1); }
+  79.61%, 100% { opacity: 0; transform: translate(721px, 137px); }
 }
 .bullet-14 { animation: flyBullet14 18.0s linear infinite; }
 
 
 @keyframes shockwave14 {
-  0%, 84.39% { opacity: 0; transform: translate(805px, 123px) scale(0.2); }
-  84.44% { opacity: 1; transform: translate(805px, 123px) scale(0.5); }
-  85.67% { opacity: 0; transform: translate(805px, 123px) scale(2.2); }
+  0%, 79.39% { opacity: 0; transform: translate(721px, 137px) scale(0.2); }
+  79.44% { opacity: 1; transform: translate(721px, 137px) scale(0.5); }
+  80.67% { opacity: 0; transform: translate(721px, 137px) scale(2.2); }
   100% { opacity: 0; }
 }
 .shockwave-14 { animation: shockwave14 18.0s ease-out infinite; }
 
 
 @keyframes sparkExplosion14 {
-  0%, 84.39% { opacity: 0; transform: translate(805px, 123px) scale(0); }
-  84.44% { opacity: 1; transform: translate(805px, 123px) scale(1); }
-  85.56% { opacity: 0; transform: translate(805px, 123px) scale(1.8) rotate(35deg); }
+  0%, 79.39% { opacity: 0; transform: translate(721px, 137px) scale(0); }
+  79.44% { opacity: 1; transform: translate(721px, 137px) scale(1.0); }
+  80.56% { opacity: 0; transform: translate(721px, 137px) scale(1.8) rotate(35deg); }
   100% { opacity: 0; }
 }
 .detonation-14 { animation: sparkExplosion14 18.0s ease-out infinite; }
 
 
 @keyframes targetBurn14 {
-  0%, 84.39% { fill: #39d353; stroke: none; filter: none; opacity: 1; }
-  84.44% { fill: #ffffff; filter: drop-shadow(0 0 6px #ffffff); opacity: 1; }
-  84.72% { fill: #ffea00; filter: drop-shadow(0 0 8px #ff6600); opacity: 1; }
-  85.28% { fill: #ff4500; filter: drop-shadow(0 0 6px #ff2200); opacity: 1; }
-  86.39% { fill: #b91c1c; filter: drop-shadow(0 0 2px #ff4500); opacity: 0.8; }
-  /* DISAPPEARS! Becomes empty dark square #161b22, completely wiped out! */
-  87.22%, 97.0% { fill: #161b22; stroke: none; filter: none; opacity: 1; }
-  /* Respawns green at end of loop for fresh cycle */
-  98.5%, 100% { fill: #39d353; stroke: none; filter: none; opacity: 1; }
+  0%, 79.44% { fill: #216e39; stroke: none; }
+  79.56% { fill: #ffffff; stroke: #ffea00; stroke-width: 1.5; }
+  79.89% { fill: #ff4500; stroke: #ff8c00; stroke-width: 1.0; }
+  81.39% { fill: #7f1d1d; stroke: none; }
+  82.50%, 97.22% { fill: #161b22; stroke: none; }
+  98.33%, 100% { fill: #216e39; stroke: none; }
 }
-.target-block-14 { animation: targetBurn14 18.0s ease-in-out infinite; }
+.target-block-14 { animation: targetBurn14 18.0s ease-out infinite; }
 
 
 @keyframes radarSweep {
-  0%   { transform: translateX(50px); opacity: 0; }
-  10%  { opacity: 0.18; }
-  90%  { opacity: 0.18; }
-  100% { transform: translateX(810px); opacity: 0; }
+  0%   { transform: translateX(0px); opacity: 0.1; }
+  50%  { opacity: 0.6; }
+  100% { transform: translateX(810px); opacity: 0.1; }
 }
-.radar-scan { animation: radarSweep 9s linear infinite; }
-
-
-@keyframes ledPulse {
-  0%, 100% { opacity: 0.6; filter: drop-shadow(0 0 2px #22d3ee); }
-  50%      { opacity: 1.0; filter: drop-shadow(0 0 6px #22d3ee); }
-}
-.status-led { animation: ledPulse 1.8s ease-in-out infinite; }
-
-
-@keyframes visorSparkle {
-  0%, 91.0% { opacity: 0; transform: scale(0); }
-  92.0%, 94.5% { opacity: 1; transform: scale(1.3) rotate(45deg); filter: drop-shadow(0 0 4px #22d3ee); }
-  95.5%, 100% { opacity: 0; transform: scale(0); }
-}
-.visor-sparkle { animation: visorSparkle 18.0s ease-in-out infinite; }
-
-
-@keyframes victoryPrompt {
-  0%, 88.0% { opacity: 0; transform: translateY(4px); }
-  89.5%, 96.0% { opacity: 1; transform: translateY(0px); filter: drop-shadow(0 0 6px #39d353); }
-  97.5%, 100% { opacity: 0; transform: translateY(-4px); }
-}
-.victory-hud { animation: victoryPrompt 18.0s ease-in-out infinite; }
+.radar-scan { animation: radarSweep 7.0s linear infinite; }
 
     </style>
   </defs>
@@ -806,21 +741,20 @@
   <!-- Top Neon Cyber Accent Line -->
   <line x1="15" y1="1" x2="865" y2="1" stroke="url(#topCyberGlow)" stroke-width="2.2"/>
 
-  <!-- Month Headers -->
+  <!-- Month Headers (Calendar Year 2026: Jan to Dec matching Image 2!) -->
   <g transform="translate(0, 48)" font-size="10" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" fill="#7d8590">
-    <text x="72" y="0">Nov</text>
-    <text x="142" y="0">Dec</text>
-    <text x="212" y="0">Jan</text>
-    <text x="282" y="0">Feb</text>
-    <text x="352" y="0">Mar</text>
-    <text x="422" y="0">Apr</text>
-    <text x="492" y="0">May</text>
-    <text x="562" y="0">Jun</text>
-    <text x="632" y="0">Jul</text>
-    <text x="702" y="0">Aug</text>
-    <text x="772" y="0">Sep</text>
-    <text x="825" y="0">Oct</text>
-    <text x="856" y="0">Nov</text>
+    <text x="72" y="0">Jan</text>
+    <text x="128" y="0">Feb</text>
+    <text x="184" y="0">Mar</text>
+    <text x="254" y="0">Apr</text>
+    <text x="310" y="0">May</text>
+    <text x="366" y="0">Jun</text>
+    <text x="436" y="0">Jul</text>
+    <text x="492" y="0">Aug</text>
+    <text x="562" y="0">Sep</text>
+    <text x="618" y="0">Oct</text>
+    <text x="688" y="0">Nov</text>
+    <text x="758" y="0">Dec</text>
   </g>
 
   <!-- Weekday Labels -->
@@ -1127,14 +1061,14 @@
     <rect x="646" y="90" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="646" y="104" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="646" y="118" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect x="646" y="132" width="10" height="10" rx="2" fill="#161b22"/>
+    <rect class="target-block-1" x="646" y="132" width="10" height="10" rx="2" fill="#40c463"/>
     <rect x="646" y="146" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="660" y="62" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="660" y="76" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="660" y="90" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect x="660" y="104" width="10" height="10" rx="2" fill="#161b22"/>
+    <rect class="target-block-3" x="660" y="104" width="10" height="10" rx="2" fill="#216e39"/>
     <rect x="660" y="118" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect x="660" y="132" width="10" height="10" rx="2" fill="#161b22"/>
+    <rect class="target-block-2" x="660" y="132" width="10" height="10" rx="2" fill="#9be9a8"/>
     <rect x="660" y="146" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="674" y="62" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="674" y="76" width="10" height="10" rx="2" fill="#161b22"/>
@@ -1144,39 +1078,39 @@
     <rect x="674" y="132" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="674" y="146" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="688" y="62" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect x="688" y="76" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect x="688" y="90" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect x="688" y="104" width="10" height="10" rx="2" fill="#161b22"/>
+    <rect class="target-block-4" x="688" y="76" width="10" height="10" rx="2" fill="#40c463"/>
+    <rect class="target-block-5" x="688" y="90" width="10" height="10" rx="2" fill="#9be9a8"/>
+    <rect class="target-block-6" x="688" y="104" width="10" height="10" rx="2" fill="#9be9a8"/>
     <rect x="688" y="118" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="688" y="132" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect x="688" y="146" width="10" height="10" rx="2" fill="#161b22"/>
+    <rect class="target-block-7" x="688" y="146" width="10" height="10" rx="2" fill="#9be9a8"/>
     <rect x="702" y="62" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="702" y="76" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect x="702" y="90" width="10" height="10" rx="2" fill="#161b22"/>
+    <rect class="target-block-8" x="702" y="90" width="10" height="10" rx="2" fill="#9be9a8"/>
     <rect x="702" y="104" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="702" y="118" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="702" y="132" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect x="702" y="146" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect x="716" y="62" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect x="716" y="76" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect x="716" y="90" width="10" height="10" rx="2" fill="#161b22"/>
+    <rect class="target-block-9" x="702" y="146" width="10" height="10" rx="2" fill="#216e39"/>
+    <rect class="target-block-10" x="716" y="62" width="10" height="10" rx="2" fill="#9be9a8"/>
+    <rect class="target-block-11" x="716" y="76" width="10" height="10" rx="2" fill="#9be9a8"/>
+    <rect class="target-block-12" x="716" y="90" width="10" height="10" rx="2" fill="#40c463"/>
     <rect x="716" y="104" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect x="716" y="118" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect x="716" y="132" width="10" height="10" rx="2" fill="#161b22"/>
+    <rect class="target-block-13" x="716" y="118" width="10" height="10" rx="2" fill="#216e39"/>
+    <rect class="target-block-14" x="716" y="132" width="10" height="10" rx="2" fill="#216e39"/>
     <rect x="716" y="146" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="730" y="62" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="730" y="76" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="730" y="90" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="730" y="104" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="730" y="118" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect class="target-block-1" x="730" y="132" width="10" height="10" rx="2" fill="#006d32"/>
+    <rect x="730" y="132" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="730" y="146" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="744" y="62" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="744" y="76" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect class="target-block-3" x="744" y="90" width="10" height="10" rx="2" fill="#0e4429"/>
-    <rect class="target-block-4" x="744" y="104" width="10" height="10" rx="2" fill="#39d353"/>
+    <rect x="744" y="90" width="10" height="10" rx="2" fill="#161b22"/>
+    <rect x="744" y="104" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="744" y="118" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect class="target-block-2" x="744" y="132" width="10" height="10" rx="2" fill="#26a641"/>
+    <rect x="744" y="132" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="744" y="146" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="758" y="62" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="758" y="76" width="10" height="10" rx="2" fill="#161b22"/>
@@ -1186,24 +1120,24 @@
     <rect x="758" y="132" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="758" y="146" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="772" y="62" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect class="target-block-5" x="772" y="76" width="10" height="10" rx="2" fill="#39d353"/>
-    <rect class="target-block-6" x="772" y="90" width="10" height="10" rx="2" fill="#26a641"/>
-    <rect class="target-block-7" x="772" y="104" width="10" height="10" rx="2" fill="#0e4429"/>
+    <rect x="772" y="76" width="10" height="10" rx="2" fill="#161b22"/>
+    <rect x="772" y="90" width="10" height="10" rx="2" fill="#161b22"/>
+    <rect x="772" y="104" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="772" y="118" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="772" y="132" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect class="target-block-9" x="772" y="146" width="10" height="10" rx="2" fill="#26a641"/>
+    <rect x="772" y="146" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="786" y="62" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="786" y="76" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect class="target-block-8" x="786" y="90" width="10" height="10" rx="2" fill="#0e4429"/>
+    <rect x="786" y="90" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="786" y="104" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="786" y="118" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="786" y="132" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect class="target-block-10" x="786" y="146" width="10" height="10" rx="2" fill="#39d353"/>
-    <rect class="target-block-11" x="800" y="62" width="10" height="10" rx="2" fill="#0e4429"/>
-    <rect class="target-block-12" x="800" y="76" width="10" height="10" rx="2" fill="#26a641"/>
-    <rect class="target-block-13" x="800" y="90" width="10" height="10" rx="2" fill="#39d353"/>
+    <rect x="786" y="146" width="10" height="10" rx="2" fill="#161b22"/>
+    <rect x="800" y="62" width="10" height="10" rx="2" fill="#161b22"/>
+    <rect x="800" y="76" width="10" height="10" rx="2" fill="#161b22"/>
+    <rect x="800" y="90" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="800" y="104" width="10" height="10" rx="2" fill="#161b22"/>
-    <rect class="target-block-14" x="800" y="118" width="10" height="10" rx="2" fill="#39d353"/>
+    <rect x="800" y="118" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="800" y="132" width="10" height="10" rx="2" fill="#161b22"/>
     <rect x="800" y="146" width="10" height="10" rx="2" fill="#161b22"/>
   </g>
@@ -1504,10 +1438,6 @@
       <!-- Visor -->
       <rect x="-1" y="-7.5" width="8.5" height="6.5" rx="3.2" fill="url(#visorGrad)" stroke="#450a0a" stroke-width="1.4"/>
       <ellipse cx="3.2" cy="-5.5" rx="2.2" ry="1.1" fill="#ffffff" opacity="0.85" transform="rotate(-10 3.2 -5.5)"/>
-      <!-- Sparkle Star on Visor at Victory -->
-      <g transform="translate(6, -6)" class="visor-sparkle">
-        <polygon points="0,-4 1,-1 4,0 1,1 0,4 -1,1 -4,0 -1,-1" fill="#cffafe"/>
-      </g>
       
       <!-- Blaster Plasma Cannon (Mounted on EXACT ROW CENTER y=0!) -->
       <g class="impostor-blaster">
