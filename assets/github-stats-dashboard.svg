@@ -304,7 +304,7 @@ text{font-family:'Segoe UI Variable Display','Segoe UI','SF Pro Display',Inter,s
   </g>
 
   <!-- Hourly Bars (00 to 23) -->
-  <rect class="b" x="112.4" y="459.2" width="26" height="12.8" rx="5" fill="url(#bar)" style="animation:k11 14.0s infinite"/>
+  <rect class="b" x="112.4" y="456.0" width="26" height="16.0" rx="5" fill="url(#bar)" style="animation:k11 14.0s infinite"/>
 <rect class="b" x="155.2" y="452.8" width="26" height="19.2" rx="5" fill="url(#bar)" style="animation:k12 14.0s infinite"/>
 <rect class="b" x="198.1" y="388.8" width="26" height="83.2" rx="5" fill="url(#barPeak)" style="animation:k13 14.0s infinite"/>
 <rect class="b" x="241.0" y="465.6" width="26" height="6.4" rx="5" fill="url(#bar)" style="animation:k14 14.0s infinite"/>
