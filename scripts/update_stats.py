@@ -288,14 +288,8 @@ text{{font-family:'Segoe UI Variable Display','Segoe UI','SF Pro Display',Inter,
   <clipPath id="c_lng"><rect x="884.0" y="156.1" width="98.0" height="80.6"/></clipPath>
 </defs>
 
-<!-- Background -->
-<g clip-path="url(#frame)">
-  <rect width="1200" height="800" fill="url(#bg)"/>
-  <rect width="1200" height="800" fill="url(#dots)"/>
-  <rect width="1200" height="800" fill="url(#glowA)"/>
-  <rect width="1200" height="800" fill="url(#glowB)"/>
-</g>
-<rect x="0.5" y="0.5" width="1199" height="799" rx="28" fill="none" stroke="#FFFFFF" stroke-opacity="0.08"/>
+<!-- Transparent Seamless Background (Outer container plate removed per user request) -->
+<rect width="1200" height="800" fill="none"/>
 
 <!-- Main Animated Content -->
 <g id="content">

@@ -12,9 +12,9 @@ text{font-family:'Segoe UI Variable Display','Segoe UI','SF Pro Display',Inter,s
 @keyframes k4{0%,4.643%{stroke-dashoffset:389.56;animation-timing-function:cubic-bezier(.2,.8,.2,1)}16.786%,100%{stroke-dashoffset:0}}
 @keyframes k5{0%,17.143%{opacity:0;animation-timing-function:ease}20.0%,100%{opacity:1}}
 @keyframes k6{0%,4.643%{transform:translateY(0px);animation-timing-function:cubic-bezier(.2,.8,.2,1)}16.786%,100%{transform:translateY(-644.0px)}}
-@keyframes k7{0%,5.5%{transform:translateY(0px);animation-timing-function:cubic-bezier(.2,.8,.2,1)}17.643%,100%{transform:translateY(-1159.2px)}}
+@keyframes k7{0%,5.5%{transform:translateY(0px);animation-timing-function:cubic-bezier(.2,.8,.2,1)}17.643%,100%{transform:translateY(-1223.6px)}}
 @keyframes k8{0%,5.714%{transform:translateY(0px);animation-timing-function:cubic-bezier(.2,.8,.2,1)}17.857%,100%{transform:translateY(-1008.0px)}}
-@keyframes k9{0%,6.571%{transform:translateY(0px);animation-timing-function:cubic-bezier(.2,.8,.2,1)}18.714%,100%{transform:translateY(-1814.4px)}}
+@keyframes k9{0%,6.571%{transform:translateY(0px);animation-timing-function:cubic-bezier(.2,.8,.2,1)}18.714%,100%{transform:translateY(-1915.2px)}}
 @keyframes k10{0%,18.571%{opacity:0;animation-timing-function:ease}22.857%,100%{opacity:1}}
 @keyframes k11{0%,10.714%{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}15.714%,100%{transform:scaleY(1)}}
 @keyframes k12{0%,11.0%{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}16.0%,100%{transform:scaleY(1)}}
@@ -92,14 +92,8 @@ text{font-family:'Segoe UI Variable Display','Segoe UI','SF Pro Display',Inter,s
   <clipPath id="c_lng"><rect x="884.0" y="156.1" width="98.0" height="80.6"/></clipPath>
 </defs>
 
-<!-- Background -->
-<g clip-path="url(#frame)">
-  <rect width="1200" height="800" fill="url(#bg)"/>
-  <rect width="1200" height="800" fill="url(#dots)"/>
-  <rect width="1200" height="800" fill="url(#glowA)"/>
-  <rect width="1200" height="800" fill="url(#glowB)"/>
-</g>
-<rect x="0.5" y="0.5" width="1199" height="799" rx="28" fill="none" stroke="#FFFFFF" stroke-opacity="0.08"/>
+<!-- Transparent Seamless Background (Outer container plate removed per user request) -->
+<rect width="1200" height="800" fill="none"/>
 
 <!-- Main Animated Content -->
 <g id="content">
@@ -209,7 +203,7 @@ text{font-family:'Segoe UI Variable Display','Segoe UI','SF Pro Display',Inter,s
 <text x="457.5" y="1366.2" text-anchor="middle" font-size="46" font-weight="800" fill="url(#numfill)">8</text>
 <text x="457.5" y="1430.6" text-anchor="middle" font-size="46" font-weight="800" fill="url(#numfill)">9</text>
     </g>
-    <g style="animation:k7 14.0s infinite;transform:translateY(-1159.2px)">
+    <g style="animation:k7 14.0s infinite;transform:translateY(-1223.6px)">
       <text x="486.5" y="207.0" text-anchor="middle" font-size="46" font-weight="800" fill="url(#numfill)">0</text>
 <text x="486.5" y="271.4" text-anchor="middle" font-size="46" font-weight="800" fill="url(#numfill)">1</text>
 <text x="486.5" y="335.8" text-anchor="middle" font-size="46" font-weight="800" fill="url(#numfill)">2</text>
@@ -234,7 +228,7 @@ text{font-family:'Segoe UI Variable Display','Segoe UI','SF Pro Display',Inter,s
   </g>
   <text x="472" y="229" text-anchor="middle" font-size="12" font-weight="600" fill="#8B94B3">days</text>
   <text x="574" y="174" font-size="19" font-weight="700" fill="#E8ECF8">Current streak</text>
-  <text x="574" y="200" font-size="14" fill="#5EEAD4" font-weight="600">Nov 13 to Nov 20</text>
+  <text x="574" y="200" font-size="14" fill="#5EEAD4" font-weight="600">Nov 13 to Nov 21</text>
   <text x="574" y="228" font-size="13" fill="#8B94B3">Matches the longest streak</text>
 
   <!-- Top Card 3: Longest Streak -->
@@ -263,7 +257,7 @@ text{font-family:'Segoe UI Variable Display','Segoe UI','SF Pro Display',Inter,s
 <text x="910.5" y="2032.4" text-anchor="middle" font-size="72" font-weight="800" fill="url(#numfill)">8</text>
 <text x="910.5" y="2133.2" text-anchor="middle" font-size="72" font-weight="800" fill="url(#numfill)">9</text>
     </g>
-    <g style="animation:k9 14.0s infinite;transform:translateY(-1814.4px)">
+    <g style="animation:k9 14.0s infinite;transform:translateY(-1915.2px)">
       <text x="955.5" y="218.0" text-anchor="middle" font-size="72" font-weight="800" fill="url(#numfill)">0</text>
 <text x="955.5" y="318.8" text-anchor="middle" font-size="72" font-weight="800" fill="url(#numfill)">1</text>
 <text x="955.5" y="419.6" text-anchor="middle" font-size="72" font-weight="800" fill="url(#numfill)">2</text>
@@ -287,7 +281,7 @@ text{font-family:'Segoe UI Variable Display','Segoe UI','SF Pro Display',Inter,s
     </g>
   </g>
   <text x="988" y="218" font-size="20" font-weight="600" fill="#8B94B3">days</text>
-  <text x="888" y="260" font-size="13" font-weight="600" fill="#5EEAD4">Nov 13 to Nov 20</text>
+  <text x="888" y="260" font-size="13" font-weight="600" fill="#5EEAD4">Nov 13 to Nov 21</text>
 
   <!-- Middle Card: Commits by Hour -->
   <rect x="40" y="306" width="1120" height="200" rx="20" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.09" stroke-width="1"/>
@@ -310,7 +304,7 @@ text{font-family:'Segoe UI Variable Display','Segoe UI','SF Pro Display',Inter,s
   </g>
 
   <!-- Hourly Bars (00 to 23) -->
-  <rect class="b" x="112.4" y="465.6" width="26" height="6.4" rx="5" fill="url(#bar)" style="animation:k11 14.0s infinite"/>
+  <rect class="b" x="112.4" y="459.2" width="26" height="12.8" rx="5" fill="url(#bar)" style="animation:k11 14.0s infinite"/>
 <rect class="b" x="155.2" y="452.8" width="26" height="19.2" rx="5" fill="url(#bar)" style="animation:k12 14.0s infinite"/>
 <rect class="b" x="198.1" y="388.8" width="26" height="83.2" rx="5" fill="url(#barPeak)" style="animation:k13 14.0s infinite"/>
 <rect class="b" x="241.0" y="465.6" width="26" height="6.4" rx="5" fill="url(#bar)" style="animation:k14 14.0s infinite"/>
