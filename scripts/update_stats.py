@@ -230,14 +230,17 @@ text{{font-family:'Segoe UI Variable Display','Segoe UI','SF Pro Display',Inter,
 @keyframes k32{{0%,16.714%{{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}21.714%,100%{{transform:scaleY(1)}}}}
 @keyframes k33{{0%,17.0%{{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}22.0%,100%{{transform:scaleY(1)}}}}
 @keyframes k34{{0%,17.286%{{transform:scaleY(0);animation-timing-function:cubic-bezier(.2,.8,.2,1)}}22.286%,100%{{transform:scaleY(1)}}}}
-@keyframes k35{{0%,17.143%{{stroke-dasharray:0 427.26;animation-timing-function:linear}}21.343%,100%{{stroke-dasharray:183.72 427.26}}}}
-@keyframes k36{{0%,21.343%{{stroke-dasharray:0 427.26;animation-timing-function:linear}}24.843%,100%{{stroke-dasharray:183.72 427.26}}}}
-@keyframes k37{{0%,24.843%{{stroke-dasharray:0 427.26;animation-timing-function:linear}}27.143%,100%{{stroke-dasharray:59.82 427.26}}}}
+@keyframes k35{{0%,17.143%{{stroke-dasharray:0 427.26;animation-timing-function:linear}}21.343%,100%{{stroke-dasharray:264.90 427.26}}}}
+@keyframes k36{{0%,21.343%{{stroke-dasharray:0 427.26;animation-timing-function:linear}}24.843%,100%{{stroke-dasharray:76.91 427.26}}}}
+@keyframes k37{{0%,24.843%{{stroke-dasharray:0 427.26;animation-timing-function:linear}}27.143%,100%{{stroke-dasharray:42.73 427.26}}}}
+@keyframes k38{{0%,27.143%{{stroke-dasharray:0 427.26;animation-timing-function:linear}}28.500%,100%{{stroke-dasharray:25.64 427.26}}}}
+@keyframes k39{{0%,28.500%{{stroke-dasharray:0 427.26;animation-timing-function:linear}}29.500%,100%{{stroke-dasharray:17.08 427.26}}}}
 @keyframes k40{{0%,27.143%{{opacity:0;animation-timing-function:ease}}30.714%,100%{{opacity:1}}}}
-@keyframes k41{{0%,19.286%{{stroke-dasharray:0 427.26;animation-timing-function:linear}}24.486%,100%{{stroke-dasharray:413.16 427.26}}}}
-@keyframes k42{{0%,24.486%{{stroke-dasharray:0 427.26;animation-timing-function:linear}}28.486%,100%{{stroke-dasharray:11.96 427.26}}}}
-@keyframes k43{{0%,28.486%{{stroke-dasharray:0 427.26;animation-timing-function:linear}}29.343%,100%{{stroke-dasharray:1.71 427.26}}}}
-@keyframes k44{{0%,29.343%{{stroke-dasharray:0 427.26;animation-timing-function:linear}}30.043%,100%{{stroke-dasharray:0.43 427.26}}}}
+@keyframes k41{{0%,19.286%{{stroke-dasharray:0 427.26;animation-timing-function:linear}}24.486%,100%{{stroke-dasharray:247.81 427.26}}}}
+@keyframes k42{{0%,24.486%{{stroke-dasharray:0 427.26;animation-timing-function:linear}}27.486%,100%{{stroke-dasharray:102.54 427.26}}}}
+@keyframes k43{{0%,27.486%{{stroke-dasharray:0 427.26;animation-timing-function:linear}}28.843%,100%{{stroke-dasharray:42.73 427.26}}}}
+@keyframes k44{{0%,28.843%{{stroke-dasharray:0 427.26;animation-timing-function:linear}}29.643%,100%{{stroke-dasharray:21.36 427.26}}}}
+@keyframes k45{{0%,29.643%{{stroke-dasharray:0 427.26;animation-timing-function:linear}}30.243%,100%{{stroke-dasharray:12.82 427.26}}}}
 @keyframes k46{{0%,29.286%{{opacity:0;animation-timing-function:ease}}32.857%,100%{{opacity:1}}}}
 @media (prefers-reduced-motion:reduce){{*{{animation:none!important}}.dot{{display:none}}}}
 </style>
@@ -381,59 +384,66 @@ text{{font-family:'Segoe UI Variable Display','Segoe UI','SF Pro Display',Inter,
   <rect x="40" y="526" width="550" height="250" rx="20" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.09" stroke-width="1"/>
   <text x="68" y="566" font-size="17" font-weight="700" fill="#E8ECF8">Top languages by repository</text>
   
-  <circle cx="74" cy="616" r="5" fill="#F1E05A"/>
-  <text x="92" y="621" font-size="14" fill="#E8ECF8">JavaScript</text>
-  <text x="302" y="621" text-anchor="end" font-size="14" font-weight="600" fill="#8B94B3">43%</text>
+  <circle cx="74" cy="616" r="5" fill="#4F8EF7"/>
+  <text x="92" y="621" font-size="14" fill="#E8ECF8">Python</text>
+  <text x="302" y="621" text-anchor="end" font-size="14" font-weight="600" fill="#8B94B3">62%</text>
 
-  <circle cx="74" cy="652" r="5" fill="#4F8EF7"/>
-  <text x="92" y="657" font-size="14" fill="#E8ECF8">Python</text>
-  <text x="302" y="657" text-anchor="end" font-size="14" font-weight="600" fill="#8B94B3">43%</text>
+  <circle cx="74" cy="652" r="5" fill="#F43F5E"/>
+  <text x="92" y="657" font-size="14" fill="#E8ECF8">C / C++</text>
+  <text x="302" y="657" text-anchor="end" font-size="14" font-weight="600" fill="#8B94B3">18%</text>
 
-  <circle cx="74" cy="688" r="5" fill="#EF4444"/>
-  <text x="92" y="693" font-size="14" fill="#E8ECF8">HTML</text>
-  <text x="302" y="693" text-anchor="end" font-size="14" font-weight="600" fill="#8B94B3">14%</text>
+  <circle cx="74" cy="688" r="5" fill="#F1E05A"/>
+  <text x="92" y="693" font-size="14" fill="#E8ECF8">JavaScript</text>
+  <text x="302" y="693" text-anchor="end" font-size="14" font-weight="600" fill="#8B94B3">10%</text>
+
+  <circle cx="74" cy="724" r="5" fill="#3178C6"/>
+  <text x="92" y="729" font-size="14" fill="#E8ECF8">TypeScript</text>
+  <text x="302" y="729" text-anchor="end" font-size="14" font-weight="600" fill="#8B94B3">6%</text>
 
   <!-- Donut Chart Left (Repos) -->
   <circle cx="450" cy="668" r="68" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="26"/>
-  <circle cx="450" cy="668" r="68" fill="none" stroke="#F1E05A" stroke-width="26" stroke-dasharray="183.72 427.26" stroke-dashoffset="-1.50" transform="rotate(-90 450 668)" style="animation:k35 14.0s infinite"/>
-  <circle cx="450" cy="668" r="68" fill="none" stroke="#4F8EF7" stroke-width="26" stroke-dasharray="183.72 427.26" stroke-dashoffset="-188.22" transform="rotate(-90 450 668)" style="animation:k36 14.0s infinite"/>
-  <circle cx="450" cy="668" r="68" fill="none" stroke="#EF4444" stroke-width="26" stroke-dasharray="59.82 427.26" stroke-dashoffset="-374.94" transform="rotate(-90 450 668)" style="animation:k37 14.0s infinite"/>
+  <circle cx="450" cy="668" r="68" fill="none" stroke="#4F8EF7" stroke-width="26" stroke-dasharray="264.90 427.26" stroke-dashoffset="-1.50" transform="rotate(-90 450 668)" style="animation:k35 14.0s infinite"/>
+  <circle cx="450" cy="668" r="68" fill="none" stroke="#F43F5E" stroke-width="26" stroke-dasharray="76.91 427.26" stroke-dashoffset="-266.40" transform="rotate(-90 450 668)" style="animation:k36 14.0s infinite"/>
+  <circle cx="450" cy="668" r="68" fill="none" stroke="#F1E05A" stroke-width="26" stroke-dasharray="42.73 427.26" stroke-dashoffset="-343.31" transform="rotate(-90 450 668)" style="animation:k37 14.0s infinite"/>
+  <circle cx="450" cy="668" r="68" fill="none" stroke="#3178C6" stroke-width="26" stroke-dasharray="25.64 427.26" stroke-dashoffset="-386.04" transform="rotate(-90 450 668)" style="animation:k38 14.0s infinite"/>
+  <circle cx="450" cy="668" r="68" fill="none" stroke="#2DD4BF" stroke-width="26" stroke-dasharray="17.08 427.26" stroke-dashoffset="-411.68" transform="rotate(-90 450 668)" style="animation:k39 14.0s infinite"/>
   
   <g style="animation:k40 14.0s infinite">
-    <text x="450" y="672" text-anchor="middle" font-size="24" font-weight="800" fill="url(#numfill)">43%</text>
-    <text x="450" y="690" text-anchor="middle" font-size="12" fill="#8B94B3">JavaScript</text>
+    <text x="450" y="672" text-anchor="middle" font-size="24" font-weight="800" fill="url(#numfill)">62%</text>
+    <text x="450" y="690" text-anchor="middle" font-size="12" fill="#8B94B3">Python</text>
   </g>
 
   <!-- Bottom Card Right: Top Languages by Commit -->
   <rect x="610" y="526" width="550" height="250" rx="20" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.09" stroke-width="1"/>
   <text x="638" y="566" font-size="17" font-weight="700" fill="#E8ECF8">Top languages by commit</text>
 
-  <circle cx="644" cy="616" r="5" fill="#F1E05A"/>
-  <text x="662" y="621" font-size="14" fill="#E8ECF8">JavaScript</text>
-  <text x="872" y="621" text-anchor="end" font-size="14" font-weight="600" fill="#8B94B3">97%</text>
+  <circle cx="644" cy="616" r="5" fill="#4F8EF7"/>
+  <text x="662" y="621" font-size="14" fill="#E8ECF8">Python</text>
+  <text x="872" y="621" text-anchor="end" font-size="14" font-weight="600" fill="#8B94B3">58%</text>
 
-  <circle cx="644" cy="652" r="5" fill="#4F8EF7"/>
-  <text x="662" y="657" font-size="14" fill="#E8ECF8">Python</text>
-  <text x="872" y="657" text-anchor="end" font-size="14" font-weight="600" fill="#8B94B3">3%</text>
+  <circle cx="644" cy="652" r="5" fill="#F43F5E"/>
+  <text x="662" y="657" font-size="14" fill="#E8ECF8">C / C++</text>
+  <text x="872" y="657" text-anchor="end" font-size="14" font-weight="600" fill="#8B94B3">24%</text>
 
-  <circle cx="644" cy="688" r="5" fill="#EF4444"/>
-  <text x="662" y="693" font-size="14" fill="#E8ECF8">HTML</text>
-  <text x="872" y="693" text-anchor="end" font-size="14" font-weight="600" fill="#8B94B3">0.4%</text>
+  <circle cx="644" cy="688" r="5" fill="#00ADD8"/>
+  <text x="662" y="693" font-size="14" fill="#E8ECF8">Go</text>
+  <text x="872" y="693" text-anchor="end" font-size="14" font-weight="600" fill="#8B94B3">10%</text>
 
-  <circle cx="644" cy="724" r="5" fill="#2DD4BF"/>
-  <text x="662" y="729" font-size="14" fill="#E8ECF8">Shell</text>
-  <text x="872" y="729" text-anchor="end" font-size="14" font-weight="600" fill="#8B94B3">0.1%</text>
+  <circle cx="644" cy="724" r="5" fill="#3178C6"/>
+  <text x="662" y="729" font-size="14" fill="#E8ECF8">TypeScript</text>
+  <text x="872" y="729" text-anchor="end" font-size="14" font-weight="600" fill="#8B94B3">5%</text>
 
   <!-- Donut Chart Right (Commits) -->
   <circle cx="1020" cy="668" r="68" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="26"/>
-  <circle cx="1020" cy="668" r="68" fill="none" stroke="#F1E05A" stroke-width="26" stroke-dasharray="413.16 427.26" stroke-dashoffset="-1.50" transform="rotate(-90 1020 668)" style="animation:k41 14.0s infinite"/>
-  <circle cx="1020" cy="668" r="68" fill="none" stroke="#4F8EF7" stroke-width="26" stroke-dasharray="11.96 427.26" stroke-dashoffset="-416.16" transform="rotate(-90 1020 668)" style="animation:k42 14.0s infinite"/>
-  <circle cx="1020" cy="668" r="68" fill="none" stroke="#EF4444" stroke-width="26" stroke-dasharray="1.71 427.26" stroke-dashoffset="-429.62" transform="rotate(-90 1020 668)" style="animation:k43 14.0s infinite"/>
-  <circle cx="1020" cy="668" r="68" fill="none" stroke="#2DD4BF" stroke-width="26" stroke-dasharray="0.43 427.26" stroke-dashoffset="-432.83" transform="rotate(-90 1020 668)" style="animation:k44 14.0s infinite"/>
+  <circle cx="1020" cy="668" r="68" fill="none" stroke="#4F8EF7" stroke-width="26" stroke-dasharray="247.81 427.26" stroke-dashoffset="-1.50" transform="rotate(-90 1020 668)" style="animation:k41 14.0s infinite"/>
+  <circle cx="1020" cy="668" r="68" fill="none" stroke="#F43F5E" stroke-width="26" stroke-dasharray="102.54 427.26" stroke-dashoffset="-249.31" transform="rotate(-90 1020 668)" style="animation:k42 14.0s infinite"/>
+  <circle cx="1020" cy="668" r="68" fill="none" stroke="#00ADD8" stroke-width="26" stroke-dasharray="42.73 427.26" stroke-dashoffset="-351.85" transform="rotate(-90 1020 668)" style="animation:k43 14.0s infinite"/>
+  <circle cx="1020" cy="668" r="68" fill="none" stroke="#3178C6" stroke-width="26" stroke-dasharray="21.36 427.26" stroke-dashoffset="-394.58" transform="rotate(-90 1020 668)" style="animation:k44 14.0s infinite"/>
+  <circle cx="1020" cy="668" r="68" fill="none" stroke="#2DD4BF" stroke-width="26" stroke-dasharray="12.82 427.26" stroke-dashoffset="-415.94" transform="rotate(-90 1020 668)" style="animation:k45 14.0s infinite"/>
 
   <g style="animation:k46 14.0s infinite">
-    <text x="1020" y="672" text-anchor="middle" font-size="24" font-weight="800" fill="url(#numfill)">97%</text>
-    <text x="1020" y="690" text-anchor="middle" font-size="12" fill="#8B94B3">JavaScript</text>
+    <text x="1020" y="672" text-anchor="middle" font-size="24" font-weight="800" fill="url(#numfill)">58%</text>
+    <text x="1020" y="690" text-anchor="middle" font-size="12" fill="#8B94B3">Python</text>
   </g>
 </g>
 </svg>"""
