@@ -15,7 +15,6 @@
   <a href="#whoami"><img src="https://img.shields.io/badge/Terminal-0D1117?style=flat-square&logo=gnubash&logoColor=22D3EE" alt="Terminal" /></a>
   <a href="#-practical-security-labs--research-platforms"><img src="https://img.shields.io/badge/Labs-0D1117?style=flat-square&logo=tryhackme&logoColor=22D3EE" alt="Labs" /></a>
   <a href="#-technical-arsenal--tooling-matrix"><img src="https://img.shields.io/badge/Tech_Arsenal-0D1117?style=flat-square&logo=target&logoColor=22D3EE" alt="Arsenal" /></a>
-  <a href="#-featured-projects"><img src="https://img.shields.io/badge/Projects-0D1117?style=flat-square&logo=github&logoColor=22D3EE" alt="Projects" /></a>
   <a href="#-activity--development-velocity"><img src="https://img.shields.io/badge/Analytics-0D1117?style=flat-square&logo=chartdotjs&logoColor=22D3EE" alt="Analytics" /></a>
   <a href="#-connect--inquiries"><img src="https://img.shields.io/badge/Contact-0D1117?style=flat-square&logo=gmail&logoColor=22D3EE" alt="Contact" /></a>
 
@@ -87,40 +86,6 @@
   &nbsp;
   <a href="https://github.com/thenudasahas2008/PromptSentry"><img src="https://img.shields.io/badge/AI%20SECURITY-PromptSentry%20Defense-123C35?style=for-the-badge&logo=shield&logoColor=6EE7B7" alt="AI Security Badge" /></a>
 </div>
-
----
-
-## 🚀 Featured Projects
-
-<p align="center">
-  <a href="https://github.com/thenudasahas2008/discord-quest-completer">
-    <img src="assets/project-discordquest.svg?v=1" width="49%" alt="Discord Quest Completer Pro" />
-  </a>
-  <a href="https://github.com/thenudasahas2008/PromptSentry">
-    <img src="assets/project-promptsentry.svg?v=3" width="49%" alt="PromptSentry AI Defense Gateway" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/thenudasahas2008/DiscordFarmer">
-    <img src="assets/project-discordfarmer.svg?v=1" width="49%" alt="DiscordFarmer 24/7 Presence Client" />
-  </a>
-  <a href="https://github.com/thenudasahas2008/Baduwa">
-    <img src="assets/project-baduwa.svg?v=4" width="49%" alt="Baduwa Discord Audio Bot" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/thenudasahas2008/Password-Strength-Checker">
-    <img src="assets/project-passwordchecker.svg?v=1" width="49%" alt="Password Strength Checker Tool" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://www.thenudasahas.site/"><img src="https://img.shields.io/badge/OFFICIAL%20PORTFOLIO-thenudasahas.site-161B22?style=for-the-badge&logo=googlechrome&logoColor=58A6FF" alt="Portfolio Website" /></a>
-  &nbsp;
-  <a href="https://github.com/thenudasahas2008?tab=repositories"><img src="https://img.shields.io/badge/ALL%20REPOSITORIES-Explore%20Codebase-161B22?style=for-the-badge&logo=github&logoColor=white" alt="Explore Repositories" /></a>
-</p>
 
 ---
 
