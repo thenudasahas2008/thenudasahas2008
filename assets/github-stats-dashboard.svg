@@ -23,8 +23,8 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', 
 @keyframes roll_d1 { 0% { transform: translateY(0px); } 100% { transform: translateY(-1310.4px); } }
 @keyframes roll_d2 { 0% { transform: translateY(0px); } 100% { transform: translateY(-1612.8px); } }
 @keyframes roll_d3 { 0% { transform: translateY(0px); } 100% { transform: translateY(-1411.2px); } }
-@keyframes roll_sd1 { 0% { transform: translateY(0px); } 100% { transform: translateY(-708.4px); } }
-@keyframes roll_sd2 { 0% { transform: translateY(0px); } 100% { transform: translateY(-772.8px); } }
+@keyframes roll_sd1 { 0% { transform: translateY(0px); } 100% { transform: translateY(-644.0px); } }
+@keyframes roll_sd2 { 0% { transform: translateY(0px); } 100% { transform: translateY(-708.4px); } }
 @keyframes roll_ld1 { 0% { transform: translateY(0px); } 100% { transform: translateY(-1108.8px); } }
 @keyframes roll_ld2 { 0% { transform: translateY(0px); } 100% { transform: translateY(-1209.6px); } }
 
@@ -220,7 +220,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', 
   </circle>
 
   <g clip-path="url(#c_str)">
-    <g class="roll-sd1" style="transform:translateY(-708.4px)">
+    <g class="roll-sd1" style="transform:translateY(-644.0px)">
       <text x="457.5" y="194.0" text-anchor="middle" font-size="42" font-weight="800" fill="url(#numfill)">0</text>
 <text x="457.5" y="258.4" text-anchor="middle" font-size="42" font-weight="800" fill="url(#numfill)">1</text>
 <text x="457.5" y="322.8" text-anchor="middle" font-size="42" font-weight="800" fill="url(#numfill)">2</text>
@@ -242,7 +242,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', 
 <text x="457.5" y="1353.2" text-anchor="middle" font-size="42" font-weight="800" fill="url(#numfill)">8</text>
 <text x="457.5" y="1417.6" text-anchor="middle" font-size="42" font-weight="800" fill="url(#numfill)">9</text>
     </g>
-    <g class="roll-sd2" style="transform:translateY(-772.8px)">
+    <g class="roll-sd2" style="transform:translateY(-708.4px)">
       <text x="486.5" y="194.0" text-anchor="middle" font-size="42" font-weight="800" fill="url(#numfill)">0</text>
 <text x="486.5" y="258.4" text-anchor="middle" font-size="42" font-weight="800" fill="url(#numfill)">1</text>
 <text x="486.5" y="322.8" text-anchor="middle" font-size="42" font-weight="800" fill="url(#numfill)">2</text>
@@ -267,7 +267,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', 
   </g>
   <text x="472" y="217" text-anchor="middle" font-size="12" font-weight="600" fill="#8B949E">days</text>
   <text x="574" y="162" font-size="19" font-weight="700" fill="#F0F6FC">Current streak</text>
-  <text class="fade-in-text" x="574" y="188" font-size="14" fill="#5EEAD4" font-weight="600">Nov 13 to Nov 24</text>
+  <text class="fade-in-text" x="574" y="188" font-size="14" fill="#5EEAD4" font-weight="600">Nov 26</text>
   <text class="fade-in-text" x="574" y="216" font-size="13" fill="#8B949E">Matches the longest streak</text>
 
   <!-- Top Card 3: Longest Streak -->
@@ -343,7 +343,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', 
   </g>
 
   <!-- Hourly Bars (00 to 23) with waterfall growth -->
-  <rect class="b-bar" style="animation-delay:0.12s" x="112.4" y="460.0" width="26" height="4.0" rx="5" fill="url(#bar)"/>
+  <rect class="b-bar" style="animation-delay:0.12s" x="112.4" y="454.4" width="26" height="9.6" rx="5" fill="url(#bar)"/>
 <rect class="b-bar" style="animation-delay:0.155s" x="155.2" y="460.0" width="26" height="4.0" rx="5" fill="url(#bar)"/>
 <rect class="b-bar" style="animation-delay:0.19s" x="198.1" y="432.0" width="26" height="32.0" rx="5" fill="url(#barPeak)"/>
 <rect class="b-bar" style="animation-delay:0.225s" x="241.0" y="460.0" width="26" height="4.0" rx="5" fill="url(#bar)"/>
