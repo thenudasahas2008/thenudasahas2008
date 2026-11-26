@@ -25,8 +25,8 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', 
 @keyframes roll_d3 { 0% { transform: translateY(0px); } 100% { transform: translateY(-1411.2px); } }
 @keyframes roll_sd1 { 0% { transform: translateY(0px); } 100% { transform: translateY(-644.0px); } }
 @keyframes roll_sd2 { 0% { transform: translateY(0px); } 100% { transform: translateY(-708.4px); } }
-@keyframes roll_ld1 { 0% { transform: translateY(0px); } 100% { transform: translateY(-1108.8px); } }
-@keyframes roll_ld2 { 0% { transform: translateY(0px); } 100% { transform: translateY(-1209.6px); } }
+@keyframes roll_ld1 { 0% { transform: translateY(0px); } 100% { transform: translateY(-1008.0px); } }
+@keyframes roll_ld2 { 0% { transform: translateY(0px); } 100% { transform: translateY(-1612.8px); } }
 
 /* Streak Gauge Ring Draw */
 .ring-draw {
@@ -274,7 +274,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', 
   <rect class="card-fade" x="860" y="84" width="300" height="190" rx="16" fill="#161b22" fill-opacity="0.55" stroke="#30363d" stroke-width="1"/>
   <text x="888" y="126" font-size="15" font-weight="600" fill="#8B949E">Longest streak</text>
   <g clip-path="url(#c_lng)">
-    <g class="roll-ld1" style="transform:translateY(-1108.8px)">
+    <g class="roll-ld1" style="transform:translateY(-1008.0px)">
       <text x="910.5" y="218.0" text-anchor="middle" font-size="72" font-weight="800" fill="url(#numfill)">0</text>
 <text x="910.5" y="318.8" text-anchor="middle" font-size="72" font-weight="800" fill="url(#numfill)">1</text>
 <text x="910.5" y="419.6" text-anchor="middle" font-size="72" font-weight="800" fill="url(#numfill)">2</text>
@@ -296,7 +296,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', 
 <text x="910.5" y="2032.4" text-anchor="middle" font-size="72" font-weight="800" fill="url(#numfill)">8</text>
 <text x="910.5" y="2133.2" text-anchor="middle" font-size="72" font-weight="800" fill="url(#numfill)">9</text>
     </g>
-    <g class="roll-ld2" style="transform:translateY(-1209.6px)">
+    <g class="roll-ld2" style="transform:translateY(-1612.8px)">
       <text x="955.5" y="218.0" text-anchor="middle" font-size="72" font-weight="800" fill="url(#numfill)">0</text>
 <text x="955.5" y="318.8" text-anchor="middle" font-size="72" font-weight="800" fill="url(#numfill)">1</text>
 <text x="955.5" y="419.6" text-anchor="middle" font-size="72" font-weight="800" fill="url(#numfill)">2</text>
@@ -320,7 +320,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', 
     </g>
   </g>
   <text x="982" y="208" font-size="20" font-weight="600" fill="#8B949E">days</text>
-  <text class="fade-in-text" x="888" y="248" font-size="13" font-weight="600" fill="#5EEAD4">Nov 13 to Nov 24</text>
+  <text class="fade-in-text" x="888" y="248" font-size="13" font-weight="600" fill="#5EEAD4">Nov 19 to Nov 24</text>
 
   <!-- Middle Card: Commits by Hour -->
   <rect class="card-fade" x="40" y="294" width="1120" height="200" rx="16" fill="#161b22" fill-opacity="0.55" stroke="#30363d" stroke-width="1"/>
@@ -345,7 +345,7 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', 
   <!-- Hourly Bars (00 to 23) with waterfall growth -->
   <rect class="b-bar" style="animation-delay:0.12s" x="112.4" y="454.4" width="26" height="9.6" rx="5" fill="url(#bar)"/>
 <rect class="b-bar" style="animation-delay:0.155s" x="155.2" y="460.0" width="26" height="4.0" rx="5" fill="url(#bar)"/>
-<rect class="b-bar" style="animation-delay:0.19s" x="198.1" y="432.0" width="26" height="32.0" rx="5" fill="url(#barPeak)"/>
+<rect class="b-bar" style="animation-delay:0.19s" x="198.1" y="460.0" width="26" height="4.0" rx="5" fill="url(#barPeak)"/>
 <rect class="b-bar" style="animation-delay:0.225s" x="241.0" y="460.0" width="26" height="4.0" rx="5" fill="url(#bar)"/>
 <rect class="b-bar" style="animation-delay:0.26s" x="283.8" y="460.0" width="26" height="4.0" rx="5" fill="url(#bar)"/>
 <rect class="b-bar" style="animation-delay:0.295s" x="326.6" y="460.0" width="26" height="4.0" rx="5" fill="url(#bar)"/>
@@ -358,13 +358,13 @@ text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', 
 <rect class="b-bar" style="animation-delay:0.54s" x="626.6" y="460.0" width="26" height="4.0" rx="5" fill="url(#bar)"/>
 <rect class="b-bar" style="animation-delay:0.575s" x="669.5" y="460.0" width="26" height="4.0" rx="5" fill="url(#bar)"/>
 <rect class="b-bar" style="animation-delay:0.61s" x="712.3" y="460.0" width="26" height="4.0" rx="5" fill="url(#bar)"/>
-<rect class="b-bar" style="animation-delay:0.645s" x="755.1" y="460.0" width="26" height="4.0" rx="5" fill="url(#bar)"/>
-<rect class="b-bar" style="animation-delay:0.68s" x="798.0" y="454.4" width="26" height="9.6" rx="5" fill="url(#barPeak)"/>
+<rect class="b-bar" style="animation-delay:0.645s" x="755.1" y="457.6" width="26" height="6.4" rx="5" fill="url(#bar)"/>
+<rect class="b-bar" style="animation-delay:0.68s" x="798.0" y="438.4" width="26" height="25.6" rx="5" fill="url(#barPeak)"/>
 <rect class="b-bar" style="animation-delay:0.715s" x="840.9" y="441.6" width="26" height="22.4" rx="5" fill="url(#barPeak)"/>
 <rect class="b-bar" style="animation-delay:0.75s" x="883.7" y="457.6" width="26" height="6.4" rx="5" fill="url(#barPeak)"/>
-<rect class="b-bar" style="animation-delay:0.785s" x="926.5" y="425.6" width="26" height="38.4" rx="5" fill="url(#barPeak)"/>
-<rect class="b-bar" style="animation-delay:0.82s" x="969.4" y="416.0" width="26" height="48.0" rx="5" fill="url(#barPeak)"/>
-<rect class="b-bar" style="animation-delay:0.855s" x="1012.2" y="441.6" width="26" height="22.4" rx="5" fill="url(#barPeak)"/>
+<rect class="b-bar" style="animation-delay:0.785s" x="926.5" y="432.0" width="26" height="32.0" rx="5" fill="url(#barPeak)"/>
+<rect class="b-bar" style="animation-delay:0.82s" x="969.4" y="428.8" width="26" height="35.2" rx="5" fill="url(#barPeak)"/>
+<rect class="b-bar" style="animation-delay:0.855s" x="1012.2" y="451.2" width="26" height="12.8" rx="5" fill="url(#barPeak)"/>
 <rect class="b-bar" style="animation-delay:0.89s" x="1055.1" y="457.6" width="26" height="6.4" rx="5" fill="url(#bar)"/>
 <rect class="b-bar" style="animation-delay:0.925s" x="1098.0" y="457.6" width="26" height="6.4" rx="5" fill="url(#bar)"/>
 
